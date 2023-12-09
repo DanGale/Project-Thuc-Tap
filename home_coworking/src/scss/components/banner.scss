@@ -1,0 +1,138 @@
+@function toRem($value) {
+  $remValue: ($value / 16) * 1rem;
+  @return $remValue;
+}
+
+.banner {
+  font-family: $fontPrimary;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.banner__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 136px;
+}
+
+.banner__content-title {
+  width: 770px;
+  height: 144px;
+  flex-shrink: 0;
+  color: $textHeading;
+  text-align: center;
+  font-size: toRem(72);
+  font-style: normal;
+  font-weight: 500;
+  line-height: toRem(78);
+  letter-spacing: -2px;
+}
+
+.banner__content-description {
+  margin-top: 39px;
+  width: 669.302px;
+  height: 47.95px;
+  flex-shrink: 0;
+  color: $textText;
+  text-align: center;
+  font-family: $fontDM;
+  font-size: toRem(18);
+  font-style: normal;
+  font-weight: 400;
+  line-height: toRem(28);
+  letter-spacing: -0.3px;
+  padding: 0 70px;
+}
+
+.banner__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  gap: 10px;
+}
+
+.banner__shop {
+  font-size: toRem(15);
+  height: 55.941px;
+  padding: 18px 32px;
+}
+
+.banner__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.banner__play-title {
+  color: $textHeading;
+  text-align: center;
+  font-size: toRem(15);
+  font-style: normal;
+  font-weight: 500;
+  line-height: toRem(24);
+  letter-spacing: -0.3px;
+  text-transform: uppercase;
+}
+
+.banner__play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid transparent;
+
+  &:hover {
+    filter: drop-shadow(0px 5px 20px rgba(18, 2, 47, 0.15));
+  }
+}
+
+.banner__content-title span {
+  background: $bgPurpleGradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: toRem(72);
+  font-style: normal;
+  font-weight: 500;
+  line-height: toRem(78);
+  letter-spacing: -2px;
+}
+
+.banner__decor {
+  position: absolute;
+}
+
+.persons1 {
+  top: 375.66px;
+}
+.persons2 {
+  top: 432px;
+  right: 438px;
+}
+.persons3 {
+  top: 235.65px;
+  right: 223px;
+}
+
+.shape3 {
+  top: 325px;
+  right: 153px;
+}
+
+.persons4 {
+  top: 696px;
+}

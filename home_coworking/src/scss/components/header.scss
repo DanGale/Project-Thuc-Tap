@@ -1,0 +1,93 @@
+@function toRem($value) {
+  $remValue: ($value / 16) * 1rem;
+  @return $remValue;
+}
+
+.header {
+  background-color: #f7f5f1;
+  font-family: $fontPrimary;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1170px;
+  height: 48px;
+  flex-shrink: 0;
+  margin: 0 auto;
+}
+
+.header__list {
+  display: flex;
+  width: 470px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.header__list-item a {
+  color: $textText;
+  position: relative;
+  transition: all 0.3s ease;
+  font-size: toRem(15);
+  font-weight: 500;
+  line-height: toRem(24);
+  &.active {
+    color: $textHeading;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      background-color: $actionGreen;
+      border-radius: 50%;
+    }
+  }
+}
+
+.header__nav__list-item {
+  position: relative;
+}
+
+.header__right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.header__search {
+  padding: 3px 2.5px 2.042px 3px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.header__bag {
+  padding: 2px 3px;
+  position: relative;
+  cursor: pointer;
+}
+
+.header__right span {
+  position: relative;
+}
+
+.header__svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.header__submit {
+  width: 129px;
+  height: 48px;
+  padding: 13px 24px;
+  font-size: toRem(14);
+  letter-spacing: -0.3px;
+  gap: 10px;
+  margin-left: 30px;
+}
