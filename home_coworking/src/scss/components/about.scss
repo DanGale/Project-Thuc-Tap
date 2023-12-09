@@ -8,6 +8,20 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+.about__inside {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 120px;
+}
+
+.about__shape6{
+  position: absolute;
+  top: 522px;
+  left: 954px;
 }
 
 .about__title {
@@ -17,6 +31,8 @@
   gap: 30px;
   width: 870px;
   margin-top: 110px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about__title h2 {
@@ -50,19 +66,99 @@
 }
 
 .about__banner {
-    margin-top: 250px;
+  margin-top: 250px;
   position: relative;
 }
 
 .about__small-banner {
   position: absolute;
   right: 99px;
-  bottom: 420px;
+  bottom: 380px;
   z-index: 2;
 }
 
 .about__large-banner {
   margin-left: 299px;
-  width: 870px;
-  height: 850px;
+}
+
+.about__shape {
+  margin-left: 7px;
+}
+
+.about__box {
+  position: absolute;
+  top: 352px;
+  z-index: 3;
+  left: 45px;
+  width: 570px;
+  height: 554px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0px 60px 40px 0px rgba(18, 2, 47, 0.1);
+  padding: 60px 100px 0 100px;
+}
+
+.about__content {
+  width: 370px;
+  height: 394px;
+  flex-shrink: 0;
+}
+
+.about__content-head {
+  color: $actionBlue;
+  font-family: $fontDM;
+  font-size: toRem(18);
+  font-style: normal;
+  font-weight: 400;
+  line-height: toRem(28);
+  letter-spacing: -0.3px;
+}
+
+.about__content-tile {
+  margin: 30px 0;
+  width: 370px;
+  color: $textHeading;
+  font-family: Outfit;
+  font-size: toRem(36);
+  font-style: normal;
+  font-weight: 500;
+  line-height: toRem(46);
+  letter-spacing: -1px;
+}
+
+.about__content-description {
+  width: 370px;
+  color: $textText;
+  font-family: $fontDM;
+  font-size: toRem(18);
+  font-style: normal;
+  font-weight: 400;
+  line-height: toRem(28);
+  letter-spacing: -0.3px;
+  margin-bottom: 40px;
+}
+
+.about__arrow-title {
+  color: $textText;
+  font-size: toRem(14);
+  font-style: normal;
+  font-weight: 500;
+  line-height: toRem(24);
+  letter-spacing: -0.3px;
+  text-transform: uppercase;
+}
+
+.about__arrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 55px;
+}
+
+.about__indicator {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
 }

@@ -4,18 +4,17 @@
 }
 
 .logos {
-  width: 915px;
+  width: 100%;
   height: 162.851px;
   flex-shrink: 0;
-  margin: 120px auto;
 }
 
-.logos__inside{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 76px;
+.logos__inside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 76px;
 }
 
 .logos__title {
