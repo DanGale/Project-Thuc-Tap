@@ -1,0 +1,68 @@
+@function toRem($value) {
+  $remValue: ($value / 16) * 1rem;
+  @return $remValue;
+}
+
+.about {
+  background-color: $bgColor;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about__title {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  width: 870px;
+  margin-top: 110px;
+}
+
+.about__title h2 {
+  text-align: center;
+  font-size: toRem(48);
+  font-style: normal;
+  font-weight: 500;
+  line-height: toRem(56);
+  letter-spacing: -2px;
+  color: $textHeading;
+}
+
+.about__title-gradient {
+  background: $bgPurpleGradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about__description {
+  margin-bottom: 80px;
+  width: 100%;
+  color: $textText;
+  text-align: center;
+  font-family: $fontDM;
+  font-size: toRem(18);
+  font-style: normal;
+  font-weight: 400;
+  line-height: toRem(28);
+  letter-spacing: -0.3px;
+}
+
+.about__banner {
+    margin-top: 250px;
+  position: relative;
+}
+
+.about__small-banner {
+  position: absolute;
+  right: 99px;
+  bottom: 420px;
+  z-index: 2;
+}
+
+.about__large-banner {
+  margin-left: 299px;
+  width: 870px;
+  height: 850px;
+}
