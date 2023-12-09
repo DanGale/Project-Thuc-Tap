@@ -7,14 +7,7 @@
 @import "./components/banner.scss";
 @import "./components/button.scss";
 @import "./components/service.scss";
+@import "./utils/utils.scss";
+@import "./components/logos.scss";
+@import "./components/items.scss";
 
-#hero {
-  background-color: $bgColor;
-  padding-top: 16px;
-  height: 950px;
-}
-
-#service {
-  height: 950px;
-  background-color: #fff;
-}

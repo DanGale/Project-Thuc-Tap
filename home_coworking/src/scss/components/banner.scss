@@ -70,6 +70,10 @@
   justify-content: center;
   align-items: center;
   gap: 7px;
+  cursor: pointer;
+  &:hover {
+    filter: drop-shadow(0px 5px 20px rgba(18, 2, 47, 0.15));
+  }
 }
 
 .banner__play-title {
@@ -93,10 +97,6 @@
   border-radius: 50%;
   background-color: #fff;
   border: 1px solid transparent;
-
-  &:hover {
-    filter: drop-shadow(0px 5px 20px rgba(18, 2, 47, 0.15));
-  }
 }
 
 .banner__content-title span {
@@ -117,12 +117,25 @@
 }
 
 .persons1 {
-  top: 375.66px;
+  top: 616px;
+  right: 1075px;
 }
+
+.shape1 {
+  top: 726px;
+  right: 1255px;
+}
+
 .persons2 {
   top: 432px;
   right: 438px;
 }
+
+.shape2 {
+  top: 562px;
+  right: 648px;
+}
+
 .persons3 {
   top: 235.65px;
   right: 223px;
@@ -134,5 +147,11 @@
 }
 
 .persons4 {
-  top: 696px;
+  top: 293px;
+  right: 1431px;
+}
+
+.shape4 {
+  top: 461px;
+  right: 1341px;
 }

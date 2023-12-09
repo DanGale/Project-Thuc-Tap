@@ -1,0 +1,23 @@
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+    // background-color: $bgColor;
+}
+
+#root {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+#hero {
+  background-color: $bgColor;
+  padding-top: 16px;
+  height: 950px;
+}
+
+#service {
+  height: 950px;
+  background-color: #fff;
+}

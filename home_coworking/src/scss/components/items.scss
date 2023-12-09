@@ -1,0 +1,68 @@
+@function toRem($value) {
+  $remValue: ($value / 16) * 1rem;
+  @return $remValue;
+}
+
+.items {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 120px;
+}
+
+.items__inside {
+  background-color: #f7f5f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 1300px;
+  height: 309px;
+  flex-shrink: 0;
+  padding: 0 65px;
+}
+
+.items__title {
+  width: 370px;
+  height: 82px;
+  flex-shrink: 0;
+}
+
+.items__title h3 {
+  color: $textHeading;
+  font-size: toRem(36);
+  font-weight: 500;
+  line-height: toRem(46);
+  letter-spacing: -1px;
+}
+
+.items__card {
+  display: flex;
+  gap: 30px;
+}
+
+.items__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.items__frame {
+  position: relative;
+}
+
+.items__icon {
+  object-fit: contain;
+}
+
+.items__frame-bg {
+  width: 70px;
+  height: 70px;
+}
+
+.items__frame-icon {
+  position: absolute;
+  left: 30%;
+  top: 25%;
+}
