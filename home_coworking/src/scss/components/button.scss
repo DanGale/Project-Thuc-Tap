@@ -1,4 +1,6 @@
 .button {
+  position: relative;
+  z-index: 2;
   border-radius: 5px;
   background-color: $actionBlue;
   color: #fff;
