@@ -2,5 +2,5 @@
 
 ## Project Overview
 
-- Home Coworking: [Visit](https://home-coworking.vercel.app/)
+- Home Coworking: [Preview the website](https://home-coworking.vercel.app/)
 
