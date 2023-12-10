@@ -1,4 +1,4 @@
-# Beau Agency Internship Project
+# Beau Agency Internship Project-Nguyễn Văn Hội
 
 ## Project Overview
 
