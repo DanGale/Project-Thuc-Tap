@@ -1,0 +1,54 @@
+@function toRem($value) {
+  $remValue: ($value / 16) * 1rem;
+  @return $remValue;
+}
+
+.cta {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 120px;
+}
+
+.cta__inside {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 870px;
+  gap: 30px;
+}
+
+.cta__title {
+  color: $textHeading;
+  text-align: center;
+  font-size: toRem(48);
+  font-style: normal;
+  font-weight: 500;
+  line-height: toRem(56);
+  letter-spacing: -2px;
+}
+
+.cta__gradient {
+  background: $bgPurpleGradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cta__description {
+  color: $textText;
+  text-align: center;
+  font-size: toRem(22);
+  font-style: normal;
+  font-weight: 400;
+  line-height: toRem(32);
+  letter-spacing: -1px;
+  margin-bottom: 90px;
+}
+
+.cta__button {
+  padding: 18px 32px;
+}

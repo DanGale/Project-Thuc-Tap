@@ -1,0 +1,114 @@
+@function toRem($value) {
+  $remValue: ($value / 16) * 1rem;
+  @return $remValue;
+}
+
+.review {
+  padding-top: 113px;
+  width: 100%;
+  font-family: $fontPrimary;
+  background-color: $bgColor;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-bottom: 120px;
+}
+
+.review__shape {
+  position: absolute;
+  top: 311px;
+  left: 295px;
+}
+
+.review__head {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px 0;
+  margin-bottom: 80px;
+}
+
+.review__title {
+  color: $textHeading;
+  text-align: center;
+  font-size: toRem(48);
+  font-style: normal;
+  font-weight: 500;
+  line-height: toRem(56);
+  letter-spacing: -2px;
+}
+
+.review__subtitle {
+  color: $textText;
+  text-align: center;
+  font-size: toRem(22);
+  font-style: normal;
+  font-weight: 400;
+  line-height: toRem(32);
+  letter-spacing: -1px;
+}
+
+.review__cards {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.review__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 370px;
+  max-height: 350px;
+  border-radius: 20px;
+  background: #fff;
+  padding: 35px 35px 45px 35px;
+}
+
+.review__user {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px 0;
+  margin-bottom: 20px;
+}
+
+.review__name {
+  color: $textHeading;
+  text-align: center;
+  font-size: toRem(22);
+  font-style: normal;
+  font-weight: 400;
+  line-height: toRem(32);
+  letter-spacing: -1px;
+}
+
+.review__major {
+  color: $textText;
+  text-align: center;
+  font-family: $fontDM;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: toRem(26);
+}
+
+.review__star {
+  margin-bottom: 30px;
+}
+
+.review__content {
+  max-width: 300px;
+  max-height: 77px;
+  color: $textText;
+  text-align: center;
+  font-family: $fontDM;
+  font-size: toRem(18);
+  font-style: normal;
+  font-weight: 400;
+  line-height: toRem(28);
+  letter-spacing: -0.3px;
+}
