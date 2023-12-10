@@ -3,5 +3,5 @@
 ## Project Overview
 
 - **Name:** Home Coworking
-- **Deployed Site:** [Link to the deployed site](https://home-coworking.vercel.app/)
+- **Preview Site:** [visit](https://home-coworking.vercel.app/)
 
