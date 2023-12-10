@@ -1711,4 +1711,8 @@ input:checked + .toggle__button:before {
   margin: 0 auto 40px;
 }
 
+.footer__icon {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=style.css.map */
