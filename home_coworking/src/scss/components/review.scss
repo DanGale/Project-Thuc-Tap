@@ -36,7 +36,7 @@
   font-size: toRem(48);
   font-style: normal;
   font-weight: 500;
-  line-height: toRem(56);
+  line-height: 1.1;
   letter-spacing: -2px;
 }
 
@@ -46,7 +46,7 @@
   font-size: toRem(22);
   font-style: normal;
   font-weight: 400;
-  line-height: toRem(32);
+  line-height: 1.4;
   letter-spacing: -1px;
 }
 
@@ -82,7 +82,7 @@
   font-size: toRem(22);
   font-style: normal;
   font-weight: 400;
-  line-height: toRem(32);
+  line-height: 1.4;
   letter-spacing: -1px;
 }
 
@@ -93,7 +93,7 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: toRem(26);
+  line-height: 1.6;
 }
 
 .review__star {
@@ -109,6 +109,6 @@
   font-size: toRem(18);
   font-style: normal;
   font-weight: 400;
-  line-height: toRem(28);
+  line-height: 1.5;
   letter-spacing: -0.3px;
 }

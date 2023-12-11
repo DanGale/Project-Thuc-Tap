@@ -38,12 +38,12 @@
   font-size: toRem(48);
   font-style: normal;
   font-weight: 500;
-  line-height: toRem(56);
+  line-height: 1.1;
   letter-spacing: -2px;
   color: $textHeading;
 }
 
-.about__title-gradient {
+.about__title-gradient span{
   background: $bgPurpleGradient;
   background-clip: text;
   -webkit-background-clip: text;
@@ -59,7 +59,7 @@
   font-size: toRem(18);
   font-style: normal;
   font-weight: 400;
-  line-height: toRem(28);
+  line-height: 1.5;
   letter-spacing: -0.3px;
 }
 
@@ -110,7 +110,7 @@
   font-size: toRem(18);
   font-style: normal;
   font-weight: 400;
-  line-height: toRem(28);
+  line-height: 1.5;
   letter-spacing: -0.3px;
 }
 
@@ -133,7 +133,7 @@
   font-size: toRem(18);
   font-style: normal;
   font-weight: 400;
-  line-height: toRem(28);
+  line-height: 1.5;
   letter-spacing: -0.3px;
   margin-bottom: 40px;
 }

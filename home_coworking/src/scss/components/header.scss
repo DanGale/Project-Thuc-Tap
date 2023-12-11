@@ -30,7 +30,7 @@
   transition: all 0.3s ease;
   font-size: toRem(15);
   font-weight: 500;
-  line-height: toRem(24);
+  line-height: 1.6;
   &.active {
     color: $textHeading;
     &::before {
@@ -81,9 +81,4 @@
   right: 0;
   cursor: pointer;
   z-index: 2;
-}
-
-.header__signup {
- padding: 13px 24px;
- margin-left: 30px;
 }

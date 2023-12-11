@@ -50,7 +50,7 @@
   font-size: toRem(48);
   font-style: normal;
   font-weight: 500;
-  line-height: toRem(56);
+  line-height: 1.1;
   letter-spacing: -2px;
 }
 
@@ -72,7 +72,7 @@
   font-size: toRem(18);
   font-style: normal;
   font-weight: 400;
-  line-height: toRem(28);
+  line-height: 1.5;
   letter-spacing: -0.3px;
 }
 
@@ -101,12 +101,12 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  margin: 5px;
+  margin: 4.5px;
   transition: 0.2s ease-in-out;
 }
 
 input:checked + .toggle__button:before {
-  transform: translateX(140%);
+  transform: translateX(150%);
 }
 
 #pricing__checkbox {
@@ -135,7 +135,7 @@ input:checked + .toggle__button:before {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 30px ;
+  gap: 30px;
   margin-bottom: 145px;
   z-index: 3;
 }
@@ -164,7 +164,7 @@ input:checked + .toggle__button:before {
   font-size: toRem(18);
   font-style: normal;
   font-weight: 500;
-  line-height: toRem(28);
+  line-height: 1.5;
   letter-spacing: 0.4px;
   margin-bottom: 20px;
 }
@@ -175,7 +175,7 @@ input:checked + .toggle__button:before {
   font-size: toRem(36);
   font-style: normal;
   font-weight: 500;
-  line-height: toRem(46);
+  line-height: 1.2;
   letter-spacing: -1px;
   margin-bottom: 10px;
 
@@ -195,7 +195,7 @@ input:checked + .toggle__button:before {
   font-size: toRem(16);
   font-style: normal;
   font-weight: 400;
-  line-height: toRem(26);
+  line-height: 1.6;
 }
 
 .pricing__list {
@@ -217,19 +217,16 @@ input:checked + .toggle__button:before {
     font-size: toRem(22);
     font-style: normal;
     font-weight: 400;
-    line-height: toRem(32);
+    line-height: 1.4;
     letter-spacing: -1px;
   }
 }
 
 .pricing__footer {
   width: 100%;
-  font-size: toRem(15);
-  font-style: normal;
-  font-weight: 500;
-  line-height: toRem(24);
-  letter-spacing: -0.3px;
-  padding: 17px 0;
-  border-top-right-radius: 0px;
-  border-top-left-radius: 0px;
+  line-height: 1.6;
+  .button {
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+  }
 }

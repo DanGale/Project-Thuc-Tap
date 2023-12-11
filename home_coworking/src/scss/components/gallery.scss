@@ -34,7 +34,6 @@
 
 .gallery__flex {
   width: 670px;
-  height: 23px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,7 +48,7 @@
     font-size: toRem(22);
     font-style: normal;
     font-weight: 400;
-    line-height: toRem(32);
+    line-height: 1.4;
     letter-spacing: -1px;
   }
 }
@@ -59,13 +58,12 @@
   font-size: toRem(22);
   font-style: normal;
   font-weight: 400;
-  line-height: toRem(32);
+  line-height: 1.4;
   letter-spacing: -1px;
 }
 
 .gallery__description {
-  width: 570px;
-  height: 48px;
+  max-width: 570px;
   p {
     margin-top: 25px;
     color: $textText;
@@ -73,7 +71,7 @@
     font-size: toRem(18);
     font-style: normal;
     font-weight: 400;
-    line-height: toRem(28);
+    line-height: 1.5;
     letter-spacing: -0.3px;
   }
 }
@@ -94,7 +92,7 @@
     font-size: toRem(42);
     font-style: normal;
     font-weight: 500;
-    line-height: toRem(50);
+    line-height: 1.1;
     letter-spacing: -0.84px;
   }
 }
@@ -110,7 +108,7 @@
     font-size: toRem(18);
     font-style: normal;
     font-weight: 400;
-    line-height: toRem(28);
+    line-height: 1.5;
     letter-spacing: -0.3px;
   }
 }
@@ -130,7 +128,7 @@
     font-size: toRem(15);
     font-style: normal;
     font-weight: 500;
-    line-height: toRem(24);
+    line-height:1.6;
     letter-spacing: -0.3px;
     text-transform: uppercase;
   }

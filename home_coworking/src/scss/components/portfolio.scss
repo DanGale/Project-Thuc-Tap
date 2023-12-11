@@ -6,6 +6,7 @@
 .portfolio {
   background-color: #fff;
   position: relative;
+  padding: 120px;
 }
 
 
@@ -26,14 +27,14 @@
   font-size: toRem(42);
   font-style: normal;
   font-weight: 500;
-  line-height: toRem(50);
+  line-height: 1.1;
   letter-spacing: -0.84px;
   margin-bottom: 100px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.portfolio__gradient {
+.portfolio__title span {
   background: $bgPurpleGradient;
   background-clip: text;
   -webkit-background-clip: text;
@@ -41,7 +42,7 @@
   font-size: 42px;
   font-style: normal;
   font-weight: 500;
-  line-height: 50px;
+  line-height: 1.1;
   letter-spacing: -0.84px;
 }
 
@@ -62,7 +63,7 @@
   font-size: toRem(22);
   font-style: normal;
   font-weight: 400;
-  line-height: toRem(32);
+  line-height: 1.4;
   letter-spacing: -1px;
 }
 

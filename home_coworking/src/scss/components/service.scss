@@ -29,7 +29,7 @@
   font-size: toRem(48);
   font-style: normal;
   font-weight: 500;
-  line-height: toRem(56);
+  line-height: 1.1;
   letter-spacing: -2px;
   max-width: 970px;
   z-index: 3;
@@ -41,7 +41,7 @@
   font-size: toRem(18);
   font-style: normal;
   font-weight: 400;
-  line-height: toRem(28);
+  line-height: 1.5;
   letter-spacing: -0.3px;
   max-width: 970px;
   height: auto;
@@ -49,6 +49,7 @@
 
 .service__card {
   margin-top: 80px;
+  margin-bottom: 70px;
   flex-shrink: 0;
   gap: 30px;
   justify-content: center;
@@ -81,7 +82,7 @@
   font-size: toRem(22);
   font-style: normal;
   font-weight: 400;
-  line-height: toRem(32);
+  line-height: 1.4;
   letter-spacing: -1px;
   margin-top: 38px;
 }
@@ -96,18 +97,9 @@
   font-size: toRem(16);
   font-style: normal;
   font-weight: 400;
-  line-height: toRem(26);
+  line-height: 1.6;
 }
 
-.service__button {
-  margin-top: 70px;
-  margin-bottom: 120px;
-  display: inline-flex;
-  padding: 18px 32px;
-  font-size: toRem(15);
-  line-height: toRem(24);
-  letter-spacing: -0.3px;
-}
 
 .service__shape {
   position: absolute;

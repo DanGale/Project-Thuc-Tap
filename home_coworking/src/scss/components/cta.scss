@@ -12,7 +12,7 @@
 }
 
 .cta__container {
-  --grid-container-width: 1170px;
+  --grid-container-width: 870px;
   margin: 0 auto;
   display: inline-flex;
   flex-direction: column;
@@ -22,17 +22,18 @@
 
 }
 
+
 .cta__title {
   color: $textHeading;
   text-align: center;
   font-size: toRem(48);
   font-style: normal;
   font-weight: 500;
-  line-height: toRem(56);
+  line-height: 1.1;
   letter-spacing: -2px;
 }
 
-.cta__gradient {
+.cta__title span {
   background: $bgPurpleGradient;
   background-clip: text;
   -webkit-background-clip: text;
@@ -45,11 +46,7 @@
   font-size: toRem(22);
   font-style: normal;
   font-weight: 400;
-  line-height: toRem(32);
+  line-height: 1.4;
   letter-spacing: -1px;
   margin-bottom: 90px;
-}
-
-.cta__button {
-  padding: 18px 32px;
 }
