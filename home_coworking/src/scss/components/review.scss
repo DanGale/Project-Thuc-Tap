@@ -51,9 +51,8 @@
 }
 
 .review__cards {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 30px;
+  justify-content:center;
+  gap: 30px; 
   z-index: 3;
 }
 

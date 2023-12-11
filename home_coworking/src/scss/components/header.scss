@@ -4,14 +4,15 @@
 }
 
 .header {
-  background-color: #f7f5f1;
+  background-color: $bgColor;
   font-family: $fontPrimary;
-  display: flex;
+}
+
+.header_container {
+  --grid-container-width: 1170px;
+  padding-top: 16px;
   justify-content: space-between;
   align-items: center;
-  width: 1170px;
-  height: 48px;
-  flex-shrink: 0;
   margin: 0 auto;
 }
 
@@ -70,7 +71,7 @@
   cursor: pointer;
 }
 
-.header__right span {
+.header__right div {
   position: relative;
 }
 
@@ -82,17 +83,7 @@
   z-index: 2;
 }
 
-.header__submit {
-  display: flex;
-  width: 129px;
-  height: 48px;
-  padding: 13px 24px;
-  flex-shrink: 0;
-  margin-left: 30px;
-  text-align: center;
-  font-size: toRem(14);
-  font-weight: 500;
-  line-height: toRem(23);
-  letter-spacing: -0.3px;
-  gap: 10;
+.header__signup {
+ padding: 13px 24px;
+ margin-left: 30px;
 }

@@ -5,28 +5,24 @@
 
 .banner {
   font-family: $fontPrimary;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   position: relative;
+  background-color: $bgColor;
+  padding-bottom: 393px;
 }
 
 .banner__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: 136px;
   position: relative;
   z-index: 3;
 }
 
 .banner__content-title {
-  width: 770px;
-  height: 144px;
+  max-width: 770px;
   flex-shrink: 0;
   color: $textHeading;
   text-align: center;
@@ -35,11 +31,11 @@
   font-weight: 500;
   line-height: toRem(78);
   letter-spacing: -2px;
-  z-index: 2;
+
 }
 
 .banner__content-description {
-  margin-top: 39px;
+  // margin-top: 39px;
   width: 669.302px;
   height: 47.95px;
   flex-shrink: 0;
@@ -51,22 +47,18 @@
   font-weight: 400;
   line-height: toRem(28);
   letter-spacing: -0.3px;
-  padding: 0 70px;
+  padding: 45px 0 136px;
 }
 
 .banner__footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
   gap: 10px;
 }
 
-.banner__shop {
-  font-size: toRem(15);
-  height: 55.941px;
+.banner__shop{
   padding: 18px 32px;
-  z-index: -2;
 }
 
 .banner__button {
@@ -125,7 +117,7 @@
 
 .persons1 {
   top: 616px;
-  right: 1075px;
+  right: 1085px;
 }
 
 .shape1 {

@@ -5,8 +5,9 @@
 
 .logos {
   width: 100%;
-  height: 162.851px;
   flex-shrink: 0;
+  padding-bottom: 120px;
+  background-color: #fff;
 }
 
 .logos__inside {
@@ -18,8 +19,7 @@
 }
 
 .logos__title {
-  width: 793px;
-  height: 35px;
+  max-width: 793px;
   color: #000;
   text-align: center;
   font-size: toRem(36);
@@ -29,9 +29,6 @@
   letter-spacing: -1px;
 }
 
-.logos__list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 105.04px;
+.logos__list{
+  text-align: center;
 }

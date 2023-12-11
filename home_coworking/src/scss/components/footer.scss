@@ -12,10 +12,8 @@
   color: #fff;
 }
 
-.footer__inside {
+.footer__container {
   margin: 100px auto;
-  width: calc(100% - 375px * 2);
-  max-height: 546px;
   display: flex;
   gap: 0 30px;
   justify-content: space-between;

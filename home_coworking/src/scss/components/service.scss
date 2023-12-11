@@ -4,14 +4,16 @@
 }
 
 .service {
-  width: 100%;
-  display: flex;
-  justify-content: center;
   font-family: $fontPrimary;
+  background-color: #fff;
 }
 
-.service__inside {
-  margin-top: 120px;
+.service__container {
+  --grid-container-width: 1240px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+  text-align: center;
 }
 
 .service__content {
@@ -29,8 +31,8 @@
   font-weight: 500;
   line-height: toRem(56);
   letter-spacing: -2px;
-  width: 970px;
-  height: 101px;
+  max-width: 970px;
+  z-index: 3;
 }
 .service__content-subtitle {
   color: $textText;
@@ -41,16 +43,13 @@
   font-weight: 400;
   line-height: toRem(28);
   letter-spacing: -0.3px;
-  width: 970px;
+  max-width: 970px;
   height: auto;
 }
 
 .service__card {
   margin-top: 80px;
-  width: 1170px;
-  height: 330px;
   flex-shrink: 0;
-  display: flex;
   gap: 30px;
   justify-content: center;
   position: relative;
@@ -100,31 +99,18 @@
   line-height: toRem(26);
 }
 
-.service__link{
-  width: 100%;
-  display: flex;
-  justify-content: center
-}
-
 .service__button {
   margin-top: 70px;
   margin-bottom: 120px;
   display: inline-flex;
-  height: 55.941px;
   padding: 18px 32px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
   font-size: toRem(15);
   line-height: toRem(24);
   letter-spacing: -0.3px;
 }
 
-.service__shape{
+.service__shape {
   position: absolute;
   right: -70px;
   bottom: 0;
 }
-
-

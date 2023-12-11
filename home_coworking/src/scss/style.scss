@@ -3,6 +3,8 @@
 
 @import "./abstracts/variables.scss";
 @import "./base/reset.scss";
+@import "./base/root.scss";
+@import "./layout/grid.scss";
 @import "./components/header.scss";
 @import "./components/banner.scss";
 @import "./components/button.scss";
@@ -17,4 +19,3 @@
 @import "./components/cta.scss";
 @import "./components/review.scss";
 @import "./components/footer.scss";
-

@@ -1,20 +1,27 @@
+@function toRem($value) {
+  $remValue: ($value / 16) * 1rem;
+  @return $remValue;
+}
 .button {
-  position: relative;
-  z-index: 2;
-  border-radius: 5px;
-  background-color: $actionBlue;
-  color: #fff;
-  text-align: center;
-  font-weight: 500;
-  text-transform: uppercase;
-  border: 1px solid transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  cursor: pointer;
-  transition:0.2s ease;
-  &:hover{
-    background-color: #1344e8;
+  transition: 0.2s ease;
+  color: #fff;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  text-transform: uppercase;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #5899fd;
   }
+}
+
+.button--primary {
+  background-color: $actionBlue;
+  color: white;
 }
