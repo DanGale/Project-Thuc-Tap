@@ -45,7 +45,7 @@
         </section>
 
         <section class="banner">
-            <div>
+            <div class="container">
                 <div class="banner__content">
                     <h1 class="banner__content-title">
                         Everything we do to make <span>work better.</span>
@@ -136,7 +136,7 @@
         </section>
 
         <section class="logos">
-            <div class="logos__inside">
+            <div class="container logos__container">
                 <div class="logos__title">
                     Working with the most trusted brands in the industry
                 </div>
@@ -312,13 +312,13 @@
                 </h3>
 
                 <div class="portfolio__flex-top row">
-                    <div class="portfolio__card">
+                    <div class="portfolio__card col">
                         <img class="portfolio__img1" src="./images/portfolio1.png" alt="">
                         <div class="portfolio__card-title">
                             New York
                         </div>
                     </div>
-                    <div class="portfolio__card">
+                    <div class="portfolio__card col">
                         <img class="portfolio__img2" src="./images/portfolio2.png" alt="">
                         <div class="portfolio__card-title">
                             Miami
@@ -327,13 +327,13 @@
                 </div>
 
                 <div class="portfolio__flex-bottom row">
-                    <div class="portfolio__card">
+                    <div class="portfolio__card col">
                         <img class="portfolio__img3" src="./images/portfolio3.png" alt="">
                         <div class="portfolio__card-title">
                             New York
                         </div>
                     </div>
-                    <div class="portfolio__card">
+                    <div class="portfolio__card col">
                         <img class="portfolio__img4" src="./images/portfolio4.png" alt="">
                         <div class="portfolio__card-title">
                             Miami
@@ -347,34 +347,35 @@
         </section>
 
         <section class="pricing">
-            <div class="pricing__top">
-                <h3 class="pricing__title">
-                    Set up your office, pick a plan later
-                </h3>
-                <p class="pricing__subtitle">
-                    Try Shopify free for 14 days, no credit card required
-                </p>
-            </div>
-
             <div class="container container-price row">
-                <div class="pricing__tag">
-                    <div class="pricing__month">
-                        <div class="pricing__monthly">
-                            Monthly
-                        </div>
-                        <div class="pricing__toggle">
-                            <input type="checkbox" id="pricing__checkbox">
-                            <label for="pricing__checkbox" class="toggle__button"></label>
-                        </div>
+                <div class="row flex-column">
+                    <div class="pricing__top">
+                        <h3 class="pricing__title">
+                            Set up your office, pick a plan later
+                        </h3>
+                        <p class="pricing__subtitle">
+                            Try Shopify free for 14 days, no credit card required
+                        </p>
                     </div>
-
-                    <div class="pricing__year">
-                        <div class="pricing__yearly">
-                            Yearly
+                    
+                    <div class="pricing__tag">
+                        <div class="pricing__month">
+                            <div class="pricing__monthly">
+                                Monthly
+                            </div>
+                            <div class="pricing__toggle">
+                                <input type="checkbox" id="pricing__checkbox">
+                                <label for="pricing__checkbox" class="toggle__button"></label>
+                            </div>
                         </div>
-                        <a href="#" class="pricing__save">
-                            Save 20%
-                        </a>
+                        <div class="pricing__year">
+                            <div class="pricing__yearly">
+                                Yearly
+                            </div>
+                            <a href="#" class="pricing__save">
+                                Save 20%
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -483,55 +484,60 @@
         </section>
 
         <section class="review">
-            <div class="review__head">
-                <h2 class="review__title">
-                    What our clients are saying about us
-                </h2>
-                <div class="review__subtitle">
-                    Customer satisfaction is a primary goal for our company
+            <div class="container">
+                <div class="review__head">
+                    <h2 class="review__title">
+                        What our clients are saying about us
+                    </h2>
+                    <div class="review__subtitle">
+                        Customer satisfaction is a primary goal for our company
+                    </div>
                 </div>
-            </div>
 
-            <div class="review__cards row">
-                <div class="review__card">
-                    <img src="./images/avatar1.png" alt="" class="review__card-img">
-                    <div class="review__user">
-                        <h3 class="review__name">Monica Smith</h3>
-                        <div class="review__major">Web Designer</div>
+                <div class="review__cards row">
+                    <div class="review__card">
+                        <img src="./images/avatar1.png" alt="" class="review__card-img">
+                        <div class="review__user">
+                            <h3 class="review__name">Monica Smith</h3>
+                            <div class="review__major">Web Designer</div>
+                        </div>
+                        <img src="./images/Stars.png" alt="" class="review__star">
+                        <div class="review__content">
+                            Overall experience is awesome!! I'm a visual thinker, and I couldn't function without an
+                            office
+                            like this.
+                        </div>
                     </div>
-                    <img src="./images/Stars.png" alt="" class="review__star">
-                    <div class="review__content">
-                        Overall experience is awesome!! I'm a visual thinker, and I couldn't function without an office
-                        like this.
+                    <div class="review__card">
+                        <img src="./images/avatar2.png" alt="" class="review__card-img">
+                        <div class="review__user">
+                            <h3 class="review__name">Vincent Smith</h3>
+                            <div class="review__major">Web Designer</div>
+                        </div>
+                        <img src="./images/Stars.png" alt="" class="review__star">
+                        <div class="review__content">
+                            Overall experience is awesome!! I'm a visual thinker, and I couldn't function without an
+                            office
+                            like this.
+                        </div>
+                    </div>
+                    <div class="review__card">
+                        <img src="./images/avatar3.png" alt="" class="review__card-img">
+                        <div class="review__user">
+                            <h3 class="review__name">Stella Smith</h3>
+                            <div class="review__major">Web Designer</div>
+                        </div>
+                        <img src="./images/Stars.png" alt="" class="review__star">
+                        <div class="review__content">
+                            Overall experience is awesome!! I'm a visual thinker, and I couldn't function without an
+                            office
+                            like this.
+                        </div>
                     </div>
                 </div>
-                <div class="review__card">
-                    <img src="./images/avatar2.png" alt="" class="review__card-img">
-                    <div class="review__user">
-                        <h3 class="review__name">Vincent Smith</h3>
-                        <div class="review__major">Web Designer</div>
-                    </div>
-                    <img src="./images/Stars.png" alt="" class="review__star">
-                    <div class="review__content">
-                        Overall experience is awesome!! I'm a visual thinker, and I couldn't function without an office
-                        like this.
-                    </div>
-                </div>
-                <div class="review__card">
-                    <img src="./images/avatar3.png" alt="" class="review__card-img">
-                    <div class="review__user">
-                        <h3 class="review__name">Stella Smith</h3>
-                        <div class="review__major">Web Designer</div>
-                    </div>
-                    <img src="./images/Stars.png" alt="" class="review__star">
-                    <div class="review__content">
-                        Overall experience is awesome!! I'm a visual thinker, and I couldn't function without an office
-                        like this.
-                    </div>
-                </div>
-            </div>
 
-            <img src="./images/shape3.png" alt="" class="review__shape">
+                <img src="./images/shape3.png" alt="" class="review__shape">
+            </div>
         </section>
 
         <section class="footer">

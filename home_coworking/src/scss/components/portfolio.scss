@@ -9,6 +9,13 @@
   padding: 120px;
 }
 
+.portfolio__container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .portfolio__inside {
   margin-top: 120px;
@@ -83,4 +90,10 @@
   display: flex;
   justify-content: flex-start;
   gap: 0 30px;
+}
+
+.portfolio__shape {
+  position: absolute;
+  left: calc(284px / 1920px) * 100%;
+  top: calc(890px / 1920px) * 100%;
 }

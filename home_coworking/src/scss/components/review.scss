@@ -14,12 +14,14 @@
   align-items: center;
   position: relative;
   padding-bottom: 120px;
+  text-align: center;
 }
 
 .review__shape {
   position: absolute;
-  top: 311px;
-  left: 295px;
+  top: 74%;
+  left: 15%;
+  z-index: 1;
 }
 
 .review__head {
@@ -53,6 +55,7 @@
 .review__cards {
   justify-content:center;
   gap: 30px; 
+  position: relative;
   z-index: 3;
 }
 

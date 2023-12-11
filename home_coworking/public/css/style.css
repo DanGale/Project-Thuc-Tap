@@ -318,7 +318,7 @@ a {
 
 :root {
   --grid: 12;
-  --grid-container-width: 1200px;
+  --grid-container-width: 1528px;
   --grid-container-gap: 15px;
   --grid-col-gap-vertical: 30px;
   --grid-col-gap-horizontal: 30px;
@@ -346,6 +346,12 @@ a {
   padding-top: var(--grid-col-gap-horizontal);
 }
 
+.flex-column {
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
 @media (min-width: 768px) {
   .col {
     width: calc(var(--col-sm) / var(--grid) * 100%);
@@ -367,7 +373,6 @@ a {
 }
 
 .header_container {
-  --grid-container-width: 1170px;
   padding-top: 16px;
   justify-content: space-between;
   align-items: center;
@@ -724,7 +729,7 @@ a {
 
 .service__shape {
   position: absolute;
-  right: -70px;
+  right: -3%;
   bottom: 0;
 }
 
@@ -758,7 +763,7 @@ body {
   background-color: #fff;
 }
 
-.logos__inside {
+.logos__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1099,7 +1104,7 @@ body {
   border-radius: 20px;
   background: #fff;
   box-shadow: 0px 60px 40px 0px rgba(18, 2, 47, 0.1);
-  padding: 60px 100px 0 100px;
+  padding: 60px 100px 40px 100px;
 }
 
 .about__content {
@@ -1162,13 +1167,20 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-bottom: 40px;
 }
 
 .portfolio {
   background-color: #fff;
   position: relative;
   padding: 120px;
+}
+
+.portfolio__container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .portfolio__inside {
@@ -1246,6 +1258,12 @@ body {
   gap: 0 30px;
 }
 
+.portfolio__shape {
+  position: absolute;
+  left: 14.7916666667%;
+  top: 46.3541666667%;
+}
+
 .pricing {
   display: flex;
   flex-direction: column;
@@ -1255,7 +1273,7 @@ body {
 }
 
 .container-price {
-  --grid-container-width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
 }
 
@@ -1530,12 +1548,14 @@ input:checked + .toggle__button:before {
   align-items: center;
   position: relative;
   padding-bottom: 120px;
+  text-align: center;
 }
 
 .review__shape {
   position: absolute;
-  top: 311px;
-  left: 295px;
+  top: 74%;
+  left: 15%;
+  z-index: 1;
 }
 
 .review__head {
@@ -1569,6 +1589,7 @@ input:checked + .toggle__button:before {
 .review__cards {
   justify-content: center;
   gap: 30px;
+  position: relative;
   z-index: 3;
 }
 

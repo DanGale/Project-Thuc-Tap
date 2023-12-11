@@ -20,6 +20,12 @@
   padding-top: var(--grid-col-gap-horizontal);
 }
 
+.flex-column {
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
 @media (min-width: 768px) {
   .col {
     width: calc(var(--col-sm) / var(--grid) * 100%);
