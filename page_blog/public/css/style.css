@@ -826,6 +826,31 @@ a {
     opacity: 1;
   }
 }
+.tag {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #f8fafc;
+  border-radius: 5px;
+  border: 1px solid #e7e5ea;
+  border-radius: 5px;
+  padding: 30px 35px;
+}
+
+.tag__list a {
+  text-transform: lowercase;
+  color: white;
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: -0.3px;
+  padding: 0 5px;
+  margin: 5px 0;
+}
+
 .archive {
   display: inline-flex;
   flex-direction: column;
