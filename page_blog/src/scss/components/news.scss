@@ -1,0 +1,27 @@
+.news {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 20px;
+  background: $bgbgLight;
+  border-radius: 5px;
+  border: 1px solid $linesGrayLine;
+  border-radius: 5px;
+  padding: 30px 35px;
+}
+
+
+.news__card {
+  display: inline-flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.news__card-text {
+  color: $textText;
+  font-family: $fontDM;
+  font-size: toRem(14);
+  font-style: normal;
+  font-weight: 400;
+  line-height: toLineHeight(24, 14);
+  letter-spacing: -0.3px;
+}

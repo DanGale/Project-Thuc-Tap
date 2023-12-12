@@ -1,0 +1,64 @@
+body {
+  font-family: $fontPrimary;
+  line-height: 1;
+  color: $textText;
+  background-color: #ccc;
+}
+
+a {
+  cursor: pointer;
+}
+
+#root {
+  max-width: 1920px;
+  background-color: #fff;
+  margin: 0 auto;
+  // overflow: hidden;
+}
+
+#top__page {
+  position: relative;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 203px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -20%;
+    bottom: -30%;
+    width: 783.403px;
+    height: 595.023px;
+    border-radius: 783.403px;
+    opacity: 0.4;
+    background: $bgPurpleGradient; // Make sure this variable is defined
+    filter: blur(100px);
+    flex-shrink: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 20%;
+    bottom: -80%;
+    width: 500px;
+    height: 500px;
+    opacity: 0.3;
+    background: $actionBlue; // Make sure this variable is defined
+    filter: blur(100px);
+    flex-shrink: 0;
+  }
+
+  &:nth-child(3) {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 761px;
+    height: 743.782px;
+    opacity: 0.3;
+    background: $actionPurple; // Make sure this variable is defined
+    filter: blur(100px);
+    flex-shrink: 0;
+  }
+}

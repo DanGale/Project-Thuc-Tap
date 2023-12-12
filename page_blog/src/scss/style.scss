@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap");
+
+@import "./abstracts/functions.scss";
+@import "./base/reset.scss";
+@import "./abstracts/variables.scss";
+@import "./components/buttons.scss";
+@import "./layout/layout.scss";
+@import "./utils/utils.scss";
+@import "./components/header.scss";
+@import "./components/nav.scss";
+@import "./components/hero.scss";
+@import "./components/post.scss";
+@import "./components/post-left.scss";
+@import "./components/post-right.scss";
+@import "./components/pagination.scss";
+@import "./components/search.scss";
+@import "./components/news.scss";
+@import "./components/categories.scss";
+@import "./components/titleNews.scss";
+@import "./components/select-box.scss";
+@import "./components/archive.scss";
+@import "./components/sub.scss";
+@import "./components/cta.scss";
+@import "./components/footer.scss";

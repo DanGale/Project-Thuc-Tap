@@ -1,0 +1,12 @@
+#post {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: white;
+  position: relative;
+  z-index: 2;
+}
+
+.container-post {
+  display: flex;
+  gap: 65px;
+}

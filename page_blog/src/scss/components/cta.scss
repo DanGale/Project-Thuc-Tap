@@ -1,0 +1,57 @@
+.container-cta {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin: 0 auto;
+  padding: 108px 178px;
+}
+
+.cta__text {
+  color: $textText;
+  text-align: center;
+  font-size: toRem(22);
+  font-style: normal;
+  font-weight: 400;
+  line-height: toLineHeight(32, 22);
+  letter-spacing: -1px;
+}
+
+.cta__title {
+  color: $textHeading;
+  text-align: center;
+  font-size: toRem(48);
+  font-style: normal;
+  font-weight: 500;
+  line-height: toLineHeight(56, 48);
+  letter-spacing: -2px;
+}
+
+.cta__subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cta__input {
+  max-width: 235px;
+  padding: 15px 18px;
+  background: white;
+  border: 0;
+  outline: none;
+  position: relative;
+  border-radius: 5px;
+  border: 1px solid $linesGrayLine;
+}
+
+.cta__input::placeholder {
+  color: $textText;
+  font-family: $fontDM;
+  font-size: toRem(16);
+  font-style: normal;
+  font-weight: 400;
+  line-height: toLineHeight(26, 16);
+  opacity: 0.7;
+}

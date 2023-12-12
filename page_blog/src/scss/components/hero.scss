@@ -1,0 +1,35 @@
+#hero{
+    margin-top: 139px;
+}
+
+.hero__content {
+  min-width: 870px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px 0;
+}
+
+.hero__content-title {
+  color: $textHeading;
+  text-align: center;
+  font-size: toRem(48);
+  font-style: normal;
+  font-weight: 500;
+  line-height: toLineHeight(56, 48);
+  letter-spacing: -2px;
+}
+
+.hero__content-breadcrumb {
+  color: $textHeading;
+  text-align: center;
+  font-size: toRem(15);
+  font-style: normal;
+  font-weight: 500;
+  line-height: toLineHeight(24, 15);
+  letter-spacing: -0.3px;
+  text-transform: uppercase;
+
+  span {
+    color: $textText;
+  }
+}
