@@ -1,8 +1,12 @@
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $fontPrimary;
   line-height: 1;
   color: $textText;
-  background-color: #ccc;
+  background-color: #e5e5e5;
 }
 
 a {
@@ -13,7 +17,6 @@ a {
   max-width: 1920px;
   background-color: #fff;
   margin: 0 auto;
-  // overflow: hidden;
 }
 
 #top__page {
@@ -31,7 +34,7 @@ a {
     height: 595.023px;
     border-radius: 783.403px;
     opacity: 0.4;
-    background: $bgPurpleGradient; // Make sure this variable is defined
+    background: $bgPurpleGradient;
     filter: blur(100px);
     flex-shrink: 0;
   }
@@ -44,9 +47,10 @@ a {
     width: 500px;
     height: 500px;
     opacity: 0.3;
-    background: $actionBlue; // Make sure this variable is defined
+    background: $actionBlue;
     filter: blur(100px);
     flex-shrink: 0;
+    box-shadow: 600px -500px 0 0 $actionPurple;
   }
 
   &:nth-child(3) {
@@ -57,7 +61,7 @@ a {
     width: 761px;
     height: 743.782px;
     opacity: 0.3;
-    background: $actionPurple; // Make sure this variable is defined
+    background: $actionPurple;
     filter: blur(100px);
     flex-shrink: 0;
   }

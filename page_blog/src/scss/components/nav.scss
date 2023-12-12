@@ -13,4 +13,19 @@
   line-height: toLineHeight(24, 15);
   letter-spacing: -0.3px;
   text-transform: uppercase;
+  position: relative;
+  &.active {
+    color: $textHeading;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      background-color: $actionGreen;
+      border-radius: 50%;
+    }
+  }
 }

@@ -1,14 +1,6 @@
-@function toRem($value) {
-  $remValue: ($value / 16) * 1rem;
-  @return $remValue;
-}
-
 .header {
   background-color: $bgColor;
   font-family: $fontPrimary;
-}
-
-.container{
 }
 
 .header_container {
