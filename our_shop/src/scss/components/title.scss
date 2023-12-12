@@ -1,0 +1,9 @@
+.title {
+  color: $textHeading;
+  font-family: $fontPrimary;
+  font-size: toRem(18);
+  font-style: normal;
+  font-weight: 500;
+  line-height: toLineHeight(28, 18);
+  letter-spacing: 0.4px;
+}

@@ -1,0 +1,55 @@
+.products {
+  width: 75%;
+  padding-left: 30px;
+}
+
+.products__list {
+  margin-top: 25px;
+}
+
+.products__head {
+  padding-bottom: 14px;
+  border-bottom: 1px solid $linesGrayLine;
+  cursor: pointer;
+}
+
+.products__short {
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid $linesGrayLine;
+  background: white;
+  padding: 11px 18px;
+}
+
+.products__card {
+  text-align: center;
+  width: 270px;
+  object-fit: contain;
+  // padding-bottom: 10px;
+}
+
+.products__card-name {
+  color: $textHeading;
+  font-size: toRem(18);
+  font-style: normal;
+  font-weight: 500;
+  line-height: toLineHeight(28, 18); /* 155.556% */
+  letter-spacing: 0.4px;
+}
+
+.products__card-from {
+  color: $textText;
+  text-align: center;
+
+  font-family: $fontDM;
+  font-size: toRem(16);
+  font-style: normal;
+  font-weight: 400;
+  line-height: toLineHeight(26, 16); /* 162.5% */
+}
+
+.products__list {
+  gap: 40px 15px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid $linesGrayLine;
+}

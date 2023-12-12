@@ -1,0 +1,12 @@
+.sidebar {
+  width: 25%;
+  padding: 0 4px 0 35px;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar__head {
+  padding-bottom: 25px;
+  border-bottom: 1px solid $linesGrayLine;
+  cursor: pointer;
+}
