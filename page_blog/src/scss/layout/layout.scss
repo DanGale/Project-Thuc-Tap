@@ -1,8 +1,10 @@
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
+  flex-wrap: wrap;
   margin: 0 auto;
+  padding-left: var(--grid-container-gap);
+  padding-right: var(--grid-container-gap);
 }
-
 
 .flex {
   display: flex;

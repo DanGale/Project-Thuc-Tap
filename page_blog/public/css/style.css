@@ -320,6 +320,11 @@ a {
   color: black;
 }
 
+:root {
+  --grid: 12;
+  --grid-container-gap: 15px;
+}
+
 .btn {
   display: inline-flex;
   justify-content: center;
@@ -369,8 +374,11 @@ a {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
+  flex-wrap: wrap;
   margin: 0 auto;
+  padding-left: var(--grid-container-gap);
+  padding-right: var(--grid-container-gap);
 }
 
 .flex {

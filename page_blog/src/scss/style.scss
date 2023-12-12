@@ -3,10 +3,12 @@
 
 @import "./abstracts/functions.scss";
 @import "./base/reset.scss";
+@import "./base/root.scss";
 @import "./abstracts/variables.scss";
 @import "./components/buttons.scss";
 @import "./layout/layout.scss";
 @import "./utils/utils.scss";
+@import "./layout/grid.scss";
 @import "./components/header.scss";
 @import "./components/nav.scss";
 @import "./components/hero.scss";
