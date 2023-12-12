@@ -28,7 +28,7 @@
   }
 }
 
-.container--cta{
+.container--cta {
   position: relative;
   width: 100%;
   padding-top: 16px;
@@ -39,7 +39,7 @@
   align-items: center;
   gap: 30px;
   margin: 0 auto;
-  padding: 108px 178px;
+  padding: 170px 178px;
 }
 
 .cta__text {
@@ -50,6 +50,7 @@
   font-weight: 400;
   line-height: toLineHeight(32, 22);
   letter-spacing: -1px;
+  margin-bottom: 50px;
 }
 
 .cta__title {

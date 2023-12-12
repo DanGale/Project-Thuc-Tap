@@ -1,0 +1,31 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav__list a {
+  color: $textText;
+  font-size: toRem(15);
+  font-style: normal;
+  font-weight: 500;
+  line-height: toLineHeight(24, 15);
+  letter-spacing: -0.3px;
+  text-transform: uppercase;
+  position: relative;
+  &.active {
+    color: $textHeading;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      background-color: $actionGreen;
+      border-radius: 50%;
+    }
+  }
+}
