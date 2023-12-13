@@ -1,4 +1,14 @@
-.devices__list .row{
+.devices__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $linesGrayLine;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.devices__list .row {
   padding-bottom: 40px;
   border-bottom: 1px solid $linesGrayLine;
 }
@@ -12,7 +22,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 25px;
+  // padding-bottom: 25px;
   border-bottom: 1px solid $linesGrayLine;
 }
 
