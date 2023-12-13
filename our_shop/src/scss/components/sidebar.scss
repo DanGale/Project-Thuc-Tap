@@ -1,12 +1,40 @@
-.sidebar {
-  width: 25%;
-  padding: 0 4px 0 35px;
-  position: sticky;
-  top: 0;
-}
-
-.sidebar__head {
+.sidebar__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-bottom: 25px;
   border-bottom: 1px solid $linesGrayLine;
+  margin-bottom: 20px;
   cursor: pointer;
+}
+
+.sidebar__range-input {
+  width: 100%;
+  cursor: pointer;
+}
+
+.sidebar__range-tooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar__range-price {
+  color: $textText;
+  font-size: toRem(14);
+  line-height: toLineHeight(24, 14); /* 171.429% */
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  text-transform: uppercase;
+}
+
+.sidebar__range-filter {
+  color: $actionBlue;
+  font-size: toRem(14);
+  line-height: toLineHeight(24, 14); /* 171.429% */
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  text-transform: uppercase;
 }

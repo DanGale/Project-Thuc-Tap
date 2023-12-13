@@ -1,18 +1,17 @@
 .nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__menu {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   gap: 30px;
 }
 
-.nav__list a {
-  color: $textText;
-  font-size: toRem(15);
-  font-style: normal;
-  font-weight: 500;
-  line-height: toLineHeight(24, 15);
-  letter-spacing: -0.3px;
-  text-transform: uppercase;
+.nav__menu-item a {
   position: relative;
   &.active {
     color: $textHeading;
@@ -27,5 +26,30 @@
       background-color: $actionGreen;
       border-radius: 50%;
     }
+  }
+}
+
+.nav__buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.nav__buttons-bag {
+  padding-right: 10px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 30%;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border: 2px solid white;
+    border-radius: 50%;
+    z-index: 1;
   }
 }

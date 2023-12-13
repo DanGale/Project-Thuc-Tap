@@ -1,0 +1,29 @@
+.devices__list .row{
+  padding-bottom: 40px;
+  border-bottom: 1px solid $linesGrayLine;
+}
+
+.devices__list {
+  padding-top: 30px;
+}
+
+.devices__heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 25px;
+  border-bottom: 1px solid $linesGrayLine;
+}
+
+.devices__filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 65px;
+  border-radius: 5px;
+  border: 1px solid $linesGrayLine;
+  background: #fff;
+  padding: 11px 18px;
+  //   margin-left: 100px;
+}

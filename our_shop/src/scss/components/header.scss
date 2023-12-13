@@ -1,36 +1,8 @@
-
-.container--header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-.header__button-search {
-  cursor: pointer;
-}
-
-.header__button-bag {
-  cursor: pointer;
-  padding-right: 10px;
-  position: relative;
-}
-
-.header__button-bag::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 30%;
-  width: 10px;
-  height: 10px;
-  background-color: red;
-  border: 2px solid white;
-  border-radius: 50%;
-  z-index: 1;
+.header {
+  background-image: url("../images/BG.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 15px;
+  margin: 0 auto;
+  margin-bottom: 100px;
 }

@@ -1,92 +1,41 @@
-#cta {
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    left: -20%;
-    top: -60%;
-    width: 783.403px;
-    height: 595.023px;
-    border-radius: 783.403px;
-    opacity: 0.4;
-    background: $actionPurple;
-    filter: blur(100px);
-    flex-shrink: 0;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    right: -10%;
-    bottom: -50%;
-    width: 500px;
-    height: 500px;
-    opacity: 0.3;
-    background: $actionBlue;
-    filter: blur(100px);
-    flex-shrink: 0;
-  }
-}
-
-.container--cta {
-  position: relative;
-  width: 100%;
-  padding-top: 16px;
-  padding-bottom: 203px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
+.cta {
+  background-image: url("../images/BG-cta.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 0;
   margin: 0 auto;
-  padding: 170px 178px;
 }
 
-.cta__text {
-  color: $textText;
-  text-align: center;
-  font-size: toRem(22);
-  font-style: normal;
-  font-weight: 400;
-  line-height: toLineHeight(32, 22);
-  letter-spacing: -1px;
-  margin-bottom: 50px;
+.cta__main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 970px;
+  margin: 0 auto;
 }
 
-.cta__title {
+
+.cta__main-title {
   color: $textHeading;
   text-align: center;
   font-size: toRem(48);
   font-style: normal;
   font-weight: 500;
-  line-height: toLineHeight(56, 48);
+  line-height: toLineHeight(56, 48); /* 116.667% */
   letter-spacing: -2px;
 }
 
-.cta__subscribe {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.cta__input {
-  max-width: 235px;
-  padding: 15px 18px;
-  background: white;
-  border: 0;
-  outline: none;
-  position: relative;
-  border-radius: 5px;
-  border: 1px solid $linesGrayLine;
-}
-
-.cta__input::placeholder {
+.cta__main-desc {
   color: $textText;
-  font-family: $fontDM;
-  font-size: toRem(16);
+  text-align: center;
+  font-size: toRem(22);
   font-style: normal;
   font-weight: 400;
-  line-height: toLineHeight(26, 16);
-  opacity: 0.7;
+  line-height: toLineHeight(32, 22); /* 145.455% */
+  letter-spacing: -1px;
+}
+
+.cta__main-button{
+    text-align: center;
+  padding-top: 47px;
 }

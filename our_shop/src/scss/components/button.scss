@@ -1,0 +1,30 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  color: #fff;
+  background: $actionBlue;
+  cursor: pointer;
+  &:hover {
+    background: #3761eb;
+  }
+}
+
+.btn--p1 {
+  padding: 13px 44px;
+}
+
+.btn--p2 {
+  padding: 18px 22px;
+}
+
+.btn--p3 {
+  padding: 18px 32px;
+}
+
+.btn-w1 {
+  width: 129px;
+}
