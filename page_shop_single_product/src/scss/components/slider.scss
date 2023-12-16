@@ -1,0 +1,26 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.slider__sub {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.slider__main {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background-image: url("../../public/images/Zoom\ in.svg");
+    background-size: cover;
+  }
+}
