@@ -1,0 +1,41 @@
+.similiar {
+  padding: 100px 0 120px;
+}
+
+.similiar__title {
+  color: $textHeading;
+  text-align: center;
+  font-size: toRem(42);
+  font-style: normal;
+  font-weight: 500;
+  line-height: toLineHeight(50, 42); /* 119.048% */
+  letter-spacing: -0.84px;
+}
+
+.similiar__card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.similiar__card-name {
+  color: $textHeading;
+  text-align: center;
+  font-size: toRem(18);
+  font-style: normal;
+  font-weight: 500;
+  line-height: toLineHeight(28, 18); /* 155.556% */
+  letter-spacing: 0.4px;
+}
+
+.similiar__card-price {
+  color: $textText;
+  text-align: center;
+
+  font-family: $fontDM;
+  font-size: toRem(16);
+  font-style: normal;
+  font-weight: 400;
+  line-height: toLineHeight(26, 16); /* 162.5% */
+}
