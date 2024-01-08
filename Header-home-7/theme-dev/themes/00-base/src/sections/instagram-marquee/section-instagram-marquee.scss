@@ -1,0 +1,71 @@
+// start example
+/*
+  It is example instagram.
+  So that we just create by a grid for render instagram elements.
+  If you want to make other layout or wait for us fix it. Let remove this code.
+*/
+.base-insta {
+  xo-instagram-item {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    a {
+      display: block;
+      height: 100%;
+    }
+  }
+
+  img,
+  svg {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+  }
+}
+// end example
+
+.xo-insta-marquee {
+  --space: 0;
+  color: rgba(var(--color-accent));
+  fill: rgba(var(--color-accent));
+}
+
+.xo-insta-marquee__example,
+.xo-insta-marquee__gallery {
+  margin: 0 var(--space);
+  .xo-image {
+    height: 100%;
+    .placeholder-svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.xo-insta-marquee__gallery {
+  object-fit: cover;
+  position: relative;
+  width: var(--item_width);
+  height: var(--item_width);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.xo-insta-marquee__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.xo-insta-marquee__example {
+  width: var(--item_width);
+  height: var(--item_width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+}

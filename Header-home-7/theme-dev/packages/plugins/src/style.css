@@ -1,0 +1,1 @@
+xo-parallax-scroll[xo-keyframes*=groupImg] img{visibility:visible}xo-parallax-scroll[xo-keyframes*=groupImg] img+img{position:absolute;top:0;left:0;width:100%;height:100%;visibility:hidden}.xo-navigate-smooth{animation:xoNavigateSmooth both .3s ease}@keyframes xoNavigateSmooth{0%{opacity:1}to{opacity:0}}

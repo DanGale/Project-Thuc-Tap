@@ -1,0 +1,17 @@
+{
+  "name": "Instagram marquee",
+  "settings": {
+    "space": "Spacing between items",
+    "speed": "Marquee speed",
+    "marquee_stop": "Pause when hovered",
+    "marquee_right_to_left": "Marquee right to left",
+    "item_width": "Item width",
+    "token": "Instagram asset token"
+  },
+  "blocks":{
+
+  },
+  "presets" : {
+    "name" : "Instagram marquee"
+  }
+}

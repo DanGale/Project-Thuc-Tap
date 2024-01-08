@@ -1,0 +1,7 @@
+{
+  "name": "Reset password",
+  "settings": {},
+  "presets" : {
+    "name" : "main-reset-password"
+  }
+}

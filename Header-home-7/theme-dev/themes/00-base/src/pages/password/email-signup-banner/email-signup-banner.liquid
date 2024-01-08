@@ -1,0 +1,84 @@
+{% comment %} TODO: Thieu style cho button {% endcomment %}
+{% comment %} TODO: Thieu model nhap password {% endcomment %}
+
+{{ 'section-email-signup-banner.css' | asset_url | stylesheet_tag }}
+{{ 'field-input.css' | asset_url | stylesheet_tag }}
+{{ 'heading.css' | asset_url | stylesheet_tag }}
+
+<div {% render 'section-attr' %}>
+  <xo-container class='xo-subscribe'>
+    <xo-tabs class='xo-subscribe__content'>
+      <xo-tabs-pane xo-name='subscribe-enter-email' xo-active>
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'banner' -%}
+              <div class='xo-subscribe__banner'>
+                {% if block.settings.banner != blank %}
+                  <img
+                    src='{{ block.settings.banner | image_url: width: 240 }}'
+                    width='auto'
+                    height='auto'
+                    alt=''
+                    loading='lazy'
+                  >
+                {% endif %}
+                <h2>{{ block.settings.banner_heading }}</h2>
+              </div>
+            {%- when 'content_description' -%}
+              <div class='xo-subscribe__description' {{ block.shopify_attributes }}>
+                <h3>{{ block.settings.title }}</h3>
+                <p>{{ block.settings.description }}</p>
+              </div>
+          {% endcase %}
+        {%- endfor -%}
+        {% render 'space', value: '2.8rem', value_mobile: '1.6rem' %}
+        {% form 'customer', class: 'newsletter-form' %}
+          {% render 'form-error', form: form %}
+          {% assign emailValue = form.email %}
+          {% assign emailLabel = 'sections.email_signup.email' | t %}
+          <div class='xo-subcribe__field-input'>
+            {% render 'field-input', type: 'text', name: 'contact[email]', value: emailValue, label: emailLabel %}
+            <div class='xo-footer__field-button'>
+              {% render 'button', text: 'Subscribe', size: 'md', block: true %}
+            </div>
+          </div>
+        {% endform %}
+        {% render 'space', value: '3.8rem', value_mobile: '1.6rem' %}
+        <xo-tabs-trigger xo-name='subscribe-enter-password' style='display: flex; justify-content: center;'>
+          {% assign enterPassLabel = 'Enter using password' %}
+          {% render 'button', text: enterPassLabel, size: 'md', style: 'link' %}
+        </xo-tabs-trigger>
+      </xo-tabs-pane>
+
+      <xo-tabs-pane xo-name='subscribe-enter-password' style='height: 100%;'>
+        <div class='xo-subcribe__password'>
+          {% comment %}
+            <xo-tabs-trigger xo-name='subscribe-enter-email'>
+              {% render 'icon', name: 'close' %}
+            </xo-tabs-trigger>
+          {% endcomment %}
+          <h2>{{ 'general.password_page.login_form_heading' | t }}</h2>
+          {% render 'space', value: '3.6rem', value_mobile: '1.6rem' %}
+          {%- form 'storefront_password' -%}
+            <div class='content__input-password'>
+              <div class='xo-subcribe__field-input'>
+                {% assign passwordLabel = 'general.password_page.login_form_password_placeholder' | t %}
+                {% render 'field-input', type: 'password', name: 'password', label: passwordLabel %}
+                <div class='xo-footer__field-button'>
+                  {% assign btnLabel = 'general.password_page.login_form_submit' | t %}
+                  {% render 'button', text: btnLabel, size: 'md', block: true %}
+                </div>
+              </div>
+            </div>
+          {%- endform -%}
+          {% render 'space', value: '3.6rem', value_mobile: '1.6rem' %}
+          <div class='xo-subcribe__password-text'>
+            {{ 'general.password_page.admin_link_text' | t }}
+            {% assign btnTextLogin = 'general.password_page.admin_link_btn' | t %}
+            {% render 'button', text: btnTextLogin, style: 'link-2', link: routes.account_login_url %}
+          </div>
+        </div>
+      </xo-tabs-pane>
+    </xo-tabs>
+  </xo-container>
+</div>

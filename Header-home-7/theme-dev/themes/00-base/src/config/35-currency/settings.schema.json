@@ -1,0 +1,19 @@
+{
+  "name": "t:name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:settings.currency_format.content"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:settings.currency_format.paragraph"
+    },
+    {
+      "type": "checkbox",
+      "id": "currency_code_enabled",
+      "label": "t:settings.currency_format.label",
+      "default": true
+    }
+  ]
+}

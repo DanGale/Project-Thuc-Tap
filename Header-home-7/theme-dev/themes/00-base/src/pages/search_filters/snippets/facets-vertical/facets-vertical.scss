@@ -1,0 +1,20 @@
+.xo-facets-vertical {
+  padding-bottom: 4rem;
+}
+
+.xo-facets-vertical__item {
+  display: flex;
+  align-items: center;
+  gap: 2.6rem;
+}
+
+.xo-facets-vertical__caption {
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: rgba(var(--color-foreground), 0.6);
+}
+
+.xo-facets-vertical__filters {
+  padding-top: 5.4rem;
+}

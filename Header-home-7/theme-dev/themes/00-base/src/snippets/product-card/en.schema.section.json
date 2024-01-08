@@ -1,0 +1,35 @@
+{
+  "product_card_heading": {
+    "content": "Product Card"
+  },
+  "product_card_show_image": {
+    "label": "Show image"
+  },
+  "product_card_show_secondary_image": {
+    "label": "Show second image on hover"
+  },
+  "product_card_show_vendor": {
+    "label": "Show vendor"
+  },
+  "product_card_show_description": {
+    "label": "Show description"
+  },
+  "product_card_show_quick_add": {
+    "label": "Show quick add"
+  },
+  "product_card_show_quick_view": {
+    "label": "Show quick view"
+  },
+  "product_card_show_price": {
+    "label": "Show price"
+  },
+  "product_card_show_badge": {
+    "label": "Show badge"
+  },
+  "product_card_aspect_ratio": {
+    "label": "Aspect ratio"
+  },
+  "card_color_scheme": {
+    "label": "Card color scheme"
+  }
+}

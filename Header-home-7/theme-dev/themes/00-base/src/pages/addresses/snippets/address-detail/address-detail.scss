@@ -1,0 +1,27 @@
+.xo-address-detail__title {
+  font-size: fz(heading, 1.8);
+  line-height: lh(heading, 0.22);
+  font-weight: 500;
+  color: rgb(var(--color-foreground));
+  padding-bottom: 2.7rem;
+}
+
+.xo-address-detail__user {
+  display: flex;
+  font-weight: 500;
+  color: rgb(var(--color-foreground));
+}
+
+.xo-address-detail__user-name {
+  padding-inline-end: 1.2rem;
+  border-inline-end: 0.1rem solid rgba(var(--color-foreground), 0.15);
+}
+
+.xo-address-detail__user-phone {
+  padding-inline-start: 1.2rem;
+}
+
+.xo-address-detail__address {
+  padding-top: 1rem;
+  padding-bottom: 1.3rem;
+}

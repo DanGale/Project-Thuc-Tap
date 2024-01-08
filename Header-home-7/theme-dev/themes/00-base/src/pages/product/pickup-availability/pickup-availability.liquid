@@ -1,0 +1,4 @@
+{%- assign pick_up_availabilities = product_variant.store_availabilities | where: 'pick_up_enabled', true -%}
+
+{% render 'pickup-availability-list', pick_up_availabilities: pick_up_availabilities %}
+{% render 'pickup-availability-item', pick_up_availabilities: pick_up_availabilities %}

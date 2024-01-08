@@ -1,0 +1,22 @@
+.xo-text-marquee {
+  --space: 0;
+  background-color: rgba(var(--color-background));
+  color: rgba(var(--color-accent));
+  fill: rgba(var(--color-accent));
+}
+
+.xo-text-marquee__item {
+  --color: rgba(var(--color-accent));
+  --font-size: 5;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space);
+  color: var(--color);
+  font-size: var(--font-size);
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+}

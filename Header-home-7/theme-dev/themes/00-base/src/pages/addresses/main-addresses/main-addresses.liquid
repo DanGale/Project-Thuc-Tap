@@ -1,0 +1,27 @@
+{{ 'section-main-addresses.css' | asset_url | stylesheet_tag }}
+{{ 'address-detail.css' | asset_url | stylesheet_tag }}
+{{ 'address-table.css' | asset_url | stylesheet_tag }}
+{{ 'table.css' | asset_url | stylesheet_tag }}
+
+<div {% render 'section-attr' %}>
+  <xo-container class='xo-address-list'>
+    <xo-animate xo-cascade>
+      {% liquid
+        assign account_return = 'customer.account.return' | t
+        render 'button', text: account_return, link: routes.account_url, style: 'link'
+        render 'space', value: '5rem'
+      %}
+    </xo-animate>
+
+    <xo-animate xo-cascade>
+      <xo-grid>
+        <div style='--md: 12; --lg: 9'>
+          {% render 'address-table' %}
+        </div>
+        <div style='--md: 12; --lg: 3'>
+          {% render 'address-detail' %}
+        </div>
+      </xo-grid>
+    </xo-animate>
+  </xo-container>
+</div>

@@ -1,0 +1,15 @@
+{
+ "enable_video_looping": {
+  "label": "Enable video looping"
+ },
+ "video": {
+  "label": "Video"
+ },
+ "video_url": {
+  "label": "Video url",
+  "info": "Use a YouTube or Vimeo URL"
+ },
+ "cover_image": {
+  "label": "Cover image"
+ }
+}

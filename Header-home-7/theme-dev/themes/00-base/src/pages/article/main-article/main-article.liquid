@@ -1,0 +1,76 @@
+{{ 'section-main-article.css' | asset_url | stylesheet_tag }}
+{{ 'share.css' | asset_url | stylesheet_tag }}
+
+<div {% render 'section-attr' %}>
+  <article class='xo-main-article'>
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when '@app' -%}
+          <div class='xo-main-article__app'>
+            {% render block %}
+          </div>
+
+        {%- when 'featured_image' -%}
+          {%- if article.image -%}
+            <div
+              class='xo-main-article__image'
+            >
+              {% render 'image', image: article.image %}
+            </div>
+          {%- endif -%}
+
+        {%- when 'tag' -%}
+          {% if article.tags[0] != blank %}
+            <div class='xo-main-article__tag'>
+              {{ article.tags[0] }}
+            </div>
+          {% endif %}
+
+        {%- when 'title' -%}
+          <header class='xo-main-article__header'>
+            <h1 class='xo-main-article__title' itemprop='headline'>{{ article.title | escape }}</h1>
+            {%- if block.settings.blog_show_date -%}
+              <span class='xo-main-article__date' itemprop='dateCreated pubdate datePublished'>
+                {{- article.published_at | time_tag: format: 'date' -}}
+              </span>
+            {%- endif -%}
+            {%- if block.settings.blog_show_author -%}
+              <span class='xo-main-article__author' itemprop='author' itemscope itemtype='http://schema.org/Person'>
+                <span itemprop='name'>{{ article.author }}</span>
+              </span>
+            {%- endif -%}
+          </header>
+
+        {%- when 'content' -%}
+          <div class='xo-main-article__content xo-content'>
+            {{ article.content }}
+          </div>
+
+        {%- when 'share' -%}
+          <div>
+            {% assign url_full = request.origin | append: article.url %}
+            {% render 'space', value: '2rem' %}
+            <h3 class='h3'>
+              {%- if block.settings.share_icon -%}
+                {%- render 'icon', name: 'share', color: 'rgba(var(--color-foreground))' %}
+              {%- endif -%}
+              Share
+            </h3>
+            {% if block.settings.show_social_media %}
+              {% render 'share', copy_title: article.title, url: url_full, list: 'copy, facebook, twitter, pinterest' %}
+            {% else %}
+              {% render 'share', copy_title: article.title, url: url_full, list: 'copy' %}
+            {% endif %}
+            {% render 'space', value: '2rem' %}
+          </div>
+      {%- endcase -%}
+    {%- endfor -%}
+    <div class='xo-main-article__back-button'>
+      {% assign back_to_blog = 'blogs.article.back_to_blog' | t %}
+      {% render 'button', link: section.settings.back_url, style: 'link', type: 'button', size: 'sm', text: back_to_blog %}
+    </div>
+    {% render 'main-article-ld-json' %}
+  </article>
+</div>
+
+{% render 'main-article-ld-json' %}

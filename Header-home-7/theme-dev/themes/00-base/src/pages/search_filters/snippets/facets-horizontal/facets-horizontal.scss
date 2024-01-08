@@ -1,0 +1,34 @@
+.xo-facets-horizontal {
+  display: none;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.15);
+  margin-bottom: 3rem;
+  @include media('>md') {
+    display: flex;
+  }
+}
+
+.xo-facets-horizontal__item {
+  display: flex;
+  align-items: center;
+  gap: 2.6rem;
+}
+
+.xo-facets-horizontal__caption {
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: rgba(var(--color-foreground), 0.6);
+}
+
+.xo-facets-horizontal__selector {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.xo-facets-horizontal__refine {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}

@@ -1,0 +1,35 @@
+<div {% render 'section-attr' %}>
+  <xo-container>
+    {%
+      render 'product-recommendations',
+      intent: 'related',
+      products_to_show: section.settings.products_to_show,
+      heading_title: section.settings.heading_title,
+      heading_description: section.settings.heading_description,
+      heading_align: section.settings.heading_align,
+      columns_desktop: section.settings.columns_desktop,
+      columns_mobile: section.settings.columns_mobile,
+      columns_desktop: section.settings.columns_desktop,
+      product_card_show_image: section.settings.product_card_show_image,
+      product_card_show_secondary_image: section.settings.product_card_show_secondary_image,
+      product_card_show_vendor: section.settings.product_card_show_vendor,
+      product_card_show_description: section.settings.product_card_show_description,
+      product_card_show_quick_add: section.settings.product_card_show_quick_add,
+      product_card_show_quick_view: section.settings.product_card_show_quick_view,
+      product_card_show_price: section.settings.product_card_show_price,
+      product_card_show_badge: section.settings.product_card_show_badge,
+      product_card_aspect_ratio: section.settings.product_card_aspect_ratio,
+      card_color_scheme: section.settings.card_color_scheme,
+      carousel_pag_style: section.settings.carousel_pag_style,
+      carousel_pag_align: section.settings.carousel_pag_align,
+      carousel_pag_disabled: section.settings.carousel_pag_disabled,
+      carousel_pag_mobile_disabled: section.settings.carousel_pag_mobile_disabled,
+      carousel_nav_style: section.settings.carousel_nav_style,
+      carousel_nav_align: section.settings.carousel_nav_align,
+      carousel_nav_icon: section.settings.carousel_nav_icon,
+      carousel_nav_position: section.settings.carousel_nav_position,
+      carousel_nav_disabled: section.settings.carousel_nav_disabled,
+      carousel_nav_mobile_disabled: section.settings.carousel_nav_mobile_disabled,
+    %}
+  </xo-container>
+</div>

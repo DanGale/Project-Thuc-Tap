@@ -1,0 +1,173 @@
+{
+  "name": "Drawer",
+  "settings": {
+    "header_border": {
+      "content": "Boder"
+    },
+    "thickness": {
+      "label": "Thickness"
+    },
+    "opacity": {
+      "label": "Opacity"
+    },
+    "corner_radius": {
+      "label": "Corner radius"
+    },
+    "header_shadow": {
+      "content": "Shadow"
+    },
+    "horizontal_offset": {
+      "label": "Horizontal offset"
+    },
+    "vertical_offset": {
+      "label": "Vertical offset"
+    },
+    "blur": {
+      "label": "Blur"
+    },
+    "drawer_padding": {
+      "label": "Drawer padding"
+    },
+    "drawer_margin": {
+      "label": "Drawer margin"
+    },
+    "drawer_easing": {
+      "label": "Type of easing",
+      "linear": {
+        "label": "Linear"
+      },
+      "ease": {
+        "label": "Ease"
+      },
+      "ease_in_quad": {
+        "label": "Ease in quad"
+      },
+      "ease_out_quad": {
+        "label": "Ease out quad"
+      },
+      "ease_in_out_quad": {
+        "label": "Ease in out quad"
+      },
+      "ease_in_cubic": {
+        "label": "Ease in cubic"
+      },
+      "ease_out_cubic": {
+        "label": "Ease out cubic"
+      },
+      "ease_in_out_cubic": {
+        "label": "Ease in out cubic"
+      },
+      "ease_in_quart": {
+        "label": "Ease in quart"
+      },
+      "ease_out_quart": {
+        "label": "Ease out quart"
+      },
+      "ease_in_out_quart": {
+        "label": "Ease in out quart"
+      },
+      "ease_in_quint": {
+        "label": "Ease in quint"
+      },
+      "ease_out_quint": {
+        "label": "Ease out quint"
+      },
+      "ease_in_out_quint": {
+        "label": "Ease in out quint"
+      },
+      "ease_out_bounce": {
+        "label": "Ease out bounce"
+      },
+      "ease_in_bounce": {
+        "label": "Ease in bounce"
+      },
+      "ease_out_back": {
+        "label": "Ease out back"
+      },
+      "ease_in_back": {
+        "label": "Ease in back"
+      },
+      "ease_in_out": {
+        "label": "Ease in out"
+      },
+      "ease_in_elastic": {
+        "label": "Ease in elastic"
+      },
+      "ease_out_elastic": {
+        "label": "Ease out elastic"
+      },
+      "spring": {
+        "label": "Spring"
+      },
+      "decay": {
+        "label": "Decay"
+      },
+      "bezier": {
+        "label": "Bezier"
+      }
+    },
+    "drawer_duration": {
+      "label": "Drawer duration"
+    },
+    "drawer_backdrop_opacity": {
+      "label": "Drawer backdrop opacity"
+    },
+    "drawer_backdrop_blur": {
+      "label": "Drawer backdrop blur"
+    },
+    "header_cart_note": {
+      "content": "Cart note"
+    },
+    "show_cart_drawer_note": {
+      "label": "Show cart note"
+    },
+    "cart_drawer_note_type": {
+      "label": "Cart note type",
+      "option_1": {
+        "label": "Drawer"
+      },
+      "option_2": {
+        "label": "Popover"
+      },
+      "option_3": {
+        "label": "Modal"
+      }
+    },
+    "header_cart_discount": {
+      "content": "Cart discount"
+    },
+    "show_cart_drawer_discount": {
+      "label": "Show cart discount"
+    },
+    "cart_drawer_discount_type": {
+      "label": "Cart discount type",
+      "option_1": {
+        "label": "Drawer"
+      },
+      "option_2": {
+        "label": "Popover"
+      },
+      "option_3": {
+        "label": "Modal"
+      }
+    },
+    "header_cart_shipping": {
+      "content": "Cart shipping"
+    },
+    "show_cart_drawer_shipping": {
+      "label": "Show cart shipping"
+    },
+    "cart_drawer_shipping_type": {
+      "label": "Cart shipping type",
+      "option_1": {
+        "label": "Drawer"
+      },
+      "option_2": {
+        "label": "Popover"
+      },
+      "option_3": {
+        "label": "Modal"
+      }
+    }
+  }
+}

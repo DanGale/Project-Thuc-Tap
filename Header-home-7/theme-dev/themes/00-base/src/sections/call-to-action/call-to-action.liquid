@@ -1,0 +1,46 @@
+{{ 'section-call-to-action.css' | asset_url | stylesheet_tag }}
+
+{% assign reverse = section.settings.reverse %}
+
+<section {% render 'section-attr' %}>
+  <div class='xo-cta'>
+    <xo-container>
+      <div class='xo-bleed'>
+        <xo-grid>
+          <div
+            {% if reverse %}
+              style='--sm: 12; --md: 12; --lg: 7; --order-lg: 1'
+            {% endif %}
+            style='--sm: 12; --md: 12; --lg: 7'
+          >
+            <div class='xo-cta__content{% if reverse %} xo-bleed__right{% else %} xo-bleed__left{% endif %}'>
+              {% render 'image', image: section.settings.image, lazyload: true %}
+            </div>
+          </div>
+          <div style='--sm: 12; --md: 12; --lg: 5'>
+            {% if section.settings.title %}
+              <h2 class='xo-cta__title'>{{ section.settings.title }}</h2>
+            {% endif %}
+            {% if section.settings.description %}
+              <div class='xo-cta__description'>
+                {{ section.settings.description }}
+              </div>
+            {% endif %}
+
+            <div class='xo-cta__button'>
+              {% render 'button',
+                text: section.settings.button_text,
+                link: section.settings.button_link,
+                style: section.settings.button_style,
+                size: section.settings.button_size,
+                radius: section.settings.button_radius,
+                padding: section.settings.button_padding,
+                type: section.settings.button_type
+              %}
+            </div>
+          </div>
+        </xo-grid>
+      </div>
+    </xo-container>
+  </div>
+</section>

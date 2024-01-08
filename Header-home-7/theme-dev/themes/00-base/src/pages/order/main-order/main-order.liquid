@@ -1,0 +1,24 @@
+{% comment %} TODO: Thiếu phần properties cho order  {% endcomment %}
+{{ 'section-main-order.css' | asset_url | stylesheet_tag }}
+{{ 'table.css' | asset_url | stylesheet_tag }}
+{{ 'order-table.css' | asset_url | stylesheet_tag }}
+{{ 'order-bill.css' | asset_url | stylesheet_tag }}
+
+<div {% render 'section-attr' %}>
+  <xo-container class='xo-order-detail'>
+    <xo-animate xo-cascade>
+      {% assign account_return = 'customer.account.return' | t %}
+      {% render 'button', text: account_return, link: routes.account_url, style: 'link' %}
+      {% render 'space', value: '2rem' %}
+    </xo-animate>
+
+    <xo-grid>
+      <div class='xo-order-detail__order' style='--lg: 9'>
+        {% render 'order-table' %}
+      </div>
+      <div class='xo-order-detail__detail' style='--lg: 3'>
+        {% render 'order-bill' %}
+      </div>
+    </xo-grid>
+  </xo-container>
+</div>

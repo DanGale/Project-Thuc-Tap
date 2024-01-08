@@ -1,0 +1,23 @@
+{
+  "name": "Layout",
+  "settings": {
+    "page_width": {
+      "label": "Page width"
+    },
+    "spacing_sections": {
+      "label": "Space between template sections"
+    },
+    "header_grid": {
+      "content": "Grid"
+    },
+    "paragraph_grid": {
+      "content": "Affects areas with multiple columns or rows."
+    },
+    "spacing_grid_horizontal": {
+      "label": "Horizontal space"
+    },
+    "spacing_grid_vertical": {
+      "label": "Vertical space"
+    }
+  }
+}

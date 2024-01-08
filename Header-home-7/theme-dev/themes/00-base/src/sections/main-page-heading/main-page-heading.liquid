@@ -1,0 +1,14 @@
+<section {% render 'section-attr' %}>
+  {% render 'section-bg-image' %}
+  <xo-container>
+    <xo-animate xo-cascade>
+      {%
+        render 'page-heading',
+        title_tag: section.settings.title_tag,
+        title: section.settings.title,
+        description: section.settings.description,
+        align: section.settings.align,
+      %}
+    </xo-animate>
+  </xo-container>
+</section>

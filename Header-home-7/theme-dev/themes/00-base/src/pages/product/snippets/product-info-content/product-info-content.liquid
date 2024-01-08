@@ -1,0 +1,148 @@
+<div class='xo-product-info-content'>
+  <xo-animate xo-cascade>
+    {% render 'breadcrumb' %}
+  </xo-animate>
+
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when '@app' %}
+        {% render block %}
+
+      {% when 'text' %}
+        <div {{ block.shopify_attributes }}>
+          <xo-animate xo-cascade>
+            {{ block.settings.text }}
+          </xo-animate>
+        </div>
+
+      {% when 'vendor' %}
+        <div {{ block.shopify_attributes }}>
+          <xo-animate xo-cascade>
+            {{ product.vendor }}
+          </xo-animate>
+        </div>
+
+      {% when 'title' %}
+        <xo-animate xo-cascade>
+          <h1 class='xo-product-info-content__title' {{ block.shopify_attributes }}>
+            {{ product.title }}
+          </h1>
+        </xo-animate>
+
+      {% when 'price' %}
+        <xo-animate xo-cascade>
+          <xo-product-will-change xo-unique-id='product-price-{{ product.id }}' {{ block.shopify_attributes }}>
+            {% render 'price', product: product, use_variant: true %}
+            {% if cart.taxes_included == true %}
+              <span>{{ 'products.product.price.include_tax' | t }}</span>
+            {% endif %}
+          </xo-product-will-change>
+        </xo-animate>
+
+      {% when 'description' %}
+        <xo-animate xo-cascade class='xo-product-info-content__description xo-content' {{ block.shopify_attributes }}>
+          {{ product.description }}
+        </xo-animate>
+
+      {% when 'quantity_picker' %}
+        <xo-animate xo-cascade {{ block.shopify_attributes }}>
+          {% assign form_id = 'product_form_id-' | append: section.id %}
+          {% render 'quantity', form_id: form_id %}
+        </xo-animate>
+
+      {% when 'variants' %}
+        {% if product.options_with_values.size > 0 %}
+          {%- for option in product.options_with_values -%}
+            <xo-animate xo-cascade {{ block.shopify_attributes }}>
+              {% if option.name == 'Color' %}
+                {% render 'product-variant', option: option, style: settings.variant_color_style %}
+              {% else %}
+                {% render 'product-variant', option: option, style: settings.variant_style %}
+              {% endif %}
+            </xo-animate>
+          {%- endfor -%}
+        {% endif %}
+
+      {% when 'buy_button' %}
+        <xo-animate xo-cascade {{ block.shopify_attributes }}>
+          {% render 'buy-button', block: block %}
+        </xo-animate>
+
+      {% when 'custom_liquid' %}
+        <div {{ block.shopify_attributes }}>
+          {{ block.settings.custom_liquid }}
+        </div>
+
+      {% when 'collapse' %}
+        <xo-collapse-provider {{ block.shopify_attributes }}>
+          <xo-animate xo-cascade>
+            {% render 'collapse', title: block.settings.collapse__text, content: block.settings.collapse__content %}
+          </xo-animate>
+        </xo-collapse-provider>
+
+      {% when 'pickup' %}
+        {% assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true %}
+        <div {{ block.shopify_attributes }}>
+          <xo-animate xo-cascade>
+            {% render 'pickup-availability-item', pick_up_availabilities: pick_up_availabilities %}
+          </xo-animate>
+        </div>
+        <xo-modal
+          style='z-index: 9999;'
+          xo-portal
+          xo-name='pickup-availability'
+          xo-animate='slide-left'
+          xo-placement='top-right'
+        >
+          {% capture pickup_availability_list %}
+            {% render 'pickup-availability-list', pick_up_availabilities: pick_up_availabilities %}
+          {% endcapture %}
+          {% render 'modal-content',
+            title: product.title,
+            content: pickup_availability_list,
+            width: '40rem',
+            full_height: true,
+            title_size: '2rem',
+            title_class: 'xo-line-2',
+            header_separator: true,
+            animate: true
+          %}
+        </xo-modal>
+      {% when 'complementary' %}
+        <xo-animate xo-cascade class='xo-product-info-content__complementary'>
+          {%
+            render 'product-recommendations',
+            intent: 'related',
+            products_to_show: block.settings.products_to_show,
+            heading_title: block.settings.heading_title,
+            heading_description: block.settings.heading_description,
+            heading_align: block.settings.heading_align,
+            overflow: 'visible'
+            columns_desktop: block.settings.columns_desktop,
+            columns_mobile: block.settings.columns_mobile,
+            columns_desktop: block.settings.columns_desktop,
+            product_card_show_image: block.settings.product_card_show_image,
+            product_card_show_secondary_image: block.settings.product_card_show_secondary_image,
+            product_card_show_vendor: block.settings.product_card_show_vendor,
+            product_card_show_description: block.settings.product_card_show_description,
+            product_card_show_quick_add: block.settings.product_card_show_quick_add,
+            product_card_show_quick_view: block.settings.product_card_show_quick_view,
+            product_card_show_price: block.settings.product_card_show_price,
+            product_card_show_badge: block.settings.product_card_show_badge,
+            product_card_aspect_ratio: block.settings.product_card_aspect_ratio,
+            card_color_scheme: block.settings.card_color_scheme,
+            carousel_pag_style: block.settings.carousel_pag_style,
+            carousel_pag_align: block.settings.carousel_pag_align,
+            carousel_pag_disabled: block.settings.carousel_pag_disabled,
+            carousel_pag_mobile_disabled: block.settings.carousel_pag_mobile_disabled,
+            carousel_nav_style: block.settings.carousel_nav_style,
+            carousel_nav_align: block.settings.carousel_nav_align,
+            carousel_nav_icon: block.settings.carousel_nav_icon,
+            carousel_nav_position: block.settings.carousel_nav_position,
+            carousel_nav_disabled: block.settings.carousel_nav_disabled,
+            carousel_nav_mobile_disabled: block.settings.carousel_nav_mobile_disabled,
+          %}
+        </xo-animate>
+    {% endcase %}
+  {% endfor %}
+</div>

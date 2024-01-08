@@ -1,0 +1,20 @@
+.xo-page-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.xo-page-heading--center {
+  justify-content: center;
+  text-align: center;
+}
+
+.xo-page-heading--right {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.xo-page-heading__title {
+  margin: 0;
+  font-size: fz(heading, 4.5);
+}

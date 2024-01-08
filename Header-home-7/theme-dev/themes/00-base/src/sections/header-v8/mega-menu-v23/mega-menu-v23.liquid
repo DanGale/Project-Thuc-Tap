@@ -1,0 +1,122 @@
+{{ 'section-mega-menu-v23.css' | asset_url | stylesheet_tag }}
+{% assign index_number = section.settings.index | append: '' %}
+
+<template xo-mega-menu-name='header-mega-menu-v8' xo-mega-menu-index='{{ index_number }}'>
+  <div data-id='{{ section.id }}' {% render 'section-attr' %}>
+    {% render 'section-bg-image' %}
+    <xo-container>
+      <div class='container-header-v23'>
+        <xo-grid style='--col-width: 40rem;'>
+          {%- if section.settings.menu_style1 != blank -%}
+            <xo-grid style='--col-width: 20rem;'>
+              <div>
+                {%- if section.settings.menu_style1 != blank -%}
+                  <div style='--xs: 12; ' class='menu-header-v23'>
+                    {%- if section.settings.heading_1 != blank -%}
+                      <h2 class='menu-header-v23__heading'>{{- section.settings.heading_1 -}}</h2>
+                    {%- endif -%}
+                    <ul class='menu-header-v23__list-item'>
+                      {%- for link in section.settings.menu_style1.links -%}
+                        <li class='menu-header-v23__item'>
+                          <a
+                            href='{{ link.url }}'
+                          >
+                            {{ link.title }}
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </div>
+                {%- endif -%}
+                {%- if section.settings.menu_style2 != blank -%}
+                  <div style='--xs: 12; ' class='menu-header-v23'>
+                    {%- if section.settings.heading_2 != blank -%}
+                      <h2 class='menu-header-v23__heading'>{{- section.settings.heading_2 -}}</h2>
+                    {%- endif -%}
+                    <ul class='menu-header-v23__list-item'>
+                      {%- for link in section.settings.menu_style2.links -%}
+                        <li class='menu-header-v23__item'>
+                          <a
+                            href='{{ link.url }}'
+                          >
+                            {{ link.title }}
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </div>
+                {%- endif -%}
+              </div>
+              <div>
+                {%- if section.settings.menu_style3 != blank -%}
+                  <div style='--xs: 12; ' class='menu-header-v23'>
+                    {%- if section.settings.heading_3 != blank -%}
+                      <h2 class='menu-header-v23__heading'>{{- section.settings.heading_3 -}}</h2>
+                    {%- endif -%}
+                    <ul class='menu-header-v23__list-item'>
+                      {%- for link in section.settings.menu_style3.links -%}
+                        <li class='menu-header-v23__item'>
+                          <a
+                            href='{{ link.url }}'
+                          >
+                            {{ link.title }}
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </div>
+                {%- endif -%}
+                {%- if section.settings.menu_style4 != blank -%}
+                  <div style='--xs: 12; ' class='menu-header-v23'>
+                    {%- if section.settings.heading_4 != blank -%}
+                      <h2 class='menu-header-v23__heading'>{{- section.settings.heading_4 -}}</h2>
+                    {%- endif -%}
+                    <ul class='menu-header-v23__list-item'>
+                      {%- for link in section.settings.menu_style4.links -%}
+                        <li class='menu-header-v23__item'>
+                          <a
+                            href='{{ link.url }}'
+                          >
+                            {{ link.title }}
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </div>
+                {%- endif -%}
+              </div>
+            </xo-grid>
+          {%- endif -%}
+
+          <div class='mega-menu-v23-blog'>
+            {%- if section.settings.heading_5 != blank -%}
+              <h2 class='menu-header-v23__heading menu-header-v23__heading--nohover'>{{- section.settings.heading_5 -}}</h2>
+            {%- endif -%}
+
+            {%- for article in section.settings.blog.articles -%}
+              <div>
+                {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
+                {%- assign placeholder_image = 'product-apparel-' | append: placeholder_image_index -%}
+                {% render 'article-card-style18',
+                  article: article,
+                  media_aspect_ratio: section.settings.article_card_media_aspect_ratio,
+                  show_image: section.settings.article_card_show_image,
+                  show_date: section.settings.article_card_show_date,
+                  show_author: section.settings.article_card_show_author,
+                  show_excerpt: section.settings.article_card_show_excerpt,
+                  show_tags: section.settings.article_card_show_tags,
+                  placeholder_image: placeholder_image,
+                  color_scheme: section.settings.card_color_scheme
+                %}
+              </div>
+            {%- endfor -%}
+            {% comment %}
+              {%- paginate section.settings.blog.articles by section.settings.limit -%}
+              {%- endpaginate -%}
+            {% endcomment %}
+          </div>
+        </xo-grid>
+      </div>
+    </xo-container>
+  </div>
+</template>

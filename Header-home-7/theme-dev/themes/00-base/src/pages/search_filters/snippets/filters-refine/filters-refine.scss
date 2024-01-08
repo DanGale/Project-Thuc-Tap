@@ -1,0 +1,12 @@
+.xo-filters-refine {
+  margin-bottom: 2rem;
+  &[xo-empty]:not([xo-empty='false']) {
+    display: none;
+  }
+  xo-filters-clear {
+    background-color: transparent;
+    border: 0.1rem solid rgba(var(--color-foreground), 0.2);
+    padding: 3px 10px;
+    font-size: 1.5rem;
+  }
+}

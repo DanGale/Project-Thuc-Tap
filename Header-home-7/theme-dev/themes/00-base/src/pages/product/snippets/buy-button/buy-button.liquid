@@ -1,0 +1,46 @@
+{% assign form_id = 'product_form_id-' | append: section.id %}
+
+{%- form 'product', product, id: form_id, novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+  <xo-product-will-change xo-unique-id='product-buy-now-id-{{ product.id }}'>
+    <input type='hidden' name='id' value='{{ product.selected_or_first_available_variant.id }}' disabled>
+  </xo-product-will-change>
+
+  {% liquid
+    assign gift_card_recipient_feature_active = false
+    if block.settings.show_gift_card_recipient and product.gift_card?
+      assign gift_card_recipient_feature_active = true
+    endif
+  %}
+  {% if gift_card_recipient_feature_active == true %}
+    {%- render 'recipient-form', product: product, form: form, section: section -%}
+  {% endif %}
+
+  {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty and gift_card_recipient_feature_active == false %}
+    <xo-product-will-change
+      xo-unique-id='product-buy-now-button-{{ product.id }}'
+      {% if product.selected_or_first_available_variant.available == false %}
+        xo-disabled
+      {% endif %}
+    >
+      {{ form | payment_button }}
+      {{ form | payment_terms }}
+    </xo-product-will-change>
+  {% endif %}
+
+  {% render 'space', value: '1rem' %}
+
+  <xo-product-will-change xo-unique-id='product-add-button-{{ product.id }}'>
+    <xo-cart-add
+      {% if product.selected_or_first_available_variant.available == false %}
+        disabled
+      {% endif %}
+    >
+      {%- if product.selected_or_first_available_variant.available -%}
+        {% assign button_text = 'products.product.add_to_cart' | t %}
+      {%- else -%}
+        {% assign button_text = 'products.product.sold_out' | t %}
+      {%- endif -%}
+      {% render 'button', style: 'dark', text: button_text, size: 'md', block: true %}
+    </xo-cart-add>
+  </xo-product-will-change>
+{%- endform -%}

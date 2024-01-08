@@ -1,0 +1,41 @@
+{
+  "name": "Mega menu 1",
+  "presets" : {
+    "name": "Mega menu 1"
+  },
+  "settings": {
+    "index_number": {
+      "label": "Link position in main menu",
+      "option_1": {
+        "label": "Item 1"
+      },
+      "option_2": {
+        "label": "Item 2"
+      },
+      "option_3": {
+        "label": "Item 3"
+      },
+      "option_4": {
+        "label": "Item 4"
+      },
+      "option_5": {
+        "label": "Item 5"
+      },
+      "option_6": {
+        "label": "Item 6"
+      },
+      "option_7": {
+        "label": "Item 7"
+      },
+      "option_8": {
+        "label": "Item 8"
+      },
+      "option_9": {
+        "label": "Item 9"
+      },
+      "option_10": {
+        "label": "Item 10"
+      }
+    }
+  }
+}

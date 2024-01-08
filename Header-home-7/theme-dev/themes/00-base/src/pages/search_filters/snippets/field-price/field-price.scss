@@ -1,0 +1,49 @@
+.xo-field-price__range {
+  margin-bottom: 1.7rem;
+  xo-range-progress {
+    background-color: rgb(var(--color-foreground));
+  }
+
+  xo-range-thumb {
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: rgb(var(--color-foreground));
+    &:after {
+      content: "";
+      width: 0.4rem;
+      height: 0.4rem;
+      border-radius: 50%;
+      background-color: rgb(var(--color-background));
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.xo-field-price__input-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  color: rgba(var(--color-foreground), 0.4);
+}
+
+.xo-field-price__input-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 11rem;
+  padding: 1rem;
+  background-color: rgba(var(--color-foreground), 0.05);
+}
+
+.xo-field-price__input {
+  width: 100%;
+  border: none;
+  background-color: rgba(var(--color-foreground), 0.001);
+  display: flex;
+  justify-content: flex-end;
+  direction: rtl;
+}

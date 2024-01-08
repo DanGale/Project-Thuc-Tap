@@ -1,0 +1,40 @@
+@function getHeight($value) {
+  @return calc(var(--buttons-scale) * $value);
+}
+
+@function getFontSize($value) {
+  @return calc((1 + (var(--buttons-scale) - 1) / 2) * $value);
+}
+
+@function getPadding($value) {
+  @return calc(var(--buttons-scale) * $value);
+}
+
+.shopify-payment-button__button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: getFontSize(1.6rem);
+  font-weight: 500;
+  background-color: rgba(var(--color-button), var(--buttons-background-opacity));
+  color: rgb(var(--color-button-text));
+  cursor: pointer;
+  user-select: none;
+  border-radius: var(--buttons-radius-outset);
+  box-shadow: var(--buttons-shadow-horizontal-offset) var(--buttons-shadow-vertical-offset) var(--buttons-shadow-blur-radius) rgba(var(--color-shadow), var(--buttons-shadow-opacity));
+  border: var(--buttons-border-width) solid rgba(var(--color-button), var(--buttons-border-opacity));
+  padding: 0.6rem getPadding(2.6rem);
+  min-height: getHeight(5.4rem);
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.shopify-payment-button__button--unbranded:hover:not([disabled]) {
+  opacity: 0.8;
+  background-color: rgba(var(--color-button), var(--buttons-background-opacity));
+}
+
+.shopify-payment-button__button--hidden {
+  display: none;
+}

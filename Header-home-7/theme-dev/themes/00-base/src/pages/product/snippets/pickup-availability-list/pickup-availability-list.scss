@@ -1,0 +1,36 @@
+.xo-pickup-availability-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.xo-pickup-availability-list__item {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 0.1rem solid rgba(var(--color-border), 0.1);
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.xo-pickup-availability-list__title {
+  font-size: fz(heading, 2);
+  margin-bottom: 1rem;
+}
+
+.xo-pickup-availability-list__available {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.xo-pickup-availability-list__icon {
+  flex-shrink: 0;
+  color: #428445;
+  margin-top: 0.2rem;
+}
+
+.xo-pickup-availability-list__address {
+  font-style: normal;
+}

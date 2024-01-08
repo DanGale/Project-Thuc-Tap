@@ -1,0 +1,47 @@
+{
+  "name": "t:name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:settings.header__1.content"
+    },
+    {
+      "type": "font_picker",
+      "id": "type_header_font",
+      "default": "cooper_bt_n5",
+      "label": "t:settings.type_header_font.label",
+      "info": "t:settings.type_header_font.info"
+    },
+    {
+      "type": "range",
+      "id": "heading_scale",
+      "min": 100,
+      "max": 150,
+      "step": 5,
+      "unit": "%",
+      "label": "t:settings.heading_scale.label",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "t:settings.header__2.content"
+    },
+    {
+      "type": "font_picker",
+      "id": "type_body_font",
+      "default": "lato_n4",
+      "label": "t:settings.type_body_font.label",
+      "info": "t:settings.type_body_font.info"
+    },
+    {
+      "type": "range",
+      "id": "body_scale",
+      "min": 100,
+      "max": 130,
+      "step": 5,
+      "unit": "%",
+      "label": "t:settings.body_scale.label",
+      "default": 100
+    }
+  ]
+}

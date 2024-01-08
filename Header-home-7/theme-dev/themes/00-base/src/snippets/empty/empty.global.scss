@@ -1,0 +1,10 @@
+.xo-empty {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: var(--align);
+}
+
+.xo-empty__title {
+  font-size: fz(heading, 2.4);
+}

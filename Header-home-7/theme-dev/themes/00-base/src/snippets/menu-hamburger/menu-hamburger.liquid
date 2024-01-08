@@ -1,0 +1,150 @@
+{% comment %}
+  Renders a hamburger menu
+
+  Accepts:
+  - menu: {Object} Menu object
+
+  Usage:
+  {% render 'menu-hamburger', menu: section.settings.menu %}
+{% endcomment %}
+
+{% capture back_button %}
+  <xo-modal-trigger class='xo-menu-hamburger__link'>
+    <span class='xo-menu-hamburger__back'>
+      <span class='xo-menu-hamburger__arrow'>
+        {% render 'icon', name: 'chevron-left', size: '1.6rem' %}
+      </span>
+      <span class='xo-menu-hamburger__label'>{{ 'general.back' | t }}</span>
+    </span>
+  </xo-modal-trigger>
+{% endcapture %}
+
+{% if menu != blank %}
+  <div class='xo-menu-hamburger'>
+    <xo-modal-trigger class='xo-menu-hamburger__trigger' xo-name='xo-menu-hamburger-1'>
+      {% render 'icon', name: 'hamburger', size: '2rem' %}
+    </xo-modal-trigger>
+
+    <xo-modal
+      class='xo-menu-hamburger__modal'
+      xo-portal
+      xo-name='xo-menu-hamburger-1'
+      xo-animate='slide-right'
+      xo-duration='300'
+      xo-placement='top-left'
+    >
+      <div class='xo-menu-hamburger__content'>
+        {{ back_button }}
+        {% for link in menu.links %}
+          {% if link.links == blank %}
+            <a
+              class='xo-menu-hamburger__link{% if link.current %} xo-menu-hamburger__item--current{% endif %}'
+              href='{{ link.url }}'
+              {% if link.current %}
+                aria-current='page'
+              {% endif %}
+            >
+              <span class='xo-menu-hamburger__label'>
+                {{ link.title }}
+              </span>
+              <span class='xo-menu-hamburger__arrow xo-menu-hamburger__arrow--mega-menu'>
+                {% render 'icon', name: 'chevron-right', size: '1.6rem' %}
+              </span>
+            </a>
+            <xo-modal
+              xo-portal
+              class='xo-menu-hamburger__modal'
+              xo-name='xo-mega-menu-{{ forloop.index0 }}'
+              xo-animate='slide-right'
+              xo-duration='300'
+              xo-placement='top-left'
+              xo-backdrop-color='transparent'
+            >
+              <div class='xo-menu-hamburger__content'>
+                {{ back_button }}
+                <xo-mega-menu class='xo-menu-hamburger__mega-menu' xo-name='header-mega-menu' xo-index='{{ forloop.index0 }}'></xo-mega-menu>
+              </div>
+            </xo-modal>
+          {% else %}
+            <xo-modal-trigger xo-name='xo-menu-hamburger-2' class='xo-menu-hamburger__link'>
+              <span class='xo-menu-hamburger__label'>
+                {{ link.title }}
+              </span>
+              {% if link.links != blank %}
+                <span class='xo-menu-hamburger__arrow'>
+                  {% render 'icon', name: 'chevron-right', size: '1.6rem' %}
+                </span>
+              {% endif %}
+            </xo-modal-trigger>
+            <xo-modal
+              xo-portal
+              class='xo-menu-hamburger__modal'
+              xo-name='xo-menu-hamburger-2'
+              xo-animate='slide-right'
+              xo-duration='300'
+              xo-placement='top-left'
+              xo-backdrop-color='transparent'
+            >
+              <div class='xo-menu-hamburger__content'>
+                {{ back_button }}
+                <xo-mega-menu class='xo-menu-hamburger__mega-menu' xo-name='header-mega-menu' xo-index='{{ forloop.index0 }}'></xo-mega-menu>
+                {% for childlink in link.links %}
+                  {% if childlink.links == blank %}
+                    <a
+                      class='xo-menu-hamburger__link{% if childlink.current %} xo-menu-hamburger__item--current{% endif %}'
+                      href='{{ childlink.url }}'
+                      {% if childlink.current %}
+                        aria-current='page'
+                      {% endif %}
+                    >
+                      <span class='xo-menu-hamburger__label'>
+                        {{ childlink.title }}
+                      </span>
+                    </a>
+                  {% else %}
+                    <xo-modal-trigger xo-name='xo-menu-hamburger-3' class='xo-menu-hamburger__link'>
+                      <span class='xo-menu-hamburger__label'>
+                        {{ childlink.title }}
+                      </span>
+                      {% if childlink.links != blank %}
+                        <span class='xo-menu-hamburger__arrow'>
+                          {% render 'icon', name: 'chevron-right', size: '1.6rem' %}
+                        </span>
+                      {% endif %}
+                    </xo-modal-trigger>
+                    <xo-modal
+                      xo-portal
+                      class='xo-menu-hamburger__modal'
+                      xo-name='xo-menu-hamburger-3'
+                      xo-animate='slide-right'
+                      xo-duration='300'
+                      xo-placement='top-left'
+                      xo-backdrop-color='transparent'
+                    >
+                      <div class='xo-menu-hamburger__content'>
+                        {{ back_button }}
+                        {% for grandchildlink in childlink.links %}
+                          <a
+                            class='xo-menu-hamburger__link{% if grandchildlink.current %} xo-menu-hamburger__item--current{% endif %}'
+                            href='{{ grandchildlink.url }}'
+                            {% if grandchildlink.current %}
+                              aria-current='page'
+                            {% endif %}
+                          >
+                            <span class='xo-menu-hamburger__label'>
+                              {{ grandchildlink.title }}
+                            </span>
+                          </a>
+                        {% endfor %}
+                      </div>
+                    </xo-modal>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </xo-modal>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </xo-modal>
+  </div>
+{% endif %}

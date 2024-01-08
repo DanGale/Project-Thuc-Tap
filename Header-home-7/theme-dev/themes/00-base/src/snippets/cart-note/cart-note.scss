@@ -1,0 +1,45 @@
+.xo-cart-note {
+  .xo-collapse {
+    &:first-child {
+      border-top: none;
+    }
+  }
+}
+
+.xo-cart-note__btn {
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  padding: 1rem;
+}
+
+.xo-cart-note__trigger {
+  display: block;
+}
+
+.xo-cart-note__text {
+  font-size: fz(body, 1.4);
+}
+
+.xo-cart-note__content {
+  z-index: 9999;
+}
+
+.xo-cart-note__inner {
+  background-color: rgb(var(--color-background));
+}
+
+.xo-cart-note__inner--padding {
+  padding: 2rem;
+}
+
+.xo-cart-note__inner--effect {
+  width: 40rem;
+  box-shadow: 0 0.2rem 1rem rgba(var(--color-shadow), 0.2);
+}
+
+xo-modal {
+  .xo-cart-note__inner {
+    width: 50rem;
+  }
+}

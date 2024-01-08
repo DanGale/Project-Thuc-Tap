@@ -1,0 +1,45 @@
+.xo-facets-drawer {
+  padding-bottom: 4rem;
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.15);
+  margin-bottom: 3rem;
+}
+
+.xo-facets-drawer--mobile {
+  @include media(">md") {
+    display: none;
+  }
+}
+
+.xo-facets-drawer__trigger {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.xo-facets-drawer__modal {
+  z-index: 1000;
+}
+
+.xo-facets-drawer__body {
+  width: 50rem;
+  height: 100vh;
+  padding: 5rem;
+  background-color: rgb(var(--color-background));
+  overflow-y: auto;
+}
+
+.xo-facets-drawer__heading {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+}
+
+.xo-facets-drawer__close-button {
+  font-size: 2rem;
+}
+
+.xo-facets-drawer__refine {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}

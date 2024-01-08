@@ -1,0 +1,118 @@
+.menu-header-v24__link {
+  display: block;
+  text-align: center;
+  font-size: fz(body, 1.6);
+  color: rgb(var(--color-foreground));
+  padding-bottom: 1rem;
+  margin-bottom: 1.4rem;
+  margin-top: 1.5rem;
+}
+
+.container-header-v24 {
+  margin: 0 auto;
+}
+
+.menu-header-v24__flex {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-header-v24__heading {
+  text-transform: capitalize;
+  font-size: fz(heading, 1.5);
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  &:hover {
+    color: color(accent);
+  }
+  &::after {
+    position: absolute;
+    background-color: rgb(var(--color-accent));
+    bottom: 0.1rem;
+    width: 0rem;
+    height: 0.1rem;
+    content: '';
+    left: 0;
+    transition: width 0.5s ease-in-out;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    width: 0rem;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.menu-header-v24__list-item {
+  opacity: 0;
+  position: absolute;
+  background-color: #fff;
+  padding: 2rem 5rem 2rem 2rem;
+  width: 100%;
+  left: 100%;
+  transform: translateY(-20%);
+  box-shadow: 0 2px 10px -2px #0000004d;
+}
+
+.menu-header-v24__flex:hover .menu-header-v24__list-item {
+  opacity: 1;
+}
+
+.menu-header-v24__item {
+  list-style: none;
+  padding: 0.25rem 0;
+  a {
+    text-transform: capitalize;
+    font-size: fz(heading, 1.5);
+    font-weight: 500;
+    &:hover {
+      color: rgb(var(--color-accent));
+    }
+  }
+}
+
+.menu-header-v24 {
+  margin-bottom: 1rem;
+}
+
+.xo-menu-horizontal-v8__mega-menu:has(div > .container-header-v24) {
+  max-width: 23rem;
+  left: 63%;
+  transform: translate(-50%) !important;
+  @media (max-width: 1920px) {
+    left: 64%;
+  }
+  @media (max-width: 1800px) {
+    left: 65%;
+  }
+  @media (max-width: 1700px) {
+    left: 66%;
+  }
+  @media (max-width: 1500px) {
+    left: 67%;
+  }
+  @media (max-width: 1400px) {
+    left: 70%;
+  }
+  @media (max-width: 1200px) {
+    left: 76%;
+  }
+}
+
+.container-header-v24 {
+  padding: 0 3rem;
+}
+
+.xo-menu-hamburger-style8__mega-menu .container-header-v24 {
+  padding: 3rem 2rem;
+}

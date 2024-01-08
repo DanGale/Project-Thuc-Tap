@@ -1,0 +1,14 @@
+{{ 'collection-card.css' | asset_url | stylesheet_tag }}
+
+<template xo-mega-menu-name='header-mega-menu' xo-mega-menu-index='2'>
+  <div data-id='{{ section.id }}' {% render 'section-attr' %}>
+    <xo-container>
+      <xo-grid style='--col-width: 30rem'>
+        {% render 'collection-card', placeholder_image: 'collection-apparel-1', animate_enabled: false %}
+        {% render 'collection-card', placeholder_image: 'collection-apparel-2', animate_enabled: false %}
+        {% render 'collection-card', placeholder_image: 'collection-apparel-3', animate_enabled: false %}
+        {% render 'collection-card', placeholder_image: 'collection-apparel-4', animate_enabled: false %}
+      </xo-grid>
+    </xo-container>
+  </div>
+</template>

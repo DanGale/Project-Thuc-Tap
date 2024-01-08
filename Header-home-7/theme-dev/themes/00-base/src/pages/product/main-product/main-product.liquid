@@ -1,0 +1,28 @@
+{{ 'product-info-content.css' | asset_url | stylesheet_tag }}
+{{ 'product-info-media.css' | asset_url | stylesheet_tag }}
+{{ 'collapse.css' | asset_url | stylesheet_tag }}
+{{ 'pickup-availability-list.css' | asset_url | stylesheet_tag }}
+{{ 'pickup-availability-item.css' | asset_url | stylesheet_tag }}
+{{ 'recipient-form.css' | asset_url | stylesheet_tag }}
+
+<div {% render 'section-attr' %}>
+  <xo-product xo-product-information xo-product-id='{{ product.id }}' xo-section-id='{{ section.id }}'>
+    {%- assign product_form_id = 'product-form-' | append: section.id -%}
+    <xo-container>
+      <xo-grid>
+        <div style='--xs: 12; --lg: 6'>
+          <xo-animate xo-cascade>
+            {% render 'product-info-media', zoom_enabled: true %}
+          </xo-animate>
+        </div>
+        <div style='--xs: 12; --lg: 6; --start-lg: 8'>
+          {% render 'product-info-content' %}
+        </div>
+      </xo-grid>
+    </xo-container>
+
+    {% render 'product-data', product: product %}
+  </xo-product>
+
+  {% render 'main-product-ld-json' %}
+</div>

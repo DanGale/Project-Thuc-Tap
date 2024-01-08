@@ -1,0 +1,38 @@
+{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+
+<section {% render 'section-attr' %}>
+  <xo-container>
+    <xo-grid>
+      <div class='xo-contact' style='--xs: 12'>
+        {%- form 'contact', id: 'ContactForm', class: 'isolate' -%}
+          {% if form.posted_successfully? %}
+            {% assign message = 'templates.contact.form.post_success' | t %}
+            {% render 'form-success', form: form, message: message %}
+          {% else %}
+            {% assign message = 'templates.contact.form.error_heading' | t %}
+            {% render 'form-error', form: form, message: message %}
+          {% endif %}
+          <xo-animate xo-cascade>
+            {% assign nameLabel = 'templates.contact.form.name' | t %}
+            {% render 'field-input', type: 'text', name: 'contact[name]', value: form.name, label: nameLabel %}
+          </xo-animate>
+          <xo-animate xo-cascade>
+            {% assign emailLabel = 'templates.contact.form.email' | t %}
+            {% render 'field-input', type: 'email', name: 'contact[email]', value: form.email, label: emailLabel %}
+          </xo-animate>
+          <xo-animate xo-cascade>
+            {% assign phoneLabel = 'templates.contact.form.phone' | t %}
+            {% render 'field-input', type: 'tel', name: 'contact[phone]', value: form.phone, label: phoneLabel %}
+          </xo-animate>
+          <xo-animate xo-cascade>
+            {% assign commentLabel = 'templates.contact.form.comment' | t %}
+            {% render 'field-textarea', name: 'contact[comment]', value: form.body, label: commentLabel %}
+          </xo-animate>
+          {% render 'space', value: '30px' %}
+          {% assign btnLabel = 'templates.contact.form.send' | t %}
+          {% render 'button', type: 'submit', text: btnLabel, size: 'md', block: true, effect: 'fade' %}
+        {%- endform -%}
+      </div>
+    </xo-grid>
+  </xo-container>
+</section>

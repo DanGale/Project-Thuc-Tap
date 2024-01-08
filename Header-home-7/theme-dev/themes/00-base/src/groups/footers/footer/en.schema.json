@@ -1,0 +1,187 @@
+{
+  "name": "Footer",
+  "settings": {
+    "newsletter_placeholder" : {
+      "label" : "Newsletter placeholder"
+    },
+    "newsletter_button" : {
+      "label" : "Newsletter button"
+    },
+    "header__1" : {
+      "content" : "EMAIL SIGNUP",
+      "info" : "Subscribers added automatically to your “accepted marketing” customer list."
+    },
+    "logo" : {
+      "label" : "Logo",
+      "info" : "Subscribers added automatically to your “accepted marketing” customer list."
+    },
+    "description" : {
+      "label" : "Description",
+      "info" : "Subscribers added automatically to your “accepted marketing” customer list."
+    },
+    "newsletter_enable":{
+      "label":"Show email signup"
+    },
+    "newsletter_heading":{
+      "label":"Heading"
+    },
+    "header__2" : {
+      "content" : "SOCIAL MEDIA ICONS",
+      "info" : "To display your social media accounts, link them in your theme settings."
+    },
+    "show_social" : {
+      "label" : "Show social media icons"
+    },
+    "header__6" : {
+      "content" : "Menu",
+      "info":"Menu"
+    },
+    "header__5": {
+      "content" : "LANGUAGE SELECTOR",
+      "info" : "To add a language, go to your language settings."
+    },
+    "header__8": {
+      "content": "Policy links",
+      "info": "To add store policies, go to your [policy settings](/admin/settings/legal)."
+    },
+    "header__9": {
+      "content": "Follow on Shop",
+      "info": "To allow customers to follow your store on the Shop app from your storefront, Shop Pay must be enabled. [Learn more](https://help.shopify.com/manual/online-store/themes/customizing-themes/follow-on-shop)"
+    },
+    "enable_follow_on_shop": {
+      "label": "Enable Follow on Shop"
+    },
+    "enable_language_selector" :{
+      "label" : "Enable language selector"
+    },
+    "enable_country_selector" :{
+      "label" : "Enable country selector"
+    },
+    "show_policy": {
+      "label": "Show policy links"
+    },
+    "menu" : {
+      "label" : "Menu"
+    },
+    "header__3" : {
+      "content" : "COUNTRY/REGION SELECTOR",
+      "info":"To add a country/region, go to your region settings."
+    },
+    "header__4" : {
+      "content" : "COUNTRY/REGION SELECTOR",
+      "info":"To add a language, go to your language settings."
+    },
+    "header__7" : {
+      "content" : "PAYMENT METHODS"
+    },
+    "payment_enable" : {
+      "label" : "Show payment icons"
+    },
+    "margin_top" : {
+      "label" : "Margin top"
+    },
+    "button_text": {
+      "label" : "Button text"
+    },
+    "button_link" : {
+      "label" : "Button link"
+    },
+    "link_list" : {
+      "name" : "Menu",
+      "settings":{
+        "heading" : {
+          "label" : "Heading"
+        }
+      },
+      "menu" : {
+       "settings" : {
+        "label" : "Menu",
+        "info" : "Displays only top-level menu items."
+       }
+      }
+    },
+    "phone" : {
+      "label" : "Phone number"
+    },
+    "email" : {
+      "label" : "Email"
+    },
+    "header__12" : {
+      "content" : "Title and description"
+    },
+    "header__13" : {
+      "content" : "Button"
+    },
+    "header__14" : {
+      "content" : "Information"
+    },
+    "header__15" : {
+      "content" : "Newsletter"
+    }
+  },
+  "blocks" : {
+    "link_list" : {
+      "name" : "Menu",
+      "settings":{
+        "heading" : {
+          "label" : "Heading"
+        },
+        "menu" : {
+          "label" : "Menu",
+          "info" : "Displays only top-level menu items."
+        }
+      }
+    },
+    "text" : {
+      "name" : "Text",
+      "settings":{
+        "heading" : {
+          "label" : "Heading"
+        },
+        "subtext" : {
+          "label" : "Subtext",
+          "info" : "Displays only top-level menu items."
+        }
+      }
+    },
+    "image": {
+      "label": "Image"
+    },
+    "background_color": {
+      "label": "Background color"
+    },
+    "horizontal": {
+      "label": "Horizontal",
+      "mobile": {
+        "label" : "Horizontal mobile"
+      }
+    },
+    "vertical": {
+      "label": "Vertical",
+      "mobile": {
+        "label" : "Vertical mobile"
+      }
+    },
+    "width": {
+      "label": "Width"
+    },
+    "height": {
+      "label": "Height"
+    },
+    "scale_mobile": {
+      "label": "Scale mobile"
+    },
+    "float_animate_from": {
+      "label": "Float animate from"
+    },
+    "float_animate_to": {
+      "label": "Float animate to"
+    },
+    "float_delay": {
+      "label": "Float delay"
+    }
+  },
+  "presets": {
+    "name": "Footer"
+  }
+}

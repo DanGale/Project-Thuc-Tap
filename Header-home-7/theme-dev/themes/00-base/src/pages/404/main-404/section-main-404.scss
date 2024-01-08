@@ -1,0 +1,39 @@
+.xo-404-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  margin: 0 auto;
+  @include media('>md') {
+    width: 48%;
+  }
+}
+
+.xo-404-page__name {
+  font-size: fz(heading, 3.6);
+  line-height: lh(heading, 0.17);
+  letter-spacing: ls(heading, -0.2);
+  @include media(">md") {
+    font-size: fz(heading, 10);
+    line-height: lh(heading, 0.07);
+    letter-spacing: ls(heading, -0.2);
+  }
+}
+
+.xo-404-page__title {
+  font-size: fz(heading, 2.2);
+  line-height: lh(heading, 0.27);
+  letter-spacing: ls(heading, -0.03);
+  @include media(">md") {
+    font-size: fz(heading, 5);
+    line-height: lh(heading, 0.1);
+    letter-spacing: ls(heading, -0.01);
+  }
+}
+
+.xo-404-page__description {
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}

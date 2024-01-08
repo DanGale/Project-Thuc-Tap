@@ -1,0 +1,25 @@
+.xo-quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.15);
+}
+
+.xo-quantity--md {
+  width: 70%;
+}
+
+.xo-quantity--lg {
+  width: 100%;
+}
+
+.xo-quantity__number {
+  width: 100%;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+.xo-quantity__button {
+  padding: 1.4rem 2.2rem;
+}

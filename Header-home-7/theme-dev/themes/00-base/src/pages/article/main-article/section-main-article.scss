@@ -1,0 +1,23 @@
+.xo-main-article {
+  max-width: 80rem;
+  margin: auto;
+  position: relative;
+}
+
+.xo-main-article__tag {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  padding: 1rem;
+  background-color: rgba(var(--color-background));
+  color: rgba(var(--color-foreground));
+  z-index: 10;
+}
+
+.xo-main-article__header {
+  padding: 2rem 0;
+}
+.xo-main-article__back-button {
+  padding: 3rem 0;
+  text-align: center;
+}

@@ -1,0 +1,54 @@
+{% assign random_number = 'now' | date: '%N' | modulo: 100 %}
+{% assign id = 'localization_form_' | append: random_number %}
+
+<xo-currency-select class='xo-currency-select'>
+  {% if localization.available_countries.size > 1 %}
+    {%- form 'localization', id: id, class: 'xo-currency-select__form' -%}
+      {% comment %}
+         <input type='hidden' name='currency_code' value='{{ localization.country.iso_code }}'>
+          {% capture options_currency %}
+          {%- for country in localization.available_countries -%}
+            <option
+              value='{{ country.iso_code }}'
+              {%- if country.iso_code == localization.country.iso_code %}
+                selected
+              {% endif %}
+            >
+              {{ country.currency.iso_code }} {{ country.currency.symbol }} | {{ country.name }}
+            </option>
+          {%- endfor -%}
+        {% endcapture %}
+      {% endcomment %}
+      <div class='xo-currency-select__label'>
+        {{ 'localization.country_label' | t }}
+      </div>
+      <xo-popover-trigger xo-name='{{ id }}' class='xo-currency-select__trigger'>
+        <span>
+          {{- localization.country.currency.iso_code }}
+          {{ localization.country.currency.symbol }} | {{ localization.country.name -}}
+        </span>
+        {% render 'icon', name: 'chevron-down', size: '20' %}
+      </xo-popover-trigger>
+
+      <xo-popover xo-name='{{ id }}' xo-porta xo-placement='top-center' class='xo-currency-select__content'>
+        {%- for country in localization.available_countries -%}
+          <label class='xo-currency-select__item'>
+            <input
+              class='xo-currency-select__input'
+              type='radio'
+              name='locale_code'
+              value='{{ country.iso_code }}'
+              {%- if country.iso_code == localization.country.iso_code %}
+                checked
+              {% endif %}
+            >
+            <span class='xo-currency-select__name'>
+              {{ country.currency.iso_code }}
+              {{ country.currency.symbol }} | {{ country.name }}
+            </span>
+          </label>
+        {%- endfor -%}
+      </xo-popover>
+    {%- endform -%}
+  {% endif %}
+</xo-currency-select>

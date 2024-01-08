@@ -1,0 +1,31 @@
+.xo-img-compare {
+  width: 100%;
+  background-color: rgba(var(--color-background));
+  color: rgba(var(--color-accent));
+}
+
+.xo-img-compare__badge {
+  font-size: fz(body, 3.5);
+  padding: 0 1.5rem;
+  background-color: #0000;
+  color: rgba(var(--color-accent));
+  top: auto;
+  bottom: 0;
+  z-index: 1;
+  @include media('<md') {
+    font-size: fz(body, 2);
+  }
+}
+
+.xo-img-compare__handle {
+  z-index: 1;
+}
+
+.xo-img-compare__handle-icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(var(--color-background));
+}

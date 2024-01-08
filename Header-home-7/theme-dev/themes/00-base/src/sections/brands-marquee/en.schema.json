@@ -1,0 +1,20 @@
+{
+  "name": "Brands marquee",
+  "settings": {
+    "space": "Spacing between items",
+    "speed": "Marquee speed",
+    "marquee_stop": "Pause when hovered",
+    "marquee_right_to_left": "Marquee right to left",
+    "marquee_height": "Marquee height"
+  },
+  "blocks":{
+    "marquee_image_item":{
+      "label": "Marquee image item",
+      "link": "Link",
+      "size": "Image size"
+    }
+  },
+  "presets" : {
+    "name" : "Brands marquee"
+  }
+}

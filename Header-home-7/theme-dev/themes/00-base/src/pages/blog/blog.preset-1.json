@@ -1,0 +1,26 @@
+{
+  "sections": {
+    "main-breadcrumb": {
+      "type": "main-breadcrumb",
+      "settings": {
+        "padding_top": 10,
+        "padding_bottom": 10
+      }
+    },
+    "main-page-heading": {
+      "type": "main-page-heading",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type": "main-blog"
+    }
+  },
+  "order": [
+    "main-breadcrumb",
+    "main-page-heading",
+    "main"
+  ]
+}

@@ -1,0 +1,75 @@
+.xo-address-table__title {
+  font-size: fz(body, 1.8);
+  color: rgba(var(--color-foreground));
+  padding-bottom: 3rem;
+}
+
+.xo-address-table__table{
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    text-align: left;
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+
+    &:last-child {
+      text-align: right;
+      padding-inline-end: 2rem;
+    }
+  }
+  td {
+    color: rgba(var(--color-foreground), 0.7);
+
+    &:last-child {
+      color: rgba(var(--color-foreground));
+    }
+  }
+
+  @include media('<sm') {
+    display: block;
+    tbody,
+    tfoot,
+    tr,
+    th,
+    td {
+      display: block;
+      &:last-child {
+        padding-inline-end: 0;
+      }
+    }
+    thead {
+      display: none;
+    }
+
+    td {
+      text-align: right;
+    }
+    td:before {
+      content: attr(data-th) ": ";
+      float: left;
+      text-transform: uppercase;
+      color: rgba(var(--color-foreground));
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.xo-address-table__head-row {
+  font-size: fz(body, 1.4);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgba(var(--color-foreground), 0.3);
+  border-top: 0.1rem solid rgba(var(--color-foreground), 0.15);
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.15);
+}
+
+.xo-address-table__body-row {
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.15);
+}
+
+.xo-address-table__button {
+  margin-top: 3rem;
+}

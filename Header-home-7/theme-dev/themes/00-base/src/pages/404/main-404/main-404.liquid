@@ -1,0 +1,24 @@
+{{ 'section-main-404.css' | asset_url | stylesheet_tag }}
+
+<div {% render 'section-attr' %}>
+  <xo-container>
+    <div class='xo-404-page'>
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'title' %}
+            <xo-animate xo-cascade>
+              <h2 class='xo-404-page__name'>{{ block.settings.subtitle | default: 'templates.404.subtext' | t }}</h2>
+            </xo-animate>
+            <xo-animate xo-cascade>
+              <h2 class='xo-404-page__title'>{{ block.settings.title | default: 'templates.404.title' | t }}</h2>
+            </xo-animate>
+            <xo-animate xo-cascade class='xo-404-page__description'>
+              {{ block.settings.description }}
+            </xo-animate>
+          {% when 'button' %}
+            <xo-animate xo-cascade> __BUTTON_BLOCK__ </xo-animate>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </xo-container>
+</div>

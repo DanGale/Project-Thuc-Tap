@@ -1,0 +1,30 @@
+{{ 'section-testimonial.css' | asset_url | stylesheet_tag }}
+{{ 'testimonial-slide.css' | asset_url | stylesheet_tag }}
+
+<xo-container>
+  <xo-carousel
+    xo-per-view='1'
+    xo-per-move='1'
+    xo-render-bullet="<span class='carousel-bullet'></span>"
+  >
+    <xo-carousel-inner>
+      <xo-carousel-list>
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'testimonial-slide' %}
+              <xo-carousel-slide>
+                {% render 'testimonial-slide',
+                  image: block.settings.image,
+                  comment: block.settings.comment,
+                  content: block.settings.content,
+                  author_image: block.settings.author_image,
+                  author_name: block.settings.author_name,
+                  author_job: block.settings.author_job
+                %}
+              </xo-carousel-slide>
+          {% endcase %}
+        {% endfor %}
+      </xo-carousel-list>
+    </xo-carousel-inner>
+  </xo-carousel>
+</xo-container>

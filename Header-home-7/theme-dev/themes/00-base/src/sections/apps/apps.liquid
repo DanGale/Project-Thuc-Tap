@@ -1,0 +1,11 @@
+<div {% render 'section-attr' %}>
+  <xo-container
+    {% unless section.settings.include_margins %}
+      xo-fluid
+    {% endunless %}
+  >
+    {%- for block in section.blocks -%}
+      {% render block %}
+    {%- endfor -%}
+  </xo-container>
+</div>

@@ -1,0 +1,80 @@
+{% comment %}
+  Renders a product media carousel with thumbnails.
+
+  Accepts:
+  - zoom_enabled: {Boolean} Whether to enable zoom on the main image (optional)
+
+  Usage:
+  {% render 'product-info-media' %}
+{% endcomment %}
+
+{% assign featured_media = product.selected_or_first_available_variant.featured_media %}
+
+<div class='xo-product-info-media'>
+  <xo-product-will-change xo-unique-id='product-info-media-{{ product.id }}'>
+    <xo-gallery xo-sync='false'>
+      <xo-carousel>
+        <xo-carousel-inner>
+          <xo-carousel-list>
+            {% if featured_media != null %}
+              {% case featured_media.media_type %}
+                  <xo-carousel-slide>
+                    {% if featured_media.media_type == 'image' and zoom_enabled %}
+                      <xo-image-zoom xo-zoom='3' xo-use-wheel='false' xo-zoom-src='{{ featured_media.src | image_url: width: 1200 }}'>
+                        <xo-gallery-item xo-src='{{ featured_media.src | image_url: width: 1200 }}'>
+                          <div class='xo-product-info-media__image'>
+                            {% render 'media', type: featured_media.media_type, media: featured_media %}
+                            {% render 'button', style: 'light', icon: 'zoom', size: 'sm', width: '4.5rem', class: 'xo-product-info-media__icon' %}
+                          </div>
+                        </xo-gallery-item>
+                      </xo-image-zoom>
+                    {% else %}
+                      {% render 'media', type: featured_media.media_type, media: featured_media %}
+                    {% endif %}
+                  </xo-carousel-slide>
+              {% endcase %}
+            {% endif %}
+            {% for media in product.media %}
+              {% unless media.id == featured_media.id %}
+                <xo-carousel-slide>
+                  {% if media.media_type == 'image' and zoom_enabled %}
+                    <xo-image-zoom xo-zoom='3' xo-use-wheel='false' xo-zoom-src='{{ media.src | image_url: width: 1200 }}'>
+                      <xo-gallery-item xo-src='{{ media.src | image_url: width: 1200 }}'>
+                        <div class='xo-product-info-media__image'>
+                          {% render 'media', type: media.media_type, media: media %}
+                          {% render 'button', style: 'light', icon: 'zoom', size: 'sm', width: '4.5rem', class: 'xo-product-info-media__icon' %}
+                        </div>
+                      </xo-gallery-item>
+                    </xo-image-zoom>
+                  {% else %}
+                    {% render 'media', type: media.media_type, media: media %}
+                  {% endif %}
+                </xo-carousel-slide>
+              {% endunless %}
+            {% endfor %}
+          </xo-carousel-list>
+        </xo-carousel-inner>
+        <xo-carousel-thumbnail class='xo-product-info-media__thumbnails' xo-per-view='6'>
+          <xo-carousel-inner>
+            <xo-carousel-list>
+              {%- if featured_media != null -%}
+                {% case featured_media.media_type %}
+                    <xo-carousel-slide class='xo-product-info-media__thumb-slide'>
+                      {% render 'media', type: featured_media.media_type, media: featured_media %}
+                    </xo-carousel-slide>
+                {% endcase %}
+              {%- endif -%}
+              {% for media in product.media %}
+                {% unless media.id == featured_media.id %}
+                  <xo-carousel-slide class='xo-product-info-media__thumb-slide'>
+                    {% render 'media', type: 'image', media: media.preview_image %}
+                  </xo-carousel-slide>
+                {% endunless %}
+              {% endfor %}
+            </xo-carousel-list>
+          </xo-carousel-inner>
+        </xo-carousel-thumbnail>
+      </xo-carousel>
+    </xo-gallery>
+  </xo-product-will-change>
+</div>

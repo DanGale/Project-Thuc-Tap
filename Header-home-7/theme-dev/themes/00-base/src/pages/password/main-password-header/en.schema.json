@@ -1,0 +1,24 @@
+{
+  "name": "Password header",
+  "settings": {
+    "menu": {
+      "logo": {
+        "label": "Logo"
+      },
+      "social": {
+        "facebook": {
+          "label": "Facebook address"
+        },
+        "linkedin": {
+          "label": "LinkedIn address"
+        },
+        "instagram": {
+          "label": "Instagram address"
+        },
+        "twitter": {
+          "label": "Twitter address"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+// start example
+/*
+  It is example instagram.
+  So that we just create by a grid for render instagram elements.
+  If you want to make other layout or wait for us fix it. Let remove this code.
+*/
+.base-insta {
+  xo-instagram-item {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    a {
+      display: block;
+    }
+  }
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+// end example
+
+.xo-instagram-post {
+  --gap: 2.5rem;
+  position: relative;
+  padding-inline-start: var(--xo-container-gap);
+  @include media('<md') {
+    padding-inline-end: var(--xo-container-gap);
+    padding-bottom: 2rem;
+  }
+}
+
+.xo-instagram-post__carousel {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.xo-instagram-post__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  opacity: 0;
+  &:first-child {
+    opacity: 1;
+  }
+}
+
+.xo-instagram-post__thum-item,
+.xo-instagram-post__item {
+  .xo-image {
+    height: 100%;
+    .placeholder-svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.xo-instagram-post__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+xo-carousel-slide[xo-active]:not([xo-active='false']) .xo-instagram-post__item {
+  opacity: 1;
+  background-color: rgba(var(--color-accent), 0.13);
+}
+
+.xo-instagram-post__inner {
+  width: 45vw;
+  @include media('<md') {
+    width: 100%;
+  }
+}
+
+.xo-instagram-post__thumbnail {
+  overflow: hidden;
+  position: relative;
+  width: calc(100% - 45vw);
+  padding-inline-end: calc((100% - 45vw) * 3 / 5);
+  padding-inline-start: var(--gap);
+  @include media('<md') {
+    width: 100%;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    padding-top: var(--gap);
+  }
+}
+
+.xo-instagram-post__thum-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+}
+
+.xo-instagram-post__nav {
+  position: absolute;
+  left: 45vw;
+  top: calc(45vw - (45vw * 3 / 5) + var(--gap));
+  transform: translate(50%, 100%);
+  @include media('<md') {
+    left: 50%;
+    top: 0;
+    bottom: -1.5rem;
+    transform: translate(-50%, 100%);
+  }
+}
+
+.xo-instagram-post__prev,
+.xo-instagram-post__next {
+  padding: 0rem 2rem;
+  border-radius: 0.7rem;
+  &:hover {
+    transition: 0.3s;
+    box-shadow: 0 0 0.6rem 0.1rem rgba(var(--color-accent), 0.13);
+  }
+}
+
+.xo-instagram-post__prev[xo-disabled],
+.xo-instagram-post__next[xo-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.xo-instagram-post__prev {
+  transform: rotate(180deg);
+}

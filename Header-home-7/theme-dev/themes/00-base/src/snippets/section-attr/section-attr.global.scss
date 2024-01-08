@@ -1,0 +1,25 @@
+.xo-section {
+  --pt: 50;
+  --pb: 50;
+  position: relative;
+  z-index: 9;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--bg-color, rgb(var(--color-background)));
+  background-image: var(--bg-gradient);
+  padding-top: calc(var(--pt) * 0.75 * 1px);
+  padding-bottom: calc(var(--pb) * 0.75 * 1px);
+  @include media('>md') {
+    padding-top: calc(var(--pt) * 1px);
+    padding-bottom: calc(var(--pb) * 1px);
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--bg-overlay);
+  }
+}

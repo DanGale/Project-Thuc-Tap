@@ -1,0 +1,64 @@
+{
+  "name": "t:name",
+  "settings": [
+    {
+      "type": "select",
+      "id": "cart_type",
+      "label" : "t:settings.options.label",
+      "options" : [
+        {
+          "value" : "drawer",
+          "label" : "t:settings.options.options_1.label"
+        },
+        {
+          "value" : "page",
+          "label" : "t:settings.options.options_2.label"
+        },
+        {
+          "value" : "notification",
+          "label" : "t:settings.options.options_3.label"
+        }
+      ],
+      "default" : "drawer"
+    },
+    {
+      "type" : "checkbox",
+      "id" : "show_vendor",
+      "label" : "t:settings.show_vendor.label",
+      "default" : true
+    },
+    {
+      "type": "collection",
+      "id": "cart_drawer_collection",
+      "label": "t:settings.cart_drawer_collection.label"
+    },
+    {
+      "type": "select",
+      "id": "cart_drawer_placement",
+      "label": "t:settings.cart_drawer_placement.label",
+      "options" : [
+        {
+          "value" : "left",
+          "label" : "t:settings.cart_drawer_placement.options_1.label"
+        },
+        {
+          "value" : "right",
+          "label" : "t:settings.cart_drawer_placement.options_2.label"
+        }
+      ],
+      "default" : "right"
+    },
+    {
+      "type" : "checkbox",
+      "id" : "show_cart_free_shipping",
+      "label" : "t:settings.show_cart_free_shipping.label",
+      "default" : true
+    },
+    {
+      "type": "number",
+      "id": "cart_free_shipping_min_amount",
+      "label": "t:settings.cart_free_shipping_min_amount.label",
+      "default": 600
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+module.exports = {
+  root: true,
+  extends: ['eslint-config-airbnb'],
+  rules: {
+    "linebreak-style": 0,
+    'import/no-unresolved': 'error',
+    'no-var': 'error',
+    'no-console': 'warn',
+    'no-underscore-dangle': 0,
+    'no-return-assign': 0,
+    'no-nested-ternary': 0,
+    'no-restricted-syntax': 0,
+    'no-restricted-globals': 0,
+    'guard-for-in': 0,
+    'arrow-body-style': 0,
+    'class-methods-use-this': 0,
+    '@typescript-eslint/no-shadow': 0,
+    '@typescript-eslint/no-unused-vars': 0,
+  },
+};

@@ -1,0 +1,78 @@
+{
+  "name": "HEADER V8",
+  "settings": {
+    "transparent": {
+      "label": "Transparent background"
+    },
+    "check_topbar": {
+      "label": "Enable topbar"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "logo": {
+      "label": "Logo image"
+    },
+    "logo_width": {
+      "unit": "px",
+      "label": "Custom logo width"
+    },
+    "menu": {
+      "label": "Menu"
+    },
+    "menu_type": {
+      "label": "Menu type",
+      "options__1": {
+        "label": "Default"
+      },
+      "options__2": {
+        "label": "Hamburger"
+      }
+    },
+    "hamburger_type": {
+      "label": "Hamburger menu",
+      "options__1": {
+        "label": "Style 1"
+      },
+      "options__2": {
+        "label": "Style 2"
+      },
+      "options__3": {
+        "label": "Style 3"
+      }
+    },
+    "sticky_header_type": {
+      "label": "Sticky header type",
+      "options_1": {
+        "label": "Always"
+      },
+      "options_2": {
+        "label": "On scroll up"
+      },
+      "options_3": {
+        "label": "None"
+      }
+    },
+    "event_type": {
+      "label": "Event type",
+      "options_1": {
+        "label": "Hover"
+      },
+      "options_2": {
+        "label": "Click"
+      }
+    },
+    "width": {
+      "label": "Container type",
+      "option_1": {
+        "label": "Box"
+      },
+      "option_2": {
+        "label": "Wide"
+      }
+    }
+  },
+  "presets": {
+    "name": "header-v8"
+  }
+}

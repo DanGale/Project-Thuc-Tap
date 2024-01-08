@@ -1,0 +1,40 @@
+{{ 'section-text-marquee.css' | asset_url | stylesheet_tag }}
+<section {% render 'section-attr' %}>
+  <xo-animate xo-cascade>
+    <xo-marquee
+      class='xo-text-marquee'
+      style='
+        {%- if section.settings.item_space -%}
+          --space: {{ section.settings.item_space }}rem;
+        {%- endif -%}
+      '
+      xo-speed='{{ section.settings.marquee_speed }}'
+      {%- if section.settings.stop_marquee -%}
+        xo-pause-on-hover='true'
+      {%- endif -%}
+      {%- if section.settings.marquee_right_to_left -%}
+        xo-rtl='true'
+      {%- endif -%}
+    >
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'marquee_text_item' %}
+            <a
+              class='xo-text-marquee__item'
+              style='
+                {%- if block.settings.item_size -%}
+                  --font-size: {{ block.settings.item_size }}rem;
+                {%- endif -%}
+                {%- if block.settings.item_color != '' -%}
+                  --color: {{ block.settings.item_color }};
+                {%- endif -%}
+              '
+              href='{{ block.settings.item_link | default: '#' }}'
+            >
+              {{- block.settings.item_text }}
+            </a>
+        {% endcase %}
+      {% endfor %}
+    </xo-marquee>
+  </xo-animate>
+</section>

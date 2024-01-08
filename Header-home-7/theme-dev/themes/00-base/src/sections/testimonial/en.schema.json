@@ -1,0 +1,31 @@
+{
+  "name": "Testimonial",
+  "blocks": {
+    "slide": {
+        "label": "Testimonial Slide",
+        "settings": {
+        "image": {
+          "label": "Image"
+        },
+        "comment": {
+          "label": "Comment"
+        },
+        "content":{
+          "label": "Content"
+        },
+        "author_image": {
+          "label": "Author Image"
+        },
+        "author_name": {
+          "label": "Author Name"
+        },
+        "author_job": {
+          "label": "Author Job"
+        }
+      }
+    }
+  },
+  "presets" : {
+    "name" : "Testimonial"
+  }
+}

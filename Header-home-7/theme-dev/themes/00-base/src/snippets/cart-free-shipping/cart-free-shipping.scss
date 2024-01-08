@@ -1,0 +1,58 @@
+
+.xo-cart-free-shipping__checking {
+  padding-bottom: 1.5rem;
+  font-size: 0;
+  &:empty {
+    display: none;
+    ~ * {
+      display: none;
+    }
+  }
+}
+
+.xo-cart-free-shipping-text {
+  display: block;
+}
+
+.xo-cart-free-shipping__progress {
+  position: relative;
+  display: block;
+  height: 0.6rem;
+  background-color: rgba(var(--color-foreground), 0.1);
+  font-size: 0;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: var(--progress);
+    transition: 0.3s;
+  }
+}
+
+.xo-cart-free-shipping__progress--level-1 {
+  &:after {
+    background-color: #e95144;
+  }
+}
+
+.xo-cart-free-shipping__progress--level-2 {
+  &:after {
+    background-color: #f5a623;
+  }
+}
+
+.xo-cart-free-shipping__progress--level-3 {
+  &:after {
+    background-color: #a9d321;
+  }
+}
+
+.xo-cart-free-shipping__progress--level-4 {
+  &:after {
+    background-color: #5fd321;
+    ;
+  }
+}

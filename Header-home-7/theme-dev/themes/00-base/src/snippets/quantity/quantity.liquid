@@ -1,0 +1,26 @@
+{% comment %}
+  Renders a quantity selector for a product
+
+  Accepts:
+  - value: {number} value of input number
+  - form_id: {string} id of form to submit
+
+  Usage:
+  {% render 'quantity' %}
+{% endcomment %}
+
+<xo-cart-quantity
+  class='xo-quantity{% if size %} xo-quantity--{{ size }}{% endif %}'
+>
+  <xo-cart-quantity-minus class='xo-quantity__button'>-</xo-cart-quantity-minus>
+  <input
+    class='xo-quantity__number'
+    type='number'
+    name='quantity'
+    value='{{ value }}'
+    {% if form_id %}
+      form='{{ form_id }}'
+    {% endif %}
+  >
+  <xo-cart-quantity-plus class='xo-quantity__button'>+</xo-cart-quantity-plus>
+</xo-cart-quantity>

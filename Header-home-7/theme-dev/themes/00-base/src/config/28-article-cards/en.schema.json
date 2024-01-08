@@ -1,0 +1,56 @@
+{
+  "name": "Article cards",
+  "settings": {
+    "article_card_style": {
+      "label": "Article card style",
+      "option_1" :{
+        "label" : "Standard"
+      },
+      "option_2" :{
+        "label" : "Boxed"
+      }
+    },
+    "article_card_image_padding": {
+      "label": "Image padding"
+    },
+    "article_card_content_padding": {
+      "label": "Content padding"
+    },
+    "article_card_text_alignment": {
+      "label": "Text alignment",
+      "option_1" :{
+        "label" : "Left"
+      },
+      "option_2" :{
+        "label" : "Center"
+      },
+      "option_3" :{
+        "label" : "Right"
+      }
+    },
+    "header_border": {
+      "content": "Boder"
+    },
+    "thickness": {
+      "label": "Thickness"
+    },
+    "opacity": {
+      "label": "Opacity"
+    },
+    "corner_radius": {
+      "label": "Corner radius"
+    },
+    "header_shadow": {
+      "content": "Shadow"
+    },
+    "horizontal_offset": {
+      "label": "Horizontal offset"
+    },
+    "vertical_offset": {
+      "label": "Vertical offset"
+    },
+    "blur": {
+      "label": "Blur"
+    }
+  }
+}

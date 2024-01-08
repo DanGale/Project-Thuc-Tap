@@ -1,0 +1,57 @@
+.xo-menu-hamburger__modal {
+  z-index: 1000;
+}
+
+.xo-menu-hamburger__trigger {
+  cursor: pointer;
+  svg {
+    vertical-align: middle;
+  }
+}
+
+.xo-menu-hamburger__content {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  min-height: 100vh;
+  background-color: rgb(var(--color-background));
+  border-right: 0.1rem solid rgba(var(--color-foreground), .1);
+}
+
+.xo-menu-hamburger__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: fz(body, 1.5);
+  color: rgba(var(--color-foreground), .8);
+  padding: 1.5rem;
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), .1);
+  cursor: pointer;
+  transition: .3s;
+}
+
+.xo-menu-hamburger__item--current {
+  color: rgb(var(--color-accent));
+}
+
+.xo-menu-hamburger__arrow {
+  line-height: normal;
+  svg {
+    vertical-align: middle;
+  }
+}
+
+.xo-menu-hamburger__arrow--mega-menu {
+  display: none;
+}
+
+.xo-menu-hamburger__mega-menu {
+  &:empty {
+    display: none;
+  }
+  &:not(:empty) {
+    ~ * {
+      display: none;
+    }
+  }
+}

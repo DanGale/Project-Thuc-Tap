@@ -1,0 +1,8 @@
+.section + .section {
+  margin-top: var(--spacing-sections-mobile);
+  @include media('>md') {
+    .section + .section {
+      margin-top: var(--spacing-sections-desktop);
+    }
+  }
+}

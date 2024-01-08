@@ -1,0 +1,76 @@
+$breakpoints: (
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200,
+  xxl: 1400,
+);
+
+@function to-unit($value) {
+  @if type-of($value) !='string' {
+    @error 'Value for `to-unit` should be a string.';
+  }
+
+  $units: (
+    'px': 1px,
+    'cm': 1cm,
+    'mm': 1mm,
+    '%': 1%,
+    'ch': 1ch,
+    'pc': 1pc,
+    'in': 1in,
+    'em': 1em,
+    'rem': 1rem,
+    'pt': 1pt,
+    'ex': 1ex,
+    'vw': 1vw,
+    'vh': 1vh,
+    'vmin': 1vmin,
+    'vmax': 1vmax
+  );
+  $parsed-unit: false;
+
+  @each $unit in $units {
+    @if (str-index($value, nth($unit, 1))) {
+      $parsed-unit: nth($unit, 2);
+    }
+  }
+
+  @if (not $parsed-unit) {
+    @return '';
+  }
+
+  @return $parsed-unit;
+}
+
+@mixin media($breakpoint1, $breakpoint2: '') {
+  $breakpoint1_: $breakpoint1;
+  $operator1: str-slice($breakpoint1_, 1, 1);
+  $breakpoint1_: str-slice($breakpoint1_, 2, str-length($breakpoint1_));
+  $unit1: to-unit($breakpoint1_);
+  $unit1: if($unit1 =='', 1px, $unit1);
+  $val1: map-get($breakpoints, $breakpoint1_);
+  $val1: if($val1, $val1, $breakpoint1_);
+  $val1: to-number($val1);
+  $val1: if($operator1 =='>', $val1, if($operator1 =='<', to-number($val1) - 1, ''));
+  $minmax: if($operator1 =='>', 'min', if($operator1 =='<', 'max', ''));
+
+  $breakpoint2_: $breakpoint2;
+  $breakpoint2_: str-slice($breakpoint2_, 2, str-length($breakpoint2_));
+  $unit2: to-unit($breakpoint2_);
+  $unit2: if($unit2 =='', 1px, $unit2);
+  $val2: map-get($breakpoints, $breakpoint2_);
+  $val2: if($val2, $val2, to-number($breakpoint2_));
+
+  @if ($breakpoint2 != '') {
+    @media (min-width: #{$val1 * $unit1}) and (max-width: #{$val2 * $unit2}) {
+      @content;
+    }
+  }
+
+  @else {
+    @media (#{$minmax}-width: #{$val1 * $unit1}) {
+      @content;
+    }
+  }
+}

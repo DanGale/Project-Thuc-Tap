@@ -1,0 +1,242 @@
+{{ 'section-mega-menu-v21.css' | asset_url | stylesheet_tag }}
+{% assign index_number = section.settings.index | append: '' %}
+
+<template xo-mega-menu-name='header-mega-menu-v8' xo-mega-menu-index='{{ index_number }}'>
+  <div data-id='{{ section.id }}' {% render 'section-attr' %}>
+    {% render 'section-bg-image' %}
+    <xo-container>
+      <div class='container-header-v21'>
+        <xo-grid style='--col-width: 16rem;'>
+          {%- if section.settings.menu_style1 != blank -%}
+            <div class='menu-header-v21'>
+              {%- if section.settings.heading_1 != blank -%}
+                <h2 class='menu-header-v21__heading'>{{- section.settings.heading_1 -}}</h2>
+              {%- endif -%}
+              <ul class='menu-header-v21__list-item'>
+                {%- for link in section.settings.menu_style1.links -%}
+                  <li class='menu-header-v21__item'>
+                    {% if link.title contains '[' %}
+                      <a
+                        href='{{ link.url }}'
+                        title='{{link.title | split: '[' | first }}'
+                        class='header-v21-links'
+                      >
+                        {{- link.title | split: '[' | first }}
+                        <span
+                          class='header-v21-links__label header-v21-links__label--{{link.title | handleize}}-{{forloop.index}}'
+                          {% if link.title contains '(' %}
+                            style='background-color: {{link.title | split: '(' | last  | split: ')' | first}}; --border-label:{{link.title | split: '(' | last  | split: ')' | first}};'
+                          {% endif %}
+                        >
+                          <span>{{ link.title | split: '[' | last | split: ']' | first }}</span>
+                        </span>
+
+                        <style>
+                          .label_menu-{{link.title | handleize}}-{{forloop.index}}:before {
+                            border-top: 4px solid {{link.title | split: '(' | last  | split: ')' | first}};
+                          }
+                        </style>
+                      </a>
+                    {% else %}
+                      <a href='{{ link.url }}' title='{{link.title | split: '[' | first }}'>{{ link.title | split: '[' | first }}</a>
+                    {% endif %}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
+          {%- if section.settings.menu_style2 != blank -%}
+            <div class='menu-header-v21'>
+              {%- if section.settings.heading_2 != blank -%}
+                <h2 class='menu-header-v21__heading'>{{- section.settings.heading_2 -}}</h2>
+              {%- endif -%}
+              <ul class='menu-header-v21__list-item'>
+                {%- for link in section.settings.menu_style2.links -%}
+                  <li class='menu-header-v21__item'>
+                    {% if link.title contains '[' %}
+                      <a
+                        href='{{ link.url }}'
+                        title='{{link.title | split: '[' | first }}'
+                        class='header-v21-links'
+                      >
+                        {{- link.title | split: '[' | first }}
+                        <span
+                          class='header-v21-links__label header-v21-links__label--{{link.title | handleize}}-{{forloop.index}}'
+                          {% if link.title contains '(' %}
+                            style='background-color: {{link.title | split: '(' | last  | split: ')' | first}}; --border-label:{{link.title | split: '(' | last  | split: ')' | first}};'
+                          {% endif %}
+                        >
+                          <span>{{ link.title | split: '[' | last | split: ']' | first }}</span>
+                        </span>
+
+                        <style>
+                          .label_menu-{{link.title | handleize}}-{{forloop.index}}:before {
+                            border-top: 4px solid {{link.title | split: '(' | last  | split: ')' | first}};
+                          }
+                        </style>
+                      </a>
+                    {% else %}
+                      <a href='{{ link.url }}' title='{{link.title | split: '[' | first }}'>{{ link.title | split: '[' | first }}</a>
+                    {% endif %}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
+          {%- if section.settings.menu_style3 != blank -%}
+            <div class='menu-header-v21'>
+              {%- if section.settings.heading_3 != blank -%}
+                <h2 class='menu-header-v21__heading'>{{- section.settings.heading_3 -}}</h2>
+              {%- endif -%}
+              <ul class='menu-header-v21__list-item'>
+                {%- for link in section.settings.menu_style3.links -%}
+                  <li class='menu-header-v21__item'>
+                    {% if link.title contains '[' %}
+                      <a
+                        href='{{ link.url }}'
+                        title='{{link.title | split: '[' | first }}'
+                        class='header-v21-links'
+                      >
+                        {{- link.title | split: '[' | first }}
+                        <span
+                          class='header-v21-links__label header-v21-links__label--{{link.title | handleize}}-{{forloop.index}}'
+                          {% if link.title contains '(' %}
+                            style='background-color: {{link.title | split: '(' | last  | split: ')' | first}}; --border-label:{{link.title | split: '(' | last  | split: ')' | first}};'
+                          {% endif %}
+                        >
+                          <span>{{ link.title | split: '[' | last | split: ']' | first }}</span>
+                        </span>
+
+                        <style>
+                          .label_menu-{{link.title | handleize}}-{{forloop.index}}:before {
+                            border-top: 4px solid {{link.title | split: '(' | last  | split: ')' | first}};
+                          }
+                        </style>
+                      </a>
+                    {% else %}
+                      <a href='{{ link.url }}' title='{{link.title | split: '[' | first }}'>{{ link.title | split: '[' | first }}</a>
+                    {% endif %}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
+          {%- if section.settings.menu_style4 != blank -%}
+            <div class='menu-header-v21'>
+              {%- if section.settings.heading_4 != blank -%}
+                <h2 class='menu-header-v21__heading'>{{- section.settings.heading_4 -}}</h2>
+              {%- endif -%}
+              <ul class='menu-header-v21__list-item'>
+                {%- for link in section.settings.menu_style4.links -%}
+                  <li class='menu-header-v21__item'>
+                    {% if link.title contains '[' %}
+                      <a
+                        href='{{ link.url }}'
+                        title='{{link.title | split: '[' | first }}'
+                        class='header-v21-links'
+                      >
+                        {{- link.title | split: '[' | first }}
+                        <span
+                          class='header-v21-links__label header-v21-links__label--{{link.title | handleize}}-{{forloop.index}}'
+                          {% if link.title contains '(' %}
+                            style='background-color: {{link.title | split: '(' | last  | split: ')' | first}}; --border-label:{{link.title | split: '(' | last  | split: ')' | first}};'
+                          {% endif %}
+                        >
+                          <span>{{ link.title | split: '[' | last | split: ']' | first }}</span>
+                        </span>
+
+                        <style>
+                          .label_menu-{{link.title | handleize}}-{{forloop.index}}:before {
+                            border-top: 4px solid {{link.title | split: '(' | last  | split: ')' | first}};
+                          }
+                        </style>
+                      </a>
+                    {% else %}
+                      <a href='{{ link.url }}' title='{{link.title | split: '[' | first }}'>{{ link.title | split: '[' | first }}</a>
+                    {% endif %}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
+          {%- if section.settings.menu_style5 != blank -%}
+            <div class='menu-header-v21'>
+              {%- if section.settings.heading_5 != blank -%}
+                <h2 class='menu-header-v21__heading'>{{- section.settings.heading_5 -}}</h2>
+              {%- endif -%}
+              <ul class='menu-header-v21__list-item'>
+                {%- for link in section.settings.menu_style5.links -%}
+                  <li class='menu-header-v21__item'>
+                    {% if link.title contains '[' %}
+                      <a
+                        href='{{ link.url }}'
+                        title='{{link.title | split: '[' | first }}'
+                        class='header-v21-links'
+                      >
+                        {{- link.title | split: '[' | first }}
+                        <span
+                          class='header-v21-links__label header-v21-links__label--{{link.title | handleize}}-{{forloop.index}}'
+                          {% if link.title contains '(' %}
+                            style='background-color: {{link.title | split: '(' | last  | split: ')' | first}}; --border-label:{{link.title | split: '(' | last  | split: ')' | first}};'
+                          {% endif %}
+                        >
+                          <span>{{ link.title | split: '[' | last | split: ']' | first }}</span>
+                        </span>
+
+                        <style>
+                          .label_menu-{{link.title | handleize}}-{{forloop.index}}:before {
+                            border-top: 4px solid {{link.title | split: '(' | last  | split: ')' | first}};
+                          }
+                        </style>
+                      </a>
+                    {% else %}
+                      <a href='{{ link.url }}' title='{{link.title | split: '[' | first }}'>{{ link.title | split: '[' | first }}</a>
+                    {% endif %}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
+          {%- if section.settings.menu_style6 != blank -%}
+            <div class='menu-header-v21'>
+              {%- if section.settings.heading_6 != blank -%}
+                <h2 class='menu-header-v21__heading'>{{- section.settings.heading_6 -}}</h2>
+              {%- endif -%}
+              <ul class='menu-header-v21__list-item'>
+                {%- for link in section.settings.menu_style6.links -%}
+                  <li class='menu-header-v21__item'>
+                    {% if link.title contains '[' %}
+                      <a
+                        href='{{ link.url }}'
+                        title='{{link.title | split: '[' | first }}'
+                        class='header-v21-links'
+                      >
+                        {{- link.title | split: '[' | first }}
+                        <span
+                          class='header-v21-links__label header-v21-links__label--{{link.title | handleize}}-{{forloop.index}}'
+                          {% if link.title contains '(' %}
+                            style='background-color: {{link.title | split: '(' | last  | split: ')' | first}}; --border-label:{{link.title | split: '(' | last  | split: ')' | first}};'
+                          {% endif %}
+                        >
+                          <span>{{ link.title | split: '[' | last | split: ']' | first }}</span>
+                        </span>
+
+                        <style>
+                          .label_menu-{{link.title | handleize}}-{{forloop.index}}:before {
+                            border-top: 4px solid {{link.title | split: '(' | last  | split: ')' | first}};
+                          }
+                        </style>
+                      </a>
+                    {% else %}
+                      <a href='{{ link.url }}' title='{{link.title | split: '[' | first }}'>{{ link.title | split: '[' | first }}</a>
+                    {% endif %}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
+        </xo-grid>
+      </div>
+    </xo-container>
+  </div>
+</template>

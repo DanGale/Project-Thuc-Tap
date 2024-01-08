@@ -1,0 +1,96 @@
+{
+  "header": {
+    "announcement": "Announcement",
+    "menu": "Menu",
+    "cart_count": {
+      "one": "{{ count }} item",
+      "other": "{{ count }} items"
+    }
+  },
+  "comment": {
+    "title": "Comment"
+  },
+  "email_signup": {
+    "title": "Subscribe to our email",
+    "description" : "Enter your information below to proceed. If you already have an account, please log in instead. ",
+    "email": "Email"
+  },
+  "cart": {
+    "title": "Your cart",
+    "caption": "Cart items",
+    "remove_title": "Remove {{ title }}",
+    "subtotal": "Subtotal",
+    "new_subtotal": "New subtotal",
+    "note_title": "Note",
+    "note_label": "Order special instructions",
+    "note_submit": "Add",
+    "discount_title": "Discount",
+    "discount_label": "Discount code",
+    "estimate_shipping_rates_title": "Estimate",
+    "calculate_shipping": "Calculate shipping",
+    "save": "Save",
+    "cancel": "Cancel",
+    "checkout": "Check out",
+    "empty": "Your cart is empty",
+    "delete" : "Delete",
+    "cart_error": "There was an error while updating your cart. Please try again.",
+    "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
+    "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping</a> calculated at checkout",
+    "taxes_included_but_shipping_at_checkout": "Tax included and shipping calculated at checkout",
+    "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
+    "taxes_and_shipping_at_checkout": "Taxes and shipping calculated at checkout",
+    "estimated_tax": "Estimated Tax",
+    "shipping": "Shipping",
+    "estimated_total": "Estimated Total",
+    "headings": {
+      "product": "Product",
+      "price": "Price",
+      "total": "Total",
+      "quantity": "Quantity",
+      "image": "Product image"
+    },
+    "update": "Update",
+    "login": {
+      "title": "Have an account?",
+      "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in</a> to check out faster."
+    },
+    "continue_shoping": "Continue shopping",
+    "view_cart": "View cart"
+  },
+  "footer": {
+    "payment": "Payment methods"
+  },
+  "featured_blog": {
+    "view_all": "View all",
+    "onboarding_title": "Blog post",
+    "onboarding_content": "Give your customers a summary of your blog post"
+  },
+  "featured_collection": {
+    "view_all": "View all",
+    "view_all_label": "View all products in the {{ collection_name }} collection",
+    "slider": "Slider"
+  },
+  "collection_list": {
+    "view_all": "View all"
+  },
+  "collection_template": {
+    "empty": "No products found",
+    "title": "Collection",
+    "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">remove all</a>"
+  },
+  "video": {
+    "load_video": "Load video: {{ description }}"
+  },
+  "slideshow": {
+    "load_slide": "Load slide",
+    "previous_slideshow": "Previous slide",
+    "next_slideshow": "Next slide",
+    "pause_slideshow": "Pause slideshow",
+    "play_slideshow": "Play slideshow",
+    "carousel": "Carousel",
+    "slide": "Slide"
+  },
+  "page": {
+    "title": "Page title"
+  }
+}

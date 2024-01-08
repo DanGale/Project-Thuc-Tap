@@ -1,0 +1,146 @@
+{{ 'section-header-v8.css' | asset_url | stylesheet_tag }}
+
+<header
+  class='
+    xo-header-v8 color-{{ section.settings.color_scheme }} {% if section.settings.transparent %}
+      xo-header-v8--trans
+    {% endif %}
+  '
+>
+  <div
+    {% if section.settings.transparent %}
+      class='xo-header-v8__transparent'
+    {% endif %}
+    {% render 'section-attr' %}
+  >
+    <xo-sticky
+      xo-direction='{{ section.settings.sticky_header_type }}'
+      {% if section.settings.sticky_header_type == 'none' %}
+        xo-disabled
+      {% endif %}
+      style='z-index: 10000'
+    >
+      <xo-animate
+        xo-type='fade-up'
+        class='
+          xo-header-v8__sticky {% if section.settings.transparent %}
+            xo-header-v8__sticky--trans
+          {% endif %}
+        '
+      >
+        <xo-container class='{% if section.settings.width == 'unset' %} xo-container-width{% endif %} '>
+          <xo-grid class='xo-header-v8__content'>
+            <div
+              {% if section.settings.menu_type == 'drawer' %}
+                style='--xs: 4'
+              {% else %}
+                style='--xs: 8; --order-xs: 2; --lg: 2; --order-lg: 1;'
+              {% endif %}
+              class='
+                xo-header-v8__center {% if section.settings.menu_type == 'drawer' %}
+                  xo-header-v8__center--order
+                {% endif %}
+              '
+            >
+              <a href='/'>
+                {%- if section.settings.logo != blank -%}
+                  {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+                  {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
+                  {{
+                    section.settings.logo
+                    | image_url: width: section.settings.logo_width
+                    | image_tag:
+                      class: 'xo-header-v8__logo-img',
+                      widths: '50, 100, 150, 200, 250, 300, 400, 500',
+                      height: logo_height,
+                      width: section.settings.logo_width,
+                      alt: logo_alt
+                  }}
+                {%- else -%}
+                  <span class='h4 xo-header-v8__logo-heading-logo'>{{ shop.name }}</span>
+                {%- endif -%}
+              </a>
+            </div>
+
+            <nav
+              {% if section.settings.menu_type == 'drawer' %}
+                style='--xs: 4'
+              {% else %}
+                style='--xs: 2; --order-xs: 1; --lg: 8; --order-lg: 2;'
+              {% endif %}
+              class='
+                xo-header-v8__left {% if section.settings.menu_type == 'drawer' %}
+                  xo-header-v8__left--order
+                {% endif %}
+              '
+            >
+              <div class='xo-header-v8__desktop{% if section.settings.menu_type == 'drawer' %} xo-header-v8__desktop--only{% endif %}'>
+                {% if section.settings.menu_type == 'default' %}
+                  {% render 'menu-horizontal-v8', menu: section.settings.menu, event_type: section.settings.event_type %}
+                {% else %}
+                  {% render 'menu-hamburger-style8', menu: section.settings.menu, hamburger_type: section.settings.hamburger_type, menu_type: section.settings.menu_type %}
+                {% endif %}
+              </div>
+              {% if section.settings.menu_type == 'default' %}
+                <div class='xo-header-v8__mobile'>
+                  {% render 'menu-hamburger-style8', menu: section.settings.menu, hamburger_type: section.settings.hamburger_type, menu_type: section.settings.menu_type %}
+                </div>
+              {% endif %}
+            </nav>
+
+            <div
+              {% if section.settings.menu_type == 'drawer' %}
+                style='--xs: 4'
+              {% else %}
+                style='--xs: 2; --order-xs: 3; --lg: 2;'
+              {% endif %}
+              class='xo-header-v8__right'
+            >
+              <xo-modal-trigger
+                class='xo-header-v8__right-item'
+                xo-name='how'
+              >
+                {% render 'icon', name: 'search', size: '24', color: 'rgb(var(--color-foreground))' %}
+              </xo-modal-trigger>
+              <a href='#' class='xo-header-v8__right-item xo-header-v8__right-item--heart'>
+                {% render 'icon', name: 'heart', size: '24', color: 'rgb(var(--color-foreground))' %}
+              </a>
+              <a
+                href='{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}'
+                class='xo-header-v8__right-item xo-header-v8__right-item--account'
+              >
+                {% if customer %}
+                  {% render 'icon', name: 'account', size: '24', color: 'rgb(var(--color-foreground))' %}
+                {% else %}
+                  {% render 'icon', name: 'account', size: '24', color: 'rgb(var(--color-foreground))' %}
+                {% endif %}
+              </a>
+
+              {% if settings.cart_type == 'page' %}
+                <a class='xo-header-v8__right-item' href='{{ routes.cart_url }}'>
+                  {% render 'icon', name: 'cart1', icon_size: '24', color: 'rgb(var(--color-foreground))' %}
+                  <div class='xo-header-v8__right-item-number'>
+                    <xo-cart-size>{{ cart.item_count }}</xo-cart-size>
+                  </div>
+                </a>
+              {% else %}
+                <xo-modal-trigger
+                  class='xo-header-v8__right-item'
+                  xo-name='cart'
+                  ,
+                >
+                  {% render 'icon', name: 'cart', size: '24', color: 'rgb(var(--color-foreground))' %}
+                  <div class='xo-header-v8__right-item-number'>
+                    <xo-cart-size>{{ cart.item_count }}</xo-cart-size>
+                  </div>
+                </xo-modal-trigger>
+              {% endif %}
+            </div>
+          </xo-grid>
+        </xo-container>
+      </xo-animate>
+    </xo-sticky>
+  </div>
+</header>
+
+{% render 'header-ld-json' %}

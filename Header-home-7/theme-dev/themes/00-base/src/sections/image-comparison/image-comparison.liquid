@@ -1,0 +1,22 @@
+{{ 'section-image-comparison.css' | asset_url | stylesheet_tag }}
+<section {% render 'section-attr' %}>
+  <xo-container>
+    <xo-animate xo-cascade>
+      <xo-image-comparison class='xo-img-compare'>
+        <xo-image-comparison-before>
+          {% render 'image', image: section.settings.image_before, width: '100%' %}
+          <xo-image-comparison-label class='xo-img-compare__badge'>Before</xo-image-comparison-label>
+        </xo-image-comparison-before>
+        <xo-image-comparison-after>
+          {% render 'image', image: section.settings.image_after, width: '100%' %}
+          <xo-image-comparison-label class='xo-img-compare__badge'>After</xo-image-comparison-label>
+        </xo-image-comparison-after>
+        <xo-image-comparison-handle class='xo-img-compare__handle'>
+          <xo-image-comparison-handle-icon class='xo-img-compare__handle-icon'>
+            {% render 'icon', name: 'arrow', size: '2rem', color: 'rgba(var(--color-accent))' %}
+          </xo-image-comparison-handle-icon>
+        </xo-image-comparison-handle>
+      </xo-image-comparison>
+    </xo-animate>
+  </xo-container>
+</section>

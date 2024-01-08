@@ -1,0 +1,21 @@
+.xo-section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.xo-section-heading--center {
+  justify-content: center;
+  text-align: center;
+}
+
+.xo-section-heading--right {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.xo-section-heading__title {
+  margin: 0;
+  font-size: fz(heading, 4.5);
+}

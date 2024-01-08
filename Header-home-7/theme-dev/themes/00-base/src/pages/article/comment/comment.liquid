@@ -1,0 +1,12 @@
+{{ 'section-comment.css' | asset_url | stylesheet_tag }}
+{{ 'article-comments.css' | asset_url | stylesheet_tag }}
+{{ 'article-comments-form.css' | asset_url | stylesheet_tag }}
+
+<div {% render 'section-attr' %}>
+  <div class='xo-section-comment'>
+    {%- if blog.comments_enabled? -%}
+      {% render 'article-comments' %}
+      {% render 'article-comments-form' %}
+    {%- endif -%}
+  </div>
+</div>

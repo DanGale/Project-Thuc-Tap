@@ -1,0 +1,2 @@
+export declare function reduce<T extends any, R extends any>(array: T[], callback: (previousValue: R, currentValue: T, currentIndex: number, array: T[]) => R, initialValue: R): R;
+//# sourceMappingURL=reduce.d.ts.map

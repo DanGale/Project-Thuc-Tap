@@ -1,0 +1,10 @@
+{
+  "name": "Currency format",
+  "settings": {
+    "currency_format": {
+      "content": "Currency codes",
+      "paragraph": "Cart and checkout prices always show currency codes. Example: $1.00 USD.",
+      "label": "Show currency codes"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "title": {
+    "label": "Title"
+  },
+  "description": {
+    "label": "Description"
+  },
+  "align": {
+    "label": "Align",
+    "option__1": {
+      "label": "Left"
+    },
+    "option__2": {
+      "label": "Center"
+    },
+    "option__3": {
+      "label": "Right"
+    }
+  }
+}

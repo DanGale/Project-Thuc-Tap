@@ -1,0 +1,232 @@
+/* color-1 là 1 color scheme */
+
+// :root {
+//   // Đây là nơi định nghĩa ra các màu sắc
+//   @include colorSchemeDefine(color-1, (
+//     accent-1: #f00f00,
+//     background: #ffffff,
+//     text: #121212,
+//     shadow: #121212,
+//     button: #121212,
+//     button_label: #dd1d1d,
+//     secondary_button_label: #121212
+//   ));
+
+//   // Đây là nơi ánh xạ tạo ra các màu để sử dụng từ màu đã định nghĩa phía trên
+//   @include colorSchemeMapping(color-1, (
+//     color-accent-1: accent-1,
+//     color-background: background,
+//     color-foreground: text,
+//     color-shadow: shadow,
+//     color-button: button,
+//     color-button-text: button_label,
+//     color-secondary-button-text: secondary_button_label,
+//     color-link: secondary_button_label,
+//     color-badge-foreground: text,
+//     color-badge-background: background,
+//     color-badge-border: text,
+//   ));
+// }
+
+// :root {
+//   --font-body-desktop-size: 1.6rem;
+//   --font-body-mobile-size: 1.5rem;
+//   --font-body-family: Assistant, sans-serif;
+//   --font-body-style: normal;
+//   --font-body-weight: 400;
+//   --font-body-weight-bold: 700;
+
+//   --font-heading-family: Assistant, sans-serif;
+//   --font-heading-style: normal;
+//   --font-heading-weight: 400;
+
+//   --font-body-scale: 1.0;
+//   --font-heading-scale: 1.0;
+
+//   --media-padding: 0px;
+//   --media-border-opacity: 0.05;
+//   --media-border-width: 1px;
+//   --media-radius: 0px;
+//   --media-shadow-opacity: 0.0;
+//   --media-shadow-horizontal-offset: 0px;
+//   --media-shadow-vertical-offset: 4px;
+//   --media-shadow-blur-radius: 5px;
+//   --media-shadow-visible: 0;
+
+//   /* Đây chính là container */
+//   --page-width: 120rem;
+//   /* Phần này chưa rõ */
+//   --page-width-margin: 0rem;
+//   /* Còn thiếu biến gap 2 bên */
+//   --page-spacing: 20px;
+
+//   --spacing-sections-desktop: 0px;
+//   --spacing-sections-mobile: 0px;
+
+//   /* Đoạn này là gap của column */
+//   --grid-desktop-vertical-spacing: 8px;
+//   --grid-desktop-horizontal-spacing: 8px;
+//   --grid-mobile-vertical-spacing: 4px;
+//   --grid-mobile-horizontal-spacing: 4px;
+
+//   --product-card-image-padding: 0.0rem;
+//   --product-card-corner-radius: 0.0rem;
+//   --product-card-text-alignment: left;
+//   --product-card-border-width: 0.0rem;
+//   --product-card-border-opacity: 0.1;
+//   --product-card-shadow-opacity: 0.0;
+//   --product-card-shadow-visible: 0;
+//   --product-card-shadow-horizontal-offset: 0.0rem;
+//   --product-card-shadow-vertical-offset: 0.4rem;
+//   --product-card-shadow-blur-radius: 0.5rem;
+
+//   --collection-card-image-padding: 0.0rem;
+//   --collection-card-corner-radius: 0.0rem;
+//   --collection-card-text-alignment: left;
+//   --collection-card-border-width: 0.0rem;
+//   --collection-card-border-opacity: 0.1;
+//   --collection-card-shadow-opacity: 0.0;
+//   --collection-card-shadow-visible: 0;
+//   --collection-card-shadow-horizontal-offset: 0.0rem;
+//   --collection-card-shadow-vertical-offset: 0.4rem;
+//   --collection-card-shadow-blur-radius: 0.5rem;
+
+//   --blog-card-image-padding: 0.0rem;
+//   --blog-card-corner-radius: 0.0rem;
+//   --blog-card-text-alignment: left;
+//   --blog-card-border-width: 0.0rem;
+//   --blog-card-border-opacity: 0.1;
+//   --blog-card-shadow-opacity: 0.0;
+//   --blog-card-shadow-visible: 0;
+//   --blog-card-shadow-horizontal-offset: 0.0rem;
+//   --blog-card-shadow-vertical-offset: 0.4rem;
+//   --blog-card-shadow-blur-radius: 0.5rem;
+
+//   --badge-corner-radius: 4.0rem;
+
+//   --popup-border-width: 1px;
+//   --popup-border-opacity: 0.1;
+//   --popup-corner-radius: 0px;
+//   --popup-shadow-opacity: 0.0;
+//   --popup-shadow-horizontal-offset: 0px;
+//   --popup-shadow-vertical-offset: 4px;
+//   --popup-shadow-blur-radius: 5px;
+
+//   --drawer-border-width: 1px;
+//   --drawer-border-opacity: 0.1;
+//   --drawer-shadow-opacity: 0.0;
+//   --drawer-shadow-horizontal-offset: 0px;
+//   --drawer-shadow-vertical-offset: 4px;
+//   --drawer-shadow-blur-radius: 5px;
+
+//   --text-boxes-border-opacity: 0.1;
+//   --text-boxes-border-width: 0px;
+//   --text-boxes-radius: 0px;
+//   --text-boxes-shadow-opacity: 0.0;
+//   --text-boxes-shadow-visible: 0;
+//   --text-boxes-shadow-horizontal-offset: 0px;
+//   --text-boxes-shadow-vertical-offset: 4px;
+//   --text-boxes-shadow-blur-radius: 5px;
+
+//   --buttons-radius: 0px;
+//   --buttons-radius-outset: 0px;
+//   --buttons-border-width: 1px;
+//   --buttons-border-opacity: 1.0;
+//   --buttons-shadow-opacity: 0.0;
+//   --buttons-shadow-visible: 0;
+//   --buttons-shadow-horizontal-offset: 0px;
+//   --buttons-shadow-vertical-offset: 4px;
+//   --buttons-shadow-blur-radius: 5px;
+//   --buttons-border-offset: 0px;
+
+//   --inputs-radius: 0px;
+//   --inputs-border-width: 1px;
+//   --inputs-border-opacity: 0.55;
+//   --inputs-shadow-opacity: 0.0;
+//   --inputs-shadow-horizontal-offset: 0px;
+//   --inputs-margin-offset: 0px;
+//   --inputs-shadow-vertical-offset: 4px;
+//   --inputs-shadow-blur-radius: 5px;
+//   --inputs-radius-outset: 0px;
+
+//   --variant-pills-radius: 40px;
+//   --variant-pills-border-width: 1px;
+//   --variant-pills-border-opacity: 0.55;
+//   --variant-pills-shadow-opacity: 0.0;
+//   --variant-pills-shadow-horizontal-offset: 0px;
+//   --variant-pills-shadow-vertical-offset: 4px;
+//   --variant-pills-shadow-blur-radius: 5px;
+// }
+
+// ĐOẠN DƯỚI NÀY KHÔNG CẦN
+// :root {
+//   --shopify-editor-color-scheme-color-1-setting-accent: #fe6060;
+//   --shopify-editor-color-scheme-color-1-setting-accent-format-red: 254;
+//   --shopify-editor-color-scheme-color-1-setting-accent-format-green: 96;
+//   --shopify-editor-color-scheme-color-1-setting-accent-format-blue: 96;
+
+//   --shopify-editor-color-scheme-color-1-setting-background: #FFFFFF;
+//   --shopify-editor-color-scheme-color-1-setting-background-format-red: 255;
+//   --shopify-editor-color-scheme-color-1-setting-background-format-green: 255;
+//   --shopify-editor-color-scheme-color-1-setting-background-format-blue: 255;
+//   --shopify-editor-color-scheme-color-1-setting-background-format-rgb: 255 255 255;
+
+//   --shopify-editor-color-scheme-color-1-setting-text: #121212;
+//   --shopify-editor-color-scheme-color-1-setting-text-format-red: 18;
+//   --shopify-editor-color-scheme-color-1-setting-text-format-green: 18;
+//   --shopify-editor-color-scheme-color-1-setting-text-format-blue: 18;
+
+//   --shopify-editor-color-scheme-color-1-setting-shadow: #121212;
+//   --shopify-editor-color-scheme-color-1-setting-shadow-format-red: 18;
+//   --shopify-editor-color-scheme-color-1-setting-shadow-format-green: 18;
+//   --shopify-editor-color-scheme-color-1-setting-shadow-format-blue: 18;
+
+//   --shopify-editor-color-scheme-color-1-setting-button: #121212;
+//   --shopify-editor-color-scheme-color-1-setting-button-format-red: 18;
+//   --shopify-editor-color-scheme-color-1-setting-button-format-green: 18;
+//   --shopify-editor-color-scheme-color-1-setting-button-format-blue: 18;
+
+//   --shopify-editor-color-scheme-color-1-setting-button_label: #dd1d1d;
+//   --shopify-editor-color-scheme-color-1-setting-button_label-format-red: 221;
+//   --shopify-editor-color-scheme-color-1-setting-button_label-format-green: 29;
+//   --shopify-editor-color-scheme-color-1-setting-button_label-format-blue: 29;
+
+//   --shopify-editor-color-scheme-color-1-setting-secondary_button_label: #121212;
+//   --shopify-editor-color-scheme-color-1-setting-secondary_button_label-format-red: 18;
+//   --shopify-editor-color-scheme-color-1-setting-secondary_button_label-format-green: 18;
+//   --shopify-editor-color-scheme-color-1-setting-secondary_button_label-format-blue: 18;
+// }
+
+// /*
+// Đoạn biến màu này được generate từ phía trên
+// Và khi style ta sẽ dùng biến màu này
+//  */
+// :root {
+//   --color-accent: var(--shopify-editor-color-scheme-color-1-setting-accent-format-red), var(--shopify-editor-color-scheme-color-1-setting-accent-format-green), var(--shopify-editor-color-scheme-color-1-setting-accent-format-blue);
+
+//   --color-background: var(--shopify-editor-color-scheme-color-1-setting-background-format-red), var(--shopify-editor-color-scheme-color-1-setting-background-format-green), var(--shopify-editor-color-scheme-color-1-setting-background-format-blue);
+
+//   --gradient-background: var(--shopify-editor-color-scheme-color-1-setting-background);
+
+//   --color-foreground: var(--shopify-editor-color-scheme-color-1-setting-text-format-red), var(--shopify-editor-color-scheme-color-1-setting-text-format-green), var(--shopify-editor-color-scheme-color-1-setting-text-format-blue);
+
+//   --color-shadow: var(--shopify-editor-color-scheme-color-1-setting-shadow-format-red), var(--shopify-editor-color-scheme-color-1-setting-shadow-format-green), var(--shopify-editor-color-scheme-color-1-setting-shadow-format-blue);
+
+//   --color-button: var(--shopify-editor-color-scheme-color-1-setting-button-format-red), var(--shopify-editor-color-scheme-color-1-setting-button-format-green), var(--shopify-editor-color-scheme-color-1-setting-button-format-blue);
+
+//   --color-button-text: var(--shopify-editor-color-scheme-color-1-setting-button_label-format-red), var(--shopify-editor-color-scheme-color-1-setting-button_label-format-green), var(--shopify-editor-color-scheme-color-1-setting-button_label-format-blue);
+
+//   --color-secondary-button: var(--shopify-editor-color-scheme-color-1-setting-background-format-red), var(--shopify-editor-color-scheme-color-1-setting-background-format-green), var(--shopify-editor-color-scheme-color-1-setting-background-format-blue);
+
+//   --color-secondary-button-text: var(--shopify-editor-color-scheme-color-1-setting-secondary_button_label-format-red), var(--shopify-editor-color-scheme-color-1-setting-secondary_button_label-format-green), var(--shopify-editor-color-scheme-color-1-setting-secondary_button_label-format-blue);
+
+//   --color-link: var(--shopify-editor-color-scheme-color-1-setting-secondary_button_label-format-red), var(--shopify-editor-color-scheme-color-1-setting-secondary_button_label-format-green), var(--shopify-editor-color-scheme-color-1-setting-secondary_button_label-format-blue);
+
+//   --color-badge-foreground: var(--shopify-editor-color-scheme-color-1-setting-text-format-red), var(--shopify-editor-color-scheme-color-1-setting-text-format-green), var(--shopify-editor-color-scheme-color-1-setting-text-format-blue);
+
+//   --color-badge-background: var(--shopify-editor-color-scheme-color-1-setting-background-format-red), var(--shopify-editor-color-scheme-color-1-setting-background-format-green), var(--shopify-editor-color-scheme-color-1-setting-background-format-blue);
+
+//   --color-badge-border: var(--shopify-editor-color-scheme-color-1-setting-text-format-red), var(--shopify-editor-color-scheme-color-1-setting-text-format-green), var(--shopify-editor-color-scheme-color-1-setting-text-format-blue);
+
+//   --payment-terms-background-color: rgb(var(--shopify-editor-color-scheme-color-1-setting-background-format-rgb));
+// }

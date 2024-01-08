@@ -1,0 +1,88 @@
+{
+  "name": "t:name",
+  "settings": [
+    {
+      "type": "range",
+      "id": "animate_duration",
+      "min": 300,
+      "max": 4000,
+      "step": 100,
+      "default": 500,
+      "unit": "ms",
+      "label": "t:settings.animate_duration.label"
+    },
+    {
+      "type": "select",
+      "id": "animate_effect",
+      "options": [
+        {
+          "value": "fade",
+          "label": "t:settings.animate_fade.label"
+        },
+        {
+          "value": "fade-up",
+          "label": "t:settings.animate_fade_up.label"
+        },
+        {
+          "value": "fade-down",
+          "label": "t:settings.animate_fade_down.label"
+        },
+        {
+          "value": "fade-left",
+          "label": "t:settings.animate_fade_left.label"
+        },
+        {
+          "value": "fade-right",
+          "label": "t:settings.animate_fade_right.label"
+        },
+        {
+          "value": "zoom-in",
+          "label": "t:settings.animate_zoom_in.label"
+        },
+        {
+          "value": "zoom-out",
+          "label": "t:settings.animate_zoom_out.label"
+        },
+        {
+          "value": "rotate-left-up",
+          "label": "t:settings.animate_rotate_left_up.label"
+        },
+        {
+          "value": "rotate-right-up",
+          "label": "t:settings.animate_rotate_right_up.label"
+        },
+        {
+          "value": "snake-up",
+          "label": "t:settings.animate_snake_up.label"
+        },
+        {
+          "value": "snake-down",
+          "label": "t:settings.animate_snake_down.label"
+        },
+        {
+          "value": "snake-left",
+          "label": "t:settings.animate_snake_left.label"
+        },
+        {
+          "value": "snake-right",
+          "label": "t:settings.animate_snake_right.label"
+        },
+        {
+          "value": "3d-up",
+          "label": "t:settings.animate_3d_up.label"
+        }
+      ],
+      "default": "fade-up",
+      "label": "t:settings.animate_effect.label"
+    },
+    {
+      "type": "range",
+      "id": "animate_strength",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 1,
+      "label": "t:settings.animate_strength.label"
+    }
+  ]
+}

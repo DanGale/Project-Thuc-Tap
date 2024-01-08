@@ -1,0 +1,54 @@
+{
+  "button_text": {
+    "label": "Button Text"
+  },
+  "button_link": {
+    "label": "Button Link"
+  },
+  "button_radius": {
+    "label": "Button border radius"
+  },
+  "button_padding": {
+    "label": "Button padding"
+  },
+  "button_style" : {
+    "label" : "Button style",
+    "option__1" :{
+      "label" : "Primary"
+    },
+    "option__2" :{
+      "label" : "Secondary"
+    },
+    "option__3" :{
+      "label" : "Link"
+    }
+  },
+
+  "button_type" : {
+    "label" : "Button type",
+    "option__1" :{
+      "label" : "Button"
+    },
+    "option__2" :{
+      "label" : "Submit"
+    },
+    "option__3" :{
+      "label" : "Reset"
+    }
+  },
+  "button_size" : {
+    "label" : "Button size",
+    "option__0" :{
+      "label" : "Extra Small"
+    },
+    "option__1" :{
+      "label" : "Small"
+    },
+    "option__2" :{
+      "label" : "Medium"
+    },
+    "option__3" :{
+      "label" : "Large"
+    }
+  }
+}

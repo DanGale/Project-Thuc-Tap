@@ -1,0 +1,20 @@
+{
+  "name": "Image lazyload",
+  "settings": {
+    "image_lazyload": {
+      "label": "Enable lazyload"
+    },
+    "image_lazyload_loading": {
+      "label": "Type of loading",
+      "option_1": {
+        "label": "Loader 1"
+      },
+      "option_2": {
+        "label": "Loader 2"
+      },
+      "option_3": {
+        "label": "Loader 3"
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{{ 'article-card.css' | asset_url | stylesheet_tag }}
+
+<div {% render 'section-attr' %}>
+  <xo-container>
+    {%- paginate blog.articles by section.settings.limit -%}
+      <xo-grid style='--lg: {{ section.settings.columns_desktop }}; --md: {{ section.settings.columns_desktop | minus: 1 }}; --xs: 1; --xo-grid-col-gap: {{ section.settings.columns_spacing }}px; --xo-grid-row-gap: {{ section.settings.columns_spacing }}px;'>
+        {%- for article in blog.articles -%}
+          {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
+          {%- assign placeholder_image = 'product-apparel-' | append: placeholder_image_index -%}
+          {% render 'article-card',
+            article: article,
+            media_aspect_ratio: section.settings.article_card_media_aspect_ratio,
+            show_image: section.settings.article_card_show_image,
+            show_date: section.settings.article_card_show_date,
+            show_author: section.settings.article_card_show_author,
+            show_excerpt: section.settings.article_card_show_excerpt,
+            show_tags: section.settings.article_card_show_tags,
+            placeholder_image: placeholder_image,
+            color_scheme: section.settings.card_color_scheme
+          %}
+        {%- endfor -%}
+      </xo-grid>
+      {%- render 'pagination', paginate: paginate -%}
+    {%- endpaginate -%}
+  </xo-container>
+</div>

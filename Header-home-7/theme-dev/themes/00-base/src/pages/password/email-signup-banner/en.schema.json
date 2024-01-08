@@ -1,0 +1,44 @@
+{
+  "name": "Email signup banner",
+  "settings": {
+    "blocks": {
+      "banner": {
+        "name": "Banner",
+        "image": {
+          "label": "Image banner"
+        },
+        "heading": {
+          "label": "Banner heading"
+        }
+      },
+      "content_description": {
+        "name": "Description",
+        "title": {
+          "label": "Heading"
+        },
+        "description": {
+          "label": "Description"
+        }
+      },
+      "input_email": {
+        "name": "Input email",
+        "place_holder": {
+          "label": "Placeholder"
+        },
+        "button_submit": {
+          "label": "Button submit"
+        }
+      }
+    },
+    "learn_more": {
+      "label": "Learn more",
+      "learn_more_link": "Learn more link"
+    },
+    "login_here": {
+      "label": "Login here"
+    }
+  },
+  "presets": {
+    "name": "Email signup banner"
+  }
+}

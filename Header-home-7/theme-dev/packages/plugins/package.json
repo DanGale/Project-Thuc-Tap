@@ -1,0 +1,16 @@
+{
+  "name": "@xo/plugins",
+  "version": "0.0.0",
+  "main": "./src/main.js",
+  "typings": "./src/index.d.ts",
+  "files": [
+    "src"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.ts*\""
+  },
+  "devDependencies": {
+
+  }
+}

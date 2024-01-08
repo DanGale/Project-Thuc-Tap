@@ -1,0 +1,14 @@
+/* ============== CORE ============== */
+@import '../../../../html/basehtml/src/styles/main.scss';
+
+/* ============== BASE ============== */
+@import './base/input.scss';
+@import './base/heading.scss';
+@import './base/table.scss';
+@import './base/helpers.scss';
+
+/* ============== SNIPPETS ============== */
+@import '../snippets/**/*.global.scss';
+@import '../groups/**/*.global.scss';
+@import '../sections/**/*.global.scss';
+@import '../pages/**/*.global.scss';

@@ -1,0 +1,67 @@
+{
+  "name": "Header",
+  "settings": {
+    "logo": {
+      "label": "Logo image"
+    },
+    "logo_width": {
+      "unit": "px",
+      "label": "Custom logo width"
+    },
+    "logo_position": {
+      "label": "Desktop logo position",
+      "options_1": {
+        "label": "Left"
+      },
+      "options_2": {
+        "label": "Center"
+      },
+      "info": "Position is automatically optimized for mobile."
+    },
+    "menu": {
+      "label": "Menu"
+    },
+    "menu_type": {
+      "label": "Menu type",
+      "info": "Menu type is automatically optimized for mobile.",
+      "options__1": {
+        "label": "Default"
+      },
+      "options__2": {
+        "label": "Drawer"
+      }
+    },
+    "sticky_header_type": {
+      "label": "Sticky header type",
+      "info": "Header shows on the screen as customers scroll up.",
+      "options_1": {
+        "label": "Always"
+      },
+      "options_2": {
+        "label": "On scroll up"
+      },
+      "options_3": {
+        "label": "None"
+      }
+    },
+    "event_type": {
+      "label": "Event type",
+      "options_1": {
+        "label": "Hover"
+      },
+      "options_2": {
+        "label": "Click"
+      }
+    },
+    "language_select": {
+      "content": "Language selector",
+      "info": "To add a language, go to your [language settings.](/admin/settings/languages)",
+      "label": "Enable language selector"
+    },
+    "currency_select": {
+      "content": "Country/region selector",
+      "info": "To add a country/region, go to your [market settings.](/admin/settings/markets)",
+      "label": "Enable country/region selector"
+    }
+  }
+}

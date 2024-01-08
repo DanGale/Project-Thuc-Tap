@@ -1,0 +1,56 @@
+@function linear-interpolation($map) {
+	$keys: map-keys($map);
+	@if (length($keys) !=2) {
+		@error "linear-interpolation() $map must be exactly 2 values";
+	}
+	// The slope
+	$m: (map-get($map, nth($keys, 2)) - map-get($map, nth($keys, 1)))/(nth($keys, 2) - nth($keys, 1));
+	// The y-intercept
+	$b: map-get($map, nth($keys, 1)) - $m * nth($keys, 1);
+	// Determine if the sign should be positive or negative
+	$sign: "+";
+	@if ($b < 0) {
+		$sign: "-";
+		$b: abs($b);
+	}
+	@return calc(#{$m*100}vw #{$sign} #{$b});
+}
+
+@function fzz($absValue) {
+  @return calc(var(--font-heading-scale) * #{$absValue});
+}
+
+@function ends-with($string, $find) {
+  @if (str-index($string, $find) == (str-length($string) - str-length($find) + 1)) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+@function pfs($min, $max) {
+  $min_has_key: str-index(#{$min}, ':');
+  $max_has_key: str-index(#{$max}, ':');
+  $_min: if($min_has_key, to-number(str-slice(#{$min}, $min_has_key + 1)), $min);
+  $_max: if($max_has_key, to-number(str-slice(#{$max}, $max_has_key + 1)), $max);;
+  $from: if($min_has_key, to-number(str-slice(#{$min}, 0, $min_has_key - 1)), 40rem);
+  $to: if($max_has_key, to-number(str-slice(#{$max}, 0, $max_has_key - 1)), 120rem);
+
+  @if not (ends-with('#{$min}', 'rem')) {
+    $_min: $_min * 1rem;
+  }
+  @if not (ends-with('#{$max}', 'rem')) {
+    $_max: $_max * 1rem;
+  }
+  $value: linear-interpolation((
+    $from: $_min,
+    $to: $_max
+  ));
+
+  @return clamp(#{$_min}, #{$value}, #{$_max});
+}
+
+@mixin pfs($attr, $min, $max) {
+	#{$attr}: $max;
+	#{$attr}: pfs($min, $max);
+}

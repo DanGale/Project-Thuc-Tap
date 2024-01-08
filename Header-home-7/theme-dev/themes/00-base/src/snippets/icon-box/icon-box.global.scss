@@ -1,0 +1,25 @@
+.xo-icon-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.xo-icon-box__link {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-decoration: none;
+}
+
+.xo-icon-box__image,
+.xo-icon-box__icon {
+  max-width: 6rem;
+}
+
+.xo-icon-box__title {
+  font-size: fz(heading, 2.2);
+  margin: 0;
+}
+
+.xo-icon-box--center {
+  align-items: center;
+}

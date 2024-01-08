@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "main-page-heading": {
+      "type": "main-page-heading",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "main": {
+      "type" : "main-list-collections"
+    }
+  },
+  "order": [
+    "main-page-heading",
+    "main"
+  ]
+}

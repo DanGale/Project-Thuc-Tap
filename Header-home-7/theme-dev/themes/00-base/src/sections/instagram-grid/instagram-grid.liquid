@@ -1,0 +1,38 @@
+{{ 'section-instagram-grid.css' | asset_url | stylesheet_tag }}
+
+<section {% render 'section-attr' %}>
+  <xo-container>
+    {% render 'section-heading', title: section.settings.heading_title, description: section.settings.heading_description, align: section.settings.heading_align %}
+
+    <xo-instagram xo-open-mode='newtab' xo-access-token='{{ section.settings.access_token }}'>
+      <xo-grid
+        class='xo-insta-grid'
+        style='
+          --xs: {{ section.settings.collumn_sm }};
+          --md: {{ section.settings.collumn_md }};
+          --lg: {{ section.settings.collumn_lg }};
+          --xo-grid-col-gap: {{ section.settings.space }}px;
+          --xo-grid-row-gap: {{ section.settings.space }}px;
+        '
+      >
+        {% if section.settings.access_token != blank %}
+          <xo-instagram-template>
+            <div class='xo-insta-grid__item'>
+              <div class='xo-insta-grid__item-image'>
+                <img data-src='{ url }' alt=''>
+              </div>
+            </div>
+          </xo-instagram-template>
+        {% else %}
+          {% for i in (1..12) %}
+            {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
+            {%- assign placeholder_image = 'product-apparel-' | append: placeholder_image_index -%}
+            <div class='xo-insta-grid__item'>
+              {% render 'image', width: '100%', placeholder: placeholder_image %}
+            </div>
+          {% endfor %}
+        {% endif %}
+      </xo-grid>
+    </xo-instagram>
+  </xo-container>
+</section>

@@ -1,0 +1,30 @@
+{
+  "name": "Call to action",
+  "settings": {
+    "reverse": {
+      "label": "Reverse"
+    },
+    "image": {
+      "label": "Image"
+    },
+    "title": {
+      "label": "Title"
+    },
+    "description": {
+      "label": "Description"
+    },
+    "button_label": {
+      "label": "Button Label"
+    },
+    "padding_top": {
+      "label": "Padding top"
+    },
+    "padding_bottom": {
+      "label": "Padding bottom"
+    }
+  },
+  "blocks": {},
+  "presets" : {
+    "name" : "Call to action"
+  }
+}

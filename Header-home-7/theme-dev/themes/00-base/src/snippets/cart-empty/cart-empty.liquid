@@ -1,0 +1,10 @@
+{% assign title_empty = 'sections.cart.empty' | t %}
+{% capture content_empty %}
+  <a href='/collections/all'>{{ 'sections.cart.continue_shoping' | t }}</a>
+  <p class='xo-cart-drawer__login-title'>{{ 'sections.cart.login.title' | t }}</p>
+  <p class='xo-cart-drawer__login-paragraph'>{{ 'sections.cart.login.paragraph_html' | t }}</p>
+{% endcapture %}
+
+<xo-animate xo-cascade class='xo-cart-empty'>
+  {% render 'empty', title: title_empty, content: content_empty %}
+</xo-animate>

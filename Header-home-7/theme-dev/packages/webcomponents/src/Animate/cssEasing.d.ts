@@ -1,0 +1,35 @@
+export declare const cssEasing: {
+    easeLight: string;
+    easeInOut: string;
+    easeOut: string;
+    easeIn: string;
+    ease: string;
+    easeInBack: string;
+    easeOutBack: string;
+    easeInOutBack: string;
+    easeInCirc: string;
+    easeOutCirc: string;
+    easeInOutCirc: string;
+    easeInCubic: string;
+    easeOutCubic: string;
+    easeInOutCubic: string;
+    easeInExpo: string;
+    easeOutExpo: string;
+    easeInOutExpo: string;
+    easeInQuad: string;
+    easeOutQuad: string;
+    easeInOutQuad: string;
+    easeInQuart: string;
+    easeOutQuart: string;
+    easeInOutQuart: string;
+    easeInQuint: string;
+    easeOutQuint: string;
+    easeInOutQuint: string;
+    easeInSine: string;
+    easeOutSine: string;
+    easeInOutSine: string;
+    easeInBounce: string;
+    easeOutBounce: string;
+    linear: string;
+};
+//# sourceMappingURL=cssEasing.d.ts.map

@@ -1,0 +1,23 @@
+{
+  "heading": {
+    "content": "General settings"
+  },
+  "color_scheme": {
+    "label": "Section color scheme"
+  },
+  "bg_color": {
+    "label": "Background color"
+  },
+  "bg_gradient": {
+    "label": "Background gradient"
+  },
+  "bg_overlay": {
+    "label": "Background overlay"
+  },
+  "padding_top": {
+    "label": "Padding top"
+  },
+  "padding_bottom": {
+    "label": "Padding bottom"
+  }
+}

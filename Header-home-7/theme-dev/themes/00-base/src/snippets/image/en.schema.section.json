@@ -1,0 +1,14 @@
+{
+  "image": {
+    "label": "Image"
+  },
+  "lazyload": {
+    "label": "Lazyload"
+  },
+  "class": {
+    "label": "Class"
+  },
+  "attrs": {
+    "label": "Attributes"
+  }
+}

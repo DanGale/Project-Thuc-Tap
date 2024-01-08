@@ -1,0 +1,32 @@
+{
+  "carousel_pag_heading": {
+    "label": "Pagination"
+  },
+  "carousel_pag_disabled":{
+    "label": "Disabled pagination"
+  },
+  "carousel_pag_mobile_disabled":{
+    "label": "Disabled pagination in mobile"
+  },
+  "carousel_pag_align":{
+    "label": "Pagination alignments",
+    "options__1": {
+      "label": "Left"
+    },
+    "options__2": {
+      "label": "Center"
+    },
+    "options__3": {
+      "label": "Right"
+    }
+  },
+  "carousel_pag_style":{
+    "label": "Pagination button style",
+    "options__1": {
+      "label": "Circles"
+    },
+    "options__2": {
+      "label": "Sticks"
+    }
+  }
+}

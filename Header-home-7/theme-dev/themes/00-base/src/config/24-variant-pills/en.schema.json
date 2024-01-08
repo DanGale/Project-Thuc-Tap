@@ -1,0 +1,41 @@
+{
+  "name": "Variant pills",
+  "settings": {
+    "variant_pills": {
+      "paragraph": "Variant pills are one way of displaying your product variants. [Learn more](https://help.shopify.com/en/manual/online-store/themes/theme-structure/page-types#variant-picker-block)"
+    },
+    "variant_style": {
+      "label": "Variant style",
+      "option_1" :{
+        "label" : "Radio"
+      },
+      "option_2" :{
+        "label" : "Boxed"
+      },
+      "option_3" :{
+        "label" : "Select"
+      }
+    },
+    "variant_color_style": {
+      "label": "Variant color style",
+      "option_1" :{
+        "label" : "Radio"
+      },
+      "option_2" :{
+        "label" : "Boxed"
+      },
+      "option_3" :{
+        "label" : "Select"
+      },
+      "option_4" :{
+        "label" : "Color"
+      }
+    },
+    "variant_color_show_label": {
+      "label": "Variant color show label"
+    },
+    "variant_color_swatches": {
+      "label": "Variant color swatches"
+    }
+  }
+}

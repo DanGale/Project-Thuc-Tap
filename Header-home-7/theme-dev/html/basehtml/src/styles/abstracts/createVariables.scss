@@ -1,0 +1,22 @@
+@mixin colorSchemeDefine($scheme, $options) {
+  @each $name, $color in $options {
+    --shopify-editor-color-scheme-#{$scheme}-setting-#{$name}: #{$color};
+    --shopify-editor-color-scheme-#{$scheme}-setting-#{$name}-format-red: #{red($color)};
+    --shopify-editor-color-scheme-#{$scheme}-setting-#{$name}-format-green: #{green($color)};
+    --shopify-editor-color-scheme-#{$scheme}-setting-#{$name}-format-blue: #{blue($color)};
+    @if ($name == 'background') {
+      --shopify-editor-color-scheme-#{$scheme}-setting-#{$name}-format-rgb: #{red($color)} #{green($color)} #{blue($color)};
+    }
+  }
+}
+
+@mixin colorSchemeMapping($scheme, $options) {
+  $index: 0;
+  @each $key, $val in $options {
+    $index: $index + 1;
+    --#{$key}: var(--shopify-editor-color-scheme-#{$scheme}-setting-#{$val}-format-red), var(--shopify-editor-color-scheme-#{$scheme}-setting-#{$val}-format-green), var(--shopify-editor-color-scheme-#{$scheme}-setting-#{$val}-format-blue);
+    @if ($index == length($options)) {
+      --payment-terms-background-color: rgb(var(--shopify-editor-color-scheme-#{$scheme}-setting-background-format-rgb));
+    }
+  }
+}

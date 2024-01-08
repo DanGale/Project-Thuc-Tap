@@ -1,0 +1,32 @@
+.xo-cart-mini-footer {
+  padding: 2rem 0;
+}
+
+.xo-cart-mini-footer__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: fz(body, 1.8);
+  font-weight: 500;
+  line-height: lh(body, 0.22);
+  letter-spacing: ls(body, 0.018);
+  padding: 0.5rem 0;
+  color: rgb(var(--color-foreground));
+}
+
+.xo-cart-mini-footer__taxes {
+  font-size: fz(body, 1.5);
+  line-height: lh(body, 0.22);
+  letter-spacing: ls(body, 0.03);
+  color: rgba(var(--color-foreground), 0.4);
+  padding: 0.5rem 0;
+}
+
+.xo-cart-item__option {
+  span {
+    &:last-child {
+      font-weight: 500;
+      color: rgb(var(--color-foreground));
+    }
+  }
+}

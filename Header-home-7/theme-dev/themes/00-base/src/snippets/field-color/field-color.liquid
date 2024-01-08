@@ -1,0 +1,72 @@
+{% comment %}
+  Renders a color button
+
+  Accepts:
+  - name: {string} Name of the color button
+  - value: {string} Value of the color button
+  - label: {string} Label of the color button (optional)
+  - size: {string} Size of the color button. Default: 16px (optional)
+  - count_id: {string} Unique ID for the count element (optional, support filters)
+  - count_value: {string} Value of the count element (optional, support filters)
+  - checked: {Boolean} If the radio button is checked (optional)
+  - image: {Image} Image of the color button (optional)
+  - use_image: {Boolean} If the image should be used (optional)
+
+  Usage:
+  {% render 'field-color',
+    name: 'color',
+    value: 'color',
+    label: 'Color',
+    size: '10px'
+  %}
+{% endcomment %}
+
+{% liquid
+  assign variant_colors = settings.variant_color_swatches | newline_to_br | split: '<br />'
+  assign color = value
+  assign image_src = ''
+  for item in variant_colors
+    assign _item = item | replace: '\n', ''
+    assign _color = ':' | append: color
+    if _item contains color
+      assign color = _item | split: ':'
+      assign color = color[1] | strip
+      if _item contains '.jpg' or _item contains '.jpeg' or _item contains '.gif' or _item contains '.png' or _item contains '.svg'
+        assign image_src = _item | split: ':'
+        assign image_src = image_src[1] | strip
+      endif
+    endif
+  endfor
+%}
+
+<label
+  class='xo-field-color'
+  style='--size: {{ size | default: '2.4rem' }}; --color: {{ color | downcase }};{% if image_src != blank %} --image-src: url("{{ image_src }}"){% endif %}'
+>
+  <input
+    class='xo-field-color__input'
+    type='radio'
+    name='{{ name }}'
+    value='{{ value }}'
+    xo-label='{{ label }}'
+    {% if checked %}
+      checked
+    {% endif %}
+  >
+  <span class='xo-field-color__item'>
+    <span class='xo-field-color__icon'>
+      {%- render 'icon', name: 'check', size: '1.6rem', color: '#fff' -%}
+    </span>
+    {% if image != blank and use_image %}
+      {% render 'image', image: image, aspect_ratio: 1, container_class: 'xo-field-color__image' %}
+    {% endif %}
+  </span>
+  {% if label != null and settings.variant_color_show_label %}
+    <span class='xo-field-color__label'>
+      <span>{{ label }}</span>
+      {% if count_value %}
+        <xo-filters-count xo-unique-id='{{ count_id }}'> ({{ count_value }}) </xo-filters-count>
+      {% endif %}
+    </span>
+  {% endif %}
+</label>

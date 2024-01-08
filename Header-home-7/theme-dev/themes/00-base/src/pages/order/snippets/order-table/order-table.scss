@@ -1,0 +1,38 @@
+.xo-order-table__title {
+  font-size: fz(heading, 1.8);
+  font-weight: 500;
+  line-height: lh(heading, 0.22);
+  letter-spacing: ls(heading, 0.018);
+  color: rgb(var(--color-foreground));
+  padding-bottom: 1rem;
+}
+
+.xo-order-table__date {
+  padding-bottom: 1rem;
+}
+
+.xo-order-table__product {
+  color: rgba(var(--color-foreground), 0.7);
+}
+
+.xo-order-table__bill {
+  padding-top: 2.2rem;
+}
+
+.xo-order-table__bill-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline-end: 2rem;
+}
+
+.xo-order-table__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.4rem;
+  padding-inline-end: 2rem;
+  font-size: fz(body, 1.8);
+  font-weight: 500;
+  color: rgb(var(--color-foreground));
+}

@@ -1,0 +1,53 @@
+.xo-loader-2 {
+  --size: 26;
+  --color: #000;
+  --duration: 1000;
+  --stroke-width: 2;
+	position: relative;
+  width: calc(var(--size) * 1px);
+  height: calc(var(--size) * 1px);
+  > * {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: calc(var(--stroke-width) * 1px) solid transparent;
+    border-top-color: currentColor;
+    animation: xo-loader-2 calc(var(--duration) * 1ms) linear infinite;
+    transform: translateZ(0);
+    border-radius: 50%;
+    color: var(--color);
+  }
+}
+
+.xo-btn {
+  .xo-loader-2 {
+    > * {
+      animation: none;
+    }
+  }
+}
+
+.xo-btn--loading,
+xo-cart-shipping-rates-submit[xo-loading]:not([xo-loading='false']),
+xo-cart-note-submit[xo-loading]:not([xo-loading='false']),
+xo-cart-add[xo-loading]:not([xo-loading='false']),
+xo-product-quick-view-trigger[xo-loading]:not([xo-loading='false']) {
+  .xo-loader-2 {
+    > * {
+      animation: xo-loader-2 calc(var(--duration) * 1ms) linear infinite;
+    }
+  }
+}
+
+@keyframes xo-loader-2 {
+  0% {
+    visibility: hidden;
+    display: none;
+    transform: rotate(0);
+  }
+  100% {
+    visibility: visible;
+    display: block;
+    transform: rotate(360deg);
+  }
+}

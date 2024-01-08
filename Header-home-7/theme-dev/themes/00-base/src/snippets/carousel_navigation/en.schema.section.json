@@ -1,0 +1,54 @@
+{
+    "carousel_nav_heading": {
+      "label": "Navigation"
+    },
+    "carousel_nav_disabled":{
+      "label": "Disabled navigation"
+    },
+    "carousel_nav_mobile_disabled":{
+      "label": "Disabled navigation in mobile"
+    },
+    "carousel_nav_position":{
+      "label": "Navigation position",
+      "options__1": {
+        "label": "Bottom"
+      },
+      "options__2": {
+        "label": "In content"
+      },
+      "options__3": {
+        "label": "Top"
+      }
+    },
+    "carousel_nav_align":{
+      "label": "Navigation alignments",
+      "options__1": {
+        "label": "Left"
+      },
+      "options__2": {
+        "label": "Center"
+      },
+      "options__3": {
+        "label": "Right"
+      }
+    },
+    "carousel_nav_style":{
+      "label": "Navigation button style",
+      "options__1": {
+        "label": "Regular"
+      },
+      "options__2": {
+        "label": "Boxes"
+      }
+    },
+    "carousel_nav_icon":{
+      "label": "Navigation icon",
+      "options__1": {
+        "label": "Chevron"
+      },
+      "options__2": {
+        "label": "Arrow"
+      }
+
+    }
+}

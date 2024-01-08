@@ -1,0 +1,21 @@
+.xo-hotspot {
+  position: relative;
+  margin-top: 5rem;
+}
+
+.xo-hotspot__bg {
+  img {
+    height: 60rem;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    z-index: -1;
+  }
+}
+
+.xo-hotspot__point {
+  position: absolute;
+  top: calc(var(--top) * 1%);
+  left: calc(var(--left) * 1%);
+  transform: translate(-50%, -50%);
+}

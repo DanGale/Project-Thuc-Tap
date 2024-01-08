@@ -1,0 +1,24 @@
+{
+  "article_card_header":{
+    "content": "Article card"
+  },
+  "article_card_show_image": {
+    "label": "Show featured image",
+    "info": "For best results, use an image with a 3:2 aspect ratio. [Learn more](https://help.shopify.com/manual/shopify-admin/productivity-tools/image-editor#understanding-image-aspect-ratio)"
+  },
+  "article_card_show_date": {
+    "label": "Show date"
+  },
+  "article_card_show_author": {
+    "label": "Show author"
+  },
+  "article_card_show_excerpt": {
+    "label": "Show excerpt"
+  },
+  "article_card_show_tags": {
+    "label": "Show tags"
+  },
+  "article_card_media_aspect_ratio": {
+    "label": "Media aspect ratio"
+  }
+}

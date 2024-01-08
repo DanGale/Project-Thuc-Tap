@@ -1,0 +1,13 @@
+{% case filter.type %}
+  {% when 'boolean', 'list' %}
+    {%- for value in filter.values -%}
+      {% assign count_id = value.param_name | append: '-' | append: value.value %}
+      <xo-filters-field>
+        {% render 'field-checkbox', name: value.param_name, value: value.value, label: value.label, count_id: count_id, count_value: value.count %}
+      </xo-filters-field>
+    {%- endfor -%}
+  {% when 'price_range' %}
+    {% render 'field-price', filter: filter %}
+  {% else %}
+
+{% endcase %}

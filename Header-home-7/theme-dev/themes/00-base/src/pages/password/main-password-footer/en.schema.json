@@ -1,0 +1,8 @@
+{
+  "name": "Password footer",
+  "settings" : {
+    "color_scheme" : {
+      "label": "Color scheme"
+    }
+  }
+}

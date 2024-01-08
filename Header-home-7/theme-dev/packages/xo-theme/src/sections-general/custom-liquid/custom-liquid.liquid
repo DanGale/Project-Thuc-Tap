@@ -1,0 +1,24 @@
+<div class="{% if section.settings.include_margins %}xo-container {% else %}xo-container-fluid{% endif %}">
+  {{ section.settings.custom_liquid }}
+</div>
+
+{%- style -%}
+  {% comment %} TODO {% endcomment %}
+  #shopify-section-{{ section.id }} {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+    {%- unless section.settings.background_image_desktop == blank -%}
+      background-image: url('{{ section.settings.background_image_desktop | image_url }}');
+    {%- endunless -%}
+  }
+
+  {%- unless section.settings.background_image_mobile == blank -%}
+    @media screen and (min-width: 768px) {
+      #shopify-section-{{ section.id }} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+        background-image: url('{{ section.settings.background_image_mobile | image_url }}');
+      }
+    }
+  {%- endunless -%}
+{%- endstyle -%}

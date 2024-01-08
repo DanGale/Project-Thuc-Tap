@@ -1,0 +1,38 @@
+{
+  "name": "Cart",
+  "settings": {
+    "subtotal": {
+      "label": "Subtotal"
+    },
+    "free_shipping": {
+      "label": "Free shipping"
+    },
+    "note": {
+      "label": "Cart note"
+    },
+    "discount": {
+      "label": "Cart discount"
+    },
+    "shipping": {
+      "label": "Cart shipping rates"
+    },
+    "type_of_note": {
+      "label": "Type of cart note"
+    },
+    "type_of_discount": {
+      "label": "Type of cart discount"
+    },
+    "type_of_shipping": {
+      "label": "Type of cart shipping"
+    },
+    "option_regular": {
+      "label": "Regular"
+    },
+    "option_collapse": {
+      "label": "Collapse"
+    }
+  },
+  "presets" : {
+    "name" : "Cart"
+  }
+}

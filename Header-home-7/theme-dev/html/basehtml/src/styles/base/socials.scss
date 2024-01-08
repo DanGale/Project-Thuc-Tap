@@ -1,0 +1,20 @@
+$social_colors: (
+  twitter: #1DA1F2,
+  facebook: #4267B2,
+  pinterest: #E60023,
+  instagram: #E1306C,
+  tiktok: #000000,
+  tumblr: #001935,
+  snapchat: #FFFC00,
+  youtube: #FF0000,
+  vimeo: #1AB7EA,
+);
+
+@each $social, $color in $social_colors {
+  .xo-color-#{$social} {
+    color: $color;
+  }
+  .xo-background-#{$social} {
+    background-color: $color;
+  }
+}

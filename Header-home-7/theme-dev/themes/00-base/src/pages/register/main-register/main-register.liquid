@@ -1,0 +1,41 @@
+{{ 'section-main-register.css' | asset_url | stylesheet_tag }}
+
+<div {% render 'section-attr' %}>
+  <xo-container>
+    <xo-grid>
+      <div class='xo-register' style='--xs: 12'>
+        {%- form 'create_customer', novalidate: 'novalidate', class: 'xo-sign-up__content' -%}
+          {% render 'form-error', form: form %}
+          <xo-grid>
+            <xo-animate xo-cascade style='--lg: 6; --md: 12; --sm:12; --xs: 12'>
+              {% assign firstName = 'customer.register.first_name' | t %}
+              {% render 'field-input', type: 'text', name: 'customer[first_name]', label: firstName, value: form.first_name %}
+            </xo-animate>
+            <xo-animate xo-cascade style='--lg: 6; --md: 12; --sm:12; --xs: 12'>
+              {% assign lastName = 'customer.register.last_name' | t %}
+              {% render 'field-input', type: 'text', name: 'customer[last_name]', label: lastName, value: form.last_name %}
+            </xo-animate>
+            <xo-animate xo-cascade style='--lg: 12; --md: 12; --sm:12; --xs: 12'>
+              {% assign email = 'customer.register.email' | t %}
+              {% render 'field-input', type: 'email', name: 'customer[email]', label: email, value: form.email %}
+            </xo-animate>
+            <xo-animate xo-cascade style='--lg: 12; --md: 12; --sm:12; --xs: 12'>
+              {% assign password = 'customer.register.password' | t %}
+              {% render 'field-input', type: 'password', name: 'customer[password]', label: password %}
+            </xo-animate>
+          </xo-grid>
+          <xo-animate xo-cascade>
+            {% assign btn_sign_in_text = 'customer.register.submit' | t %}
+            {% render 'button', text: btn_sign_in_text, size: 'md', block: true, effect: 'slide-up' %}
+          </xo-animate>
+          {% render 'space', value: '2rem' %}
+          <xo-animate xo-cascade class='flex jc-center gap-10'>
+            <div>{{ 'customer.register.already' | t }}</div>
+            {% assign signin = 'customer.register.signin' | t %}
+            {% render 'button', text: signin, link: routes.account_login_url, style: 'link', effect: 'fade' %}
+          </xo-animate>
+        {%- endform -%}
+      </div>
+    </xo-grid>
+  </xo-container>
+</div>

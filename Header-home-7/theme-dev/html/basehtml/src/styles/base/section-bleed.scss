@@ -1,0 +1,41 @@
+.xo-bleed-offset-left,
+.xo-bleed-offset-right {
+  --xo-bleed-offset: ((100vw - var(--xo-container-width)) / 2 + var(--xo-container-gap));
+  width: max(calc(100% + var(--xo-container-gap)), calc(100% + var(--xo-bleed-offset)));
+}
+
+.xo-bleed-offset-right {
+  margin-inline-start: min(calc(var(--xo-container-gap) * -1), calc(var(--xo-bleed-offset) * -1));
+}
+
+.xo-bleed {
+  --xo-bleed-offset: ((100vw - var(--xo-container-width)) / 2 + var(--xo-container-gap));
+  --xo-bleed-left: min(calc(var(--xo-container-gap) * -1), calc(var(--xo-bleed-offset) * -1));
+  --xo-bleed-width: max(calc(100% + var(--xo-container-gap)), calc(100% + var(--xo-bleed-offset)));
+  --xo-bleed-width-mobile-container: 100%;
+  --xo-bleed-width-mobile-full: calc(100% + var(--xo-container-gap) * 2);
+}
+
+.xo-bleed__left,
+.xo-bleed__right {
+  position: relative;
+  z-index: 9;
+  height: 100%;
+
+  .xo-bleed__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+    object-fit: cover;
+    max-width: none;
+    width: var(--xo-bleed-width);
+  }
+}
+
+.xo-bleed__left {
+  .xo-bleed__item {
+    margin-inline-start: var(--xo-bleed-left);
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@xo/utils",
+  "version": "0.0.0",
+  "main": "./src/main.js",
+  "module": "./src/main.mjs",
+  "typings": "./src/index.d.ts",
+  "files": [
+    "src"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.ts*\""
+  },
+  "devDependencies": {
+
+  }
+}

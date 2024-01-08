@@ -1,0 +1,8 @@
+{
+  "name": "Dark mode",
+  "settings": {
+    "dark_mode_mapping": {
+      "label": "Dark mode mapping"
+    }
+  }
+}

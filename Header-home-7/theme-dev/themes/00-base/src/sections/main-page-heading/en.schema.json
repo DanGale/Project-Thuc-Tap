@@ -1,0 +1,36 @@
+{
+  "name": "Page heading",
+  "settings": {
+    "title_tag": {
+      "label": "Title tag"
+    },
+    "title": {
+      "label": "Title"
+    },
+    "description": {
+      "label": "Description"
+    },
+    "align": {
+      "label": "Align"
+    },
+    "value_left": {
+      "label": "Left"
+    },
+    "value_center": {
+      "label": "Center"
+    },
+    "value_right": {
+      "label": "Right"
+    },
+    "padding_top": {
+      "label": "Padding top"
+    },
+    "padding_bottom": {
+      "label": "Padding bottom"
+    }
+  },
+  "blocks": {},
+  "presets" : {
+    "name" : "Page heading"
+  }
+}

@@ -1,0 +1,107 @@
+.xo-menu-horizontal {
+  display: flex;
+  align-items: center;
+}
+
+.xo-menu-horizontal__item {
+  position: relative;
+  &:hover,
+  &.xo-menu-horizontal__item--current {
+    > .xo-menu-horizontal__link {
+      color: rgb(var(--color-accent));
+    }
+  }
+}
+
+.xo-menu-horizontal__item--open {
+  > .xo-menu-horizontal__link {
+    color: rgb(var(--color-accent));
+  }
+}
+
+.xo-menu-horizontal__item--hover:hover,
+.xo-menu-horizontal__item--open {
+  > .xo-menu-horizontal__sub-menu,
+  > .xo-menu-horizontal__mega-menu {
+    pointer-events: auto;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+.xo-menu-horizontal__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: fz(body, 1.5);
+  color: rgba(var(--color-foreground), .8);
+  padding: 2rem 1.5rem;
+  transition: .3s;
+}
+
+.xo-menu-horizontal__arrow {
+  line-height: normal;
+  svg {
+    vertical-align: middle;
+  }
+}
+
+.xo-menu-horizontal__arrow--mega-menu {
+  display: none;
+}
+
+.xo-menu-horizontal__sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(var(--color-background));
+  border: 0.1rem solid rgba(var(--color-foreground), .1);
+  width: 20rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(0, 1rem, 0);
+  transition: .3s;
+  .xo-menu-horizontal__sub-menu {
+    top: -0.1rem;
+    left: 100%;
+  }
+}
+
+
+.xo-menu-horizontal__mega-menu {
+  position: absolute;
+  top: calc(100% - 0.1rem);
+  left: 0;
+  background-color: rgb(var(--color-background));
+  border: 0.1rem solid rgba(var(--color-foreground), .1);
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  // visibility: hidden;
+  transform: translate3d(0, 1rem, 0);
+  transition: .3s;
+  &:empty {
+    display: none;
+  }
+  &:not(:empty) {
+    ~ .xo-menu-horizontal__sub-menu {
+      display: none;
+    }
+    ~ .xo-menu-horizontal__link {
+      .xo-menu-horizontal__arrow--mega-menu {
+        display: block;
+      }
+    }
+  }
+}
+
+.xo-menu-horizontal__item--sub {
+  + .xo-menu-horizontal__item--sub {
+    border-top: 0.1rem solid rgba(var(--color-foreground), .1);
+  }
+}
+
+.xo-menu-horizontal__link--sub {
+  padding: 1rem 1.5rem;
+}

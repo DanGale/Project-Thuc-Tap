@@ -1,0 +1,22 @@
+{{ 'section-hotspot.css' | asset_url | stylesheet_tag }}
+{{ 'hotspot-trigger.css' | asset_url | stylesheet_tag }}
+
+<section {% render 'section-atrr' %}>
+  <xo-container>
+    <div class='xo-hotspot'>
+      <xo-animate xo-cascade>
+        <div class='xo-hotspot__bg'>
+          {% render 'image', image: section.settings.image %}
+        </div>
+      </xo-animate>
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'hotspot-trigger' %}
+            <div class='xo-hotspot__point' style='--top: {{ block.settings.top }}; --left: {{ block.settings.left }}'>
+              {% render 'hotspot-trigger', product: block.settings.product, placement: block.settings.placement %}
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </xo-container>
+</section>

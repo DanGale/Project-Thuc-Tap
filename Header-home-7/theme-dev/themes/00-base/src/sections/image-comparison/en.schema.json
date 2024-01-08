@@ -1,0 +1,17 @@
+{
+  "name": "Image comparison",
+  "settings": {
+    "image_before": {
+      "label": "Image before"
+    },
+    "image_after":  {
+      "label": "Image after"
+    }
+  },
+  "blocks":{
+
+  },
+  "presets" : {
+    "name" : "Image comparison"
+  }
+}

@@ -1,0 +1,32 @@
+.xo-toast {
+  font-size: 1.4rem;
+  padding: 0.4rem 0.5rem 0.4rem 1rem;
+  background-color: #000;
+}
+
+.xo-toast__close {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.xo-toast__content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.xo-toast__message {
+  color: #fff;
+}
+
+.xo-toast--success {
+  background-color: #3f8843;
+}
+
+.xo-toast--warning {
+  background-color: #fba11a;
+}
+
+.xo-toast--error {
+  background-color: #ce2c2c;
+}

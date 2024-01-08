@@ -1,0 +1,196 @@
+{{ 'section-footer.css' | asset_url | stylesheet_tag }}
+
+<footer {% render 'section-attr' %}>
+  <xo-container class='xo-footer'>
+    {%- liquid
+      assign has_social_icons = true
+      if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
+        assign has_social_icons = false
+      endif
+
+      if settings.brand_image == blank and settings.brand_headline == blank and settings.brand_description == blank
+        assign brand_empty = true
+      endif
+
+      if section.blocks.size == 1 and section.blocks[0].type == 'brand_information' and brand_empty and has_social_icons == false and section.settings.newsletter_enable == false and section.settings.enable_follow_on_shop == false
+        assign only_empty_brand = true
+      endif
+    -%}
+    {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social and has_social_icons == true or section.settings.enable_follow_on_shop -%}
+      {%- unless only_empty_brand -%}
+        <div class='xo-footer__content-top'>
+          {% comment %} content top cua theme {% endcomment %}
+          <xo-grid style='--xs: 1; --sm: 2; --lg: {{ section.settings.collumn }}'>
+            {% for block in section.blocks %}
+              <xo-animate xo-cascade>
+                <div class='xo-footer-block'>
+                  {%- if block.settings.heading != blank -%}
+                    <h2 class='xo-footer-block__heading'>{{- block.settings.heading -}}</h2>
+                  {%- endif -%}
+
+                  {%- case block.type -%}
+                    {%- when '@app' -%}
+                      {% render block %}
+                    {%- when 'text' -%}
+                      <div class='xo-footer-block__detail-content rte'>
+                        {{ block.settings.subtext }}
+                      </div>
+                    {%- when 'link_list' -%}
+                      {%- if block.settings.menu != blank -%}
+                        <ul class='xo-footer-block__list'>
+                          {%- for link in block.settings.menu.links -%}
+                            <li class='xo-footer-block__list-item'>
+                              <a
+                                href='{{ link.url }}'
+                              >
+                                {{ link.title }}
+                              </a>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+                    {%- when 'logo' -%}
+                      <div class='xo-footer-block__logo'>
+                        {% if block.settings.image != blank %}
+                          {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
+                          <div
+                            class='xo-footer-block__logo-image'
+                            style='max-width: min(100%, {{ block.settings.image_width }}px);'
+                          >
+                            {% render 'image', image: block.settings.image %}
+                          </div>
+                        {% endif %}
+                      </div>
+                  {%- endcase -%}
+                </div>
+              </xo-animate>
+            {% endfor %}
+          </xo-grid>
+
+          {% render 'space', value: '3rem' %}
+          <xo-grid>
+            {%- if section.settings.newsletter_enable -%}
+              <div style='--xs: 12; --sm:  6; --lg: 4' class='xo-footer-block'>
+                <xo-animate xo-cascade>
+                  {%- if section.settings.newsletter_heading != blank -%}
+                    <h2 class='xo-footer-block__heading'>{{ section.settings.newsletter_heading }}</h2>
+                  {%- endif -%}
+                  {%- form 'customer', id: 'ContactFooter', class: 'xo-footer-block__form' -%}
+                    <input type='hidden' name='contact[tags]' value='newsletter'>
+                    <div>
+                      <div class='xo-footer__field-input'>
+                        {% assign value = form.email %}
+                        {% assign label = 'newsletter.label' | t %}
+                        {% capture attr %}
+                            aria-required='true'
+                            autocorrect='off'
+                            {% if form.errors %}
+                              autofocus
+                              aria-invalid='true'
+                              aria-describedby='ContactFooter-error'
+                            {% elsif form.posted_successfully? %}
+                              aria-describedby='ContactFooter-success'
+                            {% endif %}
+                            required
+                          {% endcapture %}
+                        {% render 'field-input', type: 'email', name: 'contact[email]', value: value, label: label, attr: attr %}
+                        <button
+                          type='submit'
+                          class='xo-footer__field-button'
+                          name='commit'
+                          id='Subscribe'
+                          aria-label='{{ 'newsletter.button_label' | t }}'
+                        >
+                          {% render 'icon', name: 'arrow' %}
+                        </button>
+                      </div>
+
+                      {%- if form.errors -%}
+                        <small class='newsletter-form__message form__message' id='ContactFooter-error'>
+                          {%- render 'icon-error' -%}
+                          {{- form.errors.translated_fields.email | capitalize }}
+                          {{ form.errors.messages.email -}}
+                        </small>
+                      {%- endif -%}
+                      {%- if form.posted_successfully? -%}
+                        <h3
+                          class='newsletter-form__message newsletter-form__message--success form__message'
+                          id='ContactFooter-success'
+                          tabindex='-1'
+                          autofocus
+                        >
+                          {% render 'icon-success' -%}
+                          {{- 'newsletter.success' | t }}
+                        </h3>
+                      {%- endif -%}
+                      {% comment %}
+                        {% assign message = 'newsletter.success' | t %}
+                        {% render 'form-success', form: message %}
+                      {% endcomment %}
+                    </div>
+                  {%- endform -%}
+                </xo-animate>
+              </div>
+            {%- endif -%}
+
+            <div class='xo-footer__social' style='--xs: 12; --sm:  6; --lg: 3; --start-lg: 10'>
+              <xo-animate xo-cascade>
+                {%- if section.settings.show_social and has_social_icons -%}
+                  {%- render 'socials' -%}
+                {%- endif -%}
+              </xo-animate>
+            </div>
+          </xo-grid>
+        </div>
+      {%- endunless -%}
+    {%- endif -%}
+
+    {% comment %} content bottom cua theme {% endcomment %}
+    <div class='xo-footer__content-bottom'>
+      <xo-animate xo-cascade>
+        <xo-grid>
+          <div style='--xs: 12; --sm: 6; --lg: 3'>
+            {%- if section.settings.enable_country_selector -%}
+              {% render 'currency-select' %}
+            {%- endif -%}
+          </div>
+          <div style='--xs: 12; --sm: 6; --lg: 3; --start-lg: 5'>
+            {%- if section.settings.enable_language_selector -%}
+              {% render 'language-select' %}
+            {%- endif -%}
+          </div>
+          {%- if section.settings.payment_enable -%}
+            <div style='--xs: 12; --sm: 6; --lg: 4; --start-lg: 9' class='xo-footer__payment'>
+              <span class='xo-visually-hidden'>{{ 'sections.footer.payment' | t }}</span>
+              <ul class='xo-list-payment' role='list'>
+                {%- for type in shop.enabled_payment_types -%}
+                  <li class='xo-list-payment__item'>
+                    {{ type | payment_type_svg_tag: class: '' }}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
+        </xo-grid>
+        {% render 'space', value: '2rem' %}
+        <div class='xo-footer__copyright'>
+          <small class='xo-footer__copyright-content'>&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}</small>
+          <small class='xo-footer__copyright-content'>{{ powered_by_link }}</small>
+          {%- if section.settings.show_policy -%}
+            <ul class=''>
+              {%- for policy in shop.policies -%}
+                {%- if policy != blank -%}
+                  <li>
+                    <small class='xo-footer__copyright-content'>
+                      <a href='{{ policy.url }}'>{{ policy.title }}</a>
+                    </small>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+        </div>
+      </xo-animate>
+    </div>
+  </xo-container>
+</footer>

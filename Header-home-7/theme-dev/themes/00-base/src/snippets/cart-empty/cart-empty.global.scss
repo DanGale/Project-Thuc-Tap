@@ -1,0 +1,15 @@
+.xo-cart-empty {
+  a {
+    padding: 1rem 0;
+    color: rgb(var(--color-foreground));
+    font-size: fz(body, 1.8);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.xo-cart-drawer__login-title {
+  padding: 1rem 0;
+  font-size: fz(body, 1.8);
+  color: rgb(var(--color-foreground));
+}

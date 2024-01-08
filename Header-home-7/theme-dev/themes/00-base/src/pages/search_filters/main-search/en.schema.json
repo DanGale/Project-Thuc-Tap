@@ -1,0 +1,33 @@
+{
+  "name": "Search results",
+  "settings": {
+    "columns_desktop": {
+      "label": "Number of columns on desktop"
+    },
+    "products_per_page": {
+      "label" : "Product per page"
+    },
+    "header__3": {
+      "content": "FILTERING AND SORTING"
+    },
+    "filtering_and_sorting": {
+      "settings": {
+        "enable_filtering": {
+          "label": "Enable filtering",
+          "info": "Customize [filter](https://neo-test-theme1.myshopify.com/admin/menus)"
+        },
+        "desktop_layout": {
+          "label": "Desktop filter layout",
+          "option": {
+            "label_1": "Horizontal",
+            "label_2": "Vertical",
+            "label_3": "Drawer"
+          }
+        },
+        "enable_sorting": {
+          "label": "Enable sorting"
+        }
+      }
+    }
+  }
+}

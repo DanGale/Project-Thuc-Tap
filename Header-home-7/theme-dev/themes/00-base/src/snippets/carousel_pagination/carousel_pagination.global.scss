@@ -1,0 +1,58 @@
+.xo-carousel-paginator {
+  --pag_align: left;
+  justify-content: var(--pag_align);
+  xo-carousel-bullet {
+    width: 2.5rem;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    span {
+      display: block;
+      flex-shrink: 0;
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: rgba(var(--color-foreground), 0.25);
+      border-radius: 50%;
+    }
+  }
+
+  xo-carousel-bullet:hover {
+    span {
+      box-shadow: 0 0 0.2rem 0.1rem rgba(0, 0, 0, 0.147);
+      transition-duration: 0.3s;
+    }
+  }
+
+  xo-carousel-bullet[xo-active]:not([xo-active='false']) {
+    span {
+      background-color: rgba(var(--color-accent));
+    }
+    &:hover {
+      span {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+// modifier
+
+.xo-carousel-paginator--sticks {
+  xo-carousel-bullet {
+    width: 4.5rem;
+    span {
+      border-radius: 0;
+      width: 3.5rem;
+      height: 0.4rem;
+    }
+  }
+}
+
+.xo-carousel-paginator--disabled {
+  display: none;
+}
+
+.is-mobile .xo-carousel-paginator--mobile-disabled {
+  display: none;
+}

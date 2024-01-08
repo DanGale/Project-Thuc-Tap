@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML starter</title>
+
+    <style>
+      .comp {
+        height: 100px;
+        background: #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+</head>
+
+<body>
+  <div class="test">aa</div>
+  <xo-container>
+    <h3>Grid đều nhau ( column có thể set tăng dần không phụ thuộc 12 cột )</h3>
+    <xo-grid style="--xs: 1; --sm: 2; --xl: 3">
+      <div style="--start-lg: 2">
+        <img src="../assets/fb1.png" />
+      </div>
+      <div style="--order-lg: -1">
+        <div class="comp"></div>
+      </div>
+      <div>
+        <div class="comp"></div>
+      </div>
+      <div>
+        <div class="comp"></div>
+      </div>
+      <div>
+        <div class="comp"></div>
+      </div>
+      <div>
+        <div class="comp"></div>
+      </div>
+    </xo-grid>
+
+    <br>
+    <br>
+
+    <h3>Grid với các cột có thể khác nhau ( max là 12 column giống bootstrap )</h3>
+
+    <xo-grid>
+      <div style="--xs: 12; --sm: 6; --lg: 6;">
+        <div class="comp"></div>
+      </div>
+      <div style="--xs: 12; --sm: 6; --lg: 3">
+        <div class="comp"></div>
+      </div>
+      <div style="--xs: 12; --sm: 6; --lg: 3">
+        <div class="comp"></div>
+      </div>
+      <div style="--xs: 12; --sm: 6; --lg: 3">
+        <div class="comp"></div>
+      </div>
+      <div style="--xs: 12; --sm: 6; --lg: 6">
+        <div class="comp"></div>
+      </div>
+      <div style="--xs: 12; --sm: 6; --lg: 3">
+        <div class="comp"></div>
+      </div>
+    </xo-grid>
+
+    <br>
+    <br>
+
+    <h3>Grid đều nhau tự động responsive dựa trên width của các cột</h3>
+
+    <xo-smart-grid style="--col-width: 300px">
+      <div>
+        <div class="comp"></div>
+      </div>
+      <div>
+        <div class="comp"></div>
+      </div>
+      <div>
+        <div class="comp"></div>
+      </div>
+      <div>
+        <div class="comp"></div>
+      </div>
+      <div>
+        <div class="comp"></div>
+      </div>
+      <div>
+        <div class="comp"></div>
+      </div>
+    </xo-smart-grid>
+
+    <br>
+    <br>
+
+    <h3>Đổi các vị trí sử dụng biến order</h3>
+
+    <xo-grid>
+      <div style="--xs: 12; --sm: 6; --lg: 7">
+        <div class="comp"></div>
+      </div>
+      <div style="--xs: 12; --sm: 6; --lg: 5; --order-lg: -1">
+        <div class="comp" style="background-color: #f78c71">--order-lg: -1</div>
+      </div>
+      <div style="--xs: 12; --sm: 6; --lg: 4">
+        <div class="comp"></div>
+      </div>
+      <div style="--xs: 12; --sm: 6; --lg: 4">
+        <div class="comp"></div>
+      </div>
+      <div style="--xs: 12; --sm: 6; --lg: 4">
+        <div class="comp"></div>
+      </div>
+    </xo-grid>
+
+    <br>
+    <br>
+
+    <h3>Offset left các cột sử dụng biến start</h3>
+
+    <xo-grid>
+      <div style="--xs: 12; --md: 6; --lg: 4; --start-lg: 3">
+        <div class="comp"></div>
+      </div>
+      <div style="--xs: 12; --md: 6; --lg: 4">
+        <div class="comp"></div>
+      </div>
+    </xo-grid>
+  </xo-container>
+</body>
+
+</html>

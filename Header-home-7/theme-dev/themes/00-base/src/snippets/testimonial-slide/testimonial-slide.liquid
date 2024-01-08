@@ -1,0 +1,58 @@
+{% comment %}
+  Renders a testimonial slide
+
+  Accepts:
+  - image: {Image} Image (required)
+  - comment: {String} User comment (required)
+  - content: {String} User comment (required)
+  - author_image: {Image} User image (optional)
+  - author_name: {String} User name (required)
+  - author_job: {String} User job (optional)
+
+  Usage:
+  {% render 'testimonial-slide', content: 'Content', comment: 'Comment', author_image: '', author_name: 'Author', author_job: 'Author Job' %}
+{% endcomment %}
+
+<xo-grid style='--xs: 1; --sm: 1; --lg: 2' class='xo-testimonial'>
+  <div class='xo-testimonial__image'>
+    {% render 'image', image: image %}
+  </div>
+  <div class='xo-testimonial__content'>
+    <div class='xo-testimonial__icon'>
+      <svg xmlns='http://www.w3.org/2000/svg' width='88' height='77' viewBox='0 0 88 77' fill='none'>
+        <path d="M84.5807 0L88 4.79488C80.0216 12.1282 66.9142 23.9743 66.9142 34.1282C66.9142 38.641 69.4787 40.0513 73.4679 42.0256C80.8764 45.4103 85.7205 50.4872 85.7205 59.5128C85.7205 69.3846 77.7421 77 68.054 77C53.5219 77 46.9682 63.1795 46.9682 50.4872C46.9682 28.4872 67.4841 10.7179 84.5807 0ZM37.6125 0L41.0318 4.79488C33.0534 12.1282 19.946 23.9743 19.946 34.1282C19.946 38.641 22.5105 40.0513 26.2148 42.0256C33.9083 45.4103 38.7523 50.4872 38.7523 59.5128C38.7523 69.3846 30.7739 77 21.0858 77C6.5537 77 0 63.1795 0 50.4872C0 28.4872 20.231 10.7179 37.6125 0Z" fill="#F2F2F2"/>
+      </svg>
+    </div>
+    <div class='xo-testimonial__comment'>
+      {{ comment }}
+    </div>
+
+    <div class='xo-testimonial__author'>
+      <div class='xo-testimonial__author-image'>
+        {% render 'image', image: author_image, width: '100%' %}
+      </div>
+      <div>
+        <div class='xo-testimonial__author-name'>{{ author_name }}</div>
+        <div class='xo-testimonial__author-job'>{{ author_job }}</div>
+      </div>
+    </div>
+    {% render 'space', value: '30px' %}
+    <div>
+      {{ content }}
+    </div>
+    <div class='xo-testimonial__group'>
+      <xo-carousel-prev class='xo-testimonial__button'>
+        <svg xmlns='http://www.w3.org/2000/svg' width='31' height='31' viewBox='0 0 31 31' fill='none'>
+          <path d="M27.8968 16.3052H2.20312" stroke="#1A1A1A" stroke-width="1.50696" stroke-linecap="square" stroke-linejoin="round"/>
+          <path d="M8.55423 23.3145L1.54688 16.3072L8.55423 9.2998" stroke="#1A1A1A" stroke-width="1.50696" stroke-linecap="square" stroke-linejoin="round"/>
+        </svg>
+      </xo-carousel-prev>
+      <xo-carousel-next class='xo-testimonial__button'>
+        <svg xmlns='http://www.w3.org/2000/svg' width='31' height='31' viewBox='0 0 31 31' fill='none'>
+          <path d="M3.10324 16.3052H28.7969" stroke="#1A1A1A" stroke-width="1.50696" stroke-linecap="square" stroke-linejoin="round"/>
+          <path d="M22.4458 23.3145L29.4531 16.3072L22.4458 9.2998" stroke="#1A1A1A" stroke-width="1.50696" stroke-linecap="square" stroke-linejoin="round"/>
+        </svg>
+      </xo-carousel-next>
+    </div>
+  </div>
+</xo-grid>

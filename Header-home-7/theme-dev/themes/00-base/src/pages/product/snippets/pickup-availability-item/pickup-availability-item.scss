@@ -1,0 +1,18 @@
+.xo-pickup-availability-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.xo-pickup-availability-item__icon {
+  flex-shrink: 0;
+  color: #428445;
+  margin-top: 0.4rem;
+}
+
+.xo-pickup-availability-item__name {
+  font-size: fz(body, 1.6);
+}
+
+.xo-pickup-availability-item__time {
+  font-size: fz(body, 1.4);
+}

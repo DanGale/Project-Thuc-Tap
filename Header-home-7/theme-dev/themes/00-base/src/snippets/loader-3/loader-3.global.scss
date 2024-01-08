@@ -1,0 +1,64 @@
+.xo-loader-3 {
+  --size: 10;
+  --color: #000;
+  --duration: 1000;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: calc(var(--size) * 1px);
+  > *, &:before, &:after {
+    height: calc(var(--size) * 1px);
+    width: calc(var(--size) * 1px);
+    border-radius: 50%;
+    background-color: var(--color);
+  }
+  > * {
+    margin: 0 calc(var(--size) / 2 * 1px);
+    animation: calc(var(--duration) * 1ms) xo-loader-3 ease-in-out infinite .15555s;
+  }
+  &:before {
+    content: '';
+    animation: calc(var(--duration) * 1ms) xo-loader-3 ease-in-out infinite 0s;
+  }
+  &:after {
+    content: '';
+    animation: calc(var(--duration) * 1ms) xo-loader-3 ease-in-out infinite .300000s;
+  }
+}
+
+.xo-btn {
+  .xo-loader-3 {
+    > *, &:before, &:after {
+      animation: none;
+    }
+  }
+}
+
+.xo-btn--loading,
+xo-cart-shipping-rates-submit[xo-loading]:not([xo-loading='false']),
+xo-cart-note-submit[xo-loading]:not([xo-loading='false']),
+xo-cart-add[xo-loading]:not([xo-loading='false']),
+xo-product-quick-view-trigger[xo-loading]:not([xo-loading='false']) {
+  .xo-loader-3 {
+    > * {
+      animation: calc(var(--duration) * 1ms) xo-loader-3 ease-in-out infinite .15555s;
+    }
+    &:before {
+      animation: calc(var(--duration) * 1ms) xo-loader-3 ease-in-out infinite 0s;
+    }
+    &:after {
+      animation: calc(var(--duration) * 1ms) xo-loader-3 ease-in-out infinite .300000s;
+    }
+  }
+}
+
+@keyframes xo-loader-3 {
+  0%, 80%, 100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

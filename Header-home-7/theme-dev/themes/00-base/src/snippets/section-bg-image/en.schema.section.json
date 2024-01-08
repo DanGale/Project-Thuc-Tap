@@ -1,0 +1,11 @@
+{
+  "background_image_desktop": {
+    "label": "Background image desktop"
+  },
+  "background_image_mobile": {
+    "label": "Background image mobile"
+  },
+  "use_parallax": {
+    "label": "Use parallax"
+  }
+}

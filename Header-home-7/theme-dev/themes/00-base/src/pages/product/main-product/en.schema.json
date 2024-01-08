@@ -1,0 +1,133 @@
+{
+  "name": "Product information",
+  "blocks": {
+    "text": "Text",
+    "tag": "Tag",
+    "title": "Title",
+    "description": "Description",
+    "evaluate": "Evaluate",
+    "price": "Price",
+    "buy_button": {
+      "name": "Buy button",
+      "settings": {
+        "add_to_cart": "Add to cart",
+        "buy_now": "Buy now"
+      },
+      "show_dynamic_checkout": {
+        "label": "Show dynamic checkout buttons",
+        "info": "Using the payment methods available on your store, customers see their preferred option, like PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)"
+      },
+      "show_gift_card_recipient": {
+        "label": "Show recipient information form for gift cards",
+        "info": "Allows buyers to send gift cards on a scheduled date along with a personal message. [Learn more](https://help.shopify.com/manual/online-store/themes/customizing-themes/add-gift-card-recipient-fields)"
+      },
+      "add_color_scheme": "Button add color scheme"
+    },
+    "vendor": "Vendor",
+    "quantity_picker": "Quantity picker",
+    "variants": {
+      "name": "variants",
+      "settings": {
+        "options__1": "Dropdown",
+        "options__2": "Button",
+        "title": "Title"
+      }
+    },
+    "popup": {
+      "name": "Popup",
+      "settings": {
+        "title": "Title",
+        "description": "Description",
+        "link_label": "Link label",
+        "page": "page",
+        "buy_button": "Buy button"
+      }
+    },
+    "pickup": {
+      "name": "Pickup availabilies"
+    },
+    "collapsible_tab": {
+      "name": "Collapsible tab",
+      "settings": {
+        "heading": {
+          "info": "Heading",
+          "label": "Include a heading that explains the content."
+        },
+        "icon": {
+          "label": "Icon",
+          "options__1": {
+            "label": "None"
+          },
+          "options__2": {
+            "label": "Apple"
+          },
+          "options__3": {
+            "label": "Banana"
+          },
+          "options__4": {
+            "label": "Bottle"
+          },
+          "options__5": {
+            "label": "Box"
+          },
+          "options__6": {
+            "label": "Carrot"
+          },
+          "options__7": {
+            "label": "Chat bubble"
+          },
+          "options__8": {
+            "label": "Check mark"
+          },
+          "options__9": {
+            "label": "Clipboard"
+          },
+          "options__10": {
+            "label": "Dairy"
+          }
+        },
+        "content": {
+          "info": "Content",
+          "label": "Include the content of the collapsible tab."
+        },
+        "page": {
+          "info": "page",
+          "label": "Show content from page"
+        }
+      }
+    },
+    "custom_liquid": {
+      "name": "Custom liquid",
+      "settings": {
+        "custom_liquid": {
+          "label": "Custom liquid",
+          "info": "Add app snippets or other Liquid code to create advanced customizations."
+        },
+        "description": "Description",
+        "link_label": "Link label",
+        "page": "Page",
+        "buy_button": "Buy button"
+      }
+    },
+    "complementary": {
+      "name": "Complementary products",
+      "settings": {
+        "products_to_show": {
+          "label": "Maximum products to show"
+        },
+        "columns_desktop": {
+          "label": "Number of columns on desktop"
+        },
+        "columns_mobile": {
+          "label": "Number of columns on mobile",
+          "options__1": {
+            "label": "1 column"
+          },
+          "options__2": {
+            "label": "2 columns"
+          }
+        }
+      }
+    }
+  }
+}

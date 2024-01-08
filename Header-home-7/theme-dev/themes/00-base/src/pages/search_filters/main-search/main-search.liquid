@@ -1,0 +1,82 @@
+{{ 'section-main-search.css' | asset_url | stylesheet_tag }}
+{{ 'pagination.css' | asset_url | stylesheet_tag }}
+{{ 'facets-vertical.css' | asset_url | stylesheet_tag }}
+{{ 'facets-horizontal.css' | asset_url | stylesheet_tag }}
+{{ 'facets-drawer.css' | asset_url | stylesheet_tag }}
+{{ 'field-price.css' | asset_url | stylesheet_tag }}
+{{ 'fieldset-popover.css' | asset_url | stylesheet_tag }}
+{{ 'filters-refine.css' | asset_url | stylesheet_tag }}
+{{ 'collapse.css' | asset_url | stylesheet_tag }}
+
+<div {% render 'section-attr' %}>
+  {%- liquid
+    assign sort_by = search.sort_by | default: search.default_sort_by
+    assign search_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
+  -%}
+
+  <xo-filters-top></xo-filters-top>
+  <xo-filters xo-section-id='{{ section.id }}' xo-money-format='{{ 100 | money }}'>
+    <xo-container>
+      <div class='main-search__header'>
+        <div class='main-search__search'>
+          <form action='{{ routes.search_url }}' method='get' role='search' class='search'>
+            {% liquid
+              assign value = search.terms | escape
+              if search.performed
+                assign label = 'templates.search.title' | t
+              else
+                assign label = 'general.search.search' | t
+              endif
+              render 'predictive-search', value: value, label: label
+            %}
+          </form>
+        </div>
+        {%- if search.performed -%}
+          {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+            {%- if search.results_count > 0 -%}
+              <p role='status'>{{ 'templates.search.results_with_count_and_term' | t: terms: search.terms, count: search.results_count }}</p>
+            {%- endif -%}
+          {%- endif -%}
+          {%- if search.results_count == 0 and search.filters == empty -%}
+            <p role='status'>{{ 'templates.search.no_results' | t: terms: search.terms }}</p>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+      {%- if search.performed -%}
+        {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+          {% if search.results_count > 0 %}
+            {%- if section.settings.filter_type == 'vertical' %}
+              {% render 'filters-refine' %}
+              <xo-grid>
+                <div style='--xs: 12; --sm: 12; --md: 4; --lg: 3'>
+                  {%
+                    render 'facets',
+                    results: search,
+                    enable_filtering: section.settings.enable_filtering,
+                    enable_sorting: section.settings.enable_sorting,
+                    filter_type: section.settings.filter_type,
+                  %}
+                </div>
+                <div style='--xs: 12; --sm: 12; --md: 8; --lg: 9'>
+                  {% render 'filters-search-content' %}
+                </div>
+              </xo-grid>
+            {% else %}
+              {%
+                render 'facets',
+                results: search,
+                enable_filtering: section.settings.enable_filtering,
+                enable_sorting: section.settings.enable_sorting,
+                filter_type: section.settings.filter_type,
+              %}
+              {% render 'filters-refine' %}
+              {% render 'filters-search-content' %}
+            {% endif %}
+          {% endif %}
+        {% else %}
+          {% render 'filters-search-content' %}
+        {%- endif -%}
+      {%- endif -%}
+    </xo-container>
+  </xo-filters>
+</div>

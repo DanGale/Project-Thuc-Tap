@@ -1,0 +1,38 @@
+.xo-pagination__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+  padding-top: 4rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgba(var(--color-foreground), 0.3);
+  list-style: none;
+}
+
+.xo-pagination__text {
+  cursor: pointer;
+  color: rgba(var(--color-foreground), 0.3);
+}
+
+.xo-pagination__arrow {
+  cursor: pointer;
+}
+
+.xo-pagination__page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  color: rgba(var(--color-foreground), 0.3);
+  cursor: pointer;
+}
+
+.xo-pagination__page--current {
+  background-color: rgb(var(--color-button));
+  color: rgb(var(--color-button-text));
+}

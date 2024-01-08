@@ -1,0 +1,20 @@
+.xo-cart-table__title {
+  font-size: fz(body, 1.8);
+  color: rgba(var(--color-foreground));
+  padding-bottom: 3rem;
+}
+
+.xo-cart-table__quantity {
+  width: 100%;
+  @include media('>md') {
+    width: 50%;
+  }
+}
+
+.xo-cart-table__price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: 500;
+  color: rgb(var(--color-foreground));
+}

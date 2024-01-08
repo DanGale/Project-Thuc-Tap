@@ -1,0 +1,92 @@
+{{ 'section-header.css' | asset_url | stylesheet_tag }}
+
+<header class='xo-header color-{{ section.settings.color_scheme }}'>
+  <xo-sticky
+    xo-direction='{{ section.settings.sticky_header_type }}'
+    {% if section.settings.sticky_header_type == 'none' %}
+      xo-disabled
+    {% endif %}
+    style='z-index: 10000'
+  >
+    <xo-animate xo-type='fade-down' class='xo-header__sticky'>
+      <xo-container>
+        <div class='xo-header__content'>
+          <nav class='xo-header__left'>
+            <div class='xo-header__desktop{% if section.settings.menu_type == 'drawer' %} xo-header__desktop--only{% endif %}'>
+              {% if section.settings.menu_type == 'default' %}
+                {% render 'menu-horizontal', menu: section.settings.menu, event_type: section.settings.event_type %}
+              {% else %}
+                {% render 'menu-hamburger', menu: section.settings.menu %}
+              {% endif %}
+            </div>
+            {% if section.settings.menu_type == 'default' %}
+              <div class='xo-header__mobile'>
+                {% render 'menu-hamburger', menu: section.settings.menu %}
+              </div>
+            {% endif %}
+          </nav>
+          <div class='xo-header__center{% if section.settings.logo_position == 'left' and section.settings.menu_type == 'default' %} xo-header__center--{{ section.settings.logo_position }}{% endif %}'>
+            <a href='/'>
+              {%- if section.settings.logo != blank -%}
+                {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+                {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
+                {{
+                  section.settings.logo
+                  | image_url: width: section.settings.width
+                  | image_tag: class: 'xo-header__logo-img', widths: '50, 100, 150, 200, 250, 300, 400, 500', height: logo_height, width: section.settings.logo_width, alt: logo_alt
+                }}
+              {%- else -%}
+                <span class='h4 xo-header__logo-heading-logo'>{{ shop.name }}</span>
+              {%- endif -%}
+            </a>
+          </div>
+
+          <div class='xo-header__right'>
+            {% if section.settings.language_select %}
+              {% render 'language-select' %}
+            {% endif %}
+            {% if section.settings.currency_select %}
+              {% render 'currency-select' %}
+            {% endif %}
+            <xo-modal-trigger
+              class='xo-header__right-item'
+              xo-name='search'
+            >
+              {% render 'icon', name: 'search', size: '2.7rem' %}
+            </xo-modal-trigger>
+            {% if settings.cart_type == 'page' %}
+              <a class='xo-header__right-item' href='{{ routes.cart_url }}'>
+                {% render 'icon', name: 'cart', size: '2.7rem' %}
+                <div class='xo-header__right-item-number'>
+                  <xo-cart-size>{{ cart.item_count }}</xo-cart-size>
+                </div>
+              </a>
+            {% else %}
+              <xo-modal-trigger
+                class='xo-header__right-item'
+                xo-name='cart'
+              >
+                {% render 'icon', name: 'cart', size: '2.7rem' %}
+                <div class='xo-header__right-item-number'>
+                  <xo-cart-size>{{ cart.item_count }}</xo-cart-size>
+                </div>
+              </xo-modal-trigger>
+            {% endif %}
+
+            {%- if shop.customer_accounts_enabled -%}
+              <a href='{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}' class='xo-header__right-item'>
+                {% if customer %}
+                  {% render 'icon', name: 'account', size: '2.2rem' %}
+                {% else %}
+                  {% render 'icon', name: 'account', size: '2.2rem' %}
+                {% endif %}
+              </a>
+            {%- endif -%}
+          </div>
+        </div>
+      </xo-container>
+    </xo-animate>
+  </xo-sticky>
+</header>
+
+{% render 'header-ld-json' %}

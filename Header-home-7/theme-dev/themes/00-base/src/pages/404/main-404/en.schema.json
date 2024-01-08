@@ -1,0 +1,23 @@
+{
+  "name": "Main 404",
+  "settings": {
+    "title": {
+      "name": "Title",
+      "title": {
+        "label": "Title"
+      },
+      "subtitle": {
+        "label": "Subtitle"
+      },
+      "description": {
+        "label": "Description"
+      }
+    },
+    "button": {
+      "name": "Button"
+    }
+  },
+  "presets" : {
+    "name" : "Main 404"
+  }
+}

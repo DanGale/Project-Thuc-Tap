@@ -1,0 +1,15 @@
+{% comment %}
+  Renders a product data
+
+  Accepts:
+  - product: {Object} Product Liquid object
+
+  Usage:
+  {% render 'product-data', product: product %}
+{% endcomment %}
+
+<xo-product-data>
+  <script type='application/json'>
+    {{ product | json }}
+  </script>
+</xo-product-data>

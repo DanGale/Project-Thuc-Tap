@@ -1,0 +1,53 @@
+.xo-field-select-custom__trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+.xo-field-select-custom__name {
+  font-weight: 500;
+  letter-spacing: -0.032rem;
+  color: rgba(var(--color-foreground), 0.8);
+}
+
+.xo-field-select-custom__popover {
+  min-width: 25rem;
+  padding: 2rem 2.7rem;
+  background-color: rgb(var(--color-background));
+  border: 0.1rem solid rgba(var(--color-foreground), 0.15);
+  max-height: max(50vh, 40rem);
+}
+
+.xo-field-select-custom__check {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.xo-field-select-custom__input {
+  display: none;
+  &:checked {
+    ~ .xo-field-select-custom__icon {
+      svg {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.xo-field-select-custom__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    opacity: 0;
+    transform: scale(0.3);
+    transition: 0.3s;
+  }
+}

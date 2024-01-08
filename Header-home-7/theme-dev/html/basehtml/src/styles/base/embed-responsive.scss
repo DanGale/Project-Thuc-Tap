@@ -1,0 +1,22 @@
+.xo-embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  // 16:9 aspect ratio
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+  }
+  iframe,
+  video,
+  .xo-embed-responsive__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

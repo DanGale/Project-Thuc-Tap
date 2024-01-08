@@ -1,0 +1,10 @@
+:root {
+  --xo-container-width: var(--page-width, 1400px);
+  --xo-container-gap: var(--page-gap, 20px);
+  --xo-grid-col-gap: var(--grid-mobile-horizontal-spacing, 30px);
+  --xo-grid-row-gap: var(--grid-mobile-vertical-spacing, 30px);
+  @include media('>sm') {
+    --xo-grid-col-gap: var(--grid-desktop-horizontal-spacing, 15px);
+    --xo-grid-row-gap: var(--grid-desktop-vertical-spacing, 15px);
+  }
+}

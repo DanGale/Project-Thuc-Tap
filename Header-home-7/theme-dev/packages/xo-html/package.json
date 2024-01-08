@@ -1,0 +1,19 @@
+{
+  "name": "@xo/html",
+  "version": "0.0.1",
+  "author": "Neo Khuat",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack --watch"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^10.2.4",
+    "cross-env": "^7.0.3",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "5.5.1",
+    "mini-css-extract-plugin": "^2.6.0",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.13.2"
+  }
+}

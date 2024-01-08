@@ -1,0 +1,134 @@
+{
+  "name": "MEGA MENU V20",
+  "presets": {
+    "name": "mega-menu-v20"
+  },
+  "settings": {
+    "index_number": {
+      "label": "Link position in main menu",
+      "option_1": {
+        "label": "Item 1"
+      },
+      "option_2": {
+        "label": "Item 2"
+      },
+      "option_3": {
+        "label": "Item 3"
+      },
+      "option_4": {
+        "label": "Item 4"
+      },
+      "option_5": {
+        "label": "Item 5"
+      },
+      "option_6": {
+        "label": "Item 6"
+      },
+      "option_7": {
+        "label": "Item 7"
+      },
+      "option_8": {
+        "label": "Item 8"
+      },
+      "option_9": {
+        "label": "Item 9"
+      },
+      "option_10": {
+        "label": "Item 10"
+      }
+    },
+    "columns_grid": {
+      "label": "Column limit"
+    },
+    "image_1": {
+      "label": "Image 1"
+    },
+    "image_2": {
+      "label": "Image 2"
+    },
+    "image_3": {
+      "label": "Image 3"
+    },
+    "image_4": {
+      "label": "Image 4"
+    },
+    "image_5": {
+      "label": "Image 5"
+    },
+    "image_6": {
+      "label": "Image 6"
+    },
+    "image_7": {
+      "label": "Image 7"
+    },
+    "image_9": {
+      "label": "Image 9"
+    },
+    "image_10": {
+      "label": "Image 10"
+    },
+    "image_8": {
+      "label": "Image 8"
+    },
+    "button_2": {
+      "label": "Button text 2"
+    },
+    "button_1": {
+      "label": "Button text 1"
+    },
+    "button_3": {
+      "label": "Button text 3"
+    },
+    "button_4": {
+      "label": "Button text 4"
+    },
+    "button_5": {
+      "label": "Button text 5"
+    },
+    "button_6": {
+      "label": "Button link 6"
+    },
+    "button_7": {
+      "label": "Button link 7"
+    },
+    "button_8": {
+      "label": "Button link 8"
+    },
+    "button_9": {
+      "label": "Button link 9"
+    },
+    "button_10": {
+      "label": "Button link 10"
+    },
+    "button_link2": {
+      "label": "Button link 2"
+    },
+    "button_link1": {
+      "label": "Button link 1"
+    },
+    "button_link3": {
+      "label": "Button link 3"
+    },
+    "button_link4": {
+      "label": "Button link 4"
+    },
+    "button_link5": {
+      "label": "Button link 5"
+    },
+    "button_link6": {
+      "label": "Button link 6"
+    },
+    "button_link7": {
+      "label": "Button link 7"
+    },
+    "button_link8": {
+      "label": "Button link 8"
+    },
+    "button_link9": {
+      "label": "Button link 9"
+    },
+    "button_link10": {
+      "label": "Button link 10"
+    }
+  }
+}

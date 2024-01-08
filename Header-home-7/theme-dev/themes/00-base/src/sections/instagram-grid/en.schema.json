@@ -1,0 +1,14 @@
+{
+  "name": "Instagram grid",
+  "settings": {
+    "token": "Instagram asset token",
+    "space": "Spacing between items",
+    "collumn_lg": "Collumn deskop",
+    "collumn_md": "Collumn tablet",
+    "collumn_sm": "Collumn mobile"
+  },
+
+  "presets" : {
+    "name" : "Instagram grid"
+  }
+}

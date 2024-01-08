@@ -1,0 +1,33 @@
+.xo-hotspot__trigger {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #FFF;
+  position: relative;
+  cursor: pointer;
+  &:after {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #FFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation-name: hotspot;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    @keyframes hotspot {
+      0% {opacity: 1; scale: 1;}
+      100% {opacity: 0; scale: 3;}
+    }
+  }
+}
+
+.xo-hotspot__content {
+  background-color: #FFF;
+  max-width: 20rem;
+  padding: 1.5rem;
+  border: 0.1rem solid black;
+  box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) var(--color-foreground);
+}

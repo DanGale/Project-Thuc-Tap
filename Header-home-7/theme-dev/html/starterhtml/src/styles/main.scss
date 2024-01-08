@@ -1,0 +1,13 @@
+// Core
+@import "../../../basehtml/src/styles/main.scss";
+
+@font-face {
+  font-family: myFirstFont;
+  src: url('../assets/vintage.otf');
+}
+
+.test {
+  width: 200px;
+  height: 200px;
+  background: url('../assets/xo.png') no-repeat left top;
+}

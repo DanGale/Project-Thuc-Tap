@@ -1,0 +1,48 @@
+{{ 'section-main-collection.css' | asset_url | stylesheet_tag }}
+{{ 'pagination.css' | asset_url | stylesheet_tag }}
+{{ 'facets-vertical.css' | asset_url | stylesheet_tag }}
+{{ 'facets-horizontal.css' | asset_url | stylesheet_tag }}
+{{ 'facets-drawer.css' | asset_url | stylesheet_tag }}
+{{ 'field-price.css' | asset_url | stylesheet_tag }}
+{{ 'fieldset-popover.css' | asset_url | stylesheet_tag }}
+{{ 'filters-refine.css' | asset_url | stylesheet_tag }}
+{{ 'collapse.css' | asset_url | stylesheet_tag }}
+
+<div {% render 'section-attr' %}>
+  <xo-filters-top></xo-filters-top>
+  <xo-filters xo-section-id='{{ section.id }}' xo-money-format='{{ 100 | money }}'>
+    <xo-container>
+      {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+        {%- if section.settings.filter_type == 'vertical' %}
+          {% render 'filters-refine' %}
+          <xo-grid>
+            <div style='--xs: 12; --sm: 12; --md: 4; --lg: 3'>
+              {%
+                render 'facets',
+                results: collection,
+                enable_filtering: section.settings.enable_filtering,
+                enable_sorting: section.settings.enable_sorting,
+                filter_type: section.settings.filter_type,
+              %}
+            </div>
+            <div style='--xs: 12; --sm: 12; --md: 8; --lg: 9'>
+              {% render 'filters-content' %}
+            </div>
+          </xo-grid>
+        {% else %}
+          {%
+            render 'facets',
+            results: collection,
+            enable_filtering: section.settings.enable_filtering,
+            enable_sorting: section.settings.enable_sorting,
+            filter_type: section.settings.filter_type,
+          %}
+          {% render 'filters-refine' %}
+          {% render 'filters-content' %}
+        {% endif %}
+      {% else %}
+        {% render 'filters-content' %}
+      {%- endif -%}
+    </xo-container>
+  </xo-filters>
+</div>

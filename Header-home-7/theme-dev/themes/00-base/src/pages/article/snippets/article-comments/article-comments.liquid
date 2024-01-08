@@ -1,0 +1,9 @@
+<div class='xo-article-comments'>
+  <xo-animate xo-cascade>
+    <h2>{{ 'customer.comment.title' | t }}</h2>
+  </xo-animate>
+  {%- if article.comments_count > 0 -%}
+    {%- assign anchorId = '#Comments-' | append: article.id -%}
+    {% paginate article.comments by 5 %}{% endpaginate %}
+  {% endif %}
+</div>

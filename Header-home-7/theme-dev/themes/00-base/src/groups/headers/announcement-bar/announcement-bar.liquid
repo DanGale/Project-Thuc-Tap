@@ -1,0 +1,31 @@
+{{ 'section-announcement-bar.css' | asset_url | stylesheet_tag }}
+
+<div {% render 'section-attr' %}>
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'announcement' -%}
+        <div
+          class='announcement-bar color-{{ block.settings.color_scheme }} gradient'
+          role='region'
+          aria-label='{{ 'sections.header.announcement' | t }}'
+          {{ block.shopify_attributes }}
+        >
+          {%- if block.settings.text != blank -%}
+            {%- if block.settings.link != blank -%}
+              <a href='{{ block.settings.link }}' class='announcement-bar__link link link--text focus-inset animate-arrow'>
+            {%- endif -%}
+            <p class='announcement-bar__message h5'>
+              {{ block.settings.text | escape }}
+              {%- if block.settings.link != blank -%}
+                {% render 'icon', name: 'arrow' %}
+              {%- endif -%}
+            </p>
+            {%- if block.settings.link != blank -%}
+              </a>
+            {%- endif -%}
+          {%- endif -%}
+        </div>
+    {%- endcase -%}
+  {%- endfor -%}
+  {% render 'separator', class: 'abs l-0 b-0 r-0' %}
+</div>

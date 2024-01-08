@@ -1,0 +1,28 @@
+{% comment %}
+  Renders an paginator attribute of xo-carousel.
+  Accepts:
+  - style: {string} Type of the carousel pagination (optional | value: '', 'sticks')
+  - align: {string}  Alignment of the carousel pagination (optional | value: 'left', 'center', 'right')
+  - position: {string} Position of the carousel pagination (optional | value: '','in-content')
+  - disabled: {boolean} Disable the carousel pagination (optional)
+  - mobile_disabled: {boolean} Disable the carousel pagination when using mobile (optional)
+  Usage:
+  {% render 'carousel-pagination',
+    style: '',
+    align: 'left' (default),
+    position: '',
+    disabled: false,
+    mobile_disabled: false
+  %}
+{% endcomment %}
+
+<xo-carousel-pagination
+  class='
+    xo-carousel-paginator
+    {% if disabled -%} xo-carousel-paginator--disabled {%- endif %}
+    {% if mobile_disabled -%} xo-carousel-paginator--mobile-disabled {%- endif %}
+    {% if style != blank -%} xo-carousel-paginator--{{ style }} {%- endif -%}
+  '
+  style='--pag_align: {{ align | default: 'left'  }}'
+>
+</xo-carousel-pagination>

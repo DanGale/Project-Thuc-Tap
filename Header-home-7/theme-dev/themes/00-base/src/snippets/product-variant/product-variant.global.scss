@@ -1,0 +1,10 @@
+.xo-product-variant {
+  padding: 1rem 0;
+}
+
+.xo-product-variant, .xo-product-variant__inner {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+}

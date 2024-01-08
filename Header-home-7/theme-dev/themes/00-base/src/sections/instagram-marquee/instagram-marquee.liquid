@@ -1,0 +1,64 @@
+{{ 'section-instagram-marquee.css' | asset_url | stylesheet_tag }}
+
+<section {% render 'section-attr' %}>
+  {% comment %}
+    Render instagram post with grid layout. It is TEMPORARY
+  {% endcomment %}
+
+  {% if section.settings.access_token != blank %}
+    <xo-container>
+      <xo-instagram class='base-insta' xo-open-mode='modal' xo-access-token='{{ section.settings.access_token }}'>
+        <xo-grid
+          style='--lg: 5; --xs: 2; --xo-grid-col-gap: {%- if section.settings.item_space -%} {{section.settings.item_space}}rem {%- endif-%}'
+        >
+          <xo-instagram-template>
+            <img data-src='{ url }' alt=''>
+          </xo-instagram-template>
+        </xo-grid>
+      </xo-instagram>
+    </xo-container>
+
+    {% comment %}
+      Render marquee instagram. But it is INCOMPLETE.
+      <xo-instagram xo-open-mode="modal" xo-access-token="{{ section.settings.access_token }}">
+        <xo-marquee class="xo-insta-marquee" style="
+          {%- if section.settings.item_space -%}
+            --space: {{ section.settings.item_space }}rem;
+          {%- endif -%}
+          {%- if section.settings.item_width -%}
+            --item_width: {{ section.settings.item_width }}px;
+          {%- endif -%}
+          " xo-speed="{{ section.settings.marquee_speed }}" {%- if section.settings.stop_marquee -%}
+          xo-pause-on-hover="true" {%- endif -%} {%- if section.settings.marquee_right_to_left -%} xo-rtl="true" {%- endif
+          -%}>
+          <xo-instagram-template>
+            <img class="xo-insta-marquee__gallery" data-src="{ url }" alt="">
+          </xo-instagram-template>
+        </xo-marquee>
+      </xo-instagram>
+    {% endcomment %}
+  {% else %}
+    <xo-marquee
+      class='xo-insta-marquee'
+      style='
+        {%- if section.settings.item_space -%}
+          --space: {{ section.settings.item_space }}rem;
+        {%- endif -%}
+        {%- if section.settings.item_width -%}
+          --item_width: {{ section.settings.item_width }}px;
+        {%- endif -%}
+      '
+      xo-speed='{{ section.settings.marquee_speed }}'
+      {%- if section.settings.stop_marquee -%}
+        xo-pause-on-hover='true'
+      {%- endif -%}
+      {%- if section.settings.marquee_right_to_left -%}
+        xo-rtl='true'
+      {%- endif -%}
+    >
+      <div class='xo-insta-marquee__example'>
+        {% render 'image', width: '100%' %}
+      </div>
+    </xo-marquee>
+  {% endif %}
+</section>

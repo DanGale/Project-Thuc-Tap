@@ -1,0 +1,89 @@
+{
+  "name": "MEGA MENU V23",
+  "presets": {
+    "name": "Mega menu v23"
+  },
+  "settings": {
+    "index_number": {
+      "label": "Link position in main menu",
+      "option_1": {
+        "label": "Item 1"
+      },
+      "option_2": {
+        "label": "Item 2"
+      },
+      "option_3": {
+        "label": "Item 3"
+      },
+      "option_4": {
+        "label": "Item 4"
+      },
+      "option_5": {
+        "label": "Item 5"
+      },
+      "option_6": {
+        "label": "Item 6"
+      },
+      "option_7": {
+        "label": "Item 7"
+      },
+      "option_8": {
+        "label": "Item 8"
+      },
+      "option_9": {
+        "label": "Item 9"
+      },
+      "option_10": {
+        "label": "Item 10"
+      }
+    },
+    "heading_1": {
+      "label": "Title 1"
+    },
+    "menu_style1": {
+      "label": "Menu 1",
+      "info": "Displays only top-level menu items."
+    },
+    "heading_2": {
+      "label": "Title 2"
+    },
+    "menu_style2": {
+      "label": "Menu 2",
+      "info": "Displays only top-level menu items."
+    },
+    "heading_3": {
+      "label": "Title 3"
+    },
+    "menu_style3": {
+      "label": "Menu 3",
+      "info": "Displays only top-level menu items."
+    },
+    "heading_4": {
+      "label": "Title 4"
+    },
+    "menu_style4": {
+      "label": "Menu 4",
+      "info": "Displays only top-level menu items."
+    },
+    "heading_5": {
+      "label": "Title 5"
+    },
+    "menu_style5": {
+      "label": "Menu 5",
+      "info": "Displays only top-level menu items."
+    },
+    "heading_6": {
+      "label": "Title 6"
+    },
+    "menu_style6": {
+      "label": "Menu 6",
+      "info": "Displays only top-level menu items."
+    },
+    "limit": {
+      "label": "Blog limit"
+    },
+    "blog": {
+      "label": "Blog"
+    }
+  }
+}

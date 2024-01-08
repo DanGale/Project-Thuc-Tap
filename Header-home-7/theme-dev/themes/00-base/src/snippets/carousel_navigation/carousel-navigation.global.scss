@@ -1,0 +1,100 @@
+.xo-carousel-navigation {
+  width: 100%;
+  padding: 0rem 2rem;
+  display: flex;
+  justify-content: flex-start;
+  z-index: 10;
+}
+
+.xo-carousel-navigation__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  width: 12rem;
+}
+
+.xo-carousel-navigation__button {
+  z-index: 1;
+  background-color: rgba(var(--color-background), 0.4);
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 0.6rem 0.1rem rgba(var(--color-accent), 0.4);
+    border: 0.1rem solid rgba(var(--color-accent), 0.7);
+    transition: 0.3s;
+    background-color: rgba(var(--color-background), 1);
+  }
+  svg {
+    display: block;
+  }
+  &:first-child {
+    transform: rotate(180deg);
+  }
+}
+
+.xo-carousel-navigation__button--boxes {
+  border: 0;
+  background-color: rgb(var(--color-background));
+  box-shadow: 0 0 0.2rem 0.1rem rgba(var(--color-foreground), 0.2);
+  &:hover {
+    box-shadow: 0 0 0.6rem 0.1rem rgba(var(--color-accent), 0.4);
+  }
+}
+
+.xo-carousel-navigation__button[xo-disabled]:not([xo-disabled='false']) {
+  opacity: 0;
+  cursor: not-allowed;
+}
+
+// Modifier
+.xo-carousel-navigation--top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-110%);
+}
+
+.xo-carousel-navigation--in-content {
+  position: absolute;
+  top: calc(50% - 5rem);
+  left: 0;
+  transform: translateY(-50%);
+  .xo-carousel-navigation__button {
+    opacity: 0;
+    transition: 0.3s;
+  }
+  .xo-carousel-navigation__nav {
+    width: 100%;
+  }
+}
+
+xo-carousel {
+  &:hover {
+    .xo-carousel-navigation__button {
+      opacity: 1;
+    }
+  }
+}
+
+.xo-carousel-navigation--center {
+  justify-content: center;
+}
+
+.xo-carousel-navigation--right {
+  justify-content: flex-end;
+}
+
+.xo-carousel-navigation--disabled {
+  display: none;
+}
+
+.is-mobile .xo-carousel-navigation--mobile-disabled {
+  display: none;
+}

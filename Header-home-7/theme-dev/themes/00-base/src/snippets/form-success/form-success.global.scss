@@ -1,0 +1,15 @@
+.xo-form-success {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #e4ffe5;
+  border: 0.1rem solid #428445;
+  color: #428445;
+}
+
+.xo-form-success__message {
+  color: #428445;
+  margin-inline-start: 0.5rem;
+}

@@ -1,0 +1,318 @@
+{
+  "name": "t:name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:settings.header_border.content"
+    },
+    {
+      "type": "range",
+      "id": "drawer_border_thickness",
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "unit": "px",
+      "label": "t:settings.thickness.label",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "drawer_border_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "t:settings.opacity.label",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "drawer_corner_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "t:settings.corner_radius.label",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:settings.header_shadow.content"
+    },
+    {
+      "type": "range",
+      "id": "drawer_shadow_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "t:settings.opacity.label",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "drawer_shadow_horizontal_offset",
+      "min": -12,
+      "max": 12,
+      "step": 2,
+      "unit": "px",
+      "label": "t:settings.horizontal_offset.label",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "drawer_shadow_vertical_offset",
+      "min": -12,
+      "max": 12,
+      "step": 1,
+      "unit": "px",
+      "label": "t:settings.vertical_offset.label",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "drawer_shadow_blur",
+      "min": 0,
+      "max": 20,
+      "step": 5,
+      "unit": "px",
+      "label": "t:settings.blur.label",
+      "default": 10
+    },
+    {
+      "type": "number",
+      "id": "drawer_padding",
+      "label": "t:settings.drawer_padding.label",
+      "default": 20
+    },
+    {
+      "type": "number",
+      "id": "drawer_margin",
+      "label": "t:settings.drawer_margin.label",
+      "default": 0
+    },
+    {
+      "type": "select",
+      "id": "drawer_easing",
+      "label": "t:settings.drawer_easing.label",
+      "options": [
+        {
+          "value": "linear",
+          "label": "t:settings.drawer_easing.linear.label"
+        },
+        {
+          "value": "ease",
+          "label": "t:settings.drawer_easing.ease.label"
+        },
+        {
+          "value": "easeInQuad",
+          "label": "t:settings.drawer_easing.ease_in_quad.label"
+        },
+        {
+          "value": "easeOutQuad",
+          "label": "t:settings.drawer_easing.ease_out_quad.label"
+        },
+        {
+          "value": "easeInOutQuad",
+          "label": "t:settings.drawer_easing.ease_in_out_quad.label"
+        },
+        {
+          "value": "easeInCubic",
+          "label": "t:settings.drawer_easing.ease_in_cubic.label"
+        },
+        {
+          "value": "easeOutCubic",
+          "label": "t:settings.drawer_easing.ease_out_cubic.label"
+        },
+        {
+          "value": "easeInOutCubic",
+          "label": "t:settings.drawer_easing.ease_in_out_cubic.label"
+        },
+        {
+          "value": "easeInQuart",
+          "label": "t:settings.drawer_easing.ease_in_quart.label"
+        },
+        {
+          "value": "easeOutQuart",
+          "label": "t:settings.drawer_easing.ease_out_quart.label"
+        },
+        {
+          "value": "easeInOutQuart",
+          "label": "t:settings.drawer_easing.ease_in_out_quart.label"
+        },
+        {
+          "value": "easeInQuint",
+          "label": "t:settings.drawer_easing.ease_in_quint.label"
+        },
+        {
+          "value": "easeOutQuint",
+          "label": "t:settings.drawer_easing.ease_out_quint.label"
+        },
+        {
+          "value": "easeInOutQuint",
+          "label": "t:settings.drawer_easing.ease_in_out_quint.label"
+        },
+        {
+          "value": "easeOutBounce",
+          "label": "t:settings.drawer_easing.ease_out_bounce.label"
+        },
+        {
+          "value": "easeInBounce",
+          "label": "t:settings.drawer_easing.ease_in_bounce.label"
+        },
+        {
+          "value": "easeOutBack",
+          "label": "t:settings.drawer_easing.ease_out_back.label"
+        },
+        {
+          "value": "easeInBack",
+          "label": "t:settings.drawer_easing.ease_in_back.label"
+        },
+        {
+          "value": "easeInOut",
+          "label": "t:settings.drawer_easing.ease_in_out.label"
+        },
+        {
+          "value": "easeInElastic",
+          "label": "t:settings.drawer_easing.ease_in_elastic.label"
+        },
+        {
+          "value": "easeOutElastic",
+          "label": "t:settings.drawer_easing.ease_out_elastic.label"
+        },
+        {
+          "value": "spring",
+          "label": "t:settings.drawer_easing.spring.label"
+        },
+        {
+          "value": "decay",
+          "label": "t:settings.drawer_easing.decay.label"
+        },
+        {
+          "value": "bezier",
+          "label": "t:settings.drawer_easing.bezier.label"
+        }
+      ],
+      "default": "decay"
+    },
+    {
+      "type": "range",
+      "id": "drawer_duration",
+      "min": 200,
+      "max": 2000,
+      "step": 100,
+      "unit": "ms",
+      "label": "t:settings.drawer_duration.label",
+      "default": 400
+    },
+    {
+      "type": "range",
+      "id": "drawer_backdrop_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "t:settings.drawer_backdrop_opacity.label",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "drawer_backdrop_blur",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "label": "t:settings.drawer_backdrop_blur.label",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:settings.header_cart_note.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_cart_drawer_note",
+      "label": "t:settings.show_cart_drawer_note.label",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "cart_drawer_note_type",
+      "label": "t:settings.cart_drawer_note_type.label",
+      "options": [
+        {
+          "value": "drawer",
+          "label": "t:settings.cart_drawer_note_type.option_1.label"
+        },
+        {
+          "value": "popover",
+          "label": "t:settings.cart_drawer_note_type.option_2.label"
+        },
+        {
+          "value": "modal",
+          "label": "t:settings.cart_drawer_note_type.option_3.label"
+        }
+      ],
+      "default": "drawer"
+    },
+    {
+      "type": "header",
+      "content": "t:settings.header_cart_discount.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_cart_drawer_discount",
+      "label": "t:settings.show_cart_drawer_discount.label",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "cart_drawer_discount_type",
+      "label": "t:settings.cart_drawer_discount_type.label",
+      "options": [
+        {
+          "value": "drawer",
+          "label": "t:settings.cart_drawer_discount_type.option_1.label"
+        },
+        {
+          "value": "popover",
+          "label": "t:settings.cart_drawer_discount_type.option_2.label"
+        },
+        {
+          "value": "modal",
+          "label": "t:settings.cart_drawer_discount_type.option_3.label"
+        }
+      ],
+      "default": "drawer"
+    },
+    {
+      "type": "header",
+      "content": "t:settings.header_cart_shipping.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_cart_drawer_shipping",
+      "label": "t:settings.show_cart_drawer_shipping.label",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "cart_drawer_shipping_type",
+      "label": "t:settings.cart_drawer_shipping_type.label",
+      "options": [
+        {
+          "value": "drawer",
+          "label": "t:settings.cart_drawer_shipping_type.option_1.label"
+        },
+        {
+          "value": "popover",
+          "label": "t:settings.cart_drawer_shipping_type.option_2.label"
+        },
+        {
+          "value": "modal",
+          "label": "t:settings.cart_drawer_shipping_type.option_3.label"
+        }
+      ],
+      "default": "drawer"
+    }
+  ]
+}

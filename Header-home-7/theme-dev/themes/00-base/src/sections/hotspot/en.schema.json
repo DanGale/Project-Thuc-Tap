@@ -1,0 +1,66 @@
+{
+  "name": "Hotspot",
+  "settings": {
+    "image":{
+      "label": "Image"
+    }
+  },
+  "blocks": {
+    "name": "Hotspot trigger",
+    "settings":{
+      "top": {
+        "label": "Top position ( percentage )"
+      },
+      "left": {
+        "label": "Left position ( percentage )"
+      },
+      "product": {
+        "label": "Product",
+        "info": "Choose a product, when you click to the hotspot, it will be shown"
+      },
+      "placement":{
+        "label": "Content placement",
+        "info": "The hotspot's content placement depends on the hotspot's location",
+        "options__1":{
+          "label": "Top Right"
+        },
+        "options__2":{
+          "label": "Top Center"
+        },
+        "options__3":{
+          "label": "Top Left"
+        },
+        "options__4":{
+          "label": "Bottom Right"
+        },
+        "options__5":{
+          "label": "Bottom Center"
+        },
+        "options__6":{
+          "label": "Bottom Left"
+        },
+        "options__7":{
+          "label": "Right Top"
+        },
+        "options__8":{
+          "label": "Right Center"
+        },
+        "options__9":{
+          "label": "Right Bottom"
+        },
+        "options__10":{
+          "label": "Left Top"
+        },
+        "options__11":{
+          "label": "Left Center"
+        },
+        "options__12":{
+          "label": "Left Bottom"
+        }
+      }
+    }
+  },
+  "presets" : {
+    "name" : "Hotspot "
+  }
+}

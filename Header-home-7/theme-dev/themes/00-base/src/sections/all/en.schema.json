@@ -1,0 +1,59 @@
+{
+  "spacing": "Spacing",
+  "colors": {
+    "accent_1": {
+      "label": "Accent 1"
+    },
+    "accent_2": {
+      "label": "Accent 2"
+    },
+    "background_1": {
+      "label": "Background 1"
+    },
+    "background_2": {
+      "label": "Background 2"
+    },
+    "inverse": {
+      "label": "Inverse"
+    },
+    "label": "Color scheme",
+    "has_cards_info": "To change the card color scheme, update your theme settings."
+  },
+  "heading_size": {
+    "label": "Heading size",
+    "options__1": {
+      "label": "Small"
+    },
+    "options__2": {
+      "label": "Medium"
+    },
+    "options__3": {
+      "label": "Large"
+    },
+    "options__4": {
+      "label": "Extra large"
+    }
+  },
+  "component": "__SECTION_HEADING__",
+  "component": "__ARTICLE_CARD__",
+  "component": "__FIELD_CHECKBOX__",
+  "component": "__FIELD_RADIO__",
+  "component": "__IMAGE__",
+  "component": "__LOADER_1__",
+  "component": "__LOADER_2__",
+  "component": "__LOADER_3__",
+  "component": "__PRICE__",
+  "component": "__BUTTON__",
+  "component": "__ANNOUCEMENT_BAR__",
+  "component": "__ICON_BOX__",
+  "component": "__COLLECTION_CARD__",
+  "component": "__PRODUCT_CARD__",
+  "component": "__ARTICLE_CARD__",
+  "component": "__FIELD_INPUT__",
+  "component": "__VIDEO__",
+  "component": "__BG_PARALLAX__",
+  "component": "__SECTION_ATTR__",
+  "component": "__SECTION_BG_IMAGE__",
+  "component": "__CAROUSEL_NAVIGATION__",
+  "component": "__CAROUSEL_PAGINATION__"
+}

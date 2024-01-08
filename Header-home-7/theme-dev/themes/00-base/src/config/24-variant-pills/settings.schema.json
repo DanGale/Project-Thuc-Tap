@@ -1,0 +1,65 @@
+{
+  "name": "t:name",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:settings.variant_pills.paragraph"
+    },
+    {
+      "type": "select",
+      "id": "variant_style",
+      "options": [
+        {
+          "value": "radio",
+          "label": "t:settings.variant_style.option_1.label"
+        },
+        {
+          "value": "boxed",
+          "label": "t:settings.variant_style.option_2.label"
+        },
+        {
+          "value": "select",
+          "label": "t:settings.variant_style.option_3.label"
+        }
+      ],
+      "default": "boxed",
+      "label": "t:settings.variant_style.label"
+    },
+    {
+      "type": "select",
+      "id": "variant_color_style",
+      "options": [
+        {
+          "value": "radio",
+          "label": "t:settings.variant_color_style.option_1.label"
+        },
+        {
+          "value": "boxed",
+          "label": "t:settings.variant_color_style.option_2.label"
+        },
+        {
+          "value": "select",
+          "label": "t:settings.variant_color_style.option_3.label"
+        },
+        {
+          "value": "color",
+          "label": "t:settings.variant_color_style.option_4.label"
+        }
+      ],
+      "default": "color",
+      "label": "t:settings.variant_color_style.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "variant_color_show_label",
+      "label": "t:settings.variant_color_show_label.label",
+      "default": true
+    },
+    {
+      "type": "textarea",
+      "id": "variant_color_swatches",
+      "label": "t:settings.variant_color_swatches.label",
+      "default": "Blue: #6c6cf0\nOrange: #f9c056"
+    }
+  ]
+}

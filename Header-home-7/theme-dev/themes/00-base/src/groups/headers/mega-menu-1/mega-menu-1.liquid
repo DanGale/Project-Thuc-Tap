@@ -1,0 +1,14 @@
+{% assign index_number = section.settings.index | append: '' %}
+
+<template xo-mega-menu-name='header-mega-menu' xo-mega-menu-index='{{ index_number }}'>
+  <div data-id='{{ section.id }}' {% render 'section-attr' %}>
+    <xo-container>
+      <xo-grid style='--col-width: 30rem'>
+        {% render 'icon-box', icon: 'cart', title: 'Quick Ship', description: 'In stock & ready*', animate_enabled: false %}
+        {% render 'icon-box', icon: 'shipping-fast', title: 'Free Delivery over $500', description: 'In-Room Delivery Available', animate_enabled: false %}
+        {% render 'icon-box', icon: 'phone-call', title: 'Customer Care', description: 'Via Chat, Email, or Call', animate_enabled: false %}
+        {% render 'icon-box', icon: 'discount', title: 'Return Policy', description: '7 Days Easy Return*', animate_enabled: false %}
+      </xo-grid>
+    </xo-container>
+  </div>
+</template>

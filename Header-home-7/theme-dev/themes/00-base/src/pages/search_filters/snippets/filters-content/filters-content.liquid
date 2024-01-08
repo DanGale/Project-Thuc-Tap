@@ -1,0 +1,40 @@
+{% assign products_per_page = section.settings.products_per_page | default: 10 %}
+
+<xo-filters-content>
+  {%- paginate collection.products by products_per_page -%}
+    <div>
+      {%- if collection.products.size == 0 -%}
+        {% assign empty_title = 'sections.collection_template.empty' | t %}
+        {% assign empty_content = 'sections.collection_template.use_fewer_filters_html' | t: link: collection.url, class: 'underlined-link link' %}
+        {% render 'empty', title: empty_title, content: empty_content %}
+      {%- else -%}
+        <xo-grid
+          style='--xs: {{ section.settings.columns_mobile }}; --sm: {{ section.settings.columns_mobile }}; --md: {{ section.settings.columns_desktop | minus: 1 }}; --lg: {{ section.settings.columns_desktop }}'
+        >
+          {%- for product in collection.products -%}
+            {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
+            {%- assign placeholder_image = 'product-apparel-' | append: placeholder_image_index -%}
+            {% render 'product-card',
+              product: product,
+              show_image: section.settings.product_card_show_image,
+              show_secondary_image: section.settings.product_card_show_secondary_image,
+              show_vendor: section.settings.product_card_show_vendor,
+              show_description: section.settings.product_card_show_description,
+              show_quick_add: section.settings.product_card_show_quick_add,
+              show_quick_view: section.settings.product_card_show_quick_view,
+              show_price: section.settings.product_card_show_price,
+              show_badge: section.settings.product_card_show_badge,
+              media_aspect_ratio: section.settings.product_card_aspect_ratio,
+              color_scheme: section.settings.card_color_scheme,
+              placeholder_image: placeholder_image
+            -%}
+          {%- endfor -%}
+        </xo-grid>
+
+        <xo-filters-paginate>
+          {% render 'pagination', paginate: paginate, anchor: '' %}
+        </xo-filters-paginate>
+      {%- endif -%}
+    </div>
+  {%- endpaginate -%}
+</xo-filters-content>

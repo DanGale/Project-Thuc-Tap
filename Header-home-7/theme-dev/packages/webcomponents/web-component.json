@@ -1,0 +1,2988 @@
+{
+  "version": 1.1,
+  "tags": [
+    {
+      "name": "xo-video-cover",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-src",
+          "description": "Đường dẫn đến video",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-typing",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-content",
+          "description": "1 mảng các đoạn text",
+          "values": [
+            {
+              "name": "string[]"
+            }
+          ]
+        },
+        {
+          "name": "xo-duration",
+          "description": "Thời gian hiệu ứng chuyển đổi",
+          "values": []
+        },
+        {
+          "name": "xo-delay",
+          "description": "Thời gian delay giữa các đoạn text",
+          "values": []
+        },
+        {
+          "name": "xo-effect",
+          "description": "Kiểu hiệu ứng",
+          "values": [
+            {
+              "name": "typing"
+            },
+            {
+              "name": "slide"
+            }
+          ]
+        },
+        {
+          "name": "xo-cursor-char",
+          "description": "Ký tự con trỏ (chỉ dành cho typing effect)",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-tooltip",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-title",
+          "description": "Nội dung của tooltip",
+          "values": []
+        },
+        {
+          "name": "xo-placement",
+          "description": "Vị trí hiển thị popover",
+          "values": [
+            {
+              "name": "top-left"
+            },
+            {
+              "name": "top-center"
+            },
+            {
+              "name": "top-right"
+            },
+            {
+              "name": "bottom-left"
+            },
+            {
+              "name": "bottom-center"
+            },
+            {
+              "name": "bottom-right"
+            },
+            {
+              "name": "left-top"
+            },
+            {
+              "name": "left-center"
+            },
+            {
+              "name": "left-bottom"
+            },
+            {
+              "name": "right-top"
+            },
+            {
+              "name": "right-center"
+            },
+            {
+              "name": "right-bottom"
+            }
+          ]
+        },
+        {
+          "name": "xo-offset",
+          "description": "Khoảng cách tooltip portal với nút hover",
+          "values": []
+        },
+        {
+          "name": "xo-animate",
+          "description": "Tên hiệu ứng",
+          "values": [
+            {
+              "name": "none"
+            },
+            {
+              "name": "zoom"
+            },
+            {
+              "name": "fade"
+            },
+            {
+              "name": "fade-up"
+            },
+            {
+              "name": "fade-down"
+            },
+            {
+              "name": "fade-left"
+            },
+            {
+              "name": "fade-right"
+            }
+          ]
+        },
+        {
+          "name": "xo-duration",
+          "description": "Thời gian bật/tắt tooltip (ms)",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-toggle-trigger",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-name",
+          "description": "Tên này giúp đồng bộ với xo-toggle",
+          "values": []
+        },
+        {
+          "name": "xo-active",
+          "description": "Khi bấm vào thì attr này sẽ đc thêm vào hoặc xoá đi",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-toggle",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-name",
+          "description": "Tên này giúp đồng bộ với xo-toggle-trigger",
+          "values": []
+        },
+        {
+          "name": "xo-active",
+          "description": "Khi bấm vào xo-toggle-trigger thì attr này sẽ đc thêm vào hoặc xoá đi",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-section-select",
+          "description": "Hỗ trợ ẩn hiện khi shopify section select",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-outside-click-enabled",
+          "description": "Cho phép xo-toggle bị ẩn khi click ra ngoài",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-toast",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-name",
+          "description": "Tên toast",
+          "values": []
+        },
+        {
+          "name": "xo-placement",
+          "description": "Vị trí hiển thị của toast",
+          "values": [
+            {
+              "name": "top-left"
+            },
+            {
+              "name": "top-center"
+            },
+            {
+              "name": "top-right"
+            },
+            {
+              "name": "bottom-left"
+            },
+            {
+              "name": "bottom-center"
+            },
+            {
+              "name": "bottom-right"
+            }
+          ]
+        },
+        {
+          "name": "xo-class-name",
+          "description": "HTML Class",
+          "values": []
+        },
+        {
+          "name": "xo-close-button-class-name",
+          "description": "Button HTML class",
+          "values": []
+        },
+        {
+          "name": "xo-close-button-disabled",
+          "description": "disable close button",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-close-button-placement",
+          "description": "vị trí close button",
+          "values": [
+            {
+              "name": "top-right"
+            }
+          ]
+        },
+        {
+          "name": "xo-style",
+          "description": "Inline style",
+          "values": [
+            {
+              "name": "object"
+            }
+          ]
+        },
+        {
+          "name": "xo-duration",
+          "description": "Thời gian ẩn/hiện (ms)",
+          "values": []
+        },
+        {
+          "name": "xo-delay",
+          "description": "Thời gian hiển thị (ms)",
+          "values": []
+        },
+        {
+          "name": "xo-easing",
+          "description": "Easing",
+          "values": [
+            {
+              "name": "linear"
+            },
+            {
+              "name": "ease"
+            },
+            {
+              "name": "easeInQuad"
+            },
+            {
+              "name": "easeOutQuad"
+            },
+            {
+              "name": "easeInOutQuad"
+            },
+            {
+              "name": "easeInCubic"
+            },
+            {
+              "name": "easeOutCubic"
+            },
+            {
+              "name": "easeInOutCubic"
+            },
+            {
+              "name": "easeInQuart"
+            },
+            {
+              "name": "easeOutQuart"
+            },
+            {
+              "name": "easeInOutQuart"
+            },
+            {
+              "name": "easeInQuint"
+            },
+            {
+              "name": "easeOutQuint"
+            },
+            {
+              "name": "easeInOutQuint"
+            },
+            {
+              "name": "easeOutBounce"
+            },
+            {
+              "name": "easeInBounce"
+            },
+            {
+              "name": "easeOutBack"
+            },
+            {
+              "name": "easeInBack"
+            },
+            {
+              "name": "easeInOut"
+            },
+            {
+              "name": "easeInElastic"
+            },
+            {
+              "name": "easeOutElastic"
+            },
+            {
+              "name": "spring"
+            },
+            {
+              "name": "decay"
+            },
+            {
+              "name": "bezier"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-tabs",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-tabs-trigger",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-name",
+          "description": "Tên của tab",
+          "values": []
+        },
+        {
+          "name": "xo-active",
+          "description": "Tab được chọn",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-tabs-pane",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-name",
+          "description": "Tên của tab",
+          "values": []
+        },
+        {
+          "name": "xo-active",
+          "description": "Tab được chọn",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-tabs-active",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-easing",
+          "description": "Easing",
+          "values": [
+            {
+              "name": "linear"
+            },
+            {
+              "name": "ease"
+            },
+            {
+              "name": "easeInQuad"
+            },
+            {
+              "name": "easeOutQuad"
+            },
+            {
+              "name": "easeInOutQuad"
+            },
+            {
+              "name": "easeInCubic"
+            },
+            {
+              "name": "easeOutCubic"
+            },
+            {
+              "name": "easeInOutCubic"
+            },
+            {
+              "name": "easeInQuart"
+            },
+            {
+              "name": "easeOutQuart"
+            },
+            {
+              "name": "easeInOutQuart"
+            },
+            {
+              "name": "easeInQuint"
+            },
+            {
+              "name": "easeOutQuint"
+            },
+            {
+              "name": "easeInOutQuint"
+            },
+            {
+              "name": "easeOutBounce"
+            },
+            {
+              "name": "easeInBounce"
+            },
+            {
+              "name": "easeOutBack"
+            },
+            {
+              "name": "easeInBack"
+            },
+            {
+              "name": "easeInOut"
+            },
+            {
+              "name": "easeInElastic"
+            },
+            {
+              "name": "easeOutElastic"
+            },
+            {
+              "name": "spring"
+            },
+            {
+              "name": "decay"
+            },
+            {
+              "name": "bezier"
+            }
+          ]
+        },
+        {
+          "name": "xo-duration",
+          "description": "Thời gian chuyển động",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-tabs-content",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-sticky",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-direction",
+          "description": "Set scroll lên hay xuống thì hiển thị sticky",
+          "values": [
+            {
+              "name": "up"
+            },
+            {
+              "name": "down"
+            }
+          ]
+        },
+        {
+          "name": "xo-placement",
+          "description": "Vị trí của sticky",
+          "values": [
+            {
+              "name": "top"
+            },
+            {
+              "name": "bottom"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-sticky-space",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-placement",
+          "description": "'top', 'bottom'",
+          "values": [
+            {
+              "name": "top"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-scroll-to",
+      "description": "",
+      "attributes": [
+        {
+          "name": "href",
+          "description": "Selector của element cần scroll tới (Giá trị đặc biệt là",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-ripple",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-color",
+          "description": "Màu của sóng",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-range",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-name",
+          "description": "Tên của xo-range ( Tương tự các name attr của thẻ input )",
+          "values": [
+            {
+              "name": "string[]"
+            }
+          ]
+        },
+        {
+          "name": "xo-min",
+          "description": "Giá trị nhỏ nhất",
+          "values": []
+        },
+        {
+          "name": "xo-max",
+          "description": "Giá trị lớn nhất",
+          "values": []
+        },
+        {
+          "name": "xo-step",
+          "description": "Bước nhảy",
+          "values": []
+        },
+        {
+          "name": "xo-value",
+          "description": "Giá trị mặc định",
+          "values": [
+            {
+              "name": "number[]"
+            }
+          ]
+        },
+        {
+          "name": "xo-component-name",
+          "description": "Tên giúp đồng bộ với xo-range-price và input",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-range-price",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-component-name",
+          "description": "Tên giúp đồng bộ với xo-range",
+          "values": []
+        },
+        {
+          "name": "xo-money-format",
+          "description": "Định dạng tiền tệ, bên ngoài có xo-filters bao bọc thì sẽ lấy xo-money-format từ nó ( Ví dụ ${ money }, { money }VND, ...)",
+          "values": []
+        },
+        {
+          "name": "xo-type",
+          "description": "Kiểu min hoặc max sẽ hiển thị tương ứng với giá trị min, max từ xo-range",
+          "values": [
+            {
+              "name": "min"
+            },
+            {
+              "name": "max"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-product-quick-view",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-product-quick-view-trigger",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-product-url",
+          "description": "Link tới trang product",
+          "values": []
+        },
+        {
+          "name": "xo-modal-name",
+          "description": "Tên của modal sẽ hiển thị phần quickview",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-product-variant-selected",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-name",
+          "description": "Tương ứng với name của input ( tại trang product )",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-product",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-product-information",
+          "description": "Để phân biệt giữa product và product information ( tại trang product )",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-product-id",
+          "description": "Product id",
+          "values": []
+        },
+        {
+          "name": "xo-section-id",
+          "description": "{{ section.id }}",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-product-data",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-product-will-change",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-disabled",
+          "description": "Sẽ bị vô hiệu hoá event không thao tác được vào thẻ này nữa",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-unique-id",
+          "description": "Cần 1 id duy nhất và không thay đổi",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-product-variant",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-product-pickup-availability",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-product-pickup-availability-list",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-cart-quantity",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-cart-add-error",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-cart-add",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-product-id",
+          "description": "Product id",
+          "values": []
+        },
+        {
+          "name": "xo-product-quantity",
+          "description": "Số lượng để add",
+          "values": []
+        },
+        {
+          "name": "xo-cart-opened",
+          "description": "Mở cart drawer khi add xong",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-disabled",
+          "description": "Sẽ không thể thực hiện action add",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-cart-size",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-cart-mini",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-notification",
+          "description": "Khi thêm attr này thì cart mini sẽ hiển thị sản phẩm theo kiểu dạng thông báo thay vì cả cart",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-cart",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-cart-quantity",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-cart-quantity-minus",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-cart-quantity-plus",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-cart-change-fallback",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-cart-remove",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-cart-will-change",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-unique-id",
+          "description": "Cần 1 id duy nhất và không thay đổi",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-cart-note",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-cart-scroll",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-popover",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-name",
+          "description": "Tên modal",
+          "values": []
+        },
+        {
+          "name": "xo-placement",
+          "description": "Vị trí hiển thị popover",
+          "values": [
+            {
+              "name": "top-left"
+            },
+            {
+              "name": "top-center"
+            },
+            {
+              "name": "top-right"
+            },
+            {
+              "name": "bottom-left"
+            },
+            {
+              "name": "bottom-center"
+            },
+            {
+              "name": "bottom-right"
+            },
+            {
+              "name": "left-top"
+            },
+            {
+              "name": "left-center"
+            },
+            {
+              "name": "left-bottom"
+            },
+            {
+              "name": "right-top"
+            },
+            {
+              "name": "right-center"
+            },
+            {
+              "name": "right-bottom"
+            }
+          ]
+        },
+        {
+          "name": "xo-animate",
+          "description": "Tên hiệu ứng",
+          "values": [
+            {
+              "name": "none"
+            },
+            {
+              "name": "zoom"
+            },
+            {
+              "name": "fade"
+            },
+            {
+              "name": "fade-up"
+            },
+            {
+              "name": "fade-down"
+            },
+            {
+              "name": "fade-left"
+            },
+            {
+              "name": "fade-right"
+            }
+          ]
+        },
+        {
+          "name": "xo-duration",
+          "description": "Thời gian bật/tắt popover (ms)",
+          "values": []
+        },
+        {
+          "name": "xo-easing",
+          "description": "Easing",
+          "values": [
+            {
+              "name": "linear"
+            },
+            {
+              "name": "ease"
+            },
+            {
+              "name": "easeInQuad"
+            },
+            {
+              "name": "easeOutQuad"
+            },
+            {
+              "name": "easeInOutQuad"
+            },
+            {
+              "name": "easeInCubic"
+            },
+            {
+              "name": "easeOutCubic"
+            },
+            {
+              "name": "easeInOutCubic"
+            },
+            {
+              "name": "easeInQuart"
+            },
+            {
+              "name": "easeOutQuart"
+            },
+            {
+              "name": "easeInOutQuart"
+            },
+            {
+              "name": "easeInQuint"
+            },
+            {
+              "name": "easeOutQuint"
+            },
+            {
+              "name": "easeInOutQuint"
+            },
+            {
+              "name": "easeOutBounce"
+            },
+            {
+              "name": "easeInBounce"
+            },
+            {
+              "name": "easeOutBack"
+            },
+            {
+              "name": "easeInBack"
+            },
+            {
+              "name": "easeInOut"
+            },
+            {
+              "name": "easeInElastic"
+            },
+            {
+              "name": "easeOutElastic"
+            },
+            {
+              "name": "spring"
+            },
+            {
+              "name": "decay"
+            },
+            {
+              "name": "bezier"
+            }
+          ]
+        },
+        {
+          "name": "xo-portal",
+          "description": "Mở popover ở portal",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-autofocus",
+          "description": "Tự động focus vào input đầu tiên khi mở",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-section-select",
+          "description": "Hỗ trợ ẩn hiện khi shopify section select",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-disabled",
+          "description": "xo-popover sẽ bị vô hiệu hoá, thay vào đó nó sẽ hiển thị html bình thường tại vị trí tạo ra nó",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-offset",
+          "description": "Khoảng cách giữa popover và target",
+          "values": []
+        },
+        {
+          "name": "xo-modal-scroll-selector",
+          "description": "Selector scroll của modal (Hiện áp dụng cho modal quickview)",
+          "values": []
+        },
+        {
+          "name": "xo-breakpoints",
+          "description": "Xem kĩ hơn [tại đây](https://theme-docs.awe7.com/html/popover-breakpoints.html)",
+          "values": [
+            {
+              "name": "Record&lt;string"
+            },
+            {
+              "name": "PopoverBreakpointOptions&gt;"
+            }
+          ]
+        },
+        {
+          "name": "```ts",
+          "values": []
+        },
+        {
+          "name": "interface PopoverBreakpointOptions {",
+          "values": []
+        },
+        {
+          "name": "disabled: boolean;",
+          "values": []
+        },
+        {
+          "name": "duration: number;",
+          "values": []
+        },
+        {
+          "name": "easing: keyof Easings;",
+          "values": []
+        },
+        {
+          "name": "animate: PopoverAnimate;",
+          "values": []
+        },
+        {
+          "name": "placement: PopperPlacement;",
+          "values": []
+        },
+        {
+          "name": "offset: number;",
+          "values": []
+        },
+        {
+          "name": "}",
+          "values": []
+        },
+        {
+          "name": "```",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-popover-trigger",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-name",
+          "description": "Tên modal",
+          "values": []
+        },
+        {
+          "name": "xo-type",
+          "description": "Kiểu trigger",
+          "values": [
+            {
+              "name": "click"
+            },
+            {
+              "name": "hover"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-parallax-scroll",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-keyframes",
+          "description": "Keyframes",
+          "values": []
+        },
+        {
+          "name": "xo-breakpoints",
+          "description": "Breakpoints",
+          "values": []
+        },
+        {
+          "name": "xo-lerp-ease",
+          "description": "Lerp ease",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-parallax-hover",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-strength",
+          "description": "Độ mạnh khi thực hiện mouse move",
+          "values": []
+        },
+        {
+          "name": "xo-reset-position",
+          "description": "Trở về vị trí ban đầu khi di chuột ra khỏi vùng xo-parallax",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-3d",
+          "description": "Tạo hiệu ứng 3d",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-modal",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-name",
+          "description": "Tên modal",
+          "values": []
+        },
+        {
+          "name": "xo-animate",
+          "description": "Tên hiệu ứng",
+          "values": [
+            {
+              "name": "none"
+            },
+            {
+              "name": "zoom"
+            },
+            {
+              "name": "fade"
+            },
+            {
+              "name": "fade-up"
+            },
+            {
+              "name": "fade-down"
+            },
+            {
+              "name": "fade-left"
+            },
+            {
+              "name": "fade-right"
+            },
+            {
+              "name": "smart-zoom"
+            },
+            {
+              "name": "smart-fade-zoom"
+            },
+            {
+              "name": "slide-up"
+            },
+            {
+              "name": "slide-down"
+            },
+            {
+              "name": "slide-left"
+            },
+            {
+              "name": "slide-right"
+            }
+          ]
+        },
+        {
+          "name": "xo-placement",
+          "description": "Vị trí hiển thị modal",
+          "values": [
+            {
+              "name": "center"
+            },
+            {
+              "name": "top-left"
+            },
+            {
+              "name": "top-center"
+            },
+            {
+              "name": "top-right"
+            },
+            {
+              "name": "bottom-left"
+            },
+            {
+              "name": "bottom-center"
+            },
+            {
+              "name": "bottom-right"
+            }
+          ]
+        },
+        {
+          "name": "xo-duration",
+          "description": "Thời gian bật/tắt modal (ms)",
+          "values": []
+        },
+        {
+          "name": "xo-easing",
+          "description": "Easing",
+          "values": [
+            {
+              "name": "linear"
+            },
+            {
+              "name": "ease"
+            },
+            {
+              "name": "easeInQuad"
+            },
+            {
+              "name": "easeOutQuad"
+            },
+            {
+              "name": "easeInOutQuad"
+            },
+            {
+              "name": "easeInCubic"
+            },
+            {
+              "name": "easeOutCubic"
+            },
+            {
+              "name": "easeInOutCubic"
+            },
+            {
+              "name": "easeInQuart"
+            },
+            {
+              "name": "easeOutQuart"
+            },
+            {
+              "name": "easeInOutQuart"
+            },
+            {
+              "name": "easeInQuint"
+            },
+            {
+              "name": "easeOutQuint"
+            },
+            {
+              "name": "easeInOutQuint"
+            },
+            {
+              "name": "easeOutBounce"
+            },
+            {
+              "name": "easeInBounce"
+            },
+            {
+              "name": "easeOutBack"
+            },
+            {
+              "name": "easeInBack"
+            },
+            {
+              "name": "easeInOut"
+            },
+            {
+              "name": "easeInElastic"
+            },
+            {
+              "name": "easeOutElastic"
+            },
+            {
+              "name": "spring"
+            },
+            {
+              "name": "decay"
+            },
+            {
+              "name": "bezier"
+            }
+          ]
+        },
+        {
+          "name": "xo-backdrop-color",
+          "description": "Màu nền lớp lót của modal",
+          "values": []
+        },
+        {
+          "name": "xo-backdrop-blur",
+          "description": "Độ mờ lớp lót modal",
+          "values": []
+        },
+        {
+          "name": "xo-backdrop-disabled",
+          "description": "Tắt lớp lót modal",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-portal",
+          "description": "Mở modal ở portal",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-sync",
+          "description": "Ẩn trigger khi mở modal",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-disabled",
+          "description": "xo-modal sẽ bị vô hiệu hoá, thay vào đó nó sẽ hiển thị html bình thường tại vị trí tạo ra nó",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-scroll-disabled",
+          "description": "Tắt scroll khi mở modal",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-autofocus",
+          "description": "Tự động focus vào input đầu tiên khi mở",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-section-select",
+          "description": "Hỗ trợ ẩn hiện khi shopify section select",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-breakpoints",
+          "description": "Xem kĩ hơn [tại đây](https://theme-docs.awe7.com/html/modal-breakpoints.html)",
+          "values": [
+            {
+              "name": "Record&lt;string"
+            },
+            {
+              "name": "ModalBreakpointOptions&gt;"
+            }
+          ]
+        },
+        {
+          "name": "```ts",
+          "values": []
+        },
+        {
+          "name": "interface ModalBreakpointOptions {",
+          "values": []
+        },
+        {
+          "name": "disabled: boolean;",
+          "values": []
+        },
+        {
+          "name": "duration: number;",
+          "values": []
+        },
+        {
+          "name": "easing: keyof Easings;",
+          "values": []
+        },
+        {
+          "name": "animate: ModalAnimate;",
+          "values": []
+        },
+        {
+          "name": "backdropColor: string;",
+          "values": []
+        },
+        {
+          "name": "backdropDisabled: boolean;",
+          "values": []
+        },
+        {
+          "name": "placement: ModalPlacement;",
+          "values": []
+        },
+        {
+          "name": "}",
+          "values": []
+        },
+        {
+          "name": "```",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-modal-trigger",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-name",
+          "description": "Tên modal",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-mega-menu",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-name",
+          "description": "Tên của mega menu",
+          "values": []
+        },
+        {
+          "name": "xo-index",
+          "description": "Index của mega menu",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-masonry",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-column",
+          "description": "Số cột hiển thị",
+          "values": []
+        },
+        {
+          "name": "xo-gap",
+          "description": "Khoảng cách giữa các cột",
+          "values": []
+        },
+        {
+          "name": "xo-breakpoints",
+          "description": "Các điểm breakpoint",
+          "values": [
+            {
+              "name": "object (gồm 2 trường gap"
+            },
+            {
+              "name": "column)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-marquee",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-speed",
+          "description": "Tốc độ chạy",
+          "values": []
+        },
+        {
+          "name": "xo-rtl",
+          "description": "Chạy từ phải qua trái",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-pause-on-hover",
+          "description": "Khi hover vào thì tạm dừng",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-list",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-list-item",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-list-trigger",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-portal-placement",
+          "description": "Vị trí hiển thị popover",
+          "values": [
+            {
+              "name": "top-left"
+            },
+            {
+              "name": "top-center"
+            },
+            {
+              "name": "top-right"
+            },
+            {
+              "name": "bottom-left"
+            },
+            {
+              "name": "bottom-center"
+            },
+            {
+              "name": "bottom-right"
+            },
+            {
+              "name": "left-top"
+            },
+            {
+              "name": "left-center"
+            },
+            {
+              "name": "left-bottom"
+            },
+            {
+              "name": "right-top"
+            },
+            {
+              "name": "right-center"
+            },
+            {
+              "name": "right-bottom"
+            }
+          ]
+        },
+        {
+          "name": "xo-portal-animate",
+          "description": "Tên hiệu ứng",
+          "values": [
+            {
+              "name": "none"
+            },
+            {
+              "name": "zoom"
+            },
+            {
+              "name": "fade"
+            },
+            {
+              "name": "fade-up"
+            },
+            {
+              "name": "fade-down"
+            },
+            {
+              "name": "fade-left"
+            },
+            {
+              "name": "fade-right"
+            }
+          ]
+        },
+        {
+          "name": "xo-portal-duration",
+          "description": "Thời gian bật/tắt popover (ms)",
+          "values": []
+        },
+        {
+          "name": "xo-portal-easing",
+          "description": "Easing",
+          "values": [
+            {
+              "name": "linear"
+            },
+            {
+              "name": "ease"
+            },
+            {
+              "name": "easeInQuad"
+            },
+            {
+              "name": "easeOutQuad"
+            },
+            {
+              "name": "easeInOutQuad"
+            },
+            {
+              "name": "easeInCubic"
+            },
+            {
+              "name": "easeOutCubic"
+            },
+            {
+              "name": "easeInOutCubic"
+            },
+            {
+              "name": "easeInQuart"
+            },
+            {
+              "name": "easeOutQuart"
+            },
+            {
+              "name": "easeInOutQuart"
+            },
+            {
+              "name": "easeInQuint"
+            },
+            {
+              "name": "easeOutQuint"
+            },
+            {
+              "name": "easeInOutQuint"
+            },
+            {
+              "name": "easeOutBounce"
+            },
+            {
+              "name": "easeInBounce"
+            },
+            {
+              "name": "easeOutBack"
+            },
+            {
+              "name": "easeInBack"
+            },
+            {
+              "name": "easeInOut"
+            },
+            {
+              "name": "easeInElastic"
+            },
+            {
+              "name": "easeOutElastic"
+            },
+            {
+              "name": "spring"
+            },
+            {
+              "name": "decay"
+            }
+          ]
+        },
+        {
+          "name": "xo-portal-offset",
+          "description": "Khoảng cách (px)",
+          "values": []
+        },
+        {
+          "name": "xo-portal-class",
+          "description": "HTML Class",
+          "values": []
+        },
+        {
+          "name": "xo-portal-click-hide",
+          "description": "Click vào popover sẽ ẩn luôn",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-image-zoom",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-open-mode",
+          "description": "Chế độ mở popup",
+          "values": [
+            {
+              "name": "modal"
+            },
+            {
+              "name": "newtab"
+            }
+          ]
+        },
+        {
+          "name": "xo-access-token",
+          "description": "Access token của instagram",
+          "values": []
+        },
+        {
+          "name": "xo-limit",
+          "description": "Số lượng bài viết hiển thị",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-image-zoom",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-zoom-src",
+          "description": "Ảnh lớn",
+          "values": []
+        },
+        {
+          "name": "xo-zoom",
+          "description": "Tỉ lệ zoom ban đầu",
+          "values": []
+        },
+        {
+          "name": "xo-placement",
+          "description": "Vị trí hiển thị ảnh lớn",
+          "values": [
+            {
+              "name": "left"
+            },
+            {
+              "name": "center"
+            },
+            {
+              "name": "right"
+            }
+          ]
+        },
+        {
+          "name": "xo-zoom-full",
+          "description": "Hiển thị ảnh lớn full màn hình",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-use-wheel",
+          "description": "Sử dụng wheel để zoom ảnh",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-image-comparison",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-default-percent",
+          "description": "Giá trị mặc định",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-image-comparison-before",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-image-comparison-after",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-image-comparison-handle",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-image-comparison-handle-icon",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-image-comparison-label",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-group-button",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-active",
+          "description": "Khi button được active",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-container",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-fluid",
+          "description": "xo-container sẽ có width 100%",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-grid",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-gallery",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-duration",
+          "description": "Thời gian chạy của popup khi hiển thị",
+          "values": []
+        },
+        {
+          "name": "xo-easing",
+          "description": "Easing",
+          "values": [
+            {
+              "name": "linear"
+            },
+            {
+              "name": "ease"
+            },
+            {
+              "name": "easeInQuad"
+            },
+            {
+              "name": "easeOutQuad"
+            },
+            {
+              "name": "easeInOutQuad"
+            },
+            {
+              "name": "easeInCubic"
+            },
+            {
+              "name": "easeOutCubic"
+            },
+            {
+              "name": "easeInOutCubic"
+            },
+            {
+              "name": "easeInQuart"
+            },
+            {
+              "name": "easeOutQuart"
+            },
+            {
+              "name": "easeInOutQuart"
+            },
+            {
+              "name": "easeInQuint"
+            },
+            {
+              "name": "easeOutQuint"
+            },
+            {
+              "name": "easeInOutQuint"
+            },
+            {
+              "name": "easeOutBounce"
+            },
+            {
+              "name": "easeInBounce"
+            },
+            {
+              "name": "easeOutBack"
+            },
+            {
+              "name": "easeInBack"
+            },
+            {
+              "name": "easeInOut"
+            },
+            {
+              "name": "easeInElastic"
+            },
+            {
+              "name": "easeOutElastic"
+            },
+            {
+              "name": "spring"
+            },
+            {
+              "name": "decay"
+            }
+          ]
+        },
+        {
+          "name": "xo-animate",
+          "description": "Hiệu ứng khi hiển thị",
+          "values": [
+            {
+              "name": "fade"
+            },
+            {
+              "name": "fade-up"
+            },
+            {
+              "name": "fade-down"
+            },
+            {
+              "name": "fade-left"
+            },
+            {
+              "name": "fade-right"
+            },
+            {
+              "name": "none"
+            },
+            {
+              "name": "zoom"
+            },
+            {
+              "name": "smart-zoom"
+            },
+            {
+              "name": "smart-fade-zoom"
+            },
+            {
+              "name": "slide-up"
+            },
+            {
+              "name": "slide-down"
+            },
+            {
+              "name": "slide-left"
+            },
+            {
+              "name": "slide-right"
+            }
+          ]
+        },
+        {
+          "name": "xo-backdrop-color",
+          "description": "Màu nền của backdrop",
+          "values": []
+        },
+        {
+          "name": "xo-sync",
+          "description": "Đồng bộ ảnh khi click vào thumbnail",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-portal-class",
+          "description": "Class của portal",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-gallery-item",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-thumb-src",
+          "description": "Ảnh thumbnail",
+          "values": []
+        },
+        {
+          "name": "xo-src",
+          "description": "Ảnh phóng to",
+          "values": []
+        },
+        {
+          "name": "xo-intrinsic-width",
+          "description": "Kích thước chiều ngang gốc của ảnh giúp phóng to ảnh nét hơn",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-filters",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-section-id",
+          "description": "{{ section.id }} của shopify",
+          "values": []
+        },
+        {
+          "name": "xo-money-format",
+          "description": "Định dạng tiền tệ",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-filters-clear",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-name",
+          "description": "Tên của trường mà mình muốn xoá khỏi refine",
+          "values": []
+        },
+        {
+          "name": "xo-clear-all",
+          "description": "Nếu có thì sẽ xoá tất cả các lựa chọn ( Lúc này ta sẽ không cần xo-name )",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-filters-count",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-unique-id",
+          "description": "Là 1 id duy nhất không trùng và không thay đổi",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-filters-active-size",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-unique-id",
+          "description": "Là 1 id duy nhất không trùng và không thay đổi",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-filters-sort-by-selected",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-unique-id",
+          "description": "Là 1 id duy nhất không trùng và không thay đổi",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-filters-sort-by-selected",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-unique-id",
+          "description": "Là 1 id duy nhất không trùng và không thay đổi",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-filters-refine",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-filters-refine-clear-icon",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-filters-top",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-cursor",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-name",
+          "description": "Tên của cursor",
+          "values": []
+        },
+        {
+          "name": "xo-lerp-ease",
+          "description": "Tốc độ nội suy giữa các giá trị offset (Khi ta set càng cao thì nó chạy càng nhanh)",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-countdown",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-from",
+          "description": "Chạy từ",
+          "values": []
+        },
+        {
+          "name": "xo-to",
+          "description": "Chạy đến",
+          "values": []
+        },
+        {
+          "name": "xo-duration",
+          "description": "Thời gian chạy hết bao lâu",
+          "values": []
+        },
+        {
+          "name": "xo-delay",
+          "description": "Chạy sau 1 khoảng thời gian",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-countdown",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-timestamp",
+          "description": "Timestamp",
+          "values": []
+        },
+        {
+          "name": "xo-expired",
+          "description": "Attr này tự động sinh ra khi hết thời gian",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-collapse",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-name",
+          "description": "Tên collapse",
+          "values": []
+        },
+        {
+          "name": "xo-duration",
+          "description": "Thời gian hiển thị collapse (ms)",
+          "values": []
+        },
+        {
+          "name": "xo-easing",
+          "description": "Easing",
+          "values": [
+            {
+              "name": "linear"
+            },
+            {
+              "name": "ease"
+            },
+            {
+              "name": "easeInQuad"
+            },
+            {
+              "name": "easeOutQuad"
+            },
+            {
+              "name": "easeInOutQuad"
+            },
+            {
+              "name": "easeInCubic"
+            },
+            {
+              "name": "easeOutCubic"
+            },
+            {
+              "name": "easeInOutCubic"
+            },
+            {
+              "name": "easeInQuart"
+            },
+            {
+              "name": "easeOutQuart"
+            },
+            {
+              "name": "easeInOutQuart"
+            },
+            {
+              "name": "easeInQuint"
+            },
+            {
+              "name": "easeOutQuint"
+            },
+            {
+              "name": "easeInOutQuint"
+            },
+            {
+              "name": "easeOutBounce"
+            },
+            {
+              "name": "easeInBounce"
+            },
+            {
+              "name": "easeOutBack"
+            },
+            {
+              "name": "easeInBack"
+            },
+            {
+              "name": "easeInOut"
+            },
+            {
+              "name": "easeInElastic"
+            },
+            {
+              "name": "easeOutElastic"
+            },
+            {
+              "name": "spring"
+            },
+            {
+              "name": "decay"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-collapse-trigger",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-name",
+          "description": "Tên collapse",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-collapse-provider",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-circle-bar",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-name",
+          "description": "Tên component",
+          "values": []
+        },
+        {
+          "name": "xo-fill",
+          "description": "Màu nền",
+          "values": []
+        },
+        {
+          "name": "xo-size",
+          "description": "Kích thước",
+          "values": []
+        },
+        {
+          "name": "xo-stroke-width",
+          "description": "Stroke width",
+          "values": []
+        },
+        {
+          "name": "xo-track-color",
+          "description": "Màu nền của track",
+          "values": []
+        },
+        {
+          "name": "xo-thumb-color",
+          "description": "Màu nền của thumb",
+          "values": []
+        },
+        {
+          "name": "xo-stroke-linecap",
+          "description": "Kiểu của stroke",
+          "values": [
+            {
+              "name": "butt"
+            },
+            {
+              "name": "round"
+            },
+            {
+              "name": "square"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-carousel",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-name",
+          "description": "Tên carousel",
+          "values": []
+        },
+        {
+          "name": "xo-active-index",
+          "description": "Slide sẽ được active, bắt đầu từ 0",
+          "values": []
+        },
+        {
+          "name": "xo-per-view",
+          "description": "Số lượng item hiển thị trong khung view",
+          "values": []
+        },
+        {
+          "name": "xo-per-move",
+          "description": "Số lượng item hiển thị trong 1 lần next/prev",
+          "values": []
+        },
+        {
+          "name": "xo-gap",
+          "description": "Khoảng cách giữa 2 item",
+          "values": []
+        },
+        {
+          "name": "xo-speed",
+          "description": "Tốc độ chuyển item",
+          "values": []
+        },
+        {
+          "name": "xo-autoplay",
+          "description": "Tự động slide sau 1 khoảng thời gian",
+          "values": []
+        },
+        {
+          "name": "xo-autoheight",
+          "description": "Tự động thay đổi chiều cao theo những slide đang hiển thị",
+          "values": []
+        },
+        {
+          "name": "xo-hover-pause",
+          "description": "Hover vào thì carousel sẽ dừng lại",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-overflow",
+          "description": "CSS overflow",
+          "values": [
+            {
+              "name": "visible"
+            },
+            {
+              "name": "hidden"
+            },
+            {
+              "name": "scroll"
+            },
+            {
+              "name": "auto"
+            }
+          ]
+        },
+        {
+          "name": "xo-vertical",
+          "description": "Đổi carousel dạng dọc",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-rewind",
+          "description": "Chạy ngược lại khi hết slide",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-rtl",
+          "description": "Bật chế độ right to left",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-render-bullet",
+          "description": "HTML của bullet",
+          "values": []
+        },
+        {
+          "name": "xo-breakpoints",
+          "description": "thay đổi các thuộc tính theo chiều rộng màn hình",
+          "values": []
+        },
+        {
+          "name": "xo-type",
+          "description": "Thay đổi kiểu chạy carousel",
+          "values": [
+            {
+              "name": "slide"
+            },
+            {
+              "name": "fade"
+            },
+            {
+              "name": "none"
+            }
+          ]
+        },
+        {
+          "name": "xo-column-width",
+          "description": "Tự động chia cột và responsive nếu set attribute này",
+          "values": []
+        },
+        {
+          "name": "xo-easing",
+          "description": "Easing",
+          "values": [
+            {
+              "name": "linear"
+            },
+            {
+              "name": "ease"
+            },
+            {
+              "name": "easeInQuad"
+            },
+            {
+              "name": "easeOutQuad"
+            },
+            {
+              "name": "easeInOutQuad"
+            },
+            {
+              "name": "easeInCubic"
+            },
+            {
+              "name": "easeOutCubic"
+            },
+            {
+              "name": "easeInOutCubic"
+            },
+            {
+              "name": "easeInQuart"
+            },
+            {
+              "name": "easeOutQuart"
+            },
+            {
+              "name": "easeInOutQuart"
+            },
+            {
+              "name": "easeInQuint"
+            },
+            {
+              "name": "easeOutQuint"
+            },
+            {
+              "name": "easeInOutQuint"
+            },
+            {
+              "name": "easeOutBounce"
+            },
+            {
+              "name": "easeInBounce"
+            },
+            {
+              "name": "easeOutBack"
+            },
+            {
+              "name": "easeInBack"
+            },
+            {
+              "name": "easeInOut"
+            },
+            {
+              "name": "easeInElastic"
+            },
+            {
+              "name": "easeOutElastic"
+            },
+            {
+              "name": "spring"
+            },
+            {
+              "name": "decay"
+            }
+          ]
+        },
+        {
+          "name": "xo-snake",
+          "description": "Chạy theo kiểu snake",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-stop-autoplay-on-interaction",
+          "description": "Dừng autoplay khi người dùng tương tác",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "xo-carousel-list",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-carousel-slide",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-carousel-thumbnail",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-per-view",
+          "description": "Số lượng item hiển thị trong khung view",
+          "values": []
+        },
+        {
+          "name": "xo-per-move",
+          "description": "Số lượng item hiển thị trong 1 lần next/prev",
+          "values": []
+        },
+        {
+          "name": "xo-gap",
+          "description": "Khoảng cách giữa 2 item",
+          "values": []
+        },
+        {
+          "name": "xo-vertical",
+          "description": "boolean",
+          "values": [
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-breakpoints",
+          "description": "thay đổi các thuộc tính theo chiều rộng màn hình",
+          "values": []
+        }
+      ]
+    },
+    {
+      "name": "xo-carousel-prev",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-carousel-next",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-carousel-pagination",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-carousel-size",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-carousel-page",
+      "description": "",
+      "attributes": []
+    },
+    {
+      "name": "xo-animate",
+      "description": "",
+      "attributes": [
+        {
+          "name": "xo-type",
+          "description": "Các kiểu animate",
+          "values": [
+            {
+              "name": "fade"
+            },
+            {
+              "name": "fade-up"
+            },
+            {
+              "name": "fade-down"
+            },
+            {
+              "name": "fade-left"
+            },
+            {
+              "name": "fade-right"
+            },
+            {
+              "name": "zoom-in"
+            },
+            {
+              "name": "zoom-out"
+            },
+            {
+              "name": "rotate-left-up"
+            },
+            {
+              "name": "rotate-right-up"
+            },
+            {
+              "name": "width-increment"
+            },
+            {
+              "name": "snack-up"
+            },
+            {
+              "name": "snack-down"
+            },
+            {
+              "name": "snack-left"
+            },
+            {
+              "name": "snack-right"
+            }
+          ]
+        },
+        {
+          "name": "xo-duration",
+          "description": "Thời gian chạy animate",
+          "values": []
+        },
+        {
+          "name": "xo-order",
+          "description": "Thứ tự chạy animate (chú ý nếu xin xo-cascade thì không cần attr này)",
+          "values": []
+        },
+        {
+          "name": "xo-strength",
+          "description": "Độ mạnh của các animate: fade-up, fade-down, fade-left, fade-right, rotate-left-up, rotate-right-up",
+          "values": []
+        },
+        {
+          "name": "xo-cascade",
+          "description": "Chạy animate tự tính toán delay cho hợp lý",
+          "values": [
+            {
+              "name": "true"
+            },
+            {
+              "name": "false"
+            }
+          ]
+        },
+        {
+          "name": "xo-constant",
+          "description": "Hằng số để thứ tự animate giữa các element có 1 độ trễ xx milliseconds",
+          "values": []
+        },
+        {
+          "name": "xo-easing",
+          "description": "CSS Easing",
+          "values": [
+            {
+              "name": "easeInOut"
+            },
+            {
+              "name": "easeOut"
+            },
+            {
+              "name": "easeIn"
+            },
+            {
+              "name": "ease"
+            },
+            {
+              "name": "easeInBack"
+            },
+            {
+              "name": "easeOutBack"
+            },
+            {
+              "name": "easeInOutBack"
+            },
+            {
+              "name": "easeInCirc"
+            },
+            {
+              "name": "easeOutCirc"
+            },
+            {
+              "name": "easeInOutCirc"
+            },
+            {
+              "name": "easeInCubic"
+            },
+            {
+              "name": "easeOutCubic"
+            },
+            {
+              "name": "easeInOutCubic"
+            },
+            {
+              "name": "easeInExpo"
+            },
+            {
+              "name": "easeOutExpo"
+            },
+            {
+              "name": "easeInOutExpo"
+            },
+            {
+              "name": "easeInQuad"
+            },
+            {
+              "name": "easeOutQuad"
+            },
+            {
+              "name": "easeInOutQuad"
+            },
+            {
+              "name": "easeInQuart"
+            },
+            {
+              "name": "easeOutQuart"
+            },
+            {
+              "name": "easeInOutQuart"
+            },
+            {
+              "name": "easeInQuint"
+            },
+            {
+              "name": "easeOutQuint"
+            },
+            {
+              "name": "easeInOutQuint"
+            },
+            {
+              "name": "easeInSine"
+            },
+            {
+              "name": "easeOutSine"
+            },
+            {
+              "name": "easeInOutSine"
+            },
+            {
+              "name": "easeInBounce"
+            },
+            {
+              "name": "easeOutBounce"
+            },
+            {
+              "name": "linear"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

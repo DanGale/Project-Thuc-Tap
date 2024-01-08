@@ -1,0 +1,22 @@
+*:focus-visible {
+  outline: 0.2rem solid rgb(var(--color-accent, var(--color-foreground, #000)));
+  outline-offset: -0.2rem;
+  box-shadow: none;
+}
+
+.xo-visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  word-wrap: normal !important;
+}
+
+.xo-visually-hidden--inline {
+  margin: 0;
+  height: 1em;
+}

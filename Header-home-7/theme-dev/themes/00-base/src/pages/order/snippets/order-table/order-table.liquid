@@ -1,0 +1,125 @@
+<div class='xo-order-table'>
+  <xo-animate xo-cascade>
+    <div class='xo-order-table__title'>{{ 'customer.order.title' | t: name: order.name }}</div>
+    <p class='xo-order-table__date'>{{ 'customer.order.date_html' | t: date: order_date }}</p>
+    {%- if order.cancelled -%}
+      {%- assign cancelled_at = order.cancelled_at | time_tag: format: 'date_at_time' -%}
+      <p>{{ 'customer.order.cancelled_html' | t: date: cancelled_at }}</p>
+      <p>{{ 'customer.order.cancelled_reason' | t: reason: order.cancel_reason_label }}</p>
+    {%- endif -%}
+  </xo-animate>
+  <xo-animate xo-cascade>
+    <table class='xo-table'>
+      <thead>
+        <tr class='xo-table__head-row'>
+          <th>{{ 'customer.order.product' | t }}</th>
+          <th>{{ 'customer.order.sku' | t }}</th>
+          <th>{{ 'customer.order.price' | t }}</th>
+          <th>{{ 'customer.order.quantity' | t }}</th>
+          <th>{{ 'customer.order.total' | t }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%- for line_item in order.line_items -%}
+          <tr class='xo-table__body-row'>
+            <td data-th='{{ 'customer.order.product' | t }}'>
+              {% render 'order-product', item: line_item %}
+            </td>
+            <td data-th='{{ 'customer.order.sku' | t }}'>{{ line_item.sku }}</td>
+            <td data-th='{{ 'customer.order.price' | t }}'>
+              {% render 'order-price', item: line_item %}
+            </td>
+            <td data-th='{{ 'customer.order.quantity' | t }}'>
+              {{ line_item.quantity }}
+            </td>
+            <td data-th='{{ 'customer.order.total' | t }}'>
+              {% render 'order-total', item: line_item %}
+            </td>
+          </tr>
+        {%- endfor -%}
+      </tbody>
+      <tfoot role='rowgroup'>
+        <tr role='row'>
+          <td id='RowSubtotal' role='rowheader' scope='row' colspan='4'>
+            {{ 'customer.order.subtotal' | t }}
+          </td>
+          <td headers='RowSubtotal' role='cell' data-label='{{ 'customer.order.subtotal' | t }}'>
+            {{ order.line_items_subtotal_price | money }}
+          </td>
+        </tr>
+        {%- if order.cart_level_discount_applications != blank -%}
+          <tr role='row'>
+            {%- for discount_application in order.cart_level_discount_applications -%}
+              <td id='RowDiscount' role='rowheader' scope='row' colspan='4'>
+                {{ 'customer.order.discount' | t }}
+                {% render 'badge-discount', label: discount_application.title %}
+              </td>
+              <td headers='RowDiscount' role='cell' data-label='{{ 'customer.order.discount' | t }}'>
+                <div>
+                  <span>-{{ discount_application.total_allocated_amount | money }}</span>
+                  {% render 'badge-discount', label: discount_application.title %}
+                </div>
+              </td>
+            {%- endfor -%}
+          </tr>
+        {%- endif -%}
+        {%- for shipping_method in order.shipping_methods -%}
+          <tr role='row'>
+            <td id='RowShipping' role='rowheader' scope='row' colspan='4'>{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})</td>
+            <td
+              headers='RowShipping'
+              role='cell'
+              data-label='{{ 'customer.order.shipping' | t }} ({{ shipping_method.title }})'
+            >
+              {{ shipping_method.price | money }}
+            </td>
+          </tr>
+        {%- endfor -%}
+        {%- for tax_line in order.tax_lines -%}
+          <tr role='row'>
+            <td id='RowTax' role='rowheader' scope='row' colspan='4'>
+              {{ 'customer.order.tax' | t }} ({{ tax_line.title }}
+              {{ tax_line.rate | times: 100 }}%)
+            </td>
+            <td
+              headers='RowTax'
+              role='cell'
+              data-label='{{ 'customer.order.tax' | t }} ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%)'
+            >
+              {{ tax_line.price | money }}
+            </td>
+          </tr>
+        {%- endfor -%}
+        {%- if order.total_duties -%}
+          <tr role='row'>
+            <td id='RowDuties' role='rowheader' scope='row' colspan='4'>{{ 'customer.order.total_duties' | t }}</td>
+            <td headers='RowDuties' role='cell' data-label='{{ 'customer.order.total_duties' | t }}'>
+              {{ order.total_duties | money }}
+            </td>
+          </tr>
+        {%- endif -%}
+        {%- if order.total_refunded_amount > 0 -%}
+          <tr role='row'>
+            <td id='RowTotalRefund' role='rowheader' scope='row' colspan='3'>
+              {{ 'customer.order.total_refunded' | t }}
+            </td>
+            <td
+              headers='RowTotalRefund'
+              role='cell'
+              colspan='2'
+              data-label='{{ 'customer.order.total_refunded' | t }}'
+            >
+              -{{ order.total_refunded_amount | money_with_currency }}
+            </td>
+          </tr>
+        {%- endif -%}
+        <tr role='row'>
+          <td id='RowTotal' role='rowheader' scope='row' colspan='3'>{{ 'customer.order.total' | t }}</td>
+          <td headers='RowTotal' role='cell' colspan='2' data-label='{{ 'customer.order.total' | t }}'>
+            {{ order.total_net_amount | money_with_currency }}
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </xo-animate>
+</div>

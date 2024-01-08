@@ -1,0 +1,20 @@
+{
+  "name": "Text marquee",
+  "settings": {
+    "space": "Spacing between items",
+    "speed": "Marquee speed",
+    "marquee_stop": "Pause when hovered",
+    "marquee_right_to_left": "Marquee right to left"
+  },
+  "blocks":{
+    "marquee_text_item":{
+      "label": "Marquee text item",
+      "size": "Font size",
+      "color": "Text color",
+      "link": "Link"
+    }
+  },
+  "presets" : {
+    "name" : "Text marquee"
+  }
+}

@@ -1,0 +1,6 @@
+{% case type %}
+  {% when 'popover' %}
+    {% render 'fieldset-popover', filter: filter %}
+  {% else %}
+    {% render 'fieldset-collapse', filter: filter %}
+{% endcase %}

@@ -1,0 +1,36 @@
+{% comment %}
+  Renders a hotspot trigger
+
+  Accepts:
+  - product: {Object} Product (optional)
+  -- placement: {string} Placement (optional)
+  Usage:
+  {% render 'hotspot-trigger' %}
+{% endcomment %}
+{% assign min = 100000000 %}
+{% assign max = 999999999 %}
+{% assign range = max | minus: min | plus: 1 %}
+{% assign random_offset = 'now' | date: '%N' | modulo: range %}
+{% assign random_number = min | plus: random_offset %}
+
+<xo-popover-trigger xo-name='hotspot-{{ random_number }}'>
+  <div class='xo-hotspot__trigger'></div>
+</xo-popover-trigger>
+<xo-popover xo-name='hotspot-{{ random_number }}' xo-portal xo-placement='{{ placement | default: 'right-center'  }}'>
+  <div class='xo-hotspot__content'>
+    {%
+      render 'product-card',
+      product: product,
+      show_image: section.settings.product_card_show_image,
+      show_secondary_image: section.settings.product_card_show_secondary_image,
+      show_vendor: section.settings.product_card_show_vendor,
+      show_description: section.settings.product_card_show_description,
+      show_quick_add: section.settings.product_card_show_quick_add,
+      show_quick_view: section.settings.product_card_show_quick_view,
+      show_price: section.settings.product_card_show_price,
+      show_badge: section.settings.product_card_show_badge,
+      media_aspect_ratio: section.settings.product_card_aspect_ratio,
+      placeholder_image: placeholder_image,
+    %}
+  </div>
+</xo-popover>

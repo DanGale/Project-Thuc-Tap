@@ -1,0 +1,32 @@
+{
+  "color_scheme": {
+    "label": "Color Scheme"
+  },
+  "icon": {
+    "label": "Icon"
+  },
+  "image": {
+    "label": "Image"
+  },
+  "title": {
+    "label": "Title"
+  },
+  "description": {
+    "label": "Description"
+  },
+  "link": {
+    "label": "Link"
+  },
+  "align": {
+    "label": "Align",
+    "option__1": {
+      "label": "Left"
+    },
+    "option__2": {
+      "label": "Center"
+    },
+    "option__3": {
+      "label": "Right"
+    }
+  }
+}

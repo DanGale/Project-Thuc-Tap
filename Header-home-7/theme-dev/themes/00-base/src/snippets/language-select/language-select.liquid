@@ -1,0 +1,33 @@
+{% assign random_number = 'now' | date: '%N' | modulo: 100 %}
+{% assign id = 'localization_form_' | append: random_number %}
+
+<xo-language-select class='xo-language-select'>
+  {%- if localization.available_languages.size > 1 -%}
+    {%- form 'localization', id: id, class: 'xo-language-select__form' -%}
+      <div class='xo-language-select__label'>
+        {{ 'localization.language_label' | t }}
+      </div>
+      <xo-popover-trigger xo-name='{{ id }}' class='xo-language-select__trigger'>
+        <span>{{ localization.language.endonym_name }}</span>
+        {% render 'icon', name: 'chevron-down', size: '20' %}
+      </xo-popover-trigger>
+
+      <xo-popover xo-name='{{ id }}' xo-porta xo-placement='top-center' class='xo-language-select__content'>
+        {%- for language in localization.available_languages -%}
+          <label class='xo-language-select__item'>
+            <input
+              class='xo-language-select__input'
+              type='radio'
+              name='locale_code'
+              value='{{ language.iso_code }}'
+              {%- if language.iso_code == localization.language.iso_code %}
+                checked
+              {% endif %}
+            >
+            <span class='xo-language-select__name'>{{ language.endonym_name }}</span>
+          </label>
+        {%- endfor -%}
+      </xo-popover>
+    {%- endform -%}
+  {%- endif -%}
+</xo-language-select>

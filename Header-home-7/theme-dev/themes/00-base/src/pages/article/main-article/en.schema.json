@@ -1,0 +1,81 @@
+{
+  "name": "Main article",
+  "presets" : {
+    "name" : "Main article"
+  },
+  "settings": {
+    "featured_image" : {
+      "name" : "Main article"
+    },
+    "back_url" : {
+      "label" : "Link url button back"
+    }
+  },
+  "blocks" : {
+    "featured_image" : {
+      "name" : "Feature image",
+      "settings" : {
+        "image_height" : {
+          "options__1" : {
+            "label" : "Adapt to image"
+          },
+          "options__2" : {
+            "label" : "Small"
+          },
+          "options__3" : {
+            "label" : "Medium"
+          },
+          "options__4" : {
+            "label" : "Large"
+          },
+          "label" : "Featured image height",
+          "info" : "For best results, use an image with a 16:9 aspect ratio. Learn more"
+        }
+      }
+    },
+
+    "title" : {
+      "name" : "Title",
+      "settings" : {
+        "blog_show_date" : {
+          "label" : "Show date"
+        },
+        "blog_show_author" : {
+          "label" : "Show author"
+        }
+      }
+    },
+    "tag" : {
+      "name" : "Tag"
+    },
+    "content" : {
+      "name" : "Content"
+    },
+
+    "share" : {
+      "name" : "Share",
+      "share_icon" : {
+        "icon" : {
+          "label" : "Show share icon"
+        },
+        "show_social_media" : {
+          "label" : "Show social media"
+        }
+      },
+      "settings" : {
+        "social_media" : {
+          "name" : "Social media"
+        },
+        "text" : {
+          "label" : "Text"
+        },
+        "featured_image_info" : {
+          "content" : "If you include a link in social media posts, the page's featured image will be shown as the preview image. Learn more."
+        },
+        "title_info" : {
+          "content" : "A store title and description are included with the preview image. Learn more."
+        }
+      }
+    }
+  }
+}

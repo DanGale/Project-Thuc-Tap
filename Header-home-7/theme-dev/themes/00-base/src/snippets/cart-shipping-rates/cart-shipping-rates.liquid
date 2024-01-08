@@ -1,0 +1,105 @@
+{% comment %}
+  Renders the shipping rates form.
+
+  Accepts:
+  - type: {String} Type of the component (optional, value: regular, popover, drawer, modal, collapse)
+  - overlay_width: {String} Width of the overlay (optional)
+  - uid: {String} Unique identifier for the component
+
+  Usage:
+  {% render 'cart-shipping-rates', type: 'popover' %}
+{% endcomment %}
+
+{% liquid
+  if type == null
+    assign type = 'regular'
+  endif
+  if type == 'popover'
+    assign tag_type = 'popover'
+  elsif type == 'drawer' or type == 'modal'
+    assign tag_type = 'modal'
+  endif
+  assign title = 'sections.cart.estimate_shipping_rates_title' | t
+  assign submit_label = 'sections.cart.calculate_shipping' | t
+  assign cancel_label = 'sections.cart.cancel' | t
+  assign name = 'cart-shipping-rates-' | append: uid
+%}
+
+{% capture overlay_attrs %}
+  {% if type == 'popover' %}
+    xo-animate='fade-down' xo-placement='top-center'
+  {% elsif type == 'drawer' %}
+    xo-animate='slide-up' xo-placement='bottom-right' xo-backdrop-color="transparent"
+  {% endif %}
+{% endcapture %}
+
+{% capture content %}
+  <div
+    class='
+      xo-cart-shipping-rates__inner
+      {% unless type == 'regular' or type == 'collapse' %} xo-cart-shipping-rates__inner--padding{% endunless %}
+      {% if type == 'popover' or type == 'drawer' %} xo-cart-shipping-rates__inner--effect{% endif %}
+    '
+    {% if overlay_width != null %}
+      style='width: {{ overlay_width }};'
+    {% endif %}
+  >
+    {% unless type == 'collapse' %}
+      <h2 class='xo-cart-shipping-rates__title h2 mb-30'>{{ title }}</h2>
+    {% endunless %}
+    <xo-cart-shipping-rates-field>
+      <label>{{ 'localization.country_label' | t }}</label>
+      {% render 'field-select', options: all_country_option_tags, name: 'country', autocomplete: 'country' %}
+    </xo-cart-shipping-rates-field>
+    {% render 'space', value: '2rem' %}
+    <xo-cart-shipping-rates-field>
+      <label>{{ 'localization.state_label' | t }}</label>
+      {% capture select_attrs %}aria-label="{{ 'localization.select_province' | t }}"{% endcapture %}
+      {% render 'field-select', options: all_country_option_tags, name: 'province', autocomplete: 'address-level1', attrs: select_attrs %}
+    </xo-cart-shipping-rates-field>
+    {% render 'space', value: '2rem' %}
+    <xo-cart-shipping-rates-field>
+      {% assign label = 'localization.postal_code_label' | t %}
+      {% render 'field-input', name: 'zip', label: label %}
+    </xo-cart-shipping-rates-field>
+    <div class='flex-h gap-10'>
+      <xo-cart-shipping-rates-submit{% if type == 'regular' %} class="full-width"{% endif %}>
+        {% if type == 'regular' %}
+          {% assign button_block = true %}
+        {% else %}
+          {% assign button_block = false %}
+        {% endif %}
+        {% render 'button', text: submit_label, size: 'sm', style: 'primary', block: button_block %}
+      </xo-cart-shipping-rates-submit>
+      {% if type != 'regular' %}
+        <xo-{{ tag_type }}-trigger>
+          {% render 'button', text: cancel_label, size: 'sm', style: 'gray' %}
+        </xo-{{ tag_type }}-trigger>
+      {% endif %}
+    </div>
+    <xo-cart-shipping-rates-error class='xo-cart-shipping-rates__error xo-error'></xo-cart-shipping-rates-error>
+  </div>
+{% endcapture %}
+
+{% if type == 'regular' %}
+  {{ content }}
+{% elsif type == 'collapse' %}
+  <div class='xo-cart-shipping-rates'>
+    {% render 'collapse', name: name, title: title, content: content %}
+  </div>
+{% else %}
+  <div class='xo-cart-shipping-rates'>
+    <div class='xo-cart-shipping-rates__btn'>
+      <xo-{{ tag_type }}-trigger xo-name='{{ name }}' class='xo-cart-shipping-rates__trigger'>
+        <div class='xo-cart-shipping-rates__icon'>
+          {% render 'icon', name: 'estimate-shipping-rates', size: '3rem' %}
+        </div>
+        <div class='xo-cart-shipping-rates__text'>{{ title }}</div>
+      </xo-{{ tag_type }}-trigger>
+    </div>
+
+    <xo-{{ tag_type }} {{ overlay_attrs }} xo-portal xo-name='{{ name }}' class='xo-cart-shipping-rates__content'>
+      {{ content }}
+    </xo-{{ tag_type }}>
+  </div>
+{% endif %}

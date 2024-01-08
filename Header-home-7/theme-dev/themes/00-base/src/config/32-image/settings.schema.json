@@ -1,0 +1,31 @@
+{
+  "name": "t:name",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "image_lazyload",
+      "label": "t:settings.image_lazyload.label",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "image_lazyload_loading",
+      "options": [
+        {
+          "value": "loader-1",
+          "label": "t:settings.image_lazyload_loading.option_1.label"
+        },
+        {
+          "value": "loader-2",
+          "label": "t:settings.image_lazyload_loading.option_2.label"
+        },
+        {
+          "value": "loader-3",
+          "label": "t:settings.image_lazyload_loading.option_3.label"
+        }
+      ],
+      "default": "loader-3",
+      "label": "t:settings.image_lazyload_loading.label"
+    }
+  ]
+}

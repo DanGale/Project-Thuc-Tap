@@ -1,0 +1,136 @@
+{{ 'section-instagram-post.css' | asset_url | stylesheet_tag }}
+
+<section {% render 'section-attr' %}>
+  <xo-container>
+    {% render 'section-heading', title: section.settings.heading_title, description: section.settings.heading_description, align: section.settings.heading_align %}
+  </xo-container>
+  {% comment %}
+    Render instagram post with grid layout. It is TEMPORARY
+  {% endcomment %}
+  {% if section.settings.access_token != blank %}
+    <xo-animate xo-cascade>
+      <xo-container>
+        <xo-instagram class='base-insta' xo-open-mode='modal' xo-access-token='{{ section.settings.access_token }}'>
+          <xo-grid
+            style='--lg: 5; --xs: 2; --xo-grid-col-gap: {%- if section.settings.space -%} {{section.settings.space}}px {%- endif-%}'
+          >
+            <xo-instagram-template>
+              <img data-src='{ url }' alt=''>
+            </xo-instagram-template>
+          </xo-grid>
+        </xo-instagram>
+      </xo-container>
+    </xo-animate>
+    {% comment %}
+      Render instagram post. But it is INCOMPLETE.
+
+      <xo-animate xo-cascade>
+        <xo-instagram xo-open-mode="modal" xo-access-token="{{ section.settings.access_token }}">
+          <div class="xo-instagram-post" style="
+          {%- if section.settings.space -%} --gap: {{ section.settings.space }}px; {%- endif -%}
+        ">
+            <xo-carousel class="xo-instagram-post__carousel" xo-speed="700" xo-autoheight xo-per-move="1" xo-per-view="1">
+              <xo-carousel-inner class="xo-instagram-post__inner">
+                <xo-carousel-list>
+                  <xo-instagram-template>
+                    <xo-carousel-slide>
+                      <div class="xo-instagram-post__item">
+                        <img class="xo-instagram-post__img" data-src="{ url }" alt="">
+                      </div>
+                    </xo-carousel-slide>
+                  </xo-instagram-template>
+                </xo-carousel-list>
+              </xo-carousel-inner>
+              <xo-carousel-thumbnail xo-gap="25" xo-autoheight xo-overflow="visible" xo-per-view="1" xo-breakpoints="{
+                768: {
+                  perView: 4
+                },
+                3000: {
+                  perView: 1
+                }
+              }">
+                <xo-carousel-inner>
+                  <xo-carousel-list>
+                    <xo-instagram-template>
+                      <xo-carousel-slide>
+                        <div class="xo-instagram-post__thum-item">
+                          <img class="xo-instagram-post__img" data-src="{ url }" alt="">
+                        </div>
+                      </xo-carousel-slide>
+                    </xo-instagram-template>
+                  </xo-carousel-list>
+                </xo-carousel-inner>
+              </xo-carousel-thumbnail>
+              <div class="xo-instagram-post__nav">
+                <xo-carousel-prev class="xo-instagram-post__prev">
+                  {% render 'icon', name: 'arrow', color: 'rgba(var(--color-accent))' %}
+                </xo-carousel-prev>
+                <xo-carousel-next class="xo-instagram-post__next">
+                  {% render 'icon', name: 'arrow', color: 'rgba(var(--color-accent))' %}
+                </xo-carousel-next>
+              </div>
+            </xo-carousel>
+        </xo-instagram>
+      </xo-animate>
+    {% endcomment %}
+  {% else %}
+    <xo-animate xo-cascade>
+      <div class='xo-instagram-post' style='--gap: {{ section.settings.space }}px;'>
+        <xo-carousel class='xo-instagram-post__carousel' xo-speed='700' xo-autoheight xo-per-move='1' xo-per-view='1'>
+          <xo-carousel-inner class='xo-instagram-post__inner'>
+            <xo-carousel-list>
+              {% for i in (1..6) %}
+                {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
+                {%- assign placeholder_image = 'product-apparel-' | append: placeholder_image_index -%}
+                <xo-carousel-slide>
+                  <div class='xo-instagram-post__item'>
+                    {% render 'image', width: '100%', placeholder: placeholder_image %}
+                  </div>
+                </xo-carousel-slide>
+              {% endfor %}
+            </xo-carousel-list>
+          </xo-carousel-inner>
+          <xo-carousel-thumbnail
+            xo-gap='{{ section.settings.space }}'
+            xo-autoheight
+            class='xo-instagram-post__thumbnail'
+            xo-overflow='visible'
+            xo-per-view='1'
+            xo-breakpoints='
+              {
+                768: {
+                  perView: 4
+                },
+                3000: {
+                  perView: 1
+                }
+              }
+            '
+          >
+            <xo-carousel-inner>
+              <xo-carousel-list>
+                {% for i in (1..6) %}
+                  {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
+                  {%- assign placeholder_image = 'product-apparel-' | append: placeholder_image_index -%}
+                  <xo-carousel-slide>
+                    <div class='xo-instagram-post__thum-item'>
+                      {% render 'image', width: '100%', placeholder: placeholder_image %}
+                    </div>
+                  </xo-carousel-slide>
+                {% endfor %}
+              </xo-carousel-list>
+            </xo-carousel-inner>
+          </xo-carousel-thumbnail>
+          <div class='xo-instagram-post__nav'>
+            <xo-carousel-prev class='xo-instagram-post__prev'>
+              {% render 'icon', name: 'arrow', color: 'rgba(var(--color-accent))' %}
+            </xo-carousel-prev>
+            <xo-carousel-next class='xo-instagram-post__next'>
+              {% render 'icon', name: 'arrow', color: 'rgba(var(--color-accent))' %}
+            </xo-carousel-next>
+          </div>
+        </xo-carousel>
+      </div>
+    </xo-animate>
+  {% endif %}
+</section>

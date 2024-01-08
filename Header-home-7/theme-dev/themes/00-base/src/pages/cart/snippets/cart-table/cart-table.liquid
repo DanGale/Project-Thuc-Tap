@@ -1,0 +1,55 @@
+{% comment %}
+  Renders the cart table.
+
+  Usage:
+  {% render 'cart-table' %}
+{% endcomment %}
+
+<div class='xo-cart-table'>
+  <form action='{{ routes.cart_url }}' method='post' id='cart'>
+    <table class='xo-table'>
+      <thead>
+        <tr class='xo-table__head-row'>
+          <th>{{ 'sections.cart.headings.product' | t }}</th>
+          <th>{{ 'sections.cart.headings.quantity' | t }}</th>
+          <th>{{ 'sections.cart.headings.total' | t }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%- for item in cart.items -%}
+          <tr class='xo-table__body-row'>
+            <td data-th='{{ 'sections.cart.headings.product' | t }}'>
+              <xo-product xo-section-id='{{ section.id }}' xo-product-id='{{ item.id }}'>
+                {% render 'cart-item', item: item %}
+              </xo-product>
+            </td>
+            <td data-th='{{ 'sections.cart.headings.quantity' | t }}'>
+              <xo-product xo-section-id='{{ section.id }}' xo-product-id='{{ item.id }}'>
+                <div class='xo-cart-table__quantity'>
+                  {% render 'quantity', value: item.quantity %}
+                </div>
+              </xo-product>
+            </td>
+            <td data-th='{{ 'sections.cart.headings.total' | t }}'>
+              <div class='xo-cart-table__price'>
+                {%- if item.original_line_price != item.final_line_price -%}
+                  <dl class='cart-item__discounted-prices'>
+                    <s class='cart-item__old-price price price--end h4'>
+                      {{ item.original_line_price | money }}
+                    </s>
+
+                    {{ 'products.product.price.sale_price' | t }}
+
+                    {{ item.final_line_price | money }}
+                  </dl>
+                {%- else -%}
+                  {{ item.original_line_price | money }}
+                {%- endif -%}
+              </div>
+            </td>
+          </tr>
+        {%- endfor -%}
+      </tbody>
+    </table>
+  </form>
+</div>

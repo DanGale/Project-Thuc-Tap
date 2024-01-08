@@ -1,0 +1,33 @@
+.xo-breadcrumb--border {
+  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.15);
+}
+
+.xo-breadcrumb__list {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  list-style: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+.xo-breadcrumb__item {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  a {
+    color: rgba(var(--color-foreground), 0.3);
+    letter-spacing: 0.02em;
+  }
+  .xo-breadcrumb--current {
+    color: rgba(var(--color-foreground));
+  }
+}
+
+.xo-breadcrumb__separator {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: rgba(var(--color-foreground), 0.3);
+}

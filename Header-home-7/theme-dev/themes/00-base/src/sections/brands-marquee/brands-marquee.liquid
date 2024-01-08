@@ -1,0 +1,34 @@
+{{ 'section-brands-marquee.css' | asset_url | stylesheet_tag }}
+<section {% render 'section-attr' %}>
+  <xo-animate xo-cascade>
+    <xo-marquee
+      class='xo-brands-marquee'
+      style='
+        {%- if section.settings.item_space -%}
+          --space: {{ section.settings.item_space }}rem;
+        {%- endif -%}
+        {%- if section.settings.item_space -%}
+          --height: {{ section.settings.marquee_height }}px;
+        {%- endif -%}
+      '
+      xo-speed='{{ section.settings.marquee_speed }}'
+      {%- if section.settings.stop_marquee -%}
+        xo-pause-on-hover='true'
+      {%- endif -%}
+      {%- if section.settings.marquee_right_to_left -%}
+        xo-rtl='true'
+      {%- endif -%}
+    >
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'marquee_image_item' %}
+            <a class='xo-brands-marquee__image' href='{{ block.settings.item_link | default: '#' }}'>
+              {% render 'image', image: block.settings.item_image, width: '100%' %}
+            </a>
+          {% else %}
+
+        {% endcase %}
+      {% endfor %}
+    </xo-marquee>
+  </xo-animate>
+</section>

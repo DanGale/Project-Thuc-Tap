@@ -1,0 +1,26 @@
+.xo-success {
+  background-color: #3f8843;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 0.2rem 1.2rem;
+}
+
+.xo-warning {
+  background-color: #fba11a;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 0.2rem 1.2rem;
+}
+
+.xo-error {
+  background-color: #ce2c2c;
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 0.2rem 1.2rem;
+}
+
+.xo-success, .xo-warning, .xo-error {
+  &:empty {
+    display: none;
+  }
+}

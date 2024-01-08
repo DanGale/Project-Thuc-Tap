@@ -1,0 +1,35 @@
+{
+  "name": "Colors",
+  "settings": {
+    "accent": "Accent",
+    "text": "Text",
+    "title": "Title",
+    "subtitle": "Subtitle",
+    "link": "Link",
+    "line": "Line",
+    "background": "Background",
+    "background_2": "Background 2",
+    "background_gradient": {
+      "label":  "Background gradient",
+      "info": "Background gradient replaces background where possible."
+    },
+    "button_background": "Button background",
+    "button_outline": "Button outline",
+    "shadow": "Shadow",
+    "border": "Border",
+    "icon_color": "Icon color",
+    "icon_background_color": "Icon background color",
+    "button": "Button Primary",
+    "button_label": "Button label Primary",
+    "secondary_button": "Secondary button",
+    "secondary_button_label": "Secondary button label",
+    "tertiary_button": "Tertiary button",
+    "tertiary_button_label": "Tertiary button label",
+    "gray_button": "Gray button",
+    "gray_button_label": "Gray button label",
+    "dark_button": "Dark button",
+    "dark_button_label": "Dark button label",
+    "light_button": "Light button",
+    "light_button_label": "Light button label"
+  }
+}

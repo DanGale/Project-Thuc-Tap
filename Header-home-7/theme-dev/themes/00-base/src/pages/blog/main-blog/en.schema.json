@@ -1,0 +1,23 @@
+{
+  "name": "Blog posts",
+  "settings": {
+    "blog": {
+      "label": "Blog"
+    },
+    "limit": {
+      "label": "Number of blog posts to show"
+    },
+    "columns_desktop": {
+      "label": "Number of columns on desktop"
+    },
+    "columns_spacing": {
+      "label": "Columns spacing"
+    },
+    "show_view_all": {
+      "label": "Enable \"View all\" button if blog includes more blog posts than shown"
+    }
+  },
+  "presets": {
+    "name": "Blog posts"
+  }
+}

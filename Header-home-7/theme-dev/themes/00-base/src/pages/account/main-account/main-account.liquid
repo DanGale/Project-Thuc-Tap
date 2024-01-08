@@ -1,0 +1,23 @@
+{{ 'section-main-account.css' | asset_url | stylesheet_tag }}
+{{ 'account-detail.css' | asset_url | stylesheet_tag }}
+{{ 'orders-table.css' | asset_url | stylesheet_tag }}
+{{ 'table.css' | asset_url | stylesheet_tag }}
+
+<div {% render 'section-attr' %}>
+  <xo-container>
+    <xo-animate xo-cascade>
+      {% assign log_out_label = 'customer.log_out' | t %}
+      {% render 'button', text: log_out_label, link: routes.account_logout_url, style: 'link' %}
+      {% render 'space', value: '2rem' %}
+    </xo-animate>
+
+    <xo-grid>
+      <div style='--md: 12; --lg: 9'>
+        {% render 'orders-table' %}
+      </div>
+      <div style='--md: 12; --lg: 3'>
+        {% render 'account-detail' %}
+      </div>
+    </xo-grid>
+  </xo-container>
+</div>

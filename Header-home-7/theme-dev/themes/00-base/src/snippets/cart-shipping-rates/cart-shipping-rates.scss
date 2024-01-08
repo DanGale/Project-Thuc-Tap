@@ -1,0 +1,49 @@
+.xo-cart-shipping-rates {
+  .xo-collapse {
+    &:first-child {
+      border-top: none;
+    }
+  }
+}
+.xo-cart-shipping-rates__btn {
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  padding: 1rem;
+}
+
+.xo-cart-shipping-rates__trigger {
+  display: block;
+}
+
+.xo-cart-shipping-rates__text {
+  font-size: 1.4rem;
+}
+
+.xo-cart-shipping-rates__content {
+  z-index: 9999;
+}
+
+.xo-cart-shipping-rates__inner {
+  background-color: rgb(var(--color-background));
+}
+
+.xo-cart-shipping-rates__inner--padding {
+  padding: 2rem;
+}
+
+.xo-cart-shipping-rates__inner--effect {
+  padding: 2rem;
+  width: 40rem;
+  box-shadow: 0 0.2rem 1rem rgba(var(--color-shadow), 0.2);
+}
+
+xo-modal {
+  .xo-cart-shipping-rates__inner {
+    width: 50rem;
+  }
+}
+
+.xo-cart-shipping-rates__error {
+  display: block;
+}

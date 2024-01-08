@@ -1,0 +1,15 @@
+{{ 'recover-password-form.css' | asset_url | stylesheet_tag }}
+
+<div {% render 'section-attr' %}>
+  <xo-container>
+    {% render 'login-form' %}
+
+    {% capture recover_form %}
+      {% render 'recover-password-form' %}
+    {% endcapture %}
+    <xo-modal xo-portal xo-name='forgot-your-password' style='z-index: 99999;'>
+      {% assign title = 'customer.recover_password.title' | t %}
+      {% render 'modal-content', title: title, content: recover_form %}
+    </xo-modal>
+  </xo-container>
+</div>

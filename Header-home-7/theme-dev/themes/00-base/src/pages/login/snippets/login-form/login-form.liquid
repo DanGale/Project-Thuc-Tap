@@ -1,0 +1,35 @@
+{{ 'login-form.css' | asset_url | stylesheet_tag }}
+
+<xo-grid>
+  <div class='xo-login' style='--xs: 12'>
+    {% form 'customer_login' %}
+      {% render 'form-error', form: form %}
+      <xo-animate xo-cascade>
+        {% assign email_label = 'customer.login_page.email' | t %}
+        {% render 'field-input', type: 'text', name: 'customer[email]', value: '', label: email_label %}
+      </xo-animate>
+      <xo-animate xo-cascade>
+        {% assign password_label = 'customer.login_page.password' | t %}
+        {% render 'field-input', type: 'password', name: 'customer[password]', value: '', label: password_label %}
+      </xo-animate>
+      <xo-animate xo-cascade>
+        {% assign btn_sign_in_text = 'customer.login_page.sign_in' | t %}
+        {% render 'button', text: btn_sign_in_text, size: 'md', block: true, effect: 'slide-up' %}
+      </xo-animate>
+    {% endform %}
+    {% render 'space', value: '2rem' %}
+    <xo-animate xo-cascade>
+      <xo-grid style='--xs: 2; --sm: 2; --md: 2; --lg: 2'>
+        <div>
+          <span>{{ 'customer.login_page.dont_have' | t }}</span>
+          {% assign label = 'customer.login_page.sign_up' | t %}
+          {% render 'button', text: label, link: routes.account_register_url, style: 'link', effect: 'fade' %}
+        </div>
+        <xo-modal-trigger xo-name='forgot-your-password'>
+          {% assign label = 'customer.login_page.forgot_password' | t %}
+          {% render 'button', text: label, style: 'link', effect: 'fade' %}
+        </xo-modal-trigger>
+      </xo-grid>
+    </xo-animate>
+  </div>
+</xo-grid>

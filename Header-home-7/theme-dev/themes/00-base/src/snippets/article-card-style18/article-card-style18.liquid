@@ -1,0 +1,95 @@
+{% comment %}
+  Renders an article card for a given blog with settings to either show the image or not.
+
+  Accepts:
+  - article: {Object} Article object
+  - media_aspect_ratio: {string} The setting changes the aspect ratio of the article image, if shown
+  - show_image: {Boolean} The setting either show the article image or not. If it's not included it will show the image by default
+  - show_date: {Boolean} The setting either show the article date or not. If it's not included it will not show the image by default
+  - show_author: {Boolean} The setting either show the article author or not. If it's not included it will not show the author by default
+  - show_tag: {Boolean} The setting either show the article tags or not. If it's not included it will not show the tags by default
+  - show_badge: {Boolean} The setting either show the blog badge or not.
+  - placeholder_image: {String} The placeholder image to use when no article exists. Default: 'article-apparel-1' (optional)
+  - color_scheme: {String} The color scheme to use (optional)
+  - animate_enabled: {Boolean} Enable animation. Default: true (optional)
+
+  Usage:
+  {% render 'article-card-style1', article: article, show_image: section.settings.show_image %}
+{% endcomment %}
+
+{% liquid
+  if animate_enabled == null
+    assign animate_enabled = true
+  endif
+  assign tag_name = 'div'
+  if animate_enabled
+    assign tag_name = 'xo-animate'
+  endif
+%}
+
+{%- if article and article != empty -%}
+  <div class='new18'>
+    <{{ tag_name }}
+      xo-cascade
+      class='xo-article-card1 xo-article-card--{{ settings.article_card_style }}{% if color_scheme %} color-{{ color_scheme }}{% endif %}'
+    >
+      <xo-grid class='xo-artical-card__blog'>
+        {%- if show_image == true and article.image -%}
+          <div style='--xs: 3'>
+            <a href='{{ article.url }}' class='xo-article-card__image18 {% render 'hover-style' %}'>
+              {% render 'image', image: article.image, aspect_ratio: media_aspect_ratio %}
+            </a>
+          </div>
+        {%- endif -%}
+        <div style='--xs: 9'>
+          <div
+            class='xo-article-card__information18'
+            {% if settings.article_card_style == 'boxed' and settings.article_card_content_padding == 0 %}
+              style='--article-card-content-padding: initial'
+            {% endif %}
+          >
+            <div class='new18__content-bg'>
+              <h3 class='xo-article-card__title18'>
+                <a href='{{ article.url }}'>
+                  {{ article.title | truncate: 50 | escape }}
+                </a>
+              </h3>
+              {%- if show_excerpt -%}
+                {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+                  <div class='xo-article-card__description18'>
+                    {%- if article.excerpt.size > 0 -%}
+                      {{ article.excerpt | strip_html | truncatewords: 30 }}
+                    {%- else -%}
+                      {{ article.content | strip_html | truncatewords: 30 }}
+                    {%- endif -%}
+                  </div>
+                {%- endif -%}
+              {%- endif -%}
+              <div class='xo-article-card18__date-com'>
+                {%- if show_date -%}
+                  <span class='xo-article-card18__date'>{{ article.published_at | time_tag: format: 'date' }}</span>
+                {%- endif -%}
+                <div class='blog-v18__comment-content'>
+                  {%- if article.comments_count > 0 -%}
+                    {{ article.comments_count }}
+                  {% endif %}
+                  {%- if article.comments_count == 0 -%}
+                    {{ article.comments_count }}
+                  {% endif %}
+                  Comment
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </xo-grid>
+      {% comment %} anh {% endcomment %}
+
+      {% comment %} ngay {% endcomment %}
+
+      {% comment %} content {% endcomment %}
+    </{{ tag_name }}>
+  </div>
+{% else %}
+  {% render 'article-card-placeholder', placeholder_image: placeholder_image %}
+{%- endif -%}

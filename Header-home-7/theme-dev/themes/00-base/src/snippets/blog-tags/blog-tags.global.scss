@@ -1,0 +1,17 @@
+.xo-blog-tags {
+  color: rgba(var(--color-foreground));
+  align-items: center;
+}
+
+.xo-blog-tags__item {
+  font-size: fz(body, 1.2);
+  color: rgba(var(--color-foreground));
+  background-color: rgba(var(--color-foreground), 0.1);
+  padding: 0.2rem 0.8rem;
+  margin-left: 0.5rem;
+  border-radius: 1rem;
+}
+
+.xo-blog-tags__title {
+  color: rgba(var(--color-foreground), 0.5);
+}

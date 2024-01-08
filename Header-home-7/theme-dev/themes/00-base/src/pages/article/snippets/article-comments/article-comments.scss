@@ -1,0 +1,32 @@
+.xo-article-comments {
+  padding: 1rem 0;
+}
+
+.xo-article-comments__content {
+  p {
+    padding-bottom: 1rem;
+  }
+}
+
+.xo-article-comments__footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.xo-article-comments__author {
+  color: rgba(var(--color-foreground));
+  font-weight: 500;
+}
+
+.xo-article-comments__dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: rgba(var(--color-foreground), 0.4);
+}
+
+.xo-article-comments__date {
+  color: rgba(var(--color-foreground), 0.4);
+  text-transform: uppercase;
+}

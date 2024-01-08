@@ -1,0 +1,27 @@
+.xo-menu-scroll__list {
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  @-moz-document url-prefix() {
+    scrollbar-width: 0;
+    scrollbar-height: 0;
+  }
+}
+
+.xo-menu-scroll__item {
+  display: inline-block;
+}
+
+.xo-menu-scroll__link {
+  display: block;
+  padding: 0.5rem 2rem;
+}
+
+.xo-menu-scroll__link--current {
+  color: red;
+}

@@ -1,0 +1,25 @@
+.xo-image {
+  position: relative;
+  border: var(--media-border-width) solid rgba(var(--color-foreground), var(--media-border-opacity));
+  border-radius: var(--media-radius);
+  box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-foreground), var(--media-shadow-opacity));
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    aspect-ratio: var(--xo-ratio-percent);
+  }
+}
+
+.xo-image__overlay {
+  background-color: #fff;
+}
+
+.xo-image__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--color-foreground), 0.1);
+}

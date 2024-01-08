@@ -1,0 +1,28 @@
+.xo-brands-marquee {
+  --space: 0;
+  background-color: rgba(var(--color-background));
+  color: rgba(var(--color-accent));
+  fill: rgba(var(--color-accent));
+  align-items: center;
+  height: var(--height);
+}
+
+.xo-brands-marquee__image {
+  margin: 0 var(--space);
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+  .xo-image {
+    width: 100%;
+    height: var(--height);
+    .placeholder-svg {
+      width: 100%;
+      height: var(--height);
+    }
+    img {
+      height: var(--height);
+    }
+  }
+}

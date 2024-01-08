@@ -1,0 +1,9 @@
+[submodule "packages"]
+	path = packages
+	url = ssh://git@git.awe7.com:2201/xo-themes/dev-tools/packages.git
+[submodule "html/basehtml"]
+	path = html/basehtml
+	url = ssh://git@git.awe7.com:2201/xo-themes/html/basehtml.git
+[submodule "themes/00-base"]
+	path = themes/00-base
+	url = ssh://git@git.awe7.com:2201/xo-themes/themes/00-base.git

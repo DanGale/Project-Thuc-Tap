@@ -1,0 +1,52 @@
+.xo-order-bill {
+  padding-top: 2rem;
+}
+
+.xo-order-bill__nav-title {
+  font-size: fz(heading, 1.6);
+  font-weight: 500;
+  line-height: lh(heading, 0.38);
+  letter-spacing: ls(heading, -0.01);
+  color: rgb(var(--color-foreground));
+  @include media('>sm') {
+    font-size: fz(heading, 1.8);
+    line-height: lh(heading, 0.22);
+    letter-spacing: ls(heading, 0.01);
+  }
+}
+
+.xo-order-bill__payment-status {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: rgb(var(--color-foreground));
+}
+
+.xo-order-bill__payment-status-text {
+  font-size: fz(body, 1.4);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgba(var(--color-foreground), 0.4);
+}
+
+.xo-order-bill__user {
+  font-weight: 500;
+  display: flex;
+  color: rgb(var(--color-foreground));
+}
+
+.xo-order-bill__user-name {
+  padding-inline-end: 1.2rem;
+  border-inline-end: 0.1rem solid rgba(var(--color-foreground), 0.15);
+}
+
+.xo-order-bill__user-phone {
+  padding-inline-start: 1.2rem;
+}
+
+.xo-order-bill__address {
+  padding-top: 0.9rem;
+}
+
+.xo-order-bill__ship-address {
+  padding-top: 4.5rem;
+}

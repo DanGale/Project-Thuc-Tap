@@ -1,0 +1,43 @@
+<div class='xo-article-comments-form'>
+  {% form 'new_comment', article %}
+    {%- liquid
+      assign post_message = 'blogs.article.success'
+      if blog.moderated? and comment.status == 'unapproved'
+        assign post_message = 'blogs.article.success_moderated'
+      endif
+    -%}
+    {% render 'form-error', form: form %}
+    {% render 'form-success', form: form %}
+    <div>
+      <xo-animate xo-cascade>
+        <h2 class='xo-article-comments-form__title'>{{ 'blogs.article.comment_form_title' | t }}</h2>
+      </xo-animate>
+      <xo-animate xo-cascade>
+        {% assign commentNameLabel = 'blogs.article.name' | t %}
+        {% render 'field-input', type: 'text', name: 'comment[author]', label: commentNameLabel, value: form.author %}
+      </xo-animate>
+      <xo-animate xo-cascade>
+        {% assign commentEmailLabel = 'blogs.article.email' | t %}
+        {% render 'field-input', type: 'text', name: 'comment[email]', label: commentEmailLabel, value: form.email %}
+      </xo-animate>
+      <xo-animate xo-cascade>
+        {% capture attrs %}
+          onkeyup='countCharacterMessage()'
+          maxlength='200'
+          rows='5'
+          aria-required='true'
+          required
+        {% endcapture %}
+        {% assign label = 'blogs.article.message' | t %}
+        {% render 'field-textarea', name: 'comment[body]', value: form.body, label: label, attrs: attrs %}
+      </xo-animate>
+      {%- if blog.moderated? -%}
+        <p>{{ 'blogs.article.moderated' | t }}</p>
+      {%- endif -%}
+      <xo-animate xo-cascade>
+        {% assign button_label = 'blogs.article.post' | t %}
+        {% render 'button', text: button_label, type: 'submit' %}
+      </xo-animate>
+    </div>
+  {% endform %}
+</div>

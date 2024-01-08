@@ -1,0 +1,56 @@
+{
+  "name": "Animation",
+  "settings": {
+    "animate_duration": {
+      "label": "Animate duration"
+    },
+    "animate_effect": {
+      "label": "Animate effect"
+    },
+    "animate_strength": {
+      "label": "Animate strength"
+    },
+    "animate_fade": {
+      "label": "Fade"
+    },
+    "animate_fade_up": {
+      "label": "Fade up"
+    },
+    "animate_fade_down": {
+      "label": "Fade down"
+    },
+    "animate_fade_left": {
+      "label": "Fade left"
+    },
+    "animate_fade_right": {
+      "label": "Fade right"
+    },
+    "animate_zoom_in": {
+      "label": "Zoom in"
+    },
+    "animate_zoom_out": {
+      "label": "Zoom out"
+    },
+    "animate_rotate_left_up": {
+      "label": "Rotate left up"
+    },
+    "animate_rotate_right_up": {
+      "label": "Rotate right up"
+    },
+    "animate_snake_up": {
+      "label": "Snake up"
+    },
+    "animate_snake_down": {
+      "label": "Snake down"
+    },
+    "animate_snake_left": {
+      "label": "Snake left"
+    },
+    "animate_snake_right": {
+      "label": "Snake right"
+    },
+    "animate_3d_up": {
+      "label": "3d up"
+    }
+  }
+}

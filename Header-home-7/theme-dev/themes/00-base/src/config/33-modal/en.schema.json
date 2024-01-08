@@ -1,0 +1,161 @@
+{
+  "name": "Modal",
+  "settings": {
+    "header_border": {
+      "content": "Boder"
+    },
+    "thickness": {
+      "label": "Thickness"
+    },
+    "opacity": {
+      "label": "Opacity"
+    },
+    "corner_radius": {
+      "label": "Corner radius"
+    },
+    "header_shadow": {
+      "content": "Shadow"
+    },
+    "horizontal_offset": {
+      "label": "Horizontal offset"
+    },
+    "vertical_offset": {
+      "label": "Vertical offset"
+    },
+    "blur": {
+      "label": "Blur"
+    },
+    "modal_padding": {
+      "label": "Modal padding"
+    },
+    "modal_margin": {
+      "label": "Modal margin"
+    },
+    "modal_animate": {
+      "label": "Type of animate",
+      "none": {
+        "label": "None"
+      },
+      "zoom": {
+        "label": "Zoom"
+      },
+      "fade": {
+        "label": "Fade"
+      },
+      "fade_up": {
+        "label": "Fade up"
+      },
+      "fade_down": {
+        "label": "Fade down"
+      },
+      "fade_left": {
+        "label": "Fade left"
+      },
+      "fade_right": {
+        "label": "Fade right"
+      },
+      "smart_zoom": {
+        "label": "Smart zoom"
+      },
+      "smart_fade_zoom": {
+        "label": "Smart fade zoom"
+      },
+      "slide_up": {
+        "label": "Slide up"
+      },
+      "slide_down": {
+        "label": "Slide down"
+      },
+      "slide_left": {
+        "label": "Slide left"
+      },
+      "slide_right": {
+        "label": "Slide right"
+      }
+    },
+    "modal_easing": {
+      "label": "Type of easing",
+      "linear": {
+        "label": "Linear"
+      },
+      "ease": {
+        "label": "Ease"
+      },
+      "ease_in_quad": {
+        "label": "Ease in quad"
+      },
+      "ease_out_quad": {
+        "label": "Ease out quad"
+      },
+      "ease_in_out_quad": {
+        "label": "Ease in out quad"
+      },
+      "ease_in_cubic": {
+        "label": "Ease in cubic"
+      },
+      "ease_out_cubic": {
+        "label": "Ease out cubic"
+      },
+      "ease_in_out_cubic": {
+        "label": "Ease in out cubic"
+      },
+      "ease_in_quart": {
+        "label": "Ease in quart"
+      },
+      "ease_out_quart": {
+        "label": "Ease out quart"
+      },
+      "ease_in_out_quart": {
+        "label": "Ease in out quart"
+      },
+      "ease_in_quint": {
+        "label": "Ease in quint"
+      },
+      "ease_out_quint": {
+        "label": "Ease out quint"
+      },
+      "ease_in_out_quint": {
+        "label": "Ease in out quint"
+      },
+      "ease_out_bounce": {
+        "label": "Ease out bounce"
+      },
+      "ease_in_bounce": {
+        "label": "Ease in bounce"
+      },
+      "ease_out_back": {
+        "label": "Ease out back"
+      },
+      "ease_in_back": {
+        "label": "Ease in back"
+      },
+      "ease_in_out": {
+        "label": "Ease in out"
+      },
+      "ease_in_elastic": {
+        "label": "Ease in elastic"
+      },
+      "ease_out_elastic": {
+        "label": "Ease out elastic"
+      },
+      "spring": {
+        "label": "Spring"
+      },
+      "decay": {
+        "label": "Decay"
+      },
+      "bezier": {
+        "label": "Bezier"
+      }
+    },
+    "modal_duration": {
+      "label": "Modal duration"
+    },
+    "modal_backdrop_opacity": {
+      "label": "Modal backdrop opacity"
+    },
+    "modal_backdrop_blur": {
+      "label": "Modal backdrop blur"
+    }
+  }
+}

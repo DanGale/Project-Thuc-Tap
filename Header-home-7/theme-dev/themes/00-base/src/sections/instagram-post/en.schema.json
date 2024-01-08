@@ -1,0 +1,14 @@
+{
+  "name": "Instagram post carousel",
+  "settings": {
+    "token": {
+      "label": "Instagram access token"
+    },
+    "space": {
+      "label": "Item spacing"
+    }
+  },
+  "presets" : {
+    "name" : "Instagram post carousel"
+  }
+}

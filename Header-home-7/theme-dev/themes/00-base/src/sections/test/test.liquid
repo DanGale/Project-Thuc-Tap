@@ -1,0 +1,217 @@
+{{ 'share.css' | asset_url | stylesheet_tag }}
+{{ 'collection-card.css' | asset_url | stylesheet_tag }}
+
+<div {% render 'section-attr' %}>
+  <xo-container>
+    <xo-dark-mode>
+      <button>Dark / Light</button>
+    </xo-dark-mode>
+
+    {% render 'loader-1' %}
+    {% render 'loader-2' %}
+    {% render 'loader-3' %}
+
+    <br>
+    <br>
+
+    <h3>Share</h3>
+    {% render 'share', url: 'https://xo-base.myshopify.com/', copy_title: 'Xo Base' %}
+
+    <br>
+    <br>
+
+    <h3>Social</h3>
+    {% render 'socials' %}
+
+    <br>
+    <br>
+
+    <xo-animate xo-cascade>
+      {% render 'section-heading', title: 'Services' %}
+    </xo-animate>
+    <xo-grid style='--col-width: 30rem'>
+      {% render 'icon-box', icon: 'cart', title: 'Quick Ship', description: 'In stock & ready*' %}
+      {% render 'icon-box', icon: 'shipping-fast', title: 'Free Delivery over $500', description: 'In-Room Delivery Available' %}
+      {% render 'icon-box', icon: 'phone-call', title: 'Customer Care', description: 'Via Chat, Email, or Call' %}
+      {% render 'icon-box', icon: 'discount', title: 'Return Policy', description: '7 Days Easy Return*' %}
+    </xo-grid>
+
+    <br>
+    <br>
+
+    <xo-animate xo-cascade>
+      {% render 'section-heading', title: 'Collections' %}
+    </xo-animate>
+    <xo-grid style='--col-width: 30rem'>
+      {% render 'collection-card', placeholder_image: 'collection-apparel-1' %}
+      {% render 'collection-card', placeholder_image: 'collection-apparel-2' %}
+      {% render 'collection-card', placeholder_image: 'collection-apparel-3' %}
+      {% render 'collection-card', placeholder_image: 'collection-apparel-4' %}
+    </xo-grid>
+
+    <br>
+    <br>
+
+    <xo-animate xo-cascade>
+      {% render 'section-heading', title: 'Best Sellers' %}
+    </xo-animate>
+    <xo-grid style='--col-width: 30rem'>
+      {% for product in section.settings.collection.products limit: 4 %}
+        {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
+        {%- assign placeholder_image = 'product-apparel-' | append: placeholder_image_index -%}
+        {%
+          render 'product-card',
+          media_aspect_ratio: section.settings.image_ratio,
+          product: aaaaa,
+          show_image: section.settings.show_image,
+          show_secondary_image: section.settings.show_secondary_image,
+          show_vendor: section.settings.show_vendor,
+          show_description: section.settings.show_description,
+          show_quick_add: section.settings.show_quick_add,
+          show_quick_view: section.settings.show_quick_view,
+          show_price: section.settings.show_price,
+          show_badge: section.settings.show_badge,
+          placeholder_image: placeholder_image,
+        %}
+      {% endfor %}
+    </xo-grid>
+
+    <br>
+    <br>
+
+    <div style='width: 40rem; border: 1px solid;'>
+      {% render 'menu-scroll' %}
+    </div>
+  </xo-container>
+
+  <xo-container>
+    {% render 'field-checkbox', name: 'address[default]', value: '1', label: '123345' %}
+    {%
+      render 'icon-box',
+      icon: section.settings.icon,
+      image: section.settings.image,
+      title: section.settings.title,
+      description: section.settings.description,
+      align: section.settings.align,
+      color_scheme: section.settings.color_scheme,
+    %}
+
+    {% render 'button',
+      text: section.settings.button_text,
+      link: section.settings.button_link,
+      style: section.settings.button_style,
+      size: section.settings.button_size,
+      radius: section.settings.button_radius,
+      padding: section.settings.button_padding,
+      type: section.settings.button_type
+    %}
+
+    {% render 'field-color', name: 'color', value: 'red' %}
+    {% render 'field-color', name: 'color', value: 'blue' %}
+
+    {% capture options %}
+      <option value="1"> Value 1</option>
+      <option value="2"> Value 2</option>
+      <option value="3"> Value 3</option>
+    {% endcapture %}
+
+    {% render 'field-select', name: 'sort_by', options: options %}
+
+    {% render 'field-radio', name: 'size', value: 'sm', label: 'Small' %}
+    {% render 'field-radio', name: 'size', value: 'l', label: 'Large' %}
+    {% render 'field-radio', name: 'size', value: 'xl', label: 'Extra Large' %}
+
+    {% render 'field-radio', style: 'boxed', name: 'size-2', value: 'sm', label: 'Small' %}
+    {% render 'field-radio', style: 'boxed', name: 'size-2', value: 'l', label: 'Large' %}
+    {% render 'field-radio', style: 'boxed', name: 'size-2', value: 'xl', label: 'Extra Large' %}
+
+    <br>
+    <br>
+
+    <xo-modal-trigger xo-name='test-modal'>
+      {% render 'button', text: 'Modal cơ bản', size: 'lg' %}
+    </xo-modal-trigger>
+    <xo-modal
+      xo-name='test-modal'
+      xo-portal
+      style='z-index: 99999'
+    >
+      {% render 'modal-content',
+        width: '100rem',
+        title: 'Modal',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula sit amet nisi congue interdum. Donec tristique sit amet magna non dignissim. Integer mollis varius magna, sed congue lorem gravida ut. Vestibulum eu finibus nibh. In pellentesque scelerisque lacus, non aliquet ipsum varius vel. In quis iaculis arcu. Proin aliquam odio nec odio tincidunt, non porta nibh aliquet. Aliquam ultricies lobortis mi id ultrices. In dictum eleifend erat vitae pretium.
+
+        Mauris maximus augue ut sapien ullamcorper, quis blandit turpis efficitur. Duis eget porttitor enim. Praesent at tincidunt odio. Duis ut risus placerat, porta mi fermentum, commodo urna. Donec gravida est eu aliquam vulputate. Proin quis malesuada nisi. Quisque sit amet lorem in velit sodales porta. Fusce risus odio, imperdiet id massa quis, maximus consectetur eros. Curabitur dignissim auctor libero et mollis. Sed lectus leo, ultricies non leo condimentum, lacinia sollicitudin neque. Aliquam nisl nibh, aliquet at sem tincidunt, laoreet finibus dolor.',
+        footer: 'Footer'
+      %}
+    </xo-modal>
+
+    <xo-modal-trigger xo-name='cartttt'>
+      {% render 'button', text: 'Cart Drawer', style: 'secondary' %}
+    </xo-modal-trigger>
+    <xo-modal xo-name='cartttt' xo-portal xo-animate='slide-left' xo-placement='top-right' style='z-index: 99999'>
+      {% capture content %}
+        <xo-animate xo-cascade>{% render 'field-input', label: 'Firstname' %}</xo-animate>
+        <xo-animate xo-cascade>{% render 'field-input', label: 'Lastname' %}</xo-animate>
+        <xo-animate xo-cascade>{% render 'field-input', label: 'Password' %}</xo-animate>
+      {% endcapture %}
+      {% capture footer %}
+        <xo-animate xo-cascade>{% render 'button', text: 'View Cart', block: true %}</xo-animate>
+      {% endcapture %}
+      {% render 'modal-content', width: '40rem', full_height: true, animate: true, title: 'Modal', content: content, footer: footer %}
+    </xo-modal>
+
+    <xo-modal-trigger xo-name='search-modal'>
+      {% render 'button', text: 'Search', style: 'tertiary' %}
+    </xo-modal-trigger>
+    <xo-modal xo-name='search-modal' xo-portal xo-animate='slide-down' xo-placement='top-left' style='z-index: 99999'>
+      {% capture content %}
+        <xo-container>
+          <xo-grid>
+            <div style="--md: 6; --start-md: 4">
+              <xo-animate xo-cascade>{% render 'field-input', label: 'Search', block %}</xo-animate>
+              <xo-animate xo-cascade><div>Giả sử đây là nội dung form search</div></xo-animate>
+            </div>
+          </xo-grid>
+        </xo-container>
+      {% endcapture %}
+      {% render 'modal-content', full_width: true, content: content %}
+    </xo-modal>
+
+    {% render 'button', text: 'Gray', style: 'gray' %}
+    {% render 'button', text: 'Dark', style: 'dark' %}
+
+    <xo-grid style='--col-width: 30rem'>
+      {% for product in section.settings.collection.products %}
+        {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
+        {%- assign placeholder_image = 'product-apparel-' | append: placeholder_image_index -%}
+
+        {%
+          render 'product-card',
+          product: product,
+          show_image: section.settings.product_card_show_image,
+          show_secondary_image: section.settings.product_card_show_secondary_image,
+          show_vendor: section.settings.product_card_show_vendor,
+          show_description: section.settings.product_card_show_description,
+          show_quick_add: section.settings.product_card_show_quick_add,
+          show_quick_view: section.settings.product_card_show_quick_view,
+          show_price: section.settings.product_card_show_price,
+          show_badge: section.settings.product_card_show_badge,
+          media_aspect_ratio: section.settings.product_card_aspect_ratio,
+          color_scheme: section.settings.card_color_scheme,
+          placeholder_image: placeholder_image,
+        %}
+      {% endfor %}
+    </xo-grid>
+
+    {% render 'video',
+      video: section.settings.video,
+      video_url: section.settings.video_url,
+      class: 'video',
+      enable_video_looping: section.settings.enable_video_looping,
+      cover_image: section.settings.cover_image
+    %}
+  </xo-container>
+
+  {% render 'section-bg-image' %}
+</div>

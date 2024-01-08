@@ -1,0 +1,139 @@
+{
+  "name": "t:name",
+  "settings": [
+    {
+      "type": "select",
+      "id": "collection_card_style",
+      "options": [
+        {
+          "value": "standard",
+          "label": "t:settings.collection_card_style.option_1.label"
+        },
+        {
+          "value": "boxed",
+          "label": "t:settings.collection_card_style.option_2.label"
+        }
+      ],
+      "default": "standard",
+      "label": "t:settings.collection_card_style.label"
+    },
+    {
+      "type": "range",
+      "id": "collection_card_image_padding",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "t:settings.collection_card_image_padding.label",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "collection_card_content_padding",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "t:settings.collection_card_content_padding.label",
+      "default": 0
+    },
+    {
+      "type": "select",
+      "id": "collection_card_text_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:settings.collection_card_text_alignment.option_1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:settings.collection_card_text_alignment.option_2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:settings.collection_card_text_alignment.option_3.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:settings.collection_card_text_alignment.label"
+    },
+    {
+      "type": "header",
+      "content": "t:settings.header_border.content"
+    },
+    {
+      "type": "range",
+      "id": "collection_card_border_thickness",
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "unit": "px",
+      "label": "t:settings.thickness.label",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "collection_card_border_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "t:settings.opacity.label",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "collection_card_corner_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "t:settings.corner_radius.label",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:settings.header_shadow.content"
+    },
+    {
+      "type": "range",
+      "id": "collection_card_shadow_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "t:settings.opacity.label",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "collection_card_shadow_horizontal_offset",
+      "min": -12,
+      "max": 12,
+      "step": 2,
+      "unit": "px",
+      "label": "t:settings.horizontal_offset.label",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "collection_card_shadow_vertical_offset",
+      "min": -12,
+      "max": 12,
+      "step": 1,
+      "unit": "px",
+      "label": "t:settings.vertical_offset.label",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "collection_card_shadow_blur",
+      "min": 0,
+      "max": 20,
+      "step": 4,
+      "unit": "px",
+      "label": "t:settings.blur.label",
+      "default": 12
+    }
+  ]
+}

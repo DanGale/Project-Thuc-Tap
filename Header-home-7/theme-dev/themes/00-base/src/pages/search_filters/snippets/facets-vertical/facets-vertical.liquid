@@ -1,0 +1,30 @@
+{% comment %}
+  Renders facets vertical (filtering and sorting)
+
+  Accepts:
+  - results: {Object} Collection or Search object
+  - enable_filtering: {Boolean} Show filtering when true
+  - enable_sorting: {Boolean} Show sorting when true
+  - color_scheme: {String} Color scheme
+
+  Usage:
+  {% render 'facets-vertical', results: collection, enable_filtering: true, enable_sorting: true %}
+{% endcomment %}
+
+<div class='xo-facets-vertical'>
+  {% if enable_sorting %}
+    <div class='xo-facets-vertical__item'>
+      <div class='xo-facets-vertical__caption'>{{ 'products.facets.sort_by_label' | t }}</div>
+      {% assign name = 'field-sort-by-horizontal-' | append: section.id %}
+      {% render 'field-sort-by', results: results, name: name %}
+    </div>
+  {% endif %}
+
+  <div>
+    {% if enable_filtering %}
+      {% for filter in results.filters %}
+        {% render 'filters-fieldset', type: 'collapse', filter: filter %}
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>

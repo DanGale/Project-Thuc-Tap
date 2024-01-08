@@ -1,0 +1,49 @@
+{% comment %}
+  Renders a sort by field for a collection or search object
+
+  Accepts:
+  - results: {Object} Collection or Search object
+  - type: {String} Type of field to render. Default: 'select' (optional)
+  - name: {String} Name of the field (optional)
+
+  Usage:
+  {% render 'field-sort-by', type: 'select' %}
+{% endcomment %}
+
+{% liquid
+  assign type = type | default: 'select'
+  assign sort_by = collection.sort_by | default: collection.default_sort_by
+%}
+
+{% if type == 'select' %}
+  {% liquid
+    capture options
+      for option in results.sort_options
+        assign checked = false
+        if option.value == sort_by
+          assign checked = true
+        endif
+        render 'field-select-custom-option', label: option.name, name: 'sort_by', value: option.value, checked: checked
+      endfor
+    endcapture
+    render 'field-select-custom', use_with: 'filters', name: name, value: results.sort_options[0].name, options: options
+  %}
+{% elsif type == 'collapse' %}
+  {% comment %}theme-check-disable LiquidTag{% endcomment %}
+  {% capture content %}
+  {% comment %}theme-check-enable LiquidTag{% endcomment %}
+    {%- for option in results.sort_options -%}
+      {% assign checked = false %}
+      {% if option.value == sort_by %}
+        {% assign checked = true %}
+      {% endif %}
+      <xo-filters-field>
+        {% render 'field-radio', name: 'sort_by', value: option.value, label: option.name, checked: checked %}
+      </xo-filters-field>
+    {%- endfor -%}
+  {% endcapture %}
+
+  {% capture icon %}{% render 'icon', icon: 'chevron-down', size: '1.4rem' %}{% endcapture %}
+
+  {% render 'collapse', name: name, title: 'Sort by', content: content, icon: icon %}
+{% endif %}

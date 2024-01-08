@@ -1,0 +1,33 @@
+{% assign accpass = 'customer.activate_account.password' | t %}
+{% assign accpasscf = 'customer.activate_account.password_confirm' | t %}
+
+{{ 'section-main-activate-account.css' | asset_url | stylesheet_tag }}
+
+<div {% render 'section-attr' %}>
+  <xo-container>
+    <xo-grid>
+      <div class='xo-activate-account' style='--xs: 12'>
+        {%- form 'activate_customer_password' -%}
+          <xo-grid>
+            <xo-animate xo-cascade style='--xs: 12'>
+              {% render 'field-input', type: 'password', name: 'customer[password]', label: accpass %}
+            </xo-animate>
+            <xo-animate xo-cascade style='--xs: 12'>
+              {% render 'field-input', type: 'password', name: 'customer[password_confirmation]', label: accpasscf %}
+            </xo-animate>
+          </xo-grid>
+          {% render 'space', value: '24px' %}
+          <xo-animate xo-cascade>
+            {% assign btn_submit = 'customer.activate_account.submit' | t %}
+            {% render 'button', type: 'submit', text: btn_submit, size: 'lg', block: true, effect: 'fade' %}
+          </xo-animate>
+          {% render 'space', value: '15px' %}
+          <xo-animate xo-cascade>
+            {% assign btn_cancel = 'customer.activate_account.cancel' | t %}
+            {% render 'button', text: btn_submit, size: 'lg', block: true, effect: 'fade' %}
+          </xo-animate>
+        {%- endform -%}
+      </div>
+    </xo-grid>
+  </xo-container>
+</div>

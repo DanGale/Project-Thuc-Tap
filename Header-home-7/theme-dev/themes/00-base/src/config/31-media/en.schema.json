@@ -1,0 +1,29 @@
+{
+  "name": "Media",
+  "settings": {
+    "header_border": {
+      "content": "Boder"
+    },
+    "thickness": {
+      "label": "Thickness"
+    },
+    "opacity": {
+      "label": "Opacity"
+    },
+    "corner_radius": {
+      "label": "Corner radius"
+    },
+    "header_shadow": {
+      "content": "Shadow"
+    },
+    "horizontal_offset": {
+      "label": "Horizontal offset"
+    },
+    "vertical_offset": {
+      "label": "Vertical offset"
+    },
+    "blur": {
+      "label": "Blur"
+    }
+  }
+}

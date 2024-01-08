@@ -1,0 +1,52 @@
+{
+  "name": "Main collection",
+  "settings": {
+    "header__2" : {
+      "content" : "Setting collection products"
+    },
+    "products_per_page": {
+      "label" : "Product per page"
+    },
+    "columns_desktop": {
+      "label" : "Number of columns on desktop"
+    },
+    "header__1" : {
+      "content" : "Filtering and sort"
+    },
+    "enable_filtering" : {
+      "label" :"Enable filtering",
+      "info" : "Customize filters"
+    },
+    "filter_type" : {
+      "label":"Desktop filter layout",
+      "info" : "Drawer is the default mobile layout.",
+      "options__1":{
+        "label":"Horizontal"
+      },
+      "options__2":{
+        "label":"Vertical"
+      },
+      "options__3":{
+        "label":"Drawer"
+      }
+    },
+    "enable_sorting" : {
+      "label" : "Enable sorting"
+    },
+    "header_mobile" : {
+      "content":"Mobile layout"
+    },
+    "columns_mobile" :{
+      "label": "Number of columns on mobile",
+      "options__1" : {
+        "label" : "1 column"
+      },
+      "options__2" : {
+        "label" : "2 columns"
+      }
+    }
+  },
+  "presets": {
+    "name": "Main collection"
+  }
+}

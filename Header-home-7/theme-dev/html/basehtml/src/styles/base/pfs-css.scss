@@ -1,0 +1,19 @@
+.xo-pfs {
+  --min-size: 10; /* default */
+  --max-size: 60; /* default */
+  --min-viewport: 100; /* default */
+  --max-viewport: 1200; /* default */
+
+  /* calculator */
+  --m: (var(--max-size) - var(--min-size)) /
+    (var(--max-viewport) - var(--min-viewport));
+  --b: var(--min-size) - var(--m);
+  --size: clamp(
+    calc(var(--min-size) * 1px),
+    calc(
+      var(--m) * 100vw + var(--min-size) * 1px - var(--m) * var(--min-viewport) *
+        1px
+    ),
+    calc(var(--max-size) * 1px)
+  );
+}

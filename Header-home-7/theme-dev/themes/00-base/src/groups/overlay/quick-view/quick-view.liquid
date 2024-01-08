@@ -1,0 +1,10 @@
+{{ 'product-info-content.css' | asset_url | stylesheet_tag }}
+{{ 'section-quick-view.css' | asset_url | stylesheet_tag }}
+{{ 'product-info-media.css' | asset_url | stylesheet_tag }}
+{{ 'collapse.css' | asset_url | stylesheet_tag }}
+{{ 'pickup-availability-list.css' | asset_url | stylesheet_tag }}
+
+<xo-modal xo-name='quick-view' style='z-index: 9999;'>
+  {% capture content %}<xo-product-quick-view></xo-product-quick-view>{% endcapture %}
+  {% render 'modal-content', content: content, width: '120rem' %}
+</xo-modal>

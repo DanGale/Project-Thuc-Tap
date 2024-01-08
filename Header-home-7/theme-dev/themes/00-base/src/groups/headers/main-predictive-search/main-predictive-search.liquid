@@ -1,0 +1,34 @@
+{{ 'section-predictive-search.css' | asset_url | stylesheet_tag }}
+
+<xo-modal
+  class='xo-main-predictive-search'
+  xo-name='search'
+  xo-scroll-disabled
+  xo-animate='slide-down'
+  xo-placement='top-left'
+  xo-autofocus
+>
+  {% capture content %}
+    <xo-container>
+      {% assign label = 'general.search.search' | t %}
+      {% render 'predictive-search', label: label %}
+      <xo-animate xo-cascade>
+        <div class='xo-main-predictive-search__caption'>{{ 'general.search.popular_searches' | t }}</div>
+      </xo-animate>
+      <xo-animate xo-cascade>
+        <div class='xo-main-predictive-search__tag-group'>
+          {% liquid
+            if section.settings.search_tag != blank
+              for link in section.settings.search_tag.links
+                assign link_url = link.url
+                assign link_title = link.title
+                render 'button', link: link_url, text: link_title
+              endfor
+            endif
+          %}
+        </div>
+      </xo-animate>
+    </xo-container>
+  {% endcapture %}
+  {% render 'modal-content', full_width: true, content: content, scroll_disabled: true %}
+</xo-modal>

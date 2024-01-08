@@ -1,0 +1,68 @@
+{% comment %}
+  Renders a list of annoucement bar
+
+  Accepts:
+  - icon: {String} Icon svg (optional)
+  * Or
+  - image: {Image} Image icon or svg (optional)
+
+  * General
+  - title: {String} title of icon box.default: Title (optional)
+  - description: {String} description of icon box. default: Description (optional)
+  - algin: {String} align for icon box. default: center (optional)
+  - link: {String} link for icon box (optional)
+  - color_scheme: {String} color scheme for icon box (optional)
+  - animate_enabled: {Boolean} enable animation for icon box. Default: true (optional)
+
+  Usage:
+  {% render 'icon-box',
+    icon: 'check',
+    title: "abc",
+    description: "<p>Abc</p>",
+    algin: "center"
+  %}
+{% endcomment %}
+
+{% liquid
+  if animate_enabled == null
+    assign animate_enabled = true
+  endif
+  assign tag_name = 'div'
+  if animate_enabled
+    assign tag_name = 'xo-animate'
+  endif
+%}
+
+<{{ tag_name }} xo-cascade class='xo-icon-box{% if align %} xo-icon-box--{{ align }}{% endif %}{% if color_scheme %} color-{{ color_scheme }}{% endif %}'>
+  <a
+    {% if link == blank %}
+      role='link' aria-disabled='true'
+    {% else %}
+      href='{{ link }}'
+    {% endif %}
+    class='xo-icon-box__link'
+  >
+    {% if image != blank %}
+      <div class='xo-icon-box__image'>
+        {% render 'image', image: icon %}
+      </div>
+    {% elsif icon != blank %}
+      <div class='xo-icon-box__icon'>
+        {% render 'icon', name: icon, size: '4rem' %}
+      </div>
+    {% endif %}
+
+    <div class='xo-icon-box__wrapper'>
+      {% if title != '' %}
+        <h3 class='xo-icon-box__title'>
+          {{ title }}
+        </h3>
+      {% endif %}
+      {% if description != blank %}
+        <div class='xo-icon-box__description'>
+          {{ description }}
+        </div>
+      {% endif %}
+    </div>
+  </a>
+</{{ tag_name }}>

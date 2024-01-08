@@ -1,0 +1,19 @@
+.xo-product-info-content {
+  padding-top: 2.7rem;
+  width: 80%;
+}
+
+.xo-product-info-content__title {
+  color: rgba(var(--color-foreground));
+  font-weight: 400;
+  font-size: fz(heading, 6);
+  line-height: 1.11;
+  letter-spacing: -0.01em;
+  padding-bottom: 2.3rem;
+}
+
+.xo-product-info-content__description {
+  letter-spacing: 0.01em;
+  color: rgba(var(--color-foreground), 0.7);
+  padding-bottom: 3.9rem;
+}

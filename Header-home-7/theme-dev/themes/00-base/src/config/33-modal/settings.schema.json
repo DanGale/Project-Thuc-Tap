@@ -1,0 +1,288 @@
+{
+  "name": "t:name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:settings.header_border.content"
+    },
+    {
+      "type": "range",
+      "id": "modal_border_thickness",
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "unit": "px",
+      "label": "t:settings.thickness.label",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "modal_border_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "t:settings.opacity.label",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "modal_corner_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "t:settings.corner_radius.label",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:settings.header_shadow.content"
+    },
+    {
+      "type": "range",
+      "id": "modal_shadow_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "t:settings.opacity.label",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "modal_shadow_horizontal_offset",
+      "min": -12,
+      "max": 12,
+      "step": 2,
+      "unit": "px",
+      "label": "t:settings.horizontal_offset.label",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "modal_shadow_vertical_offset",
+      "min": -12,
+      "max": 12,
+      "step": 1,
+      "unit": "px",
+      "label": "t:settings.vertical_offset.label",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "modal_shadow_blur",
+      "min": 0,
+      "max": 20,
+      "step": 5,
+      "unit": "px",
+      "label": "t:settings.blur.label",
+      "default": 10
+    },
+    {
+      "type": "number",
+      "id": "modal_padding",
+      "label": "t:settings.modal_padding.label",
+      "default": 20
+    },
+    {
+      "type": "number",
+      "id": "modal_margin",
+      "label": "t:settings.modal_margin.label",
+      "default": 20
+    },
+    {
+      "type": "select",
+      "id": "modal_animate",
+      "label": "t:settings.modal_animate.label",
+      "options": [
+        {
+          "value": "none",
+          "label": "t:settings.modal_animate.none.label"
+        },
+        {
+          "value": "zoom",
+          "label": "t:settings.modal_animate.zoom.label"
+        },
+        {
+          "value": "fade",
+          "label": "t:settings.modal_animate.fade.label"
+        },
+        {
+          "value": "fade-up",
+          "label": "t:settings.modal_animate.fade_up.label"
+        },
+        {
+          "value": "fade-down",
+          "label": "t:settings.modal_animate.fade_down.label"
+        },
+        {
+          "value": "fade-left",
+          "label": "t:settings.modal_animate.fade_left.label"
+        },
+        {
+          "value": "fade-right",
+          "label": "t:settings.modal_animate.fade_right.label"
+        },
+        {
+          "value": "smart-zoom",
+          "label": "t:settings.modal_animate.smart_zoom.label"
+        },
+        {
+          "value": "smart-fade-zoom",
+          "label": "t:settings.modal_animate.smart_fade_zoom.label"
+        },
+        {
+          "value": "slide-up",
+          "label": "t:settings.modal_animate.slide_up.label"
+        },
+        {
+          "value": "slide-down",
+          "label": "t:settings.modal_animate.slide_down.label"
+        },
+        {
+          "value": "slide-left",
+          "label": "t:settings.modal_animate.slide_left.label"
+        },
+        {
+          "value": "slide-right",
+          "label": "t:settings.modal_animate.slide_right.label"
+        }
+      ],
+      "default": "zoom"
+    },
+    {
+      "type": "select",
+      "id": "modal_easing",
+      "label": "t:settings.modal_easing.label",
+      "options": [
+        {
+          "value": "linear",
+          "label": "t:settings.modal_easing.linear.label"
+        },
+        {
+          "value": "ease",
+          "label": "t:settings.modal_easing.ease.label"
+        },
+        {
+          "value": "easeInQuad",
+          "label": "t:settings.modal_easing.ease_in_quad.label"
+        },
+        {
+          "value": "easeOutQuad",
+          "label": "t:settings.modal_easing.ease_out_quad.label"
+        },
+        {
+          "value": "easeInOutQuad",
+          "label": "t:settings.modal_easing.ease_in_out_quad.label"
+        },
+        {
+          "value": "easeInCubic",
+          "label": "t:settings.modal_easing.ease_in_cubic.label"
+        },
+        {
+          "value": "easeOutCubic",
+          "label": "t:settings.modal_easing.ease_out_cubic.label"
+        },
+        {
+          "value": "easeInOutCubic",
+          "label": "t:settings.modal_easing.ease_in_out_cubic.label"
+        },
+        {
+          "value": "easeInQuart",
+          "label": "t:settings.modal_easing.ease_in_quart.label"
+        },
+        {
+          "value": "easeOutQuart",
+          "label": "t:settings.modal_easing.ease_out_quart.label"
+        },
+        {
+          "value": "easeInOutQuart",
+          "label": "t:settings.modal_easing.ease_in_out_quart.label"
+        },
+        {
+          "value": "easeInQuint",
+          "label": "t:settings.modal_easing.ease_in_quint.label"
+        },
+        {
+          "value": "easeOutQuint",
+          "label": "t:settings.modal_easing.ease_out_quint.label"
+        },
+        {
+          "value": "easeInOutQuint",
+          "label": "t:settings.modal_easing.ease_in_out_quint.label"
+        },
+        {
+          "value": "easeOutBounce",
+          "label": "t:settings.modal_easing.ease_out_bounce.label"
+        },
+        {
+          "value": "easeInBounce",
+          "label": "t:settings.modal_easing.ease_in_bounce.label"
+        },
+        {
+          "value": "easeOutBack",
+          "label": "t:settings.modal_easing.ease_out_back.label"
+        },
+        {
+          "value": "easeInBack",
+          "label": "t:settings.modal_easing.ease_in_back.label"
+        },
+        {
+          "value": "easeInOut",
+          "label": "t:settings.modal_easing.ease_in_out.label"
+        },
+        {
+          "value": "easeInElastic",
+          "label": "t:settings.modal_easing.ease_in_elastic.label"
+        },
+        {
+          "value": "easeOutElastic",
+          "label": "t:settings.modal_easing.ease_out_elastic.label"
+        },
+        {
+          "value": "spring",
+          "label": "t:settings.modal_easing.spring.label"
+        },
+        {
+          "value": "decay",
+          "label": "t:settings.modal_easing.decay.label"
+        },
+        {
+          "value": "bezier",
+          "label": "t:settings.modal_easing.bezier.label"
+        }
+      ],
+      "default": "decay"
+    },
+    {
+      "type": "range",
+      "id": "modal_duration",
+      "min": 200,
+      "max": 2000,
+      "step": 100,
+      "unit": "ms",
+      "label": "t:settings.modal_duration.label",
+      "default": 300
+    },
+    {
+      "type": "range",
+      "id": "modal_backdrop_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "label": "t:settings.modal_backdrop_opacity.label",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "modal_backdrop_blur",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "label": "t:settings.modal_backdrop_blur.label",
+      "default": 0
+    }
+  ]
+}

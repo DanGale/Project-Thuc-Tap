@@ -1,0 +1,39 @@
+.xo-scrollbar {
+  --width: 10px;
+  --scrollbar-track-color: transparent;
+  --scrollbar-thumb-color: rgba(var(--color-foreground), 0.2);
+  --scrollbar-thumb-color-hover: rgba(var(--color-foreground), 0.4);
+  --scrollbar-thumb-padding: 2px;
+  --scrollbar-radius: 5px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@-moz-document url-prefix() {
+  .xo-scrollbar {
+    scrollbar-color: rgba(var(--color-foreground), 0.4) rgba(var(--color-foreground), 0.4);
+    scrollbar-width: thin;
+  }
+}
+
+/* width */
+.xo-scrollbar::-webkit-scrollbar {
+  width: var(--width);
+}
+/* Track */
+.xo-scrollbar::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track-color);
+  border-radius: var(--scrollbar-radius);
+}
+/* Handle */
+.xo-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border: var(--scrollbar-thumb-padding) solid transparent;
+  border-radius: var(--scrollbar-radius);
+  background-clip: padding-box;
+  background-color: var(--scrollbar-thumb-color);
+}
+/* Handle on hover */
+.xo-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color-hover);
+}

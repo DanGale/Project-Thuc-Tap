@@ -1,0 +1,26 @@
+.xo-field-select {
+  position: relative;
+  min-width: 20rem;
+  width: 100%;
+}
+
+.xo-field-select__select {
+  appearance: none;
+  box-shadow: none;
+  padding: 1rem;
+  width: 100%;
+  background-color: transparent;
+  color: color(foreground);
+}
+
+.xo-field-select__option {
+  font-size: 1.6rem;
+}
+
+.xo-field-select__icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}

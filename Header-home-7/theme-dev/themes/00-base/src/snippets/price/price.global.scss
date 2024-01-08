@@ -1,0 +1,33 @@
+.xo-price {
+  position: relative;
+  display: flex;
+}
+
+.xo-price--larger {
+  .xo-price__item {
+    font-size: 2.5rem;
+  }
+  .xo-price__sale {
+    gap: 1.2rem;
+  }
+}
+
+.xo-price__item {
+  font-family: var(--font-body-family);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.xo-price__sale {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.xo-price__sale--reverse {
+  flex-direction: row-reverse;
+}
+
+.xo-price__item--del {
+  color: rgba(var(--color-foreground), 0.4);
+  text-decoration: line-through;
+}

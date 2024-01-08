@@ -1,0 +1,31 @@
+{{ 'collection-card.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  case section.settings.sort
+    when 'products_high', 'products_low'
+      assign collections = collections | sort: 'all_products_count'
+    when 'date', 'date_reversed'
+      assign collections = collections | sort: 'published_at'
+  endcase
+
+  if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
+    assign collections = collections | reverse
+  endif
+%}
+
+<div {% render 'section-attr' %}>
+  <xo-container class='container'>
+    <xo-grid style='--lg: {{ section.settings.columns_desktop }}; --md: {{ section.settings.columns_desktop | minus: 1 }}; --xs: {{ section.settings.columns_mobile }}'>
+      {%- assign placeholder_image_index = forloop.index0 | modulo: 4 | plus: 1 -%}
+      {%- assign placeholder_image = 'collection-apparel-' | append: placeholder_image_index -%}
+      {%- for collection in collections -%}
+        {% render 'collection-card',
+          collection_item: collection,
+          media_aspect_ratio: section.settings.image_ratio,
+          show_description: section.settings.description,
+          placeholder_image: placeholder_image
+        %}
+      {%- endfor -%}
+    </xo-grid>
+  </xo-container>
+</div>

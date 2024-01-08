@@ -1,0 +1,129 @@
+{
+  "name": "t:name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:settings.header_border.content"
+    },
+    {
+      "type": "range",
+      "id": "buttons_border_thickness",
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "unit": "px",
+      "label": "t:settings.thickness.label",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "buttons_border_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "t:settings.opacity.label",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "buttons_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "t:settings.corner_radius.label",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:settings.header_shadow.content"
+    },
+    {
+      "type": "range",
+      "id": "buttons_shadow_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "t:settings.opacity.label",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "buttons_shadow_horizontal_offset",
+      "min": -12,
+      "max": 12,
+      "step": 2,
+      "unit": "px",
+      "label": "t:settings.horizontal_offset.label",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "buttons_shadow_vertical_offset",
+      "min": -12,
+      "max": 12,
+      "step": 1,
+      "unit": "px",
+      "label": "t:settings.vertical_offset.label",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "buttons_shadow_blur",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "t:settings.blur.label",
+      "default": 0
+    },
+    {
+      "type": "select",
+      "id": "buttons_effect",
+      "options": [
+        {
+          "value": "slide-up",
+          "label": "t:settings.buttons_effect.option_1.label"
+        },
+        {
+          "value": "fade",
+          "label": "t:settings.buttons_effect.option_2.label"
+        }
+      ],
+      "default": "slide-up",
+      "label": "t:settings.buttons_effect.label"
+    },
+    {
+      "type": "select",
+      "id": "buttons_loading",
+      "options": [
+        {
+          "value": "loader-1",
+          "label": "t:settings.buttons_loading.option_1.label"
+        },
+        {
+          "value": "loader-2",
+          "label": "t:settings.buttons_loading.option_2.label"
+        },
+        {
+          "value": "loader-3",
+          "label": "t:settings.buttons_loading.option_3.label"
+        }
+      ],
+      "default": "loader-3",
+      "label": "t:settings.buttons_loading.label"
+    },
+    {
+      "type": "range",
+      "id": "buttons_scale",
+      "min": 100,
+      "max": 150,
+      "step": 5,
+      "unit": "%",
+      "label": "t:settings.buttons_scale.label",
+      "default": 100
+    }
+  ]
+}
